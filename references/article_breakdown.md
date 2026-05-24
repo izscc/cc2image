@@ -3,7 +3,7 @@
 
 ## Step 0：选择风格
 
-默认使用 `handdrawn_knowledge_card`（手绘知识卡片风）。如果用户指定风格，优先服从。若用户未指定，按主题自动选择：文化/历史/哲学封面用 `oriental_editorial_illustration`；学习方法/笔记/考试用 `study_note_card`；金字塔/层级/能力模型用 `pastel_learning_pyramid`；儿童教育/传统文化科普/器物介绍用 `childlike_cultural_infographic`；艺术/音乐/品牌/心理情绪极简封面用 `frosted_glass_editorial`。正文解释图默认仍用 `handdrawn_knowledge_card`。
+默认使用 `handdrawn_knowledge_card`（手绘知识卡片风）。如果用户指定风格，优先服从。若用户未指定，按主题自动选择：文化/历史/哲学封面用 `oriental_editorial_illustration`；学习方法/笔记/考试用 `study_note_card`；金字塔/层级/能力模型用 `pastel_learning_pyramid`；儿童教育/传统文化科普/器物介绍用 `childlike_cultural_infographic`；孤独/情绪/心理/音乐艺术用 `frosted_glass_editorial`；设计/品牌/作品集/工具系统用 `translucent_object_editorial`；AI/趋势/未来感/品牌视觉用 `glassmorphism_gradient_blob`；深度思考/认知/策略/极简口号/书封用 `embossed_typography_poster`；单个关键词/栏目名/年轻化视觉实验用 `acrylic_dimensional_type`。正文解释图默认仍用 `handdrawn_knowledge_card`。
 
 ## Step 1：理解文章
 

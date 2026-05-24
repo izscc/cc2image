@@ -48,12 +48,31 @@ STYLE_ANCHORS: Dict[str, str] = {
         "文字清楚但不要过密，整体活泼、有趣、易懂。不要做成写实插画，不要商业海报，不要科技风，不要 3D，不要高级冷淡风。"
     ),
     "frosted_glass_editorial": (
-        "整体风格为透明磨砂感海报风：画面像隔着一层半透明磨砂玻璃观看人物或物体，主体轮廓被柔和模糊，只露出局部阴影、形状和深色轮廓。"
+        "整体风格为透明磨砂感人物海报风：画面像隔着一层半透明磨砂玻璃观看人物、身体局部或情绪化物体，主体轮廓被柔和模糊，只露出局部阴影、形状和深色轮廓。"
         "背景为低饱和冷灰、灰绿、雾白或浅蓝色，大量留白，构图极简。文字采用现代极简排版，可以用少量亮黄色或黑色作为强调。"
         "整体像艺术节、音乐节、设计展或高级品牌海报，安静、神秘、克制、疏离。不要做成信息图，不要手绘卡通，不要 3D 科技风，不要复杂背景，不要高饱和色，不要密集文字。\n"
-        "Frosted glass editorial poster style, translucent frosted glass surface, blurred human silhouette or abstract object behind glass, soft diffusion, low contrast, "
+        "Frosted glass editorial poster style, translucent frosted glass surface, blurred human silhouette or emotional object behind glass, soft diffusion, low contrast, "
         "muted pale green gray background, minimal composition, large negative space, modern Swiss editorial typography, small bright yellow accent text, quiet, mysterious, "
         "restrained, premium art festival poster, not infographic, not cartoon, not 3D, not cyberpunk, not crowded."
+    ),
+    "translucent_object_editorial": (
+        "整体风格为透明材质物件海报风：低饱和米灰、浅灰绿或雾白背景，大量留白，中心放置一个由半透明玻璃、磨砂塑料、亚克力或柔软充气材质构成的抽象物件。"
+        "物件内部可以有被磨砂遮挡的柔和彩色块，边缘有细腻高光、折射、阴影和真实材质感。文字使用现代无衬线排版，克制、干净、像高端设计工作室作品集或设计展海报。"
+        "不要做成 PPT，不要手绘卡通，不要科技赛博，不要复杂背景，不要高饱和颜色，不要密集文字。"
+    ),
+    "glassmorphism_gradient_blob": (
+        "整体风格为玻璃拟态渐变气泡风：浅灰白背景，主体是半透明液态玻璃 blob，有柔和的橙色、粉色、蓝色、青色渐变光晕，边缘有折射、高光和柔和阴影。"
+        "文字与玻璃形体形成前后穿插，部分文字被磨砂玻璃模糊遮挡，部分文字清晰浮在前景。整体现代、轻盈、未来感、设计感强，但不要赛博朋克，不要霓虹，不要复杂 3D 场景，不要信息图。"
+    ),
+    "embossed_typography_poster": (
+        "整体风格为浮雕纸雕字体海报风：文字本身作为主视觉，使用同色系纸张浮雕、凹刻、压痕、挖空和柔和阴影来呈现立体感。"
+        "背景是白色、浅灰、米色或牛皮纸质感，整体接近单色，极简、大量留白、安静、高级，像艺术书封、设计海报或品牌口号页。"
+        "不要复杂插画，不要彩色大图，不要科技风，不要卡通，不要信息图。"
+    ),
+    "acrylic_dimensional_type": (
+        "整体风格为亚克力立体字母风：标题文字被设计成真实可触摸的 3D 字母物件，材质包括透明亚克力、半透明彩色塑料、线框金属、磨砂玻璃或纸质。"
+        "背景为干净白色或浅灰摄影棚，光线柔和，字母投下自然阴影。整体年轻、现代、轻盈、有品牌设计感。"
+        "不要做成普通平面文字，不要信息图，不要复杂场景，不要卡通，不要过度科技风。"
     ),
 }
 
@@ -63,7 +82,11 @@ STYLE_NAMES = {
     "study_note_card": "学习笔记卡片风",
     "pastel_learning_pyramid": "彩色手绘学习金字塔风",
     "childlike_cultural_infographic": "儿童手绘文化科普风",
-    "frosted_glass_editorial": "透明磨砂感海报风",
+    "frosted_glass_editorial": "透明磨砂感人物海报风",
+    "translucent_object_editorial": "透明材质物件海报风",
+    "glassmorphism_gradient_blob": "玻璃拟态渐变气泡风",
+    "embossed_typography_poster": "浮雕纸雕字体海报风",
+    "acrylic_dimensional_type": "亚克力立体字母风",
 }
 
 BODY_STRUCTURES = {
@@ -154,12 +177,58 @@ def render_frosted_cover(spec: CoverSpec) -> str:
 {STYLE_ANCHORS['frosted_glass_editorial']}"""
 
 
+def render_translucent_object_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张透明材质物件海报风的中文封面图。
+主题是「{spec.title}」。画面整体像高端设计工作室作品集封面、设计展海报或品牌案例主视觉，极简、克制、干净、有高级感。
+背景使用低饱和米灰、浅灰绿、雾白或浅冷灰色，保留大量留白。画面中心放置一个抽象主视觉物件，核心隐喻是「{spec.metaphor}」。这个物件由半透明玻璃、磨砂塑料、亚克力或柔软充气材质构成，边缘有细腻高光、折射、柔和阴影和真实材质感。
+物件内部可以隐约看到被磨砂遮挡的柔和彩色块，例如珊瑚橙、雾蓝、浅粉、浅青色，颜色被玻璃材质扩散和模糊，不要过于鲜艳。
+顶部或上方放置大标题「{spec.title}」，使用现代无衬线字体，颜色为浅灰或黑灰，排版克制。标题下方可以有一小段说明文字：「{spec.subtitle}」，字号小，像设计工作室说明文案。
+画面中可以加入少量极简标识元素，例如小箭头、圆形标记、短横线、细线框，但不要复杂。画面元素包括：「{spec.elements}」。
+{STYLE_ANCHORS['translucent_object_editorial']}"""
+
+
+def render_glassmorphism_blob_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张玻璃拟态渐变气泡风的中文封面图。
+主题是「{spec.title}」。画面使用浅灰白或雾白背景，整体极简、现代、轻盈，有高级设计展海报感。
+画面中心放置 1 到 3 个半透明液态玻璃 blob 形体，形体边缘柔和，有折射、高光和磨砂质感。blob 内部有低饱和渐变光晕，颜色包括橙色、粉色、蓝色、青色或浅紫，颜色自然扩散，不要过度鲜艳。核心隐喻是「{spec.metaphor}」，画面元素包括：「{spec.elements}」。
+标题写「{spec.title}」，使用现代无衬线大字。文字可以与玻璃 blob 前后穿插：一部分文字清晰在前景，一部分文字被玻璃材质模糊遮挡，形成空间层次。
+副标题写「{spec.subtitle}」，字号较小，放在标题附近或画面边缘，排版克制。
+整体保留大量留白，构图有呼吸感。画面可以有轻微投影和柔和环境光，但不要做成复杂 3D 场景。
+{STYLE_ANCHORS['glassmorphism_gradient_blob']}"""
+
+
+def render_embossed_typography_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张浮雕纸雕字体海报风的中文封面图。
+主题是「{spec.title}」。画面以文字本身作为主视觉，不使用复杂插画。背景使用白色、浅灰、米白或牛皮纸质感，整体接近单色，极简、高级、有大量留白。
+画面中心用大号中文或中英混排文字写「{spec.title}」。文字以纸张浮雕、凹刻、压痕、挖空或纸雕方式呈现，像从纸面凸起或被刻进纸面。字体边缘有细腻阴影和光照层次，形成真实纸雕质感。
+副标题「{spec.subtitle}」可以使用很小的现代无衬线字体，放在标题上方或下方，排版克制。
+整体构图要安静、稳重、留白充足。文字要成为唯一主角。可以加入非常轻微的纸张纹理，但不要加入复杂图案。底部短句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['embossed_typography_poster']}"""
+
+
+def render_acrylic_type_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张亚克力立体字母风的中文或中英混排封面图。
+主题是「{spec.title}」。画面使用干净的白色或浅灰摄影棚背景，整体极简、现代、轻盈。
+画面中心将标题「{spec.title}」设计成一组真实可触摸的 3D 立体字母物件。每个字母或部分文字可以使用不同材质，例如透明亚克力、半透明彩色塑料、磨砂玻璃、细金属线框、浅色纸板。字母之间有细腻的空间关系和自然阴影。
+颜色使用低饱和绿色、珊瑚橙、浅黄、浅粉、奶油白、透明灰等，整体干净但有趣。不要使用高饱和霓虹色。核心隐喻是「{spec.metaphor}」，画面元素包括：「{spec.elements}」。
+副标题「{spec.subtitle}」可以作为小号现代无衬线文字放在边缘或底部，不能抢主视觉。
+{STYLE_ANCHORS['acrylic_dimensional_type']}"""
+
+
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     if spec.style_id == "oriental_editorial_illustration":
         return render_oriental_cover(spec)
     if spec.style_id == "frosted_glass_editorial":
         return render_frosted_cover(spec)
+    if spec.style_id == "translucent_object_editorial":
+        return render_translucent_object_cover(spec)
+    if spec.style_id == "glassmorphism_gradient_blob":
+        return render_glassmorphism_blob_cover(spec)
+    if spec.style_id == "embossed_typography_poster":
+        return render_embossed_typography_cover(spec)
+    if spec.style_id == "acrylic_dimensional_type":
+        return render_acrylic_type_cover(spec)
     # Other styles can still render as knowledge-style cover with their style anchor.
     if spec.style_id == "handdrawn_knowledge_card":
         return render_handdrawn_cover(spec)
@@ -321,6 +390,17 @@ def self_test() -> None:
                 "bottom_sentence": "文明不是过去，而是持续流动的时间。",
             },
             {
+                "type": "cover",
+                "style_id": "translucent_object_editorial",
+                "title": "重新设计工作流",
+                "subtitle": "让系统替你承担复杂度",
+                "metaphor": "透明文件夹里容纳彩色流程模块",
+                "elements": "磨砂文件夹、柔和彩色块、小箭头、细线框",
+                "character_action": "旁边有极小的抽象人物观察物件",
+                "speech_bubble": "系统来承重",
+                "bottom_sentence": "复杂度应该被系统吸收。",
+            },
+            {
                 "type": "body",
                 "style_id": "study_note_card",
                 "title": "知识库不是收藏夹",
@@ -335,8 +415,10 @@ def self_test() -> None:
     )
     assert batch["images"][0]["style_id"] == "oriental_editorial_illustration"
     assert "东方典籍杂志插画风" in batch["images"][0]["prompt"]
-    assert batch["images"][1]["style_id"] == "study_note_card"
-    assert "学习笔记卡片风" in batch["images"][1]["prompt"]
+    assert batch["images"][1]["style_id"] == "translucent_object_editorial"
+    assert "透明材质物件海报风" in batch["images"][1]["prompt"]
+    assert batch["images"][2]["style_id"] == "study_note_card"
+    assert "学习笔记卡片风" in batch["images"][2]["prompt"]
     print("self-test passed")
 
 
