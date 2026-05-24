@@ -30,6 +30,34 @@
 | `embossed_typography_poster` | 浮雕纸雕字体海报风 | 极简封面、品牌口号、深度思考、书封设计、认知策略主题 |
 | `acrylic_dimensional_type` | 亚克力立体字母风 | 品牌关键词、栏目标题、创意概念、年轻化封面、视觉实验 |
 
+
+## 风格效果示例
+
+以下示例图由本 Skill 的 10 个 `style_id` 分别生成，方便快速判断风格差异。
+
+<table>
+<tr>
+<td width="50%"><strong>01. 手绘知识卡片风</strong><br><code>handdrawn_knowledge_card</code><br><img src="assets/examples/01-handdrawn-knowledge-card.jpg" alt="手绘知识卡片风示例"></td>
+<td width="50%"><strong>02. 东方典籍杂志插画风</strong><br><code>oriental_editorial_illustration</code><br><img src="assets/examples/02-oriental-editorial-illustration.jpg" alt="东方典籍杂志插画风示例"></td>
+</tr>
+<tr>
+<td width="50%"><strong>03. 学习笔记卡片风</strong><br><code>study_note_card</code><br><img src="assets/examples/03-study-note-card.jpg" alt="学习笔记卡片风示例"></td>
+<td width="50%"><strong>04. 彩色手绘学习金字塔风</strong><br><code>pastel_learning_pyramid</code><br><img src="assets/examples/04-pastel-learning-pyramid.jpg" alt="彩色手绘学习金字塔风示例"></td>
+</tr>
+<tr>
+<td width="50%"><strong>05. 儿童手绘文化科普风</strong><br><code>childlike_cultural_infographic</code><br><img src="assets/examples/05-childlike-cultural-infographic.jpg" alt="儿童手绘文化科普风示例"></td>
+<td width="50%"><strong>06. 透明磨砂感人物海报风</strong><br><code>frosted_glass_editorial</code><br><img src="assets/examples/06-frosted-glass-editorial.jpg" alt="透明磨砂感人物海报风示例"></td>
+</tr>
+<tr>
+<td width="50%"><strong>07. 透明材质物件海报风</strong><br><code>translucent_object_editorial</code><br><img src="assets/examples/07-translucent-object-editorial.jpg" alt="透明材质物件海报风示例"></td>
+<td width="50%"><strong>08. 玻璃拟态渐变气泡风</strong><br><code>glassmorphism_gradient_blob</code><br><img src="assets/examples/08-glassmorphism-gradient-blob.jpg" alt="玻璃拟态渐变气泡风示例"></td>
+</tr>
+<tr>
+<td width="50%"><strong>09. 浮雕纸雕字体海报风</strong><br><code>embossed_typography_poster</code><br><img src="assets/examples/09-embossed-typography-poster.jpg" alt="浮雕纸雕字体海报风示例"></td>
+<td width="50%"><strong>10. 亚克力立体字母风</strong><br><code>acrylic_dimensional_type</code><br><img src="assets/examples/10-acrylic-dimensional-type.jpg" alt="亚克力立体字母风示例"></td>
+</tr>
+</table>
+
 ## 典型触发词
 
 当用户提到这些意图时使用：
