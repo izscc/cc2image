@@ -23,7 +23,7 @@ STYLE_ANCHORS: Dict[str, str] = {
         "不要复杂信息图，不要密集小字，不要高饱和颜色，不要英文乱码，不要水印。"
     ),
     "oriental_editorial_illustration": (
-        "整体风格为东方典籍杂志插画风：暖白宣纸质感背景，低饱和蓝金配色，石青、金色、米白、墨灰为主，"
+        "整体风格为典籍山水风：暖白宣纸质感背景，低饱和蓝金配色，石青、金色、米白、墨灰为主，"
         "画面像高端文化杂志或图书封面。主体使用巨大文化隐喻物，例如打开的古籍、卷轴、山河、地图、书页、河流。"
         "加入少量微缩人物，人物像行走在典籍和山水之间。整体诗意、克制、留白充足，有历史感、文化感、东方美学和高级出版物质感。"
         "不要做成 PPT，不要科技风，不要可爱卡通，不要二次元，不要游戏概念图，不要 3D，不要高饱和颜色，不要拥挤。\n"
@@ -33,22 +33,22 @@ STYLE_ANCHORS: Dict[str, str] = {
         "high-end publishing design, not anime, not cartoon, not cyberpunk, not 3D, not PPT infographic, not crowded."
     ),
     "study_note_card": (
-        "整体风格为学习笔记卡片风：米白纸张背景，中间是一张带轻微阴影的笔记纸卡片，周围有胶带、回形针、便签、贴纸等学习手账元素。"
+        "整体风格为学习笔记风：米白纸张背景，中间是一张带轻微阴影的笔记纸卡片，周围有胶带、回形针、便签、贴纸等学习手账元素。"
         "使用低饱和浅紫、浅黄、奶油白、深绿色配色。标题醒目，正文分区清晰，搭配少量手绘学习图标和简笔插画。"
         "整体像精心整理的学习笔记、小红书知识卡片或高质量学习手账，不要做成商务 PPT，不要科技风，不要复杂海报，不要高饱和颜色，不要过度装饰。"
     ),
     "pastel_learning_pyramid": (
-        "整体风格为彩色手绘学习金字塔风：白色或米白纸张纹理背景，主体是柔和粉彩笔刷绘制的分层金字塔、阶梯或漏斗。"
+        "整体风格为粉彩金字塔风：白色或米白纸张纹理背景，主体是柔和粉彩笔刷绘制的分层金字塔、阶梯或漏斗。"
         "每层使用低饱和粉色、橙色、黄色、薄荷绿、浅蓝、浅紫等色块。文字像手写笔记，搭配虚线、箭头、百分比、小标签。"
         "整体轻松、清楚、学习感强，像手绘学习方法海报。不要做成商务图表，不要 3D 金字塔，不要科技风，不要高饱和颜色，不要复杂背景。"
     ),
     "childlike_cultural_infographic": (
-        "整体风格为儿童手绘文化科普风：白色纸张背景，黑色手绘边框，水彩手绘插画，线条自然、有童趣。"
+        "整体风格为童趣科普风：白色纸张背景，黑色手绘边框，水彩手绘插画，线条自然、有童趣。"
         "画面包含多个文化物件、可爱人物、虚线箭头、标签说明和气泡旁白。配色温和，像少儿文化科普海报、儿童绘本知识页或课堂小报。"
         "文字清楚但不要过密，整体活泼、有趣、易懂。不要做成写实插画，不要商业海报，不要科技风，不要 3D，不要高级冷淡风。"
     ),
     "frosted_glass_editorial": (
-        "整体风格为透明磨砂感人物海报风：画面像隔着一层半透明磨砂玻璃观看人物、身体局部或情绪化物体，主体轮廓被柔和模糊，只露出局部阴影、形状和深色轮廓。"
+        "整体风格为磨砂情绪风：画面像隔着一层半透明磨砂玻璃观看人物、身体局部或情绪化物体，主体轮廓被柔和模糊，只露出局部阴影、形状和深色轮廓。"
         "背景为低饱和冷灰、灰绿、雾白或浅蓝色，大量留白，构图极简。文字采用现代极简排版，可以用少量亮黄色或黑色作为强调。"
         "整体像艺术节、音乐节、设计展或高级品牌海报，安静、神秘、克制、疏离。不要做成信息图，不要手绘卡通，不要 3D 科技风，不要复杂背景，不要高饱和色，不要密集文字。\n"
         "Frosted glass editorial poster style, translucent frosted glass surface, blurred human silhouette or emotional object behind glass, soft diffusion, low contrast, "
@@ -56,74 +56,74 @@ STYLE_ANCHORS: Dict[str, str] = {
         "restrained, premium art festival poster, not infographic, not cartoon, not 3D, not cyberpunk, not crowded."
     ),
     "translucent_object_editorial": (
-        "整体风格为透明材质物件海报风：低饱和米灰、浅灰绿或雾白背景，大量留白，中心放置一个由半透明玻璃、磨砂塑料、亚克力或柔软充气材质构成的抽象物件。"
+        "整体风格为透明物件风：低饱和米灰、浅灰绿或雾白背景，大量留白，中心放置一个由半透明玻璃、磨砂塑料、亚克力或柔软充气材质构成的抽象物件。"
         "物件内部可以有被磨砂遮挡的柔和彩色块，边缘有细腻高光、折射、阴影和真实材质感。文字使用现代无衬线排版，克制、干净、像高端设计工作室作品集或设计展海报。"
         "不要做成 PPT，不要手绘卡通，不要科技赛博，不要复杂背景，不要高饱和颜色，不要密集文字。"
     ),
     "glassmorphism_gradient_blob": (
-        "整体风格为玻璃拟态渐变气泡风：浅灰白背景，主体是半透明液态玻璃 blob，有柔和的橙色、粉色、蓝色、青色渐变光晕，边缘有折射、高光和柔和阴影。"
+        "整体风格为玻璃气泡风：浅灰白背景，主体是半透明液态玻璃 blob，有柔和的橙色、粉色、蓝色、青色渐变光晕，边缘有折射、高光和柔和阴影。"
         "文字与玻璃形体形成前后穿插，部分文字被磨砂玻璃模糊遮挡，部分文字清晰浮在前景。整体现代、轻盈、未来感、设计感强，但不要赛博朋克，不要霓虹，不要复杂 3D 场景，不要信息图。"
     ),
     "embossed_typography_poster": (
-        "整体风格为浮雕纸雕字体海报风：文字本身作为主视觉，使用同色系纸张浮雕、凹刻、压痕、挖空和柔和阴影来呈现立体感。"
+        "整体风格为纸雕字体风：文字本身作为主视觉，使用同色系纸张浮雕、凹刻、压痕、挖空和柔和阴影来呈现立体感。"
         "背景是白色、浅灰、米色或牛皮纸质感，整体接近单色，极简、大量留白、安静、高级，像艺术书封、设计海报或品牌口号页。"
         "不要复杂插画，不要彩色大图，不要科技风，不要卡通，不要信息图。"
     ),
     "acrylic_dimensional_type": (
-        "整体风格为亚克力立体字母风：标题文字被设计成真实可触摸的 3D 字母物件，材质包括透明亚克力、半透明彩色塑料、线框金属、磨砂玻璃或纸质。"
+        "整体风格为亚克力字风：标题文字被设计成真实可触摸的 3D 字母物件，材质包括透明亚克力、半透明彩色塑料、线框金属、磨砂玻璃或纸质。"
         "背景为干净白色或浅灰摄影棚，光线柔和，字母投下自然阴影。整体年轻、现代、轻盈、有品牌设计感。"
         "不要做成普通平面文字，不要信息图，不要复杂场景，不要卡通，不要过度科技风。"
     ),
     "dark_neon_search_ui": (
-        "整体风格为暗黑霓虹搜索界面风：纯黑深空背景，彩色霓虹光带或光环在画面中穿梭，带有细腻颗粒噪点和柔和辉光。"
+        "整体风格为霓虹搜索风：纯黑深空背景，彩色霓虹光带或光环在画面中穿梭，带有细腻颗粒噪点和柔和辉光。"
         "前景是一个半透明磨砂质感的搜索框、输入框或胶囊按钮，文字极少，像 AI 搜索产品的启动界面。"
         "可以加入一个极简白色小角色或小动物，增强探索感。整体神秘、现代、轻未来感、数字产品感。"
         "不要做成复杂赛博朋克，不要密集 UI，不要游戏界面，不要过多文字，不要卡通幼稚。"
     ),
     "black_void_glowing_hands": (
-        "整体风格为黑场发光肢体概念风：纯黑背景，大量留黑，画面中只有几只手、手臂或身体局部从黑暗中浮现，边缘有柔和白色轮廓光，主体部分渐隐到黑暗里。"
+        "整体风格为黑场肢体风：纯黑背景，大量留黑，画面中只有几只手、手臂或身体局部从黑暗中浮现，边缘有柔和白色轮廓光，主体部分渐隐到黑暗里。"
         "构图极简但有强烈心理隐喻，表达触达、连接、孤独、寻找、求助、关系张力。文字极少，像艺术展海报或心理主题封面。"
         "不要做成恐怖片海报，不要血腥，不要写实惊悚，不要复杂背景，不要霓虹赛博。"
     ),
     "soft_neumorphism_ui": (
-        "整体风格为柔光新拟态界面风：浅灰白、淡蓝灰或雾白背景，UI 控件像从背景中柔和凸起或凹陷，带有细腻软阴影、内阴影和环境光。"
+        "整体风格为柔光界面风：浅灰白、淡蓝灰或雾白背景，UI 控件像从背景中柔和凸起或凹陷，带有细腻软阴影、内阴影和环境光。"
         "主体可以是搜索框、圆形控制器、滑杆、卡片或数字面板。可以加入少量暖橙、浅蓝、浅绿光晕作为反馈状态。"
         "整体干净、轻科技、柔和、安静，像高端智能产品界面或交互设计海报。不要做成传统扁平 UI，不要重色阴影，不要霓虹赛博，不要复杂仪表盘，不要密集文字。"
     ),
     "minimal_line_shadow_brand": (
-        "整体风格为极简线性光影品牌风：浅灰白或淡蓝灰背景，大量留白，主体由极细黑灰线条构成一个巨大的数字、符号、字母或几何形。"
+        "整体风格为线性品牌风：浅灰白或淡蓝灰背景，大量留白，主体由极细黑灰线条构成一个巨大的数字、符号、字母或几何形。"
         "主体带有半透明长阴影、轻微折射和淡淡彩色光点。排版极简，像高端科技品牌发布会、手机新品海报或设计品牌主视觉。"
         "不要复杂 3D，不要霓虹赛博，不要卡通，不要信息图，不要密集文字。"
     ),
     "white_mono_texture_editorial": (
-        "整体风格为白色单色肌理编辑风：画面几乎只使用白色、浅灰和黑色，主体是白色材质痕迹，例如厚涂刷痕、纸张折痕、压痕、浮起边缘、光影切面或微妙纹理。"
+        "整体风格为白色肌理风：画面几乎只使用白色、浅灰和黑色，主体是白色材质痕迹，例如厚涂刷痕、纸张折痕、压痕、浮起边缘、光影切面或微妙纹理。"
         "大量留白，文字排版像高端编辑网页、艺术书页或设计作品集封面。整体安静、克制、深思感强。"
         "不要彩色插画，不要复杂图形，不要信息图，不要手绘卡通，不要高饱和颜色。"
     ),
     "minimal_architecture_portfolio": (
-        "整体风格为极简建筑作品集线稿风：白色或浅灰纸张背景，大量留白，使用极细黑色线条、水平基准线、虚线路径、微型人物剪影和少量文字排版。"
+        "整体风格为建筑线稿风：白色或浅灰纸张背景，大量留白，使用极细黑色线条、水平基准线、虚线路径、微型人物剪影和少量文字排版。"
         "画面像建筑设计作品集封面、空间叙事图或设计学院 portfolio。整体冷静、克制、理性，有路径感和空间感。"
         "不要彩色插画，不要 3D 建筑渲染，不要复杂图表，不要卡通，不要高饱和颜色。"
     ),
 }
 
 STYLE_NAMES = {
-    "handdrawn_knowledge_card": "手绘知识卡片风",
-    "oriental_editorial_illustration": "东方典籍杂志插画风",
-    "study_note_card": "学习笔记卡片风",
-    "pastel_learning_pyramid": "彩色手绘学习金字塔风",
-    "childlike_cultural_infographic": "儿童手绘文化科普风",
-    "frosted_glass_editorial": "透明磨砂感人物海报风",
-    "translucent_object_editorial": "透明材质物件海报风",
-    "glassmorphism_gradient_blob": "玻璃拟态渐变气泡风",
-    "embossed_typography_poster": "浮雕纸雕字体海报风",
-    "acrylic_dimensional_type": "亚克力立体字母风",
-    "dark_neon_search_ui": "暗黑霓虹搜索界面风",
-    "black_void_glowing_hands": "黑场发光肢体概念风",
-    "soft_neumorphism_ui": "柔光新拟态界面风",
-    "minimal_line_shadow_brand": "极简线性光影品牌风",
-    "white_mono_texture_editorial": "白色单色肌理编辑风",
-    "minimal_architecture_portfolio": "极简建筑作品集线稿风",
+    "handdrawn_knowledge_card": "手绘知识风",
+    "oriental_editorial_illustration": "典籍山水风",
+    "study_note_card": "学习笔记风",
+    "pastel_learning_pyramid": "粉彩金字塔风",
+    "childlike_cultural_infographic": "童趣科普风",
+    "frosted_glass_editorial": "磨砂情绪风",
+    "translucent_object_editorial": "透明物件风",
+    "glassmorphism_gradient_blob": "玻璃气泡风",
+    "embossed_typography_poster": "纸雕字体风",
+    "acrylic_dimensional_type": "亚克力字风",
+    "dark_neon_search_ui": "霓虹搜索风",
+    "black_void_glowing_hands": "黑场肢体风",
+    "soft_neumorphism_ui": "柔光界面风",
+    "minimal_line_shadow_brand": "线性品牌风",
+    "white_mono_texture_editorial": "白色肌理风",
+    "minimal_architecture_portfolio": "建筑线稿风",
 }
 
 BODY_STRUCTURES = {
@@ -193,7 +193,7 @@ def render_handdrawn_cover(spec: CoverSpec) -> str:
 
 def render_oriental_cover(spec: CoverSpec) -> str:
     subtitle_or_bottom = spec.subtitle or spec.bottom_sentence
-    return f"""请生成一张东方典籍杂志插画风的中文文章封面图。
+    return f"""请生成一张典籍山水风的中文文章封面图。
 主题是「{spec.title}」。画面整体像高端文化杂志或图书封面，具有新中式东方美学、历史感、文学感和高级出版物质感。
 画面使用暖白色宣纸质感背景，带细腻纸张颗粒。整体配色为低饱和蓝金色系，以石青、青蓝、金色、土黄、米白、墨灰为主，色彩克制、安静、典雅。
 画面主体是一个巨大的文化隐喻物：「{spec.metaphor}」。这个隐喻物占据画面中心，像一个展开的古籍、卷轴、山河、地图或书页空间。让主体具有宏大空间感和诗意叙事感。
@@ -215,7 +215,7 @@ def render_frosted_cover(spec: CoverSpec) -> str:
 
 
 def render_translucent_object_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张透明材质物件海报风的中文封面图。
+    return f"""请生成一张透明物件风的中文封面图。
 主题是「{spec.title}」。画面整体像高端设计工作室作品集封面、设计展海报或品牌案例主视觉，极简、克制、干净、有高级感。
 背景使用低饱和米灰、浅灰绿、雾白或浅冷灰色，保留大量留白。画面中心放置一个抽象主视觉物件，核心隐喻是「{spec.metaphor}」。这个物件由半透明玻璃、磨砂塑料、亚克力或柔软充气材质构成，边缘有细腻高光、折射、柔和阴影和真实材质感。
 物件内部可以隐约看到被磨砂遮挡的柔和彩色块，例如珊瑚橙、雾蓝、浅粉、浅青色，颜色被玻璃材质扩散和模糊，不要过于鲜艳。
@@ -225,7 +225,7 @@ def render_translucent_object_cover(spec: CoverSpec) -> str:
 
 
 def render_glassmorphism_blob_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张玻璃拟态渐变气泡风的中文封面图。
+    return f"""请生成一张玻璃气泡风的中文封面图。
 主题是「{spec.title}」。画面使用浅灰白或雾白背景，整体极简、现代、轻盈，有高级设计展海报感。
 画面中心放置 1 到 3 个半透明液态玻璃 blob 形体，形体边缘柔和，有折射、高光和磨砂质感。blob 内部有低饱和渐变光晕，颜色包括橙色、粉色、蓝色、青色或浅紫，颜色自然扩散，不要过度鲜艳。核心隐喻是「{spec.metaphor}」，画面元素包括：「{spec.elements}」。
 标题写「{spec.title}」，使用现代无衬线大字。文字可以与玻璃 blob 前后穿插：一部分文字清晰在前景，一部分文字被玻璃材质模糊遮挡，形成空间层次。
@@ -235,7 +235,7 @@ def render_glassmorphism_blob_cover(spec: CoverSpec) -> str:
 
 
 def render_embossed_typography_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张浮雕纸雕字体海报风的中文封面图。
+    return f"""请生成一张纸雕字体风的中文封面图。
 主题是「{spec.title}」。画面以文字本身作为主视觉，不使用复杂插画。背景使用白色、浅灰、米白或牛皮纸质感，整体接近单色，极简、高级、有大量留白。
 画面中心用大号中文或中英混排文字写「{spec.title}」。文字以纸张浮雕、凹刻、压痕、挖空或纸雕方式呈现，像从纸面凸起或被刻进纸面。字体边缘有细腻阴影和光照层次，形成真实纸雕质感。
 副标题「{spec.subtitle}」可以使用很小的现代无衬线字体，放在标题上方或下方，排版克制。
@@ -244,7 +244,7 @@ def render_embossed_typography_cover(spec: CoverSpec) -> str:
 
 
 def render_acrylic_type_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张亚克力立体字母风的中文或中英混排封面图。
+    return f"""请生成一张亚克力字风的中文或中英混排封面图。
 主题是「{spec.title}」。画面使用干净的白色或浅灰摄影棚背景，整体极简、现代、轻盈。
 画面中心将标题「{spec.title}」设计成一组真实可触摸的 3D 立体字母物件。每个字母或部分文字可以使用不同材质，例如透明亚克力、半透明彩色塑料、磨砂玻璃、细金属线框、浅色纸板。字母之间有细腻的空间关系和自然阴影。
 颜色使用低饱和绿色、珊瑚橙、浅黄、浅粉、奶油白、透明灰等，整体干净但有趣。不要使用高饱和霓虹色。核心隐喻是「{spec.metaphor}」，画面元素包括：「{spec.elements}」。
@@ -254,7 +254,7 @@ def render_acrylic_type_cover(spec: CoverSpec) -> str:
 
 
 def render_dark_neon_search_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张暗黑霓虹搜索界面风的中文封面图。
+    return f"""请生成一张霓虹搜索风的中文封面图。
 主题是「{spec.title}」。画面使用纯黑或深黑背景，整体像 AI 搜索产品、探索工具或未来感网页启动页，神秘、安静、现代。
 画面左侧或背景中有几条彩色霓虹光带或光环，颜色可以包含蓝色、紫色、绿色、橙色和黄色，光带带有颗粒噪点和柔和辉光，像正在流动的信息路径。
 画面中心或偏右放置一个半透明磨砂质感的搜索框或胶囊按钮，搜索框里写「{spec.title}」。搜索框边缘柔和发光，带细腻颗粒感和阴影。
@@ -265,7 +265,7 @@ def render_dark_neon_search_cover(spec: CoverSpec) -> str:
 
 def render_black_void_hands_cover(spec: CoverSpec) -> str:
     action = spec.character_action or spec.metaphor
-    return f"""请生成一张黑场发光肢体概念风的中文封面图。
+    return f"""请生成一张黑场肢体风的中文封面图。
 主题是「{spec.title}」。画面使用纯黑背景，大量留黑，整体极简、安静、戏剧化，像心理主题艺术海报。
 画面中出现几只手或手臂，从不同方向伸入黑暗中。手部只被柔和白色边缘光照亮，部分轮廓清晰，部分逐渐消失在黑暗里。手势表达「{action}」，例如寻找、触碰、拒绝、拉近、求助、连接、悬停。
 主体不要太多，保持构图克制。手部有真实感但不恐怖，像概念摄影或高级艺术海报。
@@ -274,7 +274,7 @@ def render_black_void_hands_cover(spec: CoverSpec) -> str:
 
 
 def render_soft_neumorphism_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张柔光新拟态界面风的中文封面图。
+    return f"""请生成一张柔光界面风的中文封面图。
 主题是「{spec.title}」。画面使用浅灰白、淡蓝灰或雾白背景，整体干净、柔和、轻科技，有高端智能产品界面的感觉。
 画面中心放置一个新拟态 UI 主控件，核心隐喻是「{spec.metaphor}」，可以是搜索框、圆形旋钮、温度环、滑杆、卡片或控制面板。控件像从背景中轻轻凸起或凹陷，具有细腻软阴影、内阴影、圆角和柔和环境光。
 控件中显示少量文字或数字：「{spec.title}」。可以加入一个简洁图标，例如搜索、目标、温度、进度、开关、光线。画面元素包括：「{spec.elements}」。
@@ -284,7 +284,7 @@ def render_soft_neumorphism_cover(spec: CoverSpec) -> str:
 
 
 def render_minimal_line_shadow_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张极简线性光影品牌风的中文封面图。
+    return f"""请生成一张线性品牌风的中文封面图。
 主题是「{spec.title}」。画面使用浅灰白、淡蓝灰或雾白背景，大量留白，整体极简、克制、高级，像科技品牌发布会或产品主视觉。
 画面中心放置一个由极细黑灰线条构成的巨大符号、数字、字母或几何形，核心隐喻是「{spec.metaphor}」。主体可以带有半透明长阴影、轻微折射、淡淡彩色光点或柔和环境光。
 标题「{spec.title}」使用现代极细无衬线字体，可以放在主体下方、右下或顶部。副标题「{spec.subtitle}」字号更小，排版疏朗。
@@ -293,7 +293,7 @@ def render_minimal_line_shadow_cover(spec: CoverSpec) -> str:
 
 
 def render_white_mono_texture_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张白色单色肌理编辑风的中文封面图。
+    return f"""请生成一张白色肌理风的中文封面图。
 主题是「{spec.title}」。画面几乎只使用白色、浅灰和黑色，整体极简、安静、高级，有编辑网页或设计作品集封面的感觉。
 画面主体是一道白色材质痕迹，核心隐喻是「{spec.metaphor}」，可以是厚涂刷痕、纸张折痕、压痕、浮起边缘、光影切面或白色材质块。主体与背景同色系，但通过细腻阴影、纹理和光照产生层次。
 标题「{spec.title}」使用克制的字体，可以是优雅衬线体或现代无衬线体，放在画面左侧或留白区域。副标题「{spec.subtitle}」更小，像编辑说明文字。
@@ -302,7 +302,7 @@ def render_white_mono_texture_cover(spec: CoverSpec) -> str:
 
 
 def render_minimal_architecture_cover(spec: CoverSpec) -> str:
-    return f"""请生成一张极简建筑作品集线稿风的中文封面图。
+    return f"""请生成一张建筑线稿风的中文封面图。
 主题是「{spec.title}」。画面使用白色或浅灰纸张背景，大量留白，整体像建筑设计作品集、空间叙事图或设计学院 portfolio 封面。
 画面中使用极细黑色线条绘制几条水平基准线、虚线路径和简洁空间关系。可以加入几个微型黑色人物剪影，人物站在不同水平线上，沿着虚线路径移动，表达「{spec.metaphor}」。
 标题「{spec.title}」使用极简现代字体，放在左下、下方或画面留白处。副标题「{spec.subtitle}」字号较小，像作品集说明。可以加入年份、项目编号或极简坐标标记，但要很少。
@@ -361,7 +361,7 @@ def render_handdrawn_body(spec: BodySpec) -> str:
 
 
 def render_study_note(spec: BodySpec) -> str:
-    return f"""请生成一张学习笔记卡片风的中文知识图。
+    return f"""请生成一张学习笔记风的中文知识图。
 主题是「{spec.title}」。画面使用米白色纸张背景，中间放置一张略带阴影的笔记纸卡片，整体像精心整理的学习手账页面。
 顶部用醒目的中文标题写「{spec.title}」，标题可以放在浅紫色手绘色块或浅黄色标签上。标题字体清楚、圆润、自然，有学习笔记感。
 画面内容分为 3 到 5 个清晰区域，每个区域有小标题、简短说明和少量重点词高亮。核心内容包括：「{spec.modules}」。
@@ -372,7 +372,7 @@ def render_study_note(spec: BodySpec) -> str:
 
 
 def render_pyramid(spec: BodySpec) -> str:
-    return f"""请生成一张彩色手绘学习金字塔风的中文知识图。
+    return f"""请生成一张粉彩金字塔风的中文知识图。
 主题是「{spec.title}」。画面为竖版或横版纸张纹理背景，整体干净、轻松、有手绘学习海报感。
 顶部写一个醒目的中文手写标题：「{spec.title}」，标题下方可以有柔和的粉彩笔刷底色。副标题写「{spec.subtitle or spec.bottom_sentence}」，字号较小，像手写笔记。
 画面中心绘制一个分层结构，可以是金字塔、阶梯或漏斗。分层包括：「{spec.modules}」。每一层使用不同的低饱和粉彩色块，例如粉色、橙色、黄色、薄荷绿、浅蓝、浅紫。色块边缘保留手绘笔刷质感。
@@ -382,7 +382,7 @@ def render_pyramid(spec: BodySpec) -> str:
 
 
 def render_childlike(spec: BodySpec) -> str:
-    return f"""请生成一张儿童手绘文化科普风的中文知识图。
+    return f"""请生成一张童趣科普风的中文知识图。
 主题是「{spec.title}」。画面使用白色纸张背景，外圈有自然的黑色手绘边框，整体像少儿文化科普海报或儿童绘本知识页。
 顶部用大号中文手写标题写「{spec.title}」，副标题写「{spec.subtitle or spec.bottom_sentence}」，标题自然、童趣、清楚。
 画面中分布多个手绘文化物件或知识元素，包括：「{spec.modules}」。每个物件用黑色手绘线条和轻水彩上色表现，风格可爱、自然、有课堂小报感。
@@ -531,13 +531,13 @@ def self_test() -> None:
         ],
     )
     assert batch["images"][0]["style_id"] == "oriental_editorial_illustration"
-    assert "东方典籍杂志插画风" in batch["images"][0]["prompt"]
+    assert "典籍山水风" in batch["images"][0]["prompt"]
     assert batch["images"][1]["style_id"] == "translucent_object_editorial"
-    assert "透明材质物件海报风" in batch["images"][1]["prompt"]
+    assert "透明物件风" in batch["images"][1]["prompt"]
     assert batch["images"][2]["style_id"] == "dark_neon_search_ui"
-    assert "暗黑霓虹搜索界面风" in batch["images"][2]["prompt"]
+    assert "霓虹搜索风" in batch["images"][2]["prompt"]
     assert batch["images"][3]["style_id"] == "study_note_card"
-    assert "学习笔记卡片风" in batch["images"][3]["prompt"]
+    assert "学习笔记风" in batch["images"][3]["prompt"]
     print("self-test passed")
 
 
