@@ -1,13 +1,13 @@
 ---
 name: zscc配图生成器
-description: zscc配图生成器；当用户提到封面、正文配图、配图、知识图解、内容拆图、批量生图、文章配图、手绘知识卡片、小红书或公众号配图，或指定手绘知识风、典籍山水风、学习笔记风、粉彩金字塔风、童趣科普风、磨砂情绪风、透明物件风、玻璃气泡风、纸雕字体风、亚克力字风、霓虹搜索风、黑场肢体风、柔光界面风、线性品牌风、白色肌理风、建筑线稿风、治愈漫画风、极简治愈隐喻漫画风时使用。将中文主题、文章、段落或知识点拆解为多风格封面、正文图与批量生图方案；默认使用手绘知识风，并可在可用 image_gen 时隐藏提示词直接批量生图。
+description: zscc配图生成器；当用户提到封面、正文配图、配图、知识图解、内容拆图、批量生图、文章配图、手绘知识卡片、小红书或公众号配图，或指定手绘知识风、典籍山水风、学习笔记风、粉彩金字塔风、童趣科普风、磨砂情绪风、透明物件风、玻璃气泡风、纸雕字体风、亚克力字风、霓虹搜索风、黑场肢体风、柔光界面风、线性品牌风、白色肌理风、建筑线稿风、治愈漫画风、复古海报风、气球拼贴风、透明字境风、纸雕剪影风、撕纸便签风、毛绒字体风、云朵字体风时使用。将中文主题、文章、段落或知识点拆解为多风格封面、正文图与批量生图方案；默认使用手绘知识风，并可在可用 image_gen 时隐藏提示词直接批量生图。
 ---
 
 # zscc配图生成器
 
 ## 核心目标
 
-把中文文章、选题、段落或知识点转成一套可批量生成的视觉资产：封面图、正文配图、内容拆图和批量生图清单。默认使用“手绘知识风”；也支持典籍山水风、学习笔记风、粉彩金字塔风、童趣科普风、磨砂情绪风、透明物件风、玻璃气泡风、纸雕字体风、亚克力字风、霓虹搜索风、黑场肢体风、柔光界面风、线性品牌风、白色肌理风、建筑线稿风、治愈漫画风。
+把中文文章、选题、段落或知识点转成一套可批量生成的视觉资产：封面图、正文配图、内容拆图和批量生图清单。默认使用“手绘知识风”；也支持典籍山水风、学习笔记风、粉彩金字塔风、童趣科普风、磨砂情绪风、透明物件风、玻璃气泡风、纸雕字体风、亚克力字风、霓虹搜索风、黑场肢体风、柔光界面风、线性品牌风、白色肌理风、建筑线稿风、治愈漫画风、复古海报风、气球拼贴风、透明字境风、纸雕剪影风、撕纸便签风、毛绒字体风、云朵字体风。
 
 ## 默认执行原则
 
@@ -26,23 +26,30 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 
 支持的 style_id：
 
-- `handdrawn_knowledge_card`：手绘知识风，默认；适合正文配图、知识图解、方法论解释、流程图、对比图。
+- `handdrawn_knowledge_card`：手绘知识风；适合默认；正文配图、知识图解、方法论解释、流程图、对比图。
 - `oriental_editorial_illustration`：典籍山水风；适合文化、历史、人文、哲学类高级封面。
 - `study_note_card`：学习笔记风；适合学习方法、笔记整理、步骤教程、知识清单。
 - `pastel_learning_pyramid`：粉彩金字塔风；适合分层模型、学习金字塔、能力进阶、成长路径。
-- `childlike_cultural_infographic`：童趣科普风；适合传统文化科普、儿童教育、器物拆解、历史小知识。
-- `frosted_glass_editorial`：磨砂情绪风；适合孤独、情绪、心理、音乐、艺术展、安静疏离类封面。
-- `translucent_object_editorial`：透明物件风；适合设计、作品集、品牌、营销、工具系统封面。
-- `glassmorphism_gradient_blob`：玻璃气泡风；适合 AI、趋势、未来感、创意展览、品牌视觉。
-- `embossed_typography_poster`：纸雕字体风；适合深度思考、认知、策略、极简口号、书封。
-- `acrylic_dimensional_type`：亚克力字风；适合单个关键词、栏目名、品牌词、年轻化视觉实验。
-- `dark_neon_search_ui`：霓虹搜索风；适合 AI 搜索、知识探索、信息检索、发现推荐。
-- `black_void_glowing_hands`：黑场肢体风；适合触达、连接、孤独、关系、心理、求助。
-- `soft_neumorphism_ui`：柔光界面风；适合产品界面、搜索框、控制器、智能家居、效率工具。
-- `minimal_line_shadow_brand`：线性品牌风；适合新品发布、数字主题、品牌发布会、极简科技主视觉。
-- `white_mono_texture_editorial`：白色肌理风；适合深度思考、极简主义、个人品牌、设计博客、编辑网页。
-- `minimal_architecture_portfolio`：建筑线稿风；适合作品集、建筑、路径规划、职业路线、人生路径、空间叙事。
-- `minimal_healing_metaphor_comic`：治愈漫画风；适合情绪疗愈、内耗、孤独、亲密关系、自我照顾、生活感悟。别名：极简治愈隐喻漫画风。
+- `childlike_cultural_infographic`：童趣科普风；适合传统文化科普、儿童教育、器物拆解。
+- `frosted_glass_editorial`：磨砂情绪风；适合心理情绪、孤独感、音乐艺术主题。
+- `translucent_object_editorial`：透明物件风；适合设计主题、品牌设计、作品集封面、工具系统封面。
+- `glassmorphism_gradient_blob`：玻璃气泡风；适合品牌视觉、创意展览、趋势报告、AI 主题。
+- `embossed_typography_poster`：纸雕字体风；适合极简封面、品牌口号、深度思考、书封设计。
+- `acrylic_dimensional_type`：亚克力字风；适合品牌关键词、栏目标题、创意概念、年轻化封面。
+- `dark_neon_search_ui`：霓虹搜索风；适合AI 搜索、知识探索、信息检索、灵感发现。
+- `black_void_glowing_hands`：黑场肢体风；适合心理主题、情绪主题、关系连接、孤独感。
+- `soft_neumorphism_ui`：柔光界面风；适合产品功能封面、AI 工具界面、智能家居、效率工具。
+- `minimal_line_shadow_brand`：线性品牌风；适合新品发布、品牌封面、科技产品、数字主题。
+- `white_mono_texture_editorial`：白色肌理风；适合深度文章封面、设计作品集、哲学主题、个人品牌。
+- `minimal_architecture_portfolio`：建筑线稿风；适合作品集封面、人生路径、职业路径、空间叙事。
+- `minimal_healing_metaphor_comic`：治愈漫画风；适合情绪疗愈、内耗、孤独、亲密关系、自我照顾。
+- `retro_minimal_poster_illustration`：复古海报风；适合极简主义、生活方式、个人手册、创作宣言、书封。
+- `editorial_balloon_collage`：气球拼贴风；适合团队协作、未来愿景、组织文化、品牌广告、社群主题。
+- `transparent_architectural_type`：透明字境风；适合宏大阶段、未来路径、系统升级、人生转折、空间隐喻。
+- `paper_cut_profile_silhouette`：纸雕剪影风；适合职业人物、行业精神、工程建筑、创始人故事、人物专访。
+- `torn_paper_note_minimal`：撕纸便签风；适合一句话封面、信念提醒、极简语录、心理暗示、每日提醒。
+- `fluffy_soft_typography`：毛绒字体风；适合好运、发财、治愈、可爱、祝福、轻松社媒图。
+- `cloud_typography_cover`：云朵字体风；适合希望、成长、新开始、复原力、上升、疗愈。
 
 自动匹配优先级：
 
@@ -63,8 +70,15 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 15. 新品发布、数字主题、品牌发布会、极简科技主视觉：优先 `minimal_line_shadow_brand`。
 16. 作品集、建筑、路径规划、职业路线、人生路径、空间叙事：优先 `minimal_architecture_portfolio`。
 17. 情绪疗愈、内耗、孤独、亲密关系、自我照顾、被爱、好运、鼓励、生活感悟、内在小孩：优先 `minimal_healing_metaphor_comic`。
-18. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-19. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+18. 极简主义、生活方式、个人手册、创作宣言、书封：优先 `retro_minimal_poster_illustration`。
+19. 团队协作、共同成长、组织文化、未来愿景、品牌广告：优先 `editorial_balloon_collage`。
+20. 宏大阶段、未来路径、系统升级、人生转折、空间隐喻：优先 `transparent_architectural_type`。
+21. 职业人物、行业精神、工程建筑、创始人故事、人物专访：优先 `paper_cut_profile_silhouette`。
+22. 信念提醒、每日一句、极简语录、心理暗示、单个关键词：优先 `torn_paper_note_minimal`。
+23. 好运、发财、治愈、可爱、祝福、轻松社媒图：优先 `fluffy_soft_typography`。
+24. 希望、成长、新开始、复原力、上升、疗愈：优先 `cloud_typography_cover`。
+25. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+26. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 视觉锚点
 

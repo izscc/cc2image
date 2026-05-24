@@ -4,7 +4,7 @@
 
 它可以把中文文章、选题、段落、知识点，自动拆解成图片生成方案，并在支持图片生成工具的环境中直接批量生图。
 
-默认风格是「手绘知识风」，同时内置 17 套可选风格。用户不指定风格时默认使用 `handdrawn_knowledge_card`；用户说“合适的风格”“帮我选风格”“随机风格”时，会根据内容合理选择，不做纯随机。
+默认风格是「手绘知识风」，同时内置 24 套可选风格。用户不指定风格时默认使用 `handdrawn_knowledge_card`；用户说“合适的风格”“帮我选风格”“随机风格”时，会根据内容合理选择，不做纯随机。
 
 ## 能做什么
 
@@ -15,7 +15,7 @@
 - 根据主题自动选择合适视觉风格
 - 支持在可用 `image_gen` 的环境中隐藏提示词并直接批量生图
 
-## 17 套风格
+## 24 套风格
 
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
@@ -36,6 +36,13 @@
 | `white_mono_texture_editorial` | 白色肌理风 | 深度文章封面、设计作品集、哲学主题、个人品牌 |
 | `minimal_architecture_portfolio` | 建筑线稿风 | 作品集封面、人生路径、职业路径、空间叙事 |
 | `minimal_healing_metaphor_comic` | 治愈漫画风 | 情绪疗愈、内耗、孤独、亲密关系、自我照顾 |
+| `retro_minimal_poster_illustration` | 复古海报风 | 极简主义、生活方式、个人手册、创作宣言、书封 |
+| `editorial_balloon_collage` | 气球拼贴风 | 团队协作、未来愿景、组织文化、品牌广告、社群主题 |
+| `transparent_architectural_type` | 透明字境风 | 宏大阶段、未来路径、系统升级、人生转折、空间隐喻 |
+| `paper_cut_profile_silhouette` | 纸雕剪影风 | 职业人物、行业精神、工程建筑、人物专访 |
+| `torn_paper_note_minimal` | 撕纸便签风 | 一句话封面、信念提醒、极简语录、每日提醒 |
+| `fluffy_soft_typography` | 毛绒字体风 | 好运、发财、治愈、可爱、祝福、轻松社媒图 |
+| `cloud_typography_cover` | 云朵字体风 | 希望、成长、新开始、复原力、上升、疗愈 |
 
 ## 风格效果示例
 
@@ -83,8 +90,15 @@
 13. 新品发布、数字主题、极简科技：优先 `minimal_line_shadow_brand`。
 14. 作品集、路径规划、空间叙事：优先 `minimal_architecture_portfolio`。
 15. 情绪疗愈、内耗、孤独、亲密关系、自我照顾、被爱、好运、鼓励、生活感悟、内在小孩：优先 `minimal_healing_metaphor_comic`。
+16. 极简主义、生活方式、个人手册、创作宣言、书封：优先 `retro_minimal_poster_illustration`。
+17. 团队协作、共同成长、组织文化、未来愿景、品牌广告：优先 `editorial_balloon_collage`。
+18. 宏大阶段、未来路径、系统升级、人生转折、空间隐喻：优先 `transparent_architectural_type`。
+19. 职业人物、行业精神、工程建筑、创始人故事、人物专访：优先 `paper_cut_profile_silhouette`。
+20. 信念提醒、每日一句、极简语录、心理暗示、单个关键词：优先 `torn_paper_note_minimal`。
+21. 好运、发财、治愈、可爱、祝福、轻松社媒图：优先 `fluffy_soft_typography`。
+22. 希望、成长、新开始、复原力、上升、疗愈：优先 `cloud_typography_cover`。
 
-> 多数封面型风格更适合头图 / 海报 / 系列主视觉；正文解释图仍建议默认使用手绘知识风。若用户要“安慰人、表达情绪、做治愈图”，优先使用治愈漫画风。
+> 多数封面型风格更适合头图 / 海报 / 系列主视觉；正文解释图仍建议默认使用手绘知识风。若用户要“安慰人、表达情绪、做治愈图”，优先使用治愈漫画风；若用户要字体材质类封面，可在亚克力字风、纸雕字体风、透明字境风、毛绒字体风、云朵字体风中选择。
 
 ## 安装
 
@@ -118,6 +132,10 @@ git clone https://github.com/izscc/cc2image.git ~/.agents/skills/zscc配图生�
 
 ```text
 用治愈漫画风，做一张关于“给自己充电”的小红书治愈图。
+```
+
+```text
+用云朵字体风，做一张关于“重新开始”的励志封面。
 ```
 
 ## 文件结构

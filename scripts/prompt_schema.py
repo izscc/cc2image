@@ -116,6 +116,41 @@ STYLE_ANCHORS: Dict[str, str] = {
         "simple symbolic props such as a flower, watering can, charging cable, plug, heart, magnet, cloud, sun, flag, rain of words, emotional metaphor, inner child illustration, "
         "gentle, warm, comforting, poetic, minimal colors, black white yellow with tiny red accents, not realistic, not 3D, not complex, not colorful, not commercial illustration."
     ),
+    "retro_minimal_poster_illustration": (
+        "整体风格为复古海报风：米白旧纸背景，轻微复古纸张纹理，大面积纯色块构成主体，常用钴蓝、芥末黄、米白、少量黑色。"
+        "人物和物件高度几何化、简化，像中世纪现代海报、复古书封、丝网印刷或版画插画。构图简洁，留白充足，字体克制优雅。"
+        "不要写实，不要复杂插画，不要 3D，不要高饱和霓虹色，不要信息图。"
+    ),
+    "editorial_balloon_collage": (
+        "整体风格为气球拼贴风：白色纸张背景，大量留白，主体由几个半透明彩色圆片组成，像气球、光片或抽象希望符号。"
+        "圆片颜色可以是粉色、橙色、黄色、深蓝、紫色，带透明叠加和投影。下方加入灰黑色细线素描人物、购物车、篮子、船、平台等叙事元素，用细线连接到圆片。"
+        "文字采用粗体黑色编辑排版，像高质量品牌广告或企业文化海报。不要儿童卡通，不要 PPT，不要复杂信息图，不要高饱和廉价配色。"
+    ),
+    "transparent_architectural_type": (
+        "整体风格为透明字境风：浅灰或雾白背景，画面中心是一个巨大的数字、字母或汉字，像透明玻璃、水晶或亚克力建筑。"
+        "字体内部有云雾、天空、山体、光线、微型人物或空间场景，边缘有清晰的玻璃折射和细白线轮廓。整体超现实、安静、宏大、有建筑空间感和高级封面质感。"
+        "不要普通 3D 字体，不要霓虹赛博，不要卡通，不要复杂信息图。"
+    ),
+    "paper_cut_profile_silhouette": (
+        "整体风格为纸雕剪影风：白色或浅色纸张背景，主体是一个单色纸雕剪影，通常是人物侧脸、头像、动物或象征物。"
+        "剪影内部嵌入行业相关元素，例如桥梁、城市、工具、设备、书本、树木、道路或系统结构。剪影有纸张厚度、切割边缘和真实投影。"
+        "配色克制，可以使用红色、深蓝、黑色或单色。不要卡通，不要复杂插画，不要 3D 渲染感过强，不要高饱和多色。"
+    ),
+    "torn_paper_note_minimal": (
+        "整体风格为撕纸便签风：大面积米色或暖灰纸张背景，中心或偏下放一小片白色撕裂纸条，边缘不规则，有真实纸张纤维和柔和投影。"
+        "纸条上只写一个词或一句非常短的话。构图极简、大量留白、安静、私密，像信念便签、心理提醒卡或每日一句。"
+        "不要复杂插画，不要多色装饰，不要商业海报，不要信息图。"
+    ),
+    "fluffy_soft_typography": (
+        "整体风格为毛绒字体风：文字本身是主视觉，字体由柔软的毛绒、毛巾布、羊羔绒、绒线或蓬松纤维构成，边缘有细密绒毛，触感柔软。"
+        "背景为白色、奶油色或浅灰色，光线柔和，文字投下自然阴影。可以加入小星星、笑脸、暖光或少量可爱符号。整体温暖、治愈、可爱、轻松。"
+        "不要硬质 3D 金属字，不要科技风，不要复杂背景，不要高饱和杂乱配色。"
+    ),
+    "cloud_typography_cover": (
+        "整体风格为云朵字体风：蓝天或青蓝渐变天空背景，标题文字由真实蓬松的白云组成，云朵边缘柔软、自然、立体，有阳光照射和云影。"
+        "画面开阔、明亮、向上，带有希望、成长、疗愈和新开始的感觉。可以加入少量小云、阳光、远处山影或天空层次。"
+        "不要卡通云，不要儿童贴纸风，不要复杂信息图，不要霓虹色，不要厚重黑暗风。"
+    ),
 }
 
 STYLE_NAMES = {
@@ -136,6 +171,13 @@ STYLE_NAMES = {
     "white_mono_texture_editorial": "白色肌理风",
     "minimal_architecture_portfolio": "建筑线稿风",
     "minimal_healing_metaphor_comic": "治愈漫画风",
+    "retro_minimal_poster_illustration": "复古海报风",
+    "editorial_balloon_collage": "气球拼贴风",
+    "transparent_architectural_type": "透明字境风",
+    "paper_cut_profile_silhouette": "纸雕剪影风",
+    "torn_paper_note_minimal": "撕纸便签风",
+    "fluffy_soft_typography": "毛绒字体风",
+    "cloud_typography_cover": "云朵字体风",
 }
 
 BODY_STRUCTURES = {
@@ -342,6 +384,29 @@ def render_healing_metaphor_body(spec: BodySpec) -> str:
 画面底部可以有一句很轻的安慰语：「{spec.bottom_sentence}」。
 {STYLE_ANCHORS['minimal_healing_metaphor_comic']}"""
 
+
+EXTRA_COVER_GUIDES = {
+    "retro_minimal_poster_illustration": "米白旧纸背景，复古印刷颗粒，大面积钴蓝和芥末黄色块，几何化人物或物件，像中世纪现代海报、复古书封或丝网印刷插画。",
+    "editorial_balloon_collage": "白色纸张背景，大量留白，半透明彩色圆片像气球或光片，下方用细线素描人物或物件，并用细线连接到圆片，像品牌广告或编辑设计封面。",
+    "transparent_architectural_type": "浅灰或雾白背景，巨大透明玻璃数字、字母或汉字作为建筑空间，内部有云雾、天空、山体、光线、微型人物或空间场景。",
+    "paper_cut_profile_silhouette": "白色或浅米色纸张背景，单色纸雕剪影作为主体，剪影内部嵌入行业场景、建筑、工具、道路、书本或系统结构，有纸张厚度和投影。",
+    "torn_paper_note_minimal": "米色、暖白或浅灰纸张背景，大量留白，中心或偏下只有一小片白色撕裂纸条，纸条上写一个词或一句很短的话。",
+    "fluffy_soft_typography": "白色、奶油色或浅灰背景，标题文字变成真实可触摸的毛绒、毛巾布、羊羔绒或绒线立体字体，边缘有细密绒毛和柔和阴影。",
+    "cloud_typography_cover": "蓝天或青蓝渐变天空背景，标题文字由真实蓬松的白云组成，有阳光照射、云影和细腻云气质感，画面开阔、明亮、向上。",
+}
+
+
+def render_extra_cover(spec: CoverSpec) -> str | None:
+    guide = EXTRA_COVER_GUIDES.get(spec.style_id)
+    if not guide:
+        return None
+    return f"""请生成一张{STYLE_NAMES[spec.style_id]}的中文封面图。
+主题是「{spec.title}」。{guide}
+核心隐喻是「{spec.metaphor}」。画面元素包括：「{spec.elements}」。
+标题「{spec.title}」作为画面主视觉或重要文字，副标题「{spec.subtitle}」使用小号克制排版，底部短句为「{spec.bottom_sentence}」。
+整体构图要干净、克制、留白充足，符合高质量文章封面、书封或社交媒体主视觉。
+{STYLE_ANCHORS[spec.style_id]}"""
+
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     if spec.style_id == "oriental_editorial_illustration":
@@ -370,6 +435,9 @@ def render_cover(spec: CoverSpec) -> str:
         return render_minimal_architecture_cover(spec)
     if spec.style_id == "minimal_healing_metaphor_comic":
         return render_healing_metaphor_cover(spec)
+    extra_prompt = render_extra_cover(spec)
+    if extra_prompt:
+        return extra_prompt
     # Other styles can still render as knowledge-style cover with their style anchor.
     if spec.style_id == "handdrawn_knowledge_card":
         return render_handdrawn_cover(spec)

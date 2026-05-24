@@ -1,149 +1,173 @@
 # 可选风格库
 
-默认风格是 `handdrawn_knowledge_card`（手绘知识风）。只有用户明确指定其他风格，或主题非常明显适配时，才自动切换。正文解释图仍优先使用手绘知识风；多数非知识卡片风更适合封面图、头图、海报或系列主视觉。
+默认风格是 `handdrawn_knowledge_card`（手绘知识风）。只有用户明确指定其他风格，或用户说“合适的风格 / 帮我选风格 / 随机风格”时，才按主题自动匹配；“随机风格”也不做纯随机。正文解释图仍优先使用手绘知识风；多数非知识卡片风更适合封面图、头图、海报或系列主视觉。
 
 ## 风格选择表
 
 ```json
 {
   "styles": [
-    {"style_id": "handdrawn_knowledge_card", "style_name": "手绘知识风", "best_for": ["正文配图", "知识图解", "方法论解释", "流程图", "对比图"]},
-    {"style_id": "oriental_editorial_illustration", "style_name": "典籍山水风", "best_for": ["封面图", "文化主题", "历史人文", "哲学主题", "高级文章头图"]},
-    {"style_id": "study_note_card", "style_name": "学习笔记风", "best_for": ["学习方法", "笔记整理", "步骤教程", "知识清单", "小红书知识卡片"]},
-    {"style_id": "pastel_learning_pyramid", "style_name": "粉彩金字塔风", "best_for": ["分层模型", "学习金字塔", "能力进阶", "成长路径", "主动被动对比"]},
-    {"style_id": "childlike_cultural_infographic", "style_name": "童趣科普风", "best_for": ["传统文化科普", "儿童教育", "器物拆解", "历史小知识", "博物馆内容"]},
-    {"style_id": "frosted_glass_editorial", "style_name": "磨砂情绪风", "best_for": ["极简封面", "心理情绪主题", "孤独感", "音乐艺术主题", "高级品牌海报"]},
-    {"style_id": "translucent_object_editorial", "style_name": "透明物件风", "best_for": ["设计主题", "品牌设计", "作品集封面", "营销主题", "工具系统封面"]},
-    {"style_id": "glassmorphism_gradient_blob", "style_name": "玻璃气泡风", "best_for": ["品牌视觉", "创意展览", "趋势报告", "AI主题", "未来感封面"]},
-    {"style_id": "embossed_typography_poster", "style_name": "纸雕字体风", "best_for": ["极简封面", "品牌口号", "深度思考", "书封设计", "认知策略主题"]},
-    {"style_id": "acrylic_dimensional_type", "style_name": "亚克力字风", "best_for": ["品牌关键词", "栏目标题", "创意概念", "年轻化封面", "视觉实验"]},
-    {"style_id": "dark_neon_search_ui", "style_name": "霓虹搜索风", "best_for": ["AI搜索", "知识探索", "信息检索", "灵感发现", "AI工具封面"]},
-    {"style_id": "black_void_glowing_hands", "style_name": "黑场肢体风", "best_for": ["心理主题", "情绪主题", "关系连接", "孤独感", "艺术海报"]},
-    {"style_id": "soft_neumorphism_ui", "style_name": "柔光界面风", "best_for": ["产品功能封面", "AI工具界面", "智能家居", "效率工具", "交互设计"]},
-    {"style_id": "minimal_line_shadow_brand", "style_name": "线性品牌风", "best_for": ["新品发布", "品牌封面", "科技产品", "数字主题", "产品发布会"]},
-    {"style_id": "white_mono_texture_editorial", "style_name": "白色肌理风", "best_for": ["深度文章封面", "设计作品集", "哲学主题", "个人品牌", "高级博客头图"]},
-    {"style_id": "minimal_architecture_portfolio", "style_name": "建筑线稿风", "best_for": ["作品集封面", "人生路径", "职业路径", "空间叙事", "设计策略主题"]},
-    {"style_id": "minimal_healing_metaphor_comic", "style_name": "治愈漫画风", "best_for": ["情绪疗愈", "亲密关系", "自我成长", "内耗", "孤独感", "生活感悟", "社交媒体治愈图"]}
+    {"style_id": "handdrawn_knowledge_card", "style_name": "手绘知识风", "best_for": ["默认；正文配图、知识图解、方法论解释、流程图、对比图"]},
+    {"style_id": "oriental_editorial_illustration", "style_name": "典籍山水风", "best_for": ["文化、历史、人文、哲学类高级封面"]},
+    {"style_id": "study_note_card", "style_name": "学习笔记风", "best_for": ["学习方法、笔记整理、步骤教程、知识清单"]},
+    {"style_id": "pastel_learning_pyramid", "style_name": "粉彩金字塔风", "best_for": ["分层模型、学习金字塔、能力进阶、成长路径"]},
+    {"style_id": "childlike_cultural_infographic", "style_name": "童趣科普风", "best_for": ["传统文化科普、儿童教育、器物拆解"]},
+    {"style_id": "frosted_glass_editorial", "style_name": "磨砂情绪风", "best_for": ["心理情绪、孤独感、音乐艺术主题"]},
+    {"style_id": "translucent_object_editorial", "style_name": "透明物件风", "best_for": ["设计主题、品牌设计、作品集封面、工具系统封面"]},
+    {"style_id": "glassmorphism_gradient_blob", "style_name": "玻璃气泡风", "best_for": ["品牌视觉、创意展览、趋势报告、AI 主题"]},
+    {"style_id": "embossed_typography_poster", "style_name": "纸雕字体风", "best_for": ["极简封面、品牌口号、深度思考、书封设计"]},
+    {"style_id": "acrylic_dimensional_type", "style_name": "亚克力字风", "best_for": ["品牌关键词、栏目标题、创意概念、年轻化封面"]},
+    {"style_id": "dark_neon_search_ui", "style_name": "霓虹搜索风", "best_for": ["AI 搜索、知识探索、信息检索、灵感发现"]},
+    {"style_id": "black_void_glowing_hands", "style_name": "黑场肢体风", "best_for": ["心理主题、情绪主题、关系连接、孤独感"]},
+    {"style_id": "soft_neumorphism_ui", "style_name": "柔光界面风", "best_for": ["产品功能封面、AI 工具界面、智能家居、效率工具"]},
+    {"style_id": "minimal_line_shadow_brand", "style_name": "线性品牌风", "best_for": ["新品发布、品牌封面、科技产品、数字主题"]},
+    {"style_id": "white_mono_texture_editorial", "style_name": "白色肌理风", "best_for": ["深度文章封面、设计作品集、哲学主题、个人品牌"]},
+    {"style_id": "minimal_architecture_portfolio", "style_name": "建筑线稿风", "best_for": ["作品集封面、人生路径、职业路径、空间叙事"]},
+    {"style_id": "minimal_healing_metaphor_comic", "style_name": "治愈漫画风", "best_for": ["情绪疗愈、内耗、孤独、亲密关系、自我照顾"]},
+    {"style_id": "retro_minimal_poster_illustration", "style_name": "复古海报风", "best_for": ["极简主义、生活方式、个人手册、创作宣言、书封"]},
+    {"style_id": "editorial_balloon_collage", "style_name": "气球拼贴风", "best_for": ["团队协作、未来愿景、组织文化、品牌广告、社群主题"]},
+    {"style_id": "transparent_architectural_type", "style_name": "透明字境风", "best_for": ["宏大阶段、未来路径、系统升级、人生转折、空间隐喻"]},
+    {"style_id": "paper_cut_profile_silhouette", "style_name": "纸雕剪影风", "best_for": ["职业人物、行业精神、工程建筑、创始人故事、人物专访"]},
+    {"style_id": "torn_paper_note_minimal", "style_name": "撕纸便签风", "best_for": ["一句话封面、信念提醒、极简语录、心理暗示、每日提醒"]},
+    {"style_id": "fluffy_soft_typography", "style_name": "毛绒字体风", "best_for": ["好运、发财、治愈、可爱、祝福、轻松社媒图"]},
+    {"style_id": "cloud_typography_cover", "style_name": "云朵字体风", "best_for": ["希望、成长、新开始、复原力、上升、疗愈"]}
   ]
 }
 ```
 
+## 字体材质类风格
+
+- `acrylic_dimensional_type`：亚克力字风，现代品牌感。
+- `embossed_typography_poster`：纸雕字体风，极简高级、纸张凹凸。
+- `transparent_architectural_type`：透明字境风，宏大空间感。
+- `fluffy_soft_typography`：毛绒字体风，温暖治愈。
+- `cloud_typography_cover`：云朵字体风，希望上升。
+
 ## 默认匹配规则
 
-1. 正文配图、方法论解释、流程、对比、知识系统：默认 `handdrawn_knowledge_card`。
-2. 文化、历史、人文、哲学、东方智慧、古籍、文明：优先 `oriental_editorial_illustration`。
-3. 学习方法、笔记整理、复习、考试、效率技巧：优先 `study_note_card`。
-4. 学习金字塔、层级模型、能力进阶、成长路径、主动学习 / 被动学习：优先 `pastel_learning_pyramid`。
-5. 儿童教育、传统文化科普、器物拆解、博物馆内容：优先 `childlike_cultural_infographic`。
-6. 孤独、情绪、心理、音乐、艺术展、安静、疏离：优先 `frosted_glass_editorial` 或 `black_void_glowing_hands`。
-7. 设计、作品集、品牌、营销、工具、系统、工作室案例：优先 `translucent_object_editorial`。
-8. AI、未来感、趋势、创意展览、抽象概念、品牌视觉：优先 `glassmorphism_gradient_blob`。
-9. 深度思考、认知、策略、极简口号、书封、品牌宣言：优先 `embossed_typography_poster` 或 `white_mono_texture_editorial`。
-10. 单个关键词、栏目名、品牌词、年轻化视觉实验：优先 `acrylic_dimensional_type`。
-11. AI 搜索、探索、信息检索、发现、推荐、知识寻找：优先 `dark_neon_search_ui`。
-12. 产品界面、搜索框、控制器、智能家居、效率工具、轻科技：优先 `soft_neumorphism_ui`。
-13. 新品发布、数字主题、品牌发布会、极简科技主视觉：优先 `minimal_line_shadow_brand`。
-14. 作品集、建筑、路径规划、职业路线、人生路径、空间叙事：优先 `minimal_architecture_portfolio`。
-15. 情绪疗愈、内耗、孤独、亲密关系、自我照顾、被爱、好运、鼓励、生活感悟、内在小孩：优先 `minimal_healing_metaphor_comic`。
-16. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应风格。
+自动匹配优先级：
 
-## 风格定位速查
+1. 用户明确指定风格时，优先服从。
+2. 用户说“合适的风格”“帮我选风格”“随机风格”时，按内容合理选择，不做纯随机。
+3. 正文配图、方法论解释、流程、对比、知识系统：默认 `handdrawn_knowledge_card`。
+4. 文化、历史、人文、哲学、东方智慧、古籍、文明：优先 `oriental_editorial_illustration`。
+5. 学习方法、笔记整理、复习、考试、效率技巧：优先 `study_note_card`。
+6. 学习金字塔、层级模型、能力进阶、成长路径、主动学习 / 被动学习：优先 `pastel_learning_pyramid`。
+7. 儿童教育、传统文化科普、器物拆解、博物馆内容：优先 `childlike_cultural_infographic`。
+8. 孤独、情绪、心理、音乐、艺术展、安静、疏离：优先 `frosted_glass_editorial` 或 `black_void_glowing_hands`。
+9. 设计、作品集、品牌、营销、工具、系统、工作室案例：优先 `translucent_object_editorial`。
+10. AI、未来感、趋势、创意展览、抽象概念、品牌视觉：优先 `glassmorphism_gradient_blob`。
+11. 深度思考、认知、策略、极简口号、书封、品牌宣言：优先 `embossed_typography_poster` 或 `white_mono_texture_editorial`。
+12. 单个关键词、栏目名、品牌词、年轻化视觉实验：优先 `acrylic_dimensional_type`。
+13. AI 搜索、探索、信息检索、发现、推荐、知识寻找：优先 `dark_neon_search_ui`。
+14. 产品界面、搜索框、控制器、智能家居、效率工具、轻科技：优先 `soft_neumorphism_ui`。
+15. 新品发布、数字主题、品牌发布会、极简科技主视觉：优先 `minimal_line_shadow_brand`。
+16. 作品集、建筑、路径规划、职业路线、人生路径、空间叙事：优先 `minimal_architecture_portfolio`。
+17. 情绪疗愈、内耗、孤独、亲密关系、自我照顾、被爱、好运、鼓励、生活感悟、内在小孩：优先 `minimal_healing_metaphor_comic`。
+18. 极简主义、生活方式、个人手册、创作宣言、书封：优先 `retro_minimal_poster_illustration`。
+19. 团队协作、共同成长、组织文化、未来愿景、品牌广告：优先 `editorial_balloon_collage`。
+20. 宏大阶段、未来路径、系统升级、人生转折、空间隐喻：优先 `transparent_architectural_type`。
+21. 职业人物、行业精神、工程建筑、创始人故事、人物专访：优先 `paper_cut_profile_silhouette`。
+22. 信念提醒、每日一句、极简语录、心理暗示、单个关键词：优先 `torn_paper_note_minimal`。
+23. 好运、发财、治愈、可爱、祝福、轻松社媒图：优先 `fluffy_soft_typography`。
+24. 希望、成长、新开始、复原力、上升、疗愈：优先 `cloud_typography_cover`。
+25. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+26. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
-- `frosted_glass_editorial`：人物/物体隔着磨砂玻璃，情绪、疏离、艺术感。
-- `translucent_object_editorial`：透明文件夹、亚克力物件、设计工作室封面。
-- `glassmorphism_gradient_blob`：彩色液态玻璃 blob，未来感品牌视觉。
-- `soft_neumorphism_ui`：浅色 UI 控件、软阴影、智能界面。
-- `minimal_line_shadow_brand`：细线数字/符号、品牌发布、极简科技。
-- `white_mono_texture_editorial`：白色刷痕、纸张肌理、编辑网页、深度文章。
-- `embossed_typography_poster`：文字本身浮雕/压痕/纸雕，是字体实验。
-- `minimal_architecture_portfolio`：细线、虚线、人物剪影、路径、作品集封面。
+## 风格详情
 
 ## 1. handdrawn_knowledge_card｜手绘知识风
 
-整体风格像高质量中文知识博主的手绘知识图解系统：暖白纸感背景，黑灰细线手绘，低饱和浅色块，中文手写字，自然成熟，克制精致，留白充足，轻商业内容资产感。不要做成 PPT，不要课程课件，不要科技海报，不要 3D，不要可爱儿童插画，不要复杂信息图，不要密集小字，不要高饱和颜色，不要英文乱码，不要水印。
+适合：默认；正文配图、知识图解、方法论解释、流程图、对比图。
 
 ## 2. oriental_editorial_illustration｜典籍山水风
 
-适合文化、人文、历史、哲学类封面。以暖白宣纸、蓝金配色、巨大古籍/卷轴/山河隐喻、微缩人物和诗意留白为核心，像高端文化杂志或图书封面。
+适合：文化、历史、人文、哲学类高级封面。
 
 ## 3. study_note_card｜学习笔记风
 
-米白纸张背景，中间是一张笔记纸卡片，周围有胶带、回形针、便签、贴纸等学习手账元素。适合学习方法、笔记整理、知识清单、步骤教程。
+适合：学习方法、笔记整理、步骤教程、知识清单。
 
 ## 4. pastel_learning_pyramid｜粉彩金字塔风
 
-纸张纹理背景，主体是柔和粉彩笔刷绘制的分层金字塔、阶梯或漏斗。适合层级模型、学习金字塔、能力进阶、成长路径。
+适合：分层模型、学习金字塔、能力进阶、成长路径。
 
 ## 5. childlike_cultural_infographic｜童趣科普风
 
-白色纸张背景，黑色手绘边框，水彩手绘插画，虚线箭头、标签说明和气泡旁白。适合传统文化科普、儿童教育、器物拆解。
+适合：传统文化科普、儿童教育、器物拆解。
 
 ## 6. frosted_glass_editorial｜磨砂情绪风
 
-纯粹情绪主视觉。主体像隔着一层半透明磨砂玻璃被观看，模糊轮廓、低对比背景、大量留白，适合孤独、情绪、心理、音乐、艺术展。
+适合：心理情绪、孤独感、音乐艺术主题。
 
 ## 7. translucent_object_editorial｜透明物件风
 
-半透明玻璃、磨砂塑料、亚克力、柔软充气材质构成抽象物件，像高端设计工作室作品集或设计展海报。
+适合：设计主题、品牌设计、作品集封面、工具系统封面。
 
 ## 8. glassmorphism_gradient_blob｜玻璃气泡风
 
-半透明液态玻璃 blob，柔和橙粉蓝青渐变光晕，文字和玻璃前后穿插。适合 AI、趋势、未来感、品牌视觉。
+适合：品牌视觉、创意展览、趋势报告、AI 主题。
 
 ## 9. embossed_typography_poster｜纸雕字体风
 
-文字本身作为主视觉，使用纸张浮雕、凹刻、压痕、挖空和柔和阴影，像艺术书封或品牌口号页。
+适合：极简封面、品牌口号、深度思考、书封设计。
 
 ## 10. acrylic_dimensional_type｜亚克力字风
 
-标题文字变成真实可触摸的 3D 字母物件，透明亚克力、半透明彩色塑料、线框金属、磨砂玻璃或纸质。
+适合：品牌关键词、栏目标题、创意概念、年轻化封面。
 
 ## 11. dark_neon_search_ui｜霓虹搜索风
 
-纯黑深空背景，彩色颗粒霓虹光带，半透明磨砂搜索框，极简小角色。适合 AI 搜索、知识探索、信息检索、发现推荐。
-
-模板：请生成一张霓虹搜索风的中文封面图。主题是「{主题}」。画面使用纯黑或深黑背景，整体像 AI 搜索产品、探索工具或未来感网页启动页。背景中有彩色霓虹光带或光环，前景有半透明磨砂搜索框，搜索框里写「{标题或关键词}」。可加入极简白色小角色。整体神秘、现代、轻未来感，不要复杂赛博朋克，不要密集 UI，不要游戏界面。
+适合：AI 搜索、知识探索、信息检索、灵感发现。
 
 ## 12. black_void_glowing_hands｜黑场肢体风
 
-纯黑背景，大量留黑，几只手、手臂或身体局部从黑暗中浮现，边缘有柔和白色轮廓光。适合触达、连接、孤独、关系、心理、沉默、求助。
-
-模板：请生成一张黑场肢体风的中文封面图。主题是「{主题}」。画面使用纯黑背景，大量留黑。几只手或手臂从不同方向伸入黑暗，手势表达「{核心情绪或动作}」。标题使用极简现代字体。不要恐怖片，不要血腥，不要写实惊悚。
+适合：心理主题、情绪主题、关系连接、孤独感。
 
 ## 13. soft_neumorphism_ui｜柔光界面风
 
-浅灰白、淡蓝灰或雾白背景，UI 控件像从背景中柔和凸起或凹陷，带软阴影、内阴影和柔和环境光。适合产品功能封面、AI 工具界面、智能家居、效率工具。
-
-模板：请生成一张柔光界面风的中文封面图。主题是「{主题}」。画面中心放置一个新拟态 UI 主控件，例如搜索框、圆形旋钮、温度环、滑杆、卡片或控制面板。控件中显示少量文字或数字：「{标题或关键词}」。整体浅色、柔和、轻科技。
+适合：产品功能封面、AI 工具界面、智能家居、效率工具。
 
 ## 14. minimal_line_shadow_brand｜线性品牌风
 
-浅灰白背景，大量留白，主体由极细黑灰线条构成巨大数字、符号、字母或几何形，并带半透明长阴影和微弱光点。适合新品发布、品牌封面、科技产品、数字主题。
-
-模板：请生成一张线性品牌风的中文封面图。主题是「{主题}」。中心放置由极细黑灰线条构成的巨大符号、数字、字母或几何形，核心隐喻是「{核心隐喻}」。排版极简，像高端科技品牌发布会。
+适合：新品发布、品牌封面、科技产品、数字主题。
 
 ## 15. white_mono_texture_editorial｜白色肌理风
 
-几乎只使用白色、浅灰和黑色，主体是白色材质痕迹，如厚涂刷痕、纸张折痕、压痕、浮起边缘、光影切面。适合深度文章封面、设计作品集、哲学主题、个人品牌、高级博客头图。
-
-模板：请生成一张白色肌理风的中文封面图。主题是「{主题}」。主体是一道白色材质痕迹，核心隐喻是「{核心隐喻}」。标题使用克制字体，放在留白区域。整体安静、冷静、有深度。
+适合：深度文章封面、设计作品集、哲学主题、个人品牌。
 
 ## 16. minimal_architecture_portfolio｜建筑线稿风
 
-白色或浅灰纸张背景，大量留白，极细黑线、水平基准线、虚线路径、微型人物剪影和少量文字排版。适合作品集封面、人生路径、职业路径、空间叙事、设计策略主题。
-
-模板：请生成一张建筑线稿风的中文封面图。主题是「{主题}」。画面中使用极细黑色线条绘制水平基准线、虚线路径和空间关系。加入几个微型黑色人物剪影，表达「{核心隐喻}」。整体像建筑设计 portfolio 封面。
+适合：作品集封面、人生路径、职业路径、空间叙事。
 
 ## 17. minimal_healing_metaphor_comic｜治愈漫画风
 
-别名：极简治愈隐喻漫画风。用极少线条、大片留白、一个穿黄色衣服的小孩和简单道具，表达情绪、关系、成长、自我疗愈和生活隐喻。适合情绪疗愈、亲密关系、自我成长、内耗、孤独感、低能量、鼓励语录、生活感悟、公众号情绪配图、小红书治愈图。
+适合：情绪疗愈、内耗、孤独、亲密关系、自我照顾。
 
-不适合复杂方法论、商业分析、AI 工作流、系统流程图、数据图表和严肃报告。
+## 18. retro_minimal_poster_illustration｜复古海报风
 
-风格锚点：
+适合：极简主义、生活方式、个人手册、创作宣言、书封。
 
-整体风格为极简治愈隐喻漫画风：暖白纸张纹理背景，大量留白，黑色手绘线条，线条自然略带抖动。画面中有一个小小的圆脸小孩，黑色短发，穿黄色连帽衫或黄色上衣，黑色短裤，白色小鞋，脸颊有浅粉色腮红。用极少的道具表达情绪隐喻，例如花、浇水壶、充电线、爱心、磁铁、云朵、太阳、旗子、文字雨。配色极简，只使用黑白、黄色、少量红色和浅粉。画面安静、温柔、治愈、像成人内在小孩漫画或极简情绪绘本。不要复杂背景，不要精致商业插画，不要 3D，不要赛博朋克，不要高饱和颜色，不要密集文字，不要写实人物。
+## 19. editorial_balloon_collage｜气球拼贴风
 
-模板：
+适合：团队协作、未来愿景、组织文化、品牌广告、社群主题。
 
-请生成一张极简治愈隐喻漫画风的中文插画。主题是「{主题}」。画面使用暖白色纸张纹理背景，大量留白，整体安静、温柔、治愈，像成人内在小孩漫画或极简情绪绘本。画面中有一个小小的圆脸小孩，黑色短发或毛茸茸头发，穿黄色连帽衫或黄色上衣，黑色短裤，白色小鞋，脸颊有浅粉色腮红。小孩正在「{小孩动作}」。画面使用一个简单道具表达情绪隐喻：「{核心隐喻道具}」。如果需要文字，加入少量中文词语：「{文字元素}」。文字必须少，不能密集。整体只使用黑色手绘线条、暖白背景、黄色衣服、少量红色或浅粉点缀。
+## 20. transparent_architectural_type｜透明字境风
+
+适合：宏大阶段、未来路径、系统升级、人生转折、空间隐喻。
+
+## 21. paper_cut_profile_silhouette｜纸雕剪影风
+
+适合：职业人物、行业精神、工程建筑、创始人故事、人物专访。
+
+## 22. torn_paper_note_minimal｜撕纸便签风
+
+适合：一句话封面、信念提醒、极简语录、心理暗示、每日提醒。
+
+## 23. fluffy_soft_typography｜毛绒字体风
+
+适合：好运、发财、治愈、可爱、祝福、轻松社媒图。
+
+## 24. cloud_typography_cover｜云朵字体风
+
+适合：希望、成长、新开始、复原力、上升、疗愈。
