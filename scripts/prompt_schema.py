@@ -105,6 +105,17 @@ STYLE_ANCHORS: Dict[str, str] = {
         "画面像建筑设计作品集封面、空间叙事图或设计学院 portfolio。整体冷静、克制、理性，有路径感和空间感。"
         "不要彩色插画，不要 3D 建筑渲染，不要复杂图表，不要卡通，不要高饱和颜色。"
     ),
+    "minimal_healing_metaphor_comic": (
+        "整体风格为极简治愈隐喻漫画风：暖白纸张纹理背景，大量留白，黑色手绘线条，线条自然略带抖动。"
+        "画面中有一个小小的圆脸小孩，黑色短发，穿黄色连帽衫或黄色上衣，黑色短裤，白色小鞋，脸颊有浅粉色腮红。"
+        "用极少的道具表达情绪隐喻，例如花、浇水壶、充电线、爱心、磁铁、云朵、太阳、旗子、文字雨。"
+        "配色极简，只使用黑白、黄色、少量红色和浅粉。画面安静、温柔、治愈、像成人内在小孩漫画或极简情绪绘本。"
+        "不要复杂背景，不要精致商业插画，不要 3D，不要赛博朋克，不要高饱和颜色，不要密集文字，不要写实人物。\n"
+        "Minimal healing metaphor comic style, warm off-white paper texture background, lots of negative space, simple black hand-drawn line art, slightly wobbly ink lines, "
+        "a tiny round-faced child with messy black hair wearing a yellow hoodie or yellow shirt, black shorts, white shoes, soft pink cheeks, quiet tender expression, "
+        "simple symbolic props such as a flower, watering can, charging cable, plug, heart, magnet, cloud, sun, flag, rain of words, emotional metaphor, inner child illustration, "
+        "gentle, warm, comforting, poetic, minimal colors, black white yellow with tiny red accents, not realistic, not 3D, not complex, not colorful, not commercial illustration."
+    ),
 }
 
 STYLE_NAMES = {
@@ -124,6 +135,7 @@ STYLE_NAMES = {
     "minimal_line_shadow_brand": "线性品牌风",
     "white_mono_texture_editorial": "白色肌理风",
     "minimal_architecture_portfolio": "建筑线稿风",
+    "minimal_healing_metaphor_comic": "治愈漫画风",
 }
 
 BODY_STRUCTURES = {
@@ -309,6 +321,27 @@ def render_minimal_architecture_cover(spec: CoverSpec) -> str:
 画面元素包括：「{spec.elements}」。
 {STYLE_ANCHORS['minimal_architecture_portfolio']}"""
 
+
+def render_healing_metaphor_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张极简治愈隐喻漫画风的中文封面图。
+主题是「{spec.title}」。画面使用暖白色纸张纹理背景，大量留白，整体安静、温柔、治愈。
+画面中心或下方放一个小小的圆脸小孩，黑色短发或毛茸茸头发，穿黄色连帽衫或黄色上衣，黑色短裤，白色小鞋，脸颊有浅粉色腮红。小孩正在「{spec.character_action}」。
+用一个简单的情绪隐喻道具表达主题：「{spec.metaphor}」。道具可以是花、浇水壶、充电线、插头、爱心、磁铁、云朵、太阳、旗子、文字雨或网兜。道具与小孩之间要形成一个清楚的故事瞬间。
+标题「{spec.title}」使用自然手写中文，放在画面上方或留白处。标题要短、温柔、安静，不要像广告语。
+副标题「{spec.subtitle}」使用很小的手写字，放在标题下方或画面底部。
+画面元素和少量中文词语包括：「{spec.elements}」。文字必须少，可以像漂浮在空中、被吸引过来、落下来或藏在道具里。底部短句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['minimal_healing_metaphor_comic']}"""
+
+
+def render_healing_metaphor_body(spec: BodySpec) -> str:
+    return f"""请生成一张极简治愈隐喻漫画风的文章正文配图。
+这张图用于表达文章中的这句话：「{spec.title}」。
+画面使用暖白色纸张纹理背景，大量留白。画面中有一个小小的圆脸小孩，黑色短发，穿黄色连帽衫或黄色上衣，黑色短裤，白色小鞋，脸颊有浅粉色腮红。
+小孩正在「{spec.character_action}」，旁边有一个简单隐喻道具：「{spec.modules}」。这个道具用来象征「{spec.notes}」。
+画面可以加入极少量中文词语：「{spec.speech_bubble}」，文字像雨、风、星星、光、被吸来的词、飘走的词或藏在道具里的词。文字不能多。
+画面底部可以有一句很轻的安慰语：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['minimal_healing_metaphor_comic']}"""
+
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     if spec.style_id == "oriental_editorial_illustration":
@@ -335,6 +368,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_white_mono_texture_cover(spec)
     if spec.style_id == "minimal_architecture_portfolio":
         return render_minimal_architecture_cover(spec)
+    if spec.style_id == "minimal_healing_metaphor_comic":
+        return render_healing_metaphor_cover(spec)
     # Other styles can still render as knowledge-style cover with their style anchor.
     if spec.style_id == "handdrawn_knowledge_card":
         return render_handdrawn_cover(spec)
@@ -401,6 +436,8 @@ def render_body(spec: BodySpec) -> str:
         return render_pyramid(spec)
     if spec.style_id == "childlike_cultural_infographic":
         return render_childlike(spec)
+    if spec.style_id == "minimal_healing_metaphor_comic":
+        return render_healing_metaphor_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -518,6 +555,17 @@ def self_test() -> None:
                 "bottom_sentence": "探索从一个好问题开始。",
             },
             {
+                "type": "cover",
+                "style_id": "minimal_healing_metaphor_comic",
+                "title": "给自己充电",
+                "subtitle": "低能量的时候，也可以先停下来",
+                "metaphor": "插头、充电线、低电量图标",
+                "elements": "慢慢来、恢复中、红色小爱心",
+                "character_action": "坐在地上低头休息，旁边有充电线",
+                "speech_bubble": "恢复中",
+                "bottom_sentence": "你可以先慢慢恢复。",
+            },
+            {
                 "type": "body",
                 "style_id": "study_note_card",
                 "title": "知识库不是收藏夹",
@@ -536,8 +584,10 @@ def self_test() -> None:
     assert "透明物件风" in batch["images"][1]["prompt"]
     assert batch["images"][2]["style_id"] == "dark_neon_search_ui"
     assert "霓虹搜索风" in batch["images"][2]["prompt"]
-    assert batch["images"][3]["style_id"] == "study_note_card"
-    assert "学习笔记风" in batch["images"][3]["prompt"]
+    assert batch["images"][3]["style_id"] == "minimal_healing_metaphor_comic"
+    assert "极简治愈隐喻漫画风" in batch["images"][3]["prompt"]
+    assert batch["images"][4]["style_id"] == "study_note_card"
+    assert "学习笔记风" in batch["images"][4]["prompt"]
     print("self-test passed")
 
 

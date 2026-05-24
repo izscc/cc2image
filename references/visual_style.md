@@ -38,4 +38,4 @@
 
 ## 多风格说明
 
-默认风格是 `handdrawn_knowledge_card`（手绘知识风）。当用户指定或主题明显匹配时，也可以使用 `oriental_editorial_illustration`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`embossed_typography_poster`、`acrylic_dimensional_type`、`dark_neon_search_ui`、`black_void_glowing_hands`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`。完整定义和模板见 `style_options.md`。
+默认风格是 `handdrawn_knowledge_card`（手绘知识风）。当用户指定或主题明显匹配时，也可以使用 `oriental_editorial_illustration`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`embossed_typography_poster`、`acrylic_dimensional_type`、`dark_neon_search_ui`、`black_void_glowing_hands`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`minimal_healing_metaphor_comic`。完整定义和模板见 `style_options.md`。
