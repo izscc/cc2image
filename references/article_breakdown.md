@@ -1,5 +1,10 @@
 # 文章拆图工作流
 
+
+## Step 0：选择风格
+
+默认使用 `handdrawn_knowledge_card`（手绘知识卡片风）。如果用户指定风格，优先服从。若用户未指定，按主题自动选择：文化/历史/哲学封面用 `oriental_editorial_illustration`；学习方法/笔记/考试用 `study_note_card`；金字塔/层级/能力模型用 `pastel_learning_pyramid`；儿童教育/传统文化科普/器物介绍用 `childlike_cultural_infographic`；艺术/音乐/品牌/心理情绪极简封面用 `frosted_glass_editorial`。正文解释图默认仍用 `handdrawn_knowledge_card`。
+
 ## Step 1：理解文章
 
 提取：
@@ -41,9 +46,9 @@
 
 ## Step 5：生成最终 prompts 或直接生图
 
-- 若用户要清单、提示词、JSON：输出字段和完整 prompt。
+- 若用户要清单、提示词、JSON：输出字段、style_id 和完整 prompt。
 - 若用户要直接生图且可用图片生成工具：把 prompt 作为内部工作产物，不默认显现；按封面到正文顺序逐张调用图片生成工具。
-- 若图片生成工具一次只能生成一张，就逐张调用；保持同一全局风格锚点。
+- 若图片生成工具一次只能生成一张，就逐张调用；每张图保持对应 style_id 的风格锚点。
 
 ## 拆图输出模板
 

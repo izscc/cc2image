@@ -34,3 +34,8 @@
 ## 全局风格锚点
 
 整体风格像高质量中文知识博主的手绘知识图解系统：暖白纸感背景，黑灰细线手绘，低饱和浅色块，中文手写字，自然成熟，克制精致，留白充足，轻商业内容资产感。不要做成 PPT，不要课程课件，不要科技海报，不要 3D，不要可爱儿童插画，不要复杂信息图，不要密集小字，不要高饱和颜色，不要英文乱码，不要水印。
+
+
+## 多风格说明
+
+默认风格是 `handdrawn_knowledge_card`（手绘知识卡片风）。当用户指定或主题明显匹配时，也可以使用 `oriental_editorial_illustration`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`frosted_glass_editorial`。完整定义和模板见 `style_options.md`。
