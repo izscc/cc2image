@@ -7,7 +7,7 @@
 ```json
 {
   "styles": [
-    {"style_id": "handdrawn_knowledge_card", "style_name": "手绘知识风", "best_for": ["默认；正文配图、知识图解、方法论解释、流程图、对比图"]},
+    {"style_id": "handdrawn_knowledge_card", "style_name": "手绘知识风", "best_for": ["默认；正文配图、知识图解、方法论、流程图、对比图"]},
     {"style_id": "oriental_editorial_illustration", "style_name": "典籍山水风", "best_for": ["文化、历史、人文、哲学类高级封面"]},
     {"style_id": "study_note_card", "style_name": "学习笔记风", "best_for": ["学习方法、笔记整理、步骤教程、知识清单"]},
     {"style_id": "pastel_learning_pyramid", "style_name": "粉彩金字塔风", "best_for": ["分层模型、学习金字塔、能力进阶、成长路径"]},
@@ -27,21 +27,31 @@
     {"style_id": "retro_minimal_poster_illustration", "style_name": "复古海报风", "best_for": ["极简主义、生活方式、个人手册、创作宣言、书封"]},
     {"style_id": "editorial_balloon_collage", "style_name": "气球拼贴风", "best_for": ["团队协作、未来愿景、组织文化、品牌广告、社群主题"]},
     {"style_id": "transparent_architectural_type", "style_name": "透明字境风", "best_for": ["宏大阶段、未来路径、系统升级、人生转折、空间隐喻"]},
-    {"style_id": "paper_cut_profile_silhouette", "style_name": "纸雕剪影风", "best_for": ["职业人物、行业精神、工程建筑、创始人故事、人物专访"]},
-    {"style_id": "torn_paper_note_minimal", "style_name": "撕纸便签风", "best_for": ["一句话封面、信念提醒、极简语录、心理暗示、每日提醒"]},
+    {"style_id": "paper_cut_profile_silhouette", "style_name": "纸雕剪影风", "best_for": ["职业人物、行业精神、工程建筑、人物专访"]},
+    {"style_id": "torn_paper_note_minimal", "style_name": "撕纸便签风", "best_for": ["一句话封面、信念提醒、极简语录、每日提醒"]},
     {"style_id": "fluffy_soft_typography", "style_name": "毛绒字体风", "best_for": ["好运、发财、治愈、可爱、祝福、轻松社媒图"]},
-    {"style_id": "cloud_typography_cover", "style_name": "云朵字体风", "best_for": ["希望、成长、新开始、复原力、上升、疗愈"]}
+    {"style_id": "cloud_typography_cover", "style_name": "云朵字体风", "best_for": ["希望、成长、新开始、复原力、上升、疗愈"]},
+    {"style_id": "foam_bubble_typography", "style_name": "泡沫字体风", "best_for": ["清洁、焕新、重启、梦想、生活方式海报"]},
+    {"style_id": "embroidered_patch_brand", "style_name": "刺绣徽章风", "best_for": ["品牌徽章、学院风、社群身份、工具包、服饰品牌"]},
+    {"style_id": "luxury_gold_typography", "style_name": "金属奢华风", "best_for": ["节日海报、高端品牌、仪式感、成就、庆典"]},
+    {"style_id": "miniature_map_life_scene", "style_name": "微缩地图风", "best_for": ["人生选择、职业路径、城市迁移、成长路线"]},
+    {"style_id": "miniature_checklist_scene", "style_name": "微缩清单风", "best_for": ["任务管理、行动清单、习惯养成、目标拆解"]},
+    {"style_id": "fabric_micro_scene_ad", "style_name": "布料微缩风", "best_for": ["劳动节、匠心、手工、服饰品牌、工艺精神"]},
+    {"style_id": "giant_letter_lifestyle_scene", "style_name": "巨字生活风", "best_for": ["品牌广告、教育、家庭、城市、组织价值"]},
+    {"style_id": "oriental_floral_minimal_editorial", "style_name": "花艺留白风", "best_for": ["女性主题、母亲节、思念、关系、疗愈、节气"]},
+    {"style_id": "zen_ink_philosophy_poster", "style_name": "禅意水墨风", "best_for": ["哲学、人生路径、自我修炼、觉察、东方智慧"]}
   ]
 }
 ```
 
-## 字体材质类风格
+## 风格分组
 
-- `acrylic_dimensional_type`：亚克力字风，现代品牌感。
-- `embossed_typography_poster`：纸雕字体风，极简高级、纸张凹凸。
-- `transparent_architectural_type`：透明字境风，宏大空间感。
-- `fluffy_soft_typography`：毛绒字体风，温暖治愈。
-- `cloud_typography_cover`：云朵字体风，希望上升。
+A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`。
+B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`。
+C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`。
+D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`。
+E. 拼贴 / 纸张 / 手工材质类：`retro_minimal_poster_illustration`、`editorial_balloon_collage`、`paper_cut_profile_silhouette`、`torn_paper_note_minimal`、`embroidered_patch_brand`。
+F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_checklist_scene`、`fabric_micro_scene_ad`、`giant_letter_lifestyle_scene`。
 
 ## 默认匹配规则
 
@@ -49,7 +59,7 @@
 
 1. 用户明确指定风格时，优先服从。
 2. 用户说“合适的风格”“帮我选风格”“随机风格”时，按内容合理选择，不做纯随机。
-3. 正文配图、方法论解释、流程、对比、知识系统：默认 `handdrawn_knowledge_card`。
+3. 正文配图、方法论解释、流程、对比、知识系统：优先 `handdrawn_knowledge_card`。
 4. 文化、历史、人文、哲学、东方智慧、古籍、文明：优先 `oriental_editorial_illustration`。
 5. 学习方法、笔记整理、复习、考试、效率技巧：优先 `study_note_card`。
 6. 学习金字塔、层级模型、能力进阶、成长路径、主动学习 / 被动学习：优先 `pastel_learning_pyramid`。
@@ -71,14 +81,23 @@
 22. 信念提醒、每日一句、极简语录、心理暗示、单个关键词：优先 `torn_paper_note_minimal`。
 23. 好运、发财、治愈、可爱、祝福、轻松社媒图：优先 `fluffy_soft_typography`。
 24. 希望、成长、新开始、复原力、上升、疗愈：优先 `cloud_typography_cover`。
-25. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-26. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+25. 清洁、焕新、重启、洗去旧状态、梦想变大、生活刷新：优先 `foam_bubble_typography`。
+26. 品牌徽章、社群身份、学院风、服饰、工具包、设计师身份：优先 `embroidered_patch_brand`。
+27. 高端、奢华、节日、仪式感、庆典、成就、财富：优先 `luxury_gold_typography`。
+28. 人生路径、职业选择、城市迁移、过去与现在、成长路线：优先 `miniature_map_life_scene`。
+29. 任务清单、执行力、打卡、习惯养成、目标拆解、项目计划：优先 `miniature_checklist_scene`。
+30. 匠心、劳动节、手工、服饰、工艺、细节、制造业：优先 `fabric_micro_scene_ad`。
+31. 品牌名、组织价值、教育场景、家庭场景、字母空间、系列广告：优先 `giant_letter_lifestyle_scene`。
+32. 女性、母亲节、思念、关系、疗愈、花、花瓣、节气、东方花艺、文学情绪：优先 `oriental_floral_minimal_editorial`。
+33. 哲学、人生道路、修行、自律、克己、觉察、禅意、东方智慧、格言：优先 `zen_ink_philosophy_poster`。
+34. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+35. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
 ## 1. handdrawn_knowledge_card｜手绘知识风
 
-适合：默认；正文配图、知识图解、方法论解释、流程图、对比图。
+适合：默认；正文配图、知识图解、方法论、流程图、对比图。
 
 ## 2. oriental_editorial_illustration｜典籍山水风
 
@@ -158,11 +177,11 @@
 
 ## 21. paper_cut_profile_silhouette｜纸雕剪影风
 
-适合：职业人物、行业精神、工程建筑、创始人故事、人物专访。
+适合：职业人物、行业精神、工程建筑、人物专访。
 
 ## 22. torn_paper_note_minimal｜撕纸便签风
 
-适合：一句话封面、信念提醒、极简语录、心理暗示、每日提醒。
+适合：一句话封面、信念提醒、极简语录、每日提醒。
 
 ## 23. fluffy_soft_typography｜毛绒字体风
 
@@ -171,3 +190,39 @@
 ## 24. cloud_typography_cover｜云朵字体风
 
 适合：希望、成长、新开始、复原力、上升、疗愈。
+
+## 25. foam_bubble_typography｜泡沫字体风
+
+适合：清洁、焕新、重启、梦想、生活方式海报。
+
+## 26. embroidered_patch_brand｜刺绣徽章风
+
+适合：品牌徽章、学院风、社群身份、工具包、服饰品牌。
+
+## 27. luxury_gold_typography｜金属奢华风
+
+适合：节日海报、高端品牌、仪式感、成就、庆典。
+
+## 28. miniature_map_life_scene｜微缩地图风
+
+适合：人生选择、职业路径、城市迁移、成长路线。
+
+## 29. miniature_checklist_scene｜微缩清单风
+
+适合：任务管理、行动清单、习惯养成、目标拆解。
+
+## 30. fabric_micro_scene_ad｜布料微缩风
+
+适合：劳动节、匠心、手工、服饰品牌、工艺精神。
+
+## 31. giant_letter_lifestyle_scene｜巨字生活风
+
+适合：品牌广告、教育、家庭、城市、组织价值。
+
+## 32. oriental_floral_minimal_editorial｜花艺留白风
+
+适合：女性主题、母亲节、思念、关系、疗愈、节气。
+
+## 33. zen_ink_philosophy_poster｜禅意水墨风
+
+适合：哲学、人生路径、自我修炼、觉察、东方智慧。
