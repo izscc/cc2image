@@ -74,6 +74,37 @@ STYLE_ANCHORS: Dict[str, str] = {
         "背景为干净白色或浅灰摄影棚，光线柔和，字母投下自然阴影。整体年轻、现代、轻盈、有品牌设计感。"
         "不要做成普通平面文字，不要信息图，不要复杂场景，不要卡通，不要过度科技风。"
     ),
+    "dark_neon_search_ui": (
+        "整体风格为暗黑霓虹搜索界面风：纯黑深空背景，彩色霓虹光带或光环在画面中穿梭，带有细腻颗粒噪点和柔和辉光。"
+        "前景是一个半透明磨砂质感的搜索框、输入框或胶囊按钮，文字极少，像 AI 搜索产品的启动界面。"
+        "可以加入一个极简白色小角色或小动物，增强探索感。整体神秘、现代、轻未来感、数字产品感。"
+        "不要做成复杂赛博朋克，不要密集 UI，不要游戏界面，不要过多文字，不要卡通幼稚。"
+    ),
+    "black_void_glowing_hands": (
+        "整体风格为黑场发光肢体概念风：纯黑背景，大量留黑，画面中只有几只手、手臂或身体局部从黑暗中浮现，边缘有柔和白色轮廓光，主体部分渐隐到黑暗里。"
+        "构图极简但有强烈心理隐喻，表达触达、连接、孤独、寻找、求助、关系张力。文字极少，像艺术展海报或心理主题封面。"
+        "不要做成恐怖片海报，不要血腥，不要写实惊悚，不要复杂背景，不要霓虹赛博。"
+    ),
+    "soft_neumorphism_ui": (
+        "整体风格为柔光新拟态界面风：浅灰白、淡蓝灰或雾白背景，UI 控件像从背景中柔和凸起或凹陷，带有细腻软阴影、内阴影和环境光。"
+        "主体可以是搜索框、圆形控制器、滑杆、卡片或数字面板。可以加入少量暖橙、浅蓝、浅绿光晕作为反馈状态。"
+        "整体干净、轻科技、柔和、安静，像高端智能产品界面或交互设计海报。不要做成传统扁平 UI，不要重色阴影，不要霓虹赛博，不要复杂仪表盘，不要密集文字。"
+    ),
+    "minimal_line_shadow_brand": (
+        "整体风格为极简线性光影品牌风：浅灰白或淡蓝灰背景，大量留白，主体由极细黑灰线条构成一个巨大的数字、符号、字母或几何形。"
+        "主体带有半透明长阴影、轻微折射和淡淡彩色光点。排版极简，像高端科技品牌发布会、手机新品海报或设计品牌主视觉。"
+        "不要复杂 3D，不要霓虹赛博，不要卡通，不要信息图，不要密集文字。"
+    ),
+    "white_mono_texture_editorial": (
+        "整体风格为白色单色肌理编辑风：画面几乎只使用白色、浅灰和黑色，主体是白色材质痕迹，例如厚涂刷痕、纸张折痕、压痕、浮起边缘、光影切面或微妙纹理。"
+        "大量留白，文字排版像高端编辑网页、艺术书页或设计作品集封面。整体安静、克制、深思感强。"
+        "不要彩色插画，不要复杂图形，不要信息图，不要手绘卡通，不要高饱和颜色。"
+    ),
+    "minimal_architecture_portfolio": (
+        "整体风格为极简建筑作品集线稿风：白色或浅灰纸张背景，大量留白，使用极细黑色线条、水平基准线、虚线路径、微型人物剪影和少量文字排版。"
+        "画面像建筑设计作品集封面、空间叙事图或设计学院 portfolio。整体冷静、克制、理性，有路径感和空间感。"
+        "不要彩色插画，不要 3D 建筑渲染，不要复杂图表，不要卡通，不要高饱和颜色。"
+    ),
 }
 
 STYLE_NAMES = {
@@ -87,6 +118,12 @@ STYLE_NAMES = {
     "glassmorphism_gradient_blob": "玻璃拟态渐变气泡风",
     "embossed_typography_poster": "浮雕纸雕字体海报风",
     "acrylic_dimensional_type": "亚克力立体字母风",
+    "dark_neon_search_ui": "暗黑霓虹搜索界面风",
+    "black_void_glowing_hands": "黑场发光肢体概念风",
+    "soft_neumorphism_ui": "柔光新拟态界面风",
+    "minimal_line_shadow_brand": "极简线性光影品牌风",
+    "white_mono_texture_editorial": "白色单色肌理编辑风",
+    "minimal_architecture_portfolio": "极简建筑作品集线稿风",
 }
 
 BODY_STRUCTURES = {
@@ -215,6 +252,63 @@ def render_acrylic_type_cover(spec: CoverSpec) -> str:
 {STYLE_ANCHORS['acrylic_dimensional_type']}"""
 
 
+
+def render_dark_neon_search_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张暗黑霓虹搜索界面风的中文封面图。
+主题是「{spec.title}」。画面使用纯黑或深黑背景，整体像 AI 搜索产品、探索工具或未来感网页启动页，神秘、安静、现代。
+画面左侧或背景中有几条彩色霓虹光带或光环，颜色可以包含蓝色、紫色、绿色、橙色和黄色，光带带有颗粒噪点和柔和辉光，像正在流动的信息路径。
+画面中心或偏右放置一个半透明磨砂质感的搜索框或胶囊按钮，搜索框里写「{spec.title}」。搜索框边缘柔和发光，带细腻颗粒感和阴影。
+可以在搜索框旁边加入一个极简白色小角色、小猫或小人，像正在等待搜索结果。角色要很小、简洁、可爱但不幼稚。
+画面顶部或角落加入一句很轻的副标题：「{spec.subtitle}」。文字要少，使用现代无衬线字体，灰白色或低亮度。画面元素包括：「{spec.elements}」。
+{STYLE_ANCHORS['dark_neon_search_ui']}"""
+
+
+def render_black_void_hands_cover(spec: CoverSpec) -> str:
+    action = spec.character_action or spec.metaphor
+    return f"""请生成一张黑场发光肢体概念风的中文封面图。
+主题是「{spec.title}」。画面使用纯黑背景，大量留黑，整体极简、安静、戏剧化，像心理主题艺术海报。
+画面中出现几只手或手臂，从不同方向伸入黑暗中。手部只被柔和白色边缘光照亮，部分轮廓清晰，部分逐渐消失在黑暗里。手势表达「{action}」，例如寻找、触碰、拒绝、拉近、求助、连接、悬停。
+主体不要太多，保持构图克制。手部有真实感但不恐怖，像概念摄影或高级艺术海报。
+标题「{spec.title}」使用极简现代字体，放在画面边缘或底部，颜色为灰白色。副标题「{spec.subtitle}」更小、更轻。
+{STYLE_ANCHORS['black_void_glowing_hands']}"""
+
+
+def render_soft_neumorphism_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张柔光新拟态界面风的中文封面图。
+主题是「{spec.title}」。画面使用浅灰白、淡蓝灰或雾白背景，整体干净、柔和、轻科技，有高端智能产品界面的感觉。
+画面中心放置一个新拟态 UI 主控件，核心隐喻是「{spec.metaphor}」，可以是搜索框、圆形旋钮、温度环、滑杆、卡片或控制面板。控件像从背景中轻轻凸起或凹陷，具有细腻软阴影、内阴影、圆角和柔和环境光。
+控件中显示少量文字或数字：「{spec.title}」。可以加入一个简洁图标，例如搜索、目标、温度、进度、开关、光线。画面元素包括：「{spec.elements}」。
+画面中可以有少量暖橙、浅蓝或浅绿光晕，表示状态变化或智能反馈。整体不要复杂，留白充足。
+标题「{spec.title}」使用现代无衬线字体，排版极简。副标题「{spec.subtitle}」放在下方或角落，字号小、颜色浅。
+{STYLE_ANCHORS['soft_neumorphism_ui']}"""
+
+
+def render_minimal_line_shadow_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张极简线性光影品牌风的中文封面图。
+主题是「{spec.title}」。画面使用浅灰白、淡蓝灰或雾白背景，大量留白，整体极简、克制、高级，像科技品牌发布会或产品主视觉。
+画面中心放置一个由极细黑灰线条构成的巨大符号、数字、字母或几何形，核心隐喻是「{spec.metaphor}」。主体可以带有半透明长阴影、轻微折射、淡淡彩色光点或柔和环境光。
+标题「{spec.title}」使用现代极细无衬线字体，可以放在主体下方、右下或顶部。副标题「{spec.subtitle}」字号更小，排版疏朗。
+整体信息极少，画面要有空气感和品牌发布会感。画面元素包括：「{spec.elements}」。
+{STYLE_ANCHORS['minimal_line_shadow_brand']}"""
+
+
+def render_white_mono_texture_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张白色单色肌理编辑风的中文封面图。
+主题是「{spec.title}」。画面几乎只使用白色、浅灰和黑色，整体极简、安静、高级，有编辑网页或设计作品集封面的感觉。
+画面主体是一道白色材质痕迹，核心隐喻是「{spec.metaphor}」，可以是厚涂刷痕、纸张折痕、压痕、浮起边缘、光影切面或白色材质块。主体与背景同色系，但通过细腻阴影、纹理和光照产生层次。
+标题「{spec.title}」使用克制的字体，可以是优雅衬线体或现代无衬线体，放在画面左侧或留白区域。副标题「{spec.subtitle}」更小，像编辑说明文字。
+画面保留大量留白，构图要安静、冷静、有深度，不要加入多余装饰。画面元素包括：「{spec.elements}」。
+{STYLE_ANCHORS['white_mono_texture_editorial']}"""
+
+
+def render_minimal_architecture_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张极简建筑作品集线稿风的中文封面图。
+主题是「{spec.title}」。画面使用白色或浅灰纸张背景，大量留白，整体像建筑设计作品集、空间叙事图或设计学院 portfolio 封面。
+画面中使用极细黑色线条绘制几条水平基准线、虚线路径和简洁空间关系。可以加入几个微型黑色人物剪影，人物站在不同水平线上，沿着虚线路径移动，表达「{spec.metaphor}」。
+标题「{spec.title}」使用极简现代字体，放在左下、下方或画面留白处。副标题「{spec.subtitle}」字号较小，像作品集说明。可以加入年份、项目编号或极简坐标标记，但要很少。
+画面元素包括：「{spec.elements}」。
+{STYLE_ANCHORS['minimal_architecture_portfolio']}"""
+
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     if spec.style_id == "oriental_editorial_illustration":
@@ -229,6 +323,18 @@ def render_cover(spec: CoverSpec) -> str:
         return render_embossed_typography_cover(spec)
     if spec.style_id == "acrylic_dimensional_type":
         return render_acrylic_type_cover(spec)
+    if spec.style_id == "dark_neon_search_ui":
+        return render_dark_neon_search_cover(spec)
+    if spec.style_id == "black_void_glowing_hands":
+        return render_black_void_hands_cover(spec)
+    if spec.style_id == "soft_neumorphism_ui":
+        return render_soft_neumorphism_cover(spec)
+    if spec.style_id == "minimal_line_shadow_brand":
+        return render_minimal_line_shadow_cover(spec)
+    if spec.style_id == "white_mono_texture_editorial":
+        return render_white_mono_texture_cover(spec)
+    if spec.style_id == "minimal_architecture_portfolio":
+        return render_minimal_architecture_cover(spec)
     # Other styles can still render as knowledge-style cover with their style anchor.
     if spec.style_id == "handdrawn_knowledge_card":
         return render_handdrawn_cover(spec)
@@ -401,6 +507,17 @@ def self_test() -> None:
                 "bottom_sentence": "复杂度应该被系统吸收。",
             },
             {
+                "type": "cover",
+                "style_id": "dark_neon_search_ui",
+                "title": "寻找答案",
+                "subtitle": "AI 搜索从问题开始",
+                "metaphor": "黑暗中的信息光带汇入搜索框",
+                "elements": "霓虹光带、搜索框、极简小猫、颗粒噪点",
+                "character_action": "小猫等待搜索结果",
+                "speech_bubble": "Searching",
+                "bottom_sentence": "探索从一个好问题开始。",
+            },
+            {
                 "type": "body",
                 "style_id": "study_note_card",
                 "title": "知识库不是收藏夹",
@@ -417,8 +534,10 @@ def self_test() -> None:
     assert "东方典籍杂志插画风" in batch["images"][0]["prompt"]
     assert batch["images"][1]["style_id"] == "translucent_object_editorial"
     assert "透明材质物件海报风" in batch["images"][1]["prompt"]
-    assert batch["images"][2]["style_id"] == "study_note_card"
-    assert "学习笔记卡片风" in batch["images"][2]["prompt"]
+    assert batch["images"][2]["style_id"] == "dark_neon_search_ui"
+    assert "暗黑霓虹搜索界面风" in batch["images"][2]["prompt"]
+    assert batch["images"][3]["style_id"] == "study_note_card"
+    assert "学习笔记卡片风" in batch["images"][3]["prompt"]
     print("self-test passed")
 
 

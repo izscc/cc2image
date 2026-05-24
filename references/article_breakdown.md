@@ -3,7 +3,7 @@
 
 ## Step 0：选择风格
 
-默认使用 `handdrawn_knowledge_card`（手绘知识卡片风）。如果用户指定风格，优先服从。若用户未指定，按主题自动选择：文化/历史/哲学封面用 `oriental_editorial_illustration`；学习方法/笔记/考试用 `study_note_card`；金字塔/层级/能力模型用 `pastel_learning_pyramid`；儿童教育/传统文化科普/器物介绍用 `childlike_cultural_infographic`；孤独/情绪/心理/音乐艺术用 `frosted_glass_editorial`；设计/品牌/作品集/工具系统用 `translucent_object_editorial`；AI/趋势/未来感/品牌视觉用 `glassmorphism_gradient_blob`；深度思考/认知/策略/极简口号/书封用 `embossed_typography_poster`；单个关键词/栏目名/年轻化视觉实验用 `acrylic_dimensional_type`。正文解释图默认仍用 `handdrawn_knowledge_card`。
+默认使用 `handdrawn_knowledge_card`（手绘知识卡片风）。如果用户指定风格，优先服从。若用户未指定，按主题自动选择：文化/历史/哲学封面用 `oriental_editorial_illustration`；学习方法/笔记/考试用 `study_note_card`；金字塔/层级/能力模型用 `pastel_learning_pyramid`；儿童教育/传统文化科普/器物介绍用 `childlike_cultural_infographic`；孤独/情绪/心理/音乐艺术用 `frosted_glass_editorial`；设计/品牌/作品集/工具系统用 `translucent_object_editorial`；AI/趋势/未来感/品牌视觉用 `glassmorphism_gradient_blob`；深度思考/认知/策略/极简口号/书封用 `embossed_typography_poster`；单个关键词/栏目名/年轻化视觉实验用 `acrylic_dimensional_type`；AI 搜索/探索/信息检索用 `dark_neon_search_ui`；触达/连接/孤独/关系/心理/求助用 `black_void_glowing_hands`；产品界面/搜索框/控制器/智能家居/效率工具用 `soft_neumorphism_ui`；新品发布/数字主题/极简科技主视觉用 `minimal_line_shadow_brand`；深度思考/设计博客/编辑网页用 `white_mono_texture_editorial`；作品集/路径规划/空间叙事用 `minimal_architecture_portfolio`。正文解释图默认仍用 `handdrawn_knowledge_card`。
 
 ## Step 1：理解文章
 

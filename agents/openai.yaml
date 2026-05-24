@@ -1,9 +1,9 @@
 interface:
   display_name: "zscc配图生成器"
-  short_description: "中文文章 10 风格拆图：封面、正文配图与批量生图方案。"
+  short_description: "中文文章 16 风格拆图：封面、正文配图与批量生图方案。"
   icon: "image"
   primary_color: "#E9DDC8"
   brand_color: "#E9DDC8"
-  default_prompt: "使用 $zscc配图生成器，把这篇中文文章拆成 1 张封面和 5 张正文配图；默认手绘知识卡片风，也可指定东方典籍、透明材质、玻璃拟态、纸雕字体等风格。"
+  default_prompt: "使用 $zscc配图生成器，把这篇中文文章拆成 1 张封面和 5 张正文配图；默认手绘知识卡片风，也可指定东方典籍、透明材质、霓虹搜索、柔光界面等 16 种风格。"
 policy:
   allow_implicit_invocation: true
