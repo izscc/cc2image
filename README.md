@@ -19,22 +19,49 @@
 
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
-| `handdrawn_knowledge_card` | 手绘知识风 | 默认；正文配图、知识图解、方法论、流程图、对比图 |
-| `oriental_editorial_illustration` | 典籍山水风 | 文化、历史、人文、哲学类高级封面 |
-| `study_note_card` | 学习笔记风 | 学习方法、笔记整理、步骤教程、知识清单 |
-| `pastel_learning_pyramid` | 粉彩金字塔风 | 分层模型、学习金字塔、能力进阶、成长路径 |
-| `childlike_cultural_infographic` | 童趣科普风 | 传统文化科普、儿童教育、器物拆解 |
-| `frosted_glass_editorial` | 磨砂情绪风 | 心理情绪、孤独感、音乐艺术主题 |
-| `translucent_object_editorial` | 透明物件风 | 设计主题、品牌设计、作品集封面、工具系统封面 |
-| `glassmorphism_gradient_blob` | 玻璃气泡风 | 品牌视觉、创意展览、趋势报告、AI 主题 |
-| `embossed_typography_poster` | 纸雕字体风 | 极简封面、品牌口号、深度思考、书封设计 |
-| `acrylic_dimensional_type` | 亚克力字风 | 品牌关键词、栏目标题、创意概念、年轻化封面 |
+| `handdrawn_knowledge_card` | 手绘知识卡片风 | 默认；正文配图、知识图解、方法论、流程图、对比图 |
+| `oriental_editorial_illustration` | 东方典籍杂志插画风 | 文化、历史、人文、哲学类高级封面 |
+| `study_note_card` | 学习笔记卡片风 | 学习方法、笔记整理、步骤教程、知识清单 |
+| `pastel_learning_pyramid` | 彩色手绘学习金字塔风 | 分层模型、学习金字塔、能力进阶、成长路径 |
+| `childlike_cultural_infographic` | 儿童手绘文化科普风 | 传统文化科普、儿童教育、器物拆解 |
+| `frosted_glass_editorial` | 透明磨砂感人物海报风 | 心理情绪、孤独感、音乐艺术主题 |
+| `translucent_object_editorial` | 透明材质物件海报风 | 设计主题、品牌设计、作品集封面、工具系统封面 |
+| `glassmorphism_gradient_blob` | 玻璃拟态渐变气泡风 | 品牌视觉、创意展览、趋势报告、AI 主题 |
+| `embossed_typography_poster` | 浮雕纸雕字体海报风 | 极简封面、品牌口号、深度思考、书封设计 |
+| `acrylic_dimensional_type` | 亚克力立体字母风 | 品牌关键词、栏目标题、创意概念、年轻化封面 |
 | `dark_neon_search_ui` | 霓虹搜索风 | AI 搜索、知识探索、信息检索、灵感发现 |
 | `black_void_glowing_hands` | 黑场肢体风 | 心理主题、情绪主题、关系连接、孤独感 |
 | `soft_neumorphism_ui` | 柔光界面风 | 产品功能封面、AI 工具界面、智能家居、效率工具 |
 | `minimal_line_shadow_brand` | 线性品牌风 | 新品发布、品牌封面、科技产品、数字主题 |
 | `white_mono_texture_editorial` | 白色肌理风 | 深度文章封面、设计作品集、哲学主题、个人品牌 |
 | `minimal_architecture_portfolio` | 建筑线稿风 | 作品集封面、人生路径、职业路径、空间叙事 |
+
+## 风格效果示例
+
+下面 10 张图用于展示核心风格的视觉效果，实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
+
+<table>
+  <tr>
+    <td width="50%"><strong>01｜手绘知识卡片风</strong><br><code>handdrawn_knowledge_card</code><br><img src="assets/examples/01-handdrawn-knowledge-card.jpg" alt="手绘知识卡片风示例"></td>
+    <td width="50%"><strong>02｜东方典籍杂志插画风</strong><br><code>oriental_editorial_illustration</code><br><img src="assets/examples/02-oriental-editorial-illustration.jpg" alt="东方典籍杂志插画风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>03｜学习笔记卡片风</strong><br><code>study_note_card</code><br><img src="assets/examples/03-study-note-card.jpg" alt="学习笔记卡片风示例"></td>
+    <td width="50%"><strong>04｜彩色手绘学习金字塔风</strong><br><code>pastel_learning_pyramid</code><br><img src="assets/examples/04-pastel-learning-pyramid.jpg" alt="彩色手绘学习金字塔风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>05｜儿童手绘文化科普风</strong><br><code>childlike_cultural_infographic</code><br><img src="assets/examples/05-childlike-cultural-infographic.jpg" alt="儿童手绘文化科普风示例"></td>
+    <td width="50%"><strong>06｜透明磨砂感人物海报风</strong><br><code>frosted_glass_editorial</code><br><img src="assets/examples/06-frosted-glass-editorial.jpg" alt="透明磨砂感人物海报风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>07｜透明材质物件海报风</strong><br><code>translucent_object_editorial</code><br><img src="assets/examples/07-translucent-object-editorial.jpg" alt="透明材质物件海报风示例"></td>
+    <td width="50%"><strong>08｜玻璃拟态渐变气泡风</strong><br><code>glassmorphism_gradient_blob</code><br><img src="assets/examples/08-glassmorphism-gradient-blob.jpg" alt="玻璃拟态渐变气泡风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>09｜浮雕纸雕字体海报风</strong><br><code>embossed_typography_poster</code><br><img src="assets/examples/09-embossed-typography-poster.jpg" alt="浮雕纸雕字体海报风示例"></td>
+    <td width="50%"><strong>10｜亚克力立体字母风</strong><br><code>acrylic_dimensional_type</code><br><img src="assets/examples/10-acrylic-dimensional-type.jpg" alt="亚克力立体字母风示例"></td>
+  </tr>
+</table>
 
 ## 默认匹配规则
 
