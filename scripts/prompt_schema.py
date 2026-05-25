@@ -178,6 +178,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "zen_ink_philosophy_poster": (
         "整体风格为禅意水墨风：米白宣纸质感背景，大面积留白，黑色水墨笔触作为主体，搭配一个红色或粉色圆日。画面中可以有极小的人物剪影、行者、武士、僧人、松树、山石、路径或远山。构图极简，文字像哲学格言或书页排版，可以中英混排，少量红色印章点缀。整体安静、克制、东方、内省、有修行感。不要浓艳国潮，不要复杂山水，不要卡通，不要写实摄影，不要高饱和颜色，不要密集文字。"
     ),
+    "editorial_line_character": (
+        '整体风格为编辑线稿风：现代编辑设计语言，黑白极简线稿人物，干净扁平几何比例，简单脸部，风格化身体。画面把主题转译成日常城市生活场景，例如通勤、手机使用、阅读、购物、自拍、行走、休息、听音乐、工作和多任务处理。使用杂志式大标题、非对称排版层级、大量留白和强版面块。人物主体保持黑白单色，柔和色块只用于背景、包装、UI 面板、产品标签和分区块。点缀色可用柔黄、低饱和紫、暖橙、低饱和粉和奶油白。整体像品牌视觉系统、杂志插画、网站首屏、包装或多面板 campaign board。不要写实光影，不要 3D，不要光泽渲染，不要厚重渐变，不要动漫，不要儿童吉祥物，不要过度彩色，不要杂乱背景。\nModern editorial illustration system, minimalist black-and-white line art characters, clean flat geometric proportions, simple faces, stylized bodies, everyday urban lifestyle scenes, bold magazine typography, asymmetrical editorial hierarchy, large negative space, strong layout blocks, selective pastel accents, flat vector-like finish, no realistic lighting, no 3D, no glossy rendering, no anime, no childish mascot, no busy background.'
+    ),
 }
 
 STYLE_NAMES = {
@@ -214,6 +217,7 @@ STYLE_NAMES = {
     "giant_letter_lifestyle_scene": "巨字生活风",
     "oriental_floral_minimal_editorial": "花艺留白风",
     "zen_ink_philosophy_poster": "禅意水墨风",
+    "editorial_line_character": "编辑线稿风",
 }
 
 BODY_STRUCTURES = {
@@ -429,6 +433,7 @@ EXTRA_COVER_GUIDES = {
     "torn_paper_note_minimal": "米色、暖白或浅灰纸张背景，大量留白，中心或偏下只有一小片白色撕裂纸条，纸条上写一个词或一句很短的话。",
     "fluffy_soft_typography": "白色、奶油色或浅灰背景，标题文字变成真实可触摸的毛绒、毛巾布、羊羔绒或绒线立体字体，边缘有细密绒毛和柔和阴影。",
     "cloud_typography_cover": "蓝天或青蓝渐变天空背景，标题文字由真实蓬松的白云组成，有阳光照射、云影和细腻云气质感，画面开阔、明亮、向上。",
+    "editorial_line_character": "白色或奶油白背景，大量留白，黑白极简线稿人物作为主要叙事角色，搭配杂志式大标题、非对称网格和少量柔和色块；可做成品牌视觉板、海报、网站首屏、包装或多面板编辑插画。",
 }
 
 
