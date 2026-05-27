@@ -41,7 +41,7 @@
     {"style_id": "oriental_floral_minimal_editorial", "style_name": "花艺留白风", "best_for": ["女性主题、母亲节、思念、关系、疗愈、节气"]},
     {"style_id": "zen_ink_philosophy_poster", "style_name": "禅意水墨风", "best_for": ["哲学、人生路径、自我修炼、觉察、东方智慧"]},
     {"style_id": "editorial_line_character", "style_name": "编辑线稿风", "best_for": ["品牌视觉、杂志海报、网站首屏、包装、角色系统、城市生活场景"]},
-    {"style_id": "editorial_object_annotation_card", "style_name": "具象物品标注编辑风", "best_for": ["AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则"]}
+    {"style_id": "editorial_object_annotation_card", "style_name": "具象标注风", "best_for": ["AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则"]}
   ]
 }
 ```
@@ -239,7 +239,7 @@ F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_chec
 核心：黑白极简线稿人物、几何扁平比例、城市日常行为、杂志式强排版、大留白、少量柔和色块，适合把品牌、产品、活动或抽象主题转成一套编辑插画视觉系统。
 
 
-## 35. editorial_object_annotation_card｜具象物品标注编辑风
+## 35. editorial_object_annotation_card｜具象标注风
 
 适合：AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则。
 

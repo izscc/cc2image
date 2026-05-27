@@ -182,7 +182,7 @@ STYLE_ANCHORS: Dict[str, str] = {
         '整体风格为编辑线稿风：现代编辑设计语言，黑白极简线稿人物，干净扁平几何比例，简单脸部，风格化身体。画面把主题转译成日常城市生活场景，例如通勤、手机使用、阅读、购物、自拍、行走、休息、听音乐、工作和多任务处理。使用杂志式大标题、非对称排版层级、大量留白和强版面块。人物主体保持黑白单色，柔和色块只用于背景、包装、UI 面板、产品标签和分区块。点缀色可用柔黄、低饱和紫、暖橙、低饱和粉和奶油白。整体像品牌视觉系统、杂志插画、网站首屏、包装或多面板 campaign board。不要写实光影，不要 3D，不要光泽渲染，不要厚重渐变，不要动漫，不要儿童吉祥物，不要过度彩色，不要杂乱背景。\nModern editorial illustration system, minimalist black-and-white line art characters, clean flat geometric proportions, simple faces, stylized bodies, everyday urban lifestyle scenes, bold magazine typography, asymmetrical editorial hierarchy, large negative space, strong layout blocks, selective pastel accents, flat vector-like finish, no realistic lighting, no 3D, no glossy rendering, no anime, no childish mascot, no busy background.'
     ),
     "editorial_object_annotation_card": (
-        '整体风格为具象物品标注编辑风：纯白或暖白背景，大量留白，左侧是大号现代无衬线标题、副标题和三条原则列表，右侧是一个高清真实具象物品作为核心隐喻。物品可以是植物、叶子、花、石头、钥匙、镜子、指南针、绳子、书、杯子、灯泡、地图等，不局限于植物。物品具有真实摄影质感、自然阴影、细腻纹理和局部细节，像被放在白纸上的研究对象。画面周围加入虚线箭头、小圆点定位、括号、波浪下划线、手写注释、手绘星星、小爱心和下划线等标注系统，并加入一个极简手绘小人作为观察者或操作者。整体像高级编辑知识卡片、设计方法论页或 AI playbook 页面。不要做成 PPT，不要复杂信息图，不要卡通海报，不要 3D 科技风，不要高饱和颜色，不要密集文字。\nEditorial object annotation card style, clean white background, lots of negative space, bold modern sans-serif headline, subtitle and three numbered principles on the left, one high-resolution realistic object as the central metaphor on the right, not limited to plants, can be leaf, flower, stone, key, mirror, compass, rope, book, cup, light bulb, map. Real photographic texture, natural shadow, fine details. Add dotted arrows, small annotation labels, hand-drawn stars, hearts, underlines, tiny sketch character observing or interacting with the object. Premium design playbook page, AI methodology card, editorial learning card, not PPT, not dense infographic, not cartoon poster, not cyberpunk, not cluttered.'
+        '整体风格为具象标注风：纯白或暖白背景，大量留白，左侧是大号现代无衬线标题、副标题和三条原则列表，右侧是一个高清真实具象物品作为核心隐喻。物品可以是植物、叶子、花、石头、钥匙、镜子、指南针、绳子、书、杯子、灯泡、地图等，不局限于植物。物品具有真实摄影质感、自然阴影、细腻纹理和局部细节，像被放在白纸上的研究对象。画面周围加入虚线箭头、小圆点定位、括号、波浪下划线、手写注释、手绘星星、小爱心和下划线等标注系统，并加入一个极简手绘小人作为观察者或操作者。整体像高级编辑知识卡片、设计方法论页或 AI playbook 页面。不要做成 PPT，不要复杂信息图，不要卡通海报，不要 3D 科技风，不要高饱和颜色，不要密集文字。\nEditorial object annotation card style, clean white background, lots of negative space, bold modern sans-serif headline, subtitle and three numbered principles on the left, one high-resolution realistic object as the central metaphor on the right, not limited to plants, can be leaf, flower, stone, key, mirror, compass, rope, book, cup, light bulb, map. Real photographic texture, natural shadow, fine details. Add dotted arrows, small annotation labels, hand-drawn stars, hearts, underlines, tiny sketch character observing or interacting with the object. Premium design playbook page, AI methodology card, editorial learning card, not PPT, not dense infographic, not cartoon poster, not cyberpunk, not cluttered.'
     ),
 }
 
@@ -221,7 +221,7 @@ STYLE_NAMES = {
     "oriental_floral_minimal_editorial": "花艺留白风",
     "zen_ink_philosophy_poster": "禅意水墨风",
     "editorial_line_character": "编辑线稿风",
-    "editorial_object_annotation_card": "具象物品标注编辑风",
+    "editorial_object_annotation_card": "具象标注风",
 }
 
 BODY_STRUCTURES = {
@@ -454,7 +454,7 @@ def render_object_annotation_cover(spec: CoverSpec) -> str:
     annotation2 = spec.annotation2 or "定位证据"
     annotation3 = spec.annotation3 or "确认边界"
     series_name = spec.series_name or "AI Design & Beyond"
-    return f"""请生成一张具象物品标注编辑风的知识封面图。
+    return f"""请生成一张具象标注风的知识封面图。
 主题是「{spec.title}」。画面使用纯白或暖白背景，大量留白，整体像高级编辑知识卡片、设计方法论页或 AI playbook 页面。
 采用左右结构：左侧放大标题、副标题和 3 条原则列表；右侧放一个高清真实具象物品作为核心隐喻。
 左侧标题写「{spec.title}」，使用大号现代无衬线黑体，左对齐，观点明确、有力量。标题下方写副标题「{spec.subtitle}」，字号较小，语气克制。
