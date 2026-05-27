@@ -184,6 +184,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "editorial_object_annotation_card": (
         '整体风格为具象标注风：纯白或暖白背景，大量留白，左侧是大号现代无衬线标题、副标题和三条原则列表，右侧是一个高清真实具象物品作为核心隐喻。物品可以是植物、叶子、花、石头、钥匙、镜子、指南针、绳子、书、杯子、灯泡、地图等，不局限于植物。物品具有真实摄影质感、自然阴影、细腻纹理和局部细节，像被放在白纸上的研究对象。画面周围加入虚线箭头、小圆点定位、括号、波浪下划线、手写注释、手绘星星、小爱心和下划线等标注系统，并加入一个极简手绘小人作为观察者或操作者。整体像高级编辑知识卡片、设计方法论页或 AI playbook 页面。不要做成 PPT，不要复杂信息图，不要卡通海报，不要 3D 科技风，不要高饱和颜色，不要密集文字。\nEditorial object annotation card style, clean white background, lots of negative space, bold modern sans-serif headline, subtitle and three numbered principles on the left, one high-resolution realistic object as the central metaphor on the right, not limited to plants, can be leaf, flower, stone, key, mirror, compass, rope, book, cup, light bulb, map. Real photographic texture, natural shadow, fine details. Add dotted arrows, small annotation labels, hand-drawn stars, hearts, underlines, tiny sketch character observing or interacting with the object. Premium design playbook page, AI methodology card, editorial learning card, not PPT, not dense infographic, not cartoon poster, not cyberpunk, not cluttered.'
     ),
+    "crowd_typography_scene": (
+        '整体风格为人群造字风：白色或浅灰色巨大地面空间，高空俯视视角，大量真实微缩小人按照主题排列成一个有意义的巨大文字、数字、符号、图表或隐喻图形。小人有真实服装颜色和自然长阴影，部分人物成群，部分人物零散分布，形成社会观察感。文字排版像印在地面上，主标题使用粗黑中文字体，副标题较小，顶部可加入杂志栏目、目录、页码和灰色刊名，整体像财经杂志、深度报道或社会议题封面。不要做成卡通小人，不要普通信息图，不要拥挤杂乱，不要 3D 游戏场景，不要高饱和背景。\nCrowd typography editorial cover style, high-angle aerial view, vast white or light gray ground plane, hundreds of realistic tiny people arranged into a meaningful giant Chinese character, number, symbol, chart, path, arrow, question mark, or abstract diagram. Realistic clothing colors, long natural shadows, some scattered individuals around the main formation. Typography looks printed on the ground, bold black editorial headline, smaller subtitle, magazine cover layout with issue lines and page numbers, serious business and social issue magazine aesthetic, not cartoon, not infographic, not game scene, not crowded background.'
+    ),
 }
 
 STYLE_NAMES = {
@@ -222,6 +225,7 @@ STYLE_NAMES = {
     "zen_ink_philosophy_poster": "禅意水墨风",
     "editorial_line_character": "编辑线稿风",
     "editorial_object_annotation_card": "具象标注风",
+    "crowd_typography_scene": "人群造字风",
 }
 
 BODY_STRUCTURES = {
@@ -260,6 +264,12 @@ class CoverSpec:
     annotation2: str = ""
     annotation3: str = ""
     series_name: str = ""
+    magazine_name: str = ""
+    core_shape: str = ""
+    crowd_state: str = ""
+    scattered_elements: str = ""
+    top_directory: str = ""
+    bottom_info: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -469,6 +479,23 @@ def render_object_annotation_cover(spec: CoverSpec) -> str:
 {STYLE_ANCHORS['editorial_object_annotation_card']}"""
 
 
+def render_crowd_typography_cover(spec: CoverSpec) -> str:
+    magazine_name = spec.magazine_name or spec.series_name or "Future Work Weekly"
+    core_shape = spec.core_shape or spec.metaphor or "一个巨大的问号"
+    metaphor_meaning = spec.metaphor_meaning or spec.bottom_sentence or spec.metaphor
+    crowd_state = spec.crowd_state or "大量人群排成主体图形，少数人从边缘走向外部"
+    scattered_elements = spec.scattered_elements or "周围散落少量独立个体和小群体，有人在停留、有人在离开、有人在排队"
+    top_directory = spec.top_directory or "特别报道｜趋势观察｜城市与就业"
+    bottom_info = spec.bottom_info or spec.bottom_sentence or "2026 Special Issue"
+    return f"""请生成一张人群造字风的中文杂志封面图。
+主题是「{spec.title}」。画面使用白色或浅灰色巨大地面空间，高空俯视视角，整体像财经杂志、深度报道或社会议题封面。
+根据主题，把大量真实微缩小人排列成一个最合适的巨大图形：「{core_shape}」。这个图形可以是一个汉字、数字、问号、箭头、天平、裂缝、阶梯、漏斗、地图路径、趋势曲线或组织结构。图形必须能够直观表达「{metaphor_meaning}」。
+小人要有真实服装颜色和自然动作，像真实人群从高处俯拍。人群状态是「{crowd_state}」。周围散落元素：「{scattered_elements}」。每个人都投下自然长阴影，增强俯视空间感。
+画面中的文字排版像印在地面上。顶部放灰色杂志刊名或栏目名「{magazine_name}」，可以加入少量目录信息、页码和细线分隔：「{top_directory}」。中下方放主标题「{spec.title}」，使用粗黑中文字体。副标题写「{spec.subtitle}」，字号较小，排版克制。底部放日期、期号或页码：「{bottom_info}」。
+画面元素包括：「{spec.elements}」。
+{STYLE_ANCHORS['crowd_typography_scene']}"""
+
+
 EXTRA_COVER_GUIDES = {
     "retro_minimal_poster_illustration": "米白旧纸背景，复古印刷颗粒，大面积钴蓝和芥末黄色块，几何化人物或物件，像中世纪现代海报、复古书封或丝网印刷插画。",
     "editorial_balloon_collage": "白色纸张背景，大量留白，半透明彩色圆片像气球或光片，下方用细线素描人物或物件，并用细线连接到圆片，像品牌广告或编辑设计封面。",
@@ -479,6 +506,7 @@ EXTRA_COVER_GUIDES = {
     "cloud_typography_cover": "蓝天或青蓝渐变天空背景，标题文字由真实蓬松的白云组成，有阳光照射、云影和细腻云气质感，画面开阔、明亮、向上。",
     "editorial_line_character": "白色或奶油白背景，大量留白，黑白极简线稿人物作为主要叙事角色，搭配杂志式大标题、非对称网格和少量柔和色块；可做成品牌视觉板、海报、网站首屏、包装或多面板编辑插画。",
     "editorial_object_annotation_card": "纯白或暖白背景，大量留白，左侧大标题、副标题和三条编号原则，右侧一个高清真实具象物品作为核心隐喻，周围有虚线箭头、小圆点、手写短注释和极简手绘小人，像高级方法论知识卡片。",
+    "crowd_typography_scene": "白色或浅灰色巨大地面，高空俯视，大量真实微缩小人排列成文字、数字、问号、箭头、天平、裂缝、阶梯、路径、趋势曲线或组织结构；文字像印在地面上，整体是财经杂志或深度社会议题封面。",
 }
 
 
@@ -523,6 +551,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_healing_metaphor_cover(spec)
     if spec.style_id == "editorial_object_annotation_card":
         return render_object_annotation_cover(spec)
+    if spec.style_id == "crowd_typography_scene":
+        return render_crowd_typography_cover(spec)
     extra_prompt = render_extra_cover(spec)
     if extra_prompt:
         return extra_prompt
@@ -626,6 +656,12 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             annotation2=raw.get("annotation2", ""),
             annotation3=raw.get("annotation3", ""),
             series_name=raw.get("series_name", ""),
+            magazine_name=raw.get("magazine_name") or raw.get("column_name", ""),
+            core_shape=raw.get("core_shape", ""),
+            crowd_state=raw.get("crowd_state", ""),
+            scattered_elements=raw.get("scattered_elements", ""),
+            top_directory=raw.get("top_directory", ""),
+            bottom_info=raw.get("bottom_info", ""),
             style_id=style_id,
         )
         return {
