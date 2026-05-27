@@ -65,7 +65,7 @@
 
 ## 风格效果示例
 
-下面 10 张图用于展示核心风格的视觉效果，实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
+下面展示 37 套风格的封面效果：前 10 张为原有核心示例，后 27 张基于文章《当老师不再教书：AI 时代的教育革命》批量生成。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
 
 <table>
   <tr>
@@ -87,6 +87,62 @@
   <tr>
     <td width="50%"><strong>09｜纸雕字体风</strong><br><code>embossed_typography_poster</code><br><img src="assets/examples/09-embossed-typography-poster.jpg" alt="纸雕字体风示例"></td>
     <td width="50%"><strong>10｜亚克力字风</strong><br><code>acrylic_dimensional_type</code><br><img src="assets/examples/10-acrylic-dimensional-type.jpg" alt="亚克力字风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>11｜霓虹搜索风</strong><br><code>dark_neon_search_ui</code><br><img src="assets/examples/11-dark-neon-search-ui.jpg" alt="霓虹搜索风示例"></td>
+    <td width="50%"><strong>12｜黑场肢体风</strong><br><code>black_void_glowing_hands</code><br><img src="assets/examples/12-black-void-glowing-hands.jpg" alt="黑场肢体风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>13｜柔光界面风</strong><br><code>soft_neumorphism_ui</code><br><img src="assets/examples/13-soft-neumorphism-ui.jpg" alt="柔光界面风示例"></td>
+    <td width="50%"><strong>14｜线性品牌风</strong><br><code>minimal_line_shadow_brand</code><br><img src="assets/examples/14-minimal-line-shadow-brand.jpg" alt="线性品牌风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>15｜白色肌理风</strong><br><code>white_mono_texture_editorial</code><br><img src="assets/examples/15-white-mono-texture-editorial.jpg" alt="白色肌理风示例"></td>
+    <td width="50%"><strong>16｜建筑线稿风</strong><br><code>minimal_architecture_portfolio</code><br><img src="assets/examples/16-minimal-architecture-portfolio.jpg" alt="建筑线稿风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>17｜治愈漫画风</strong><br><code>minimal_healing_metaphor_comic</code><br><img src="assets/examples/17-minimal-healing-metaphor-comic.jpg" alt="治愈漫画风示例"></td>
+    <td width="50%"><strong>18｜复古海报风</strong><br><code>retro_minimal_poster_illustration</code><br><img src="assets/examples/18-retro-minimal-poster-illustration.jpg" alt="复古海报风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>19｜气球拼贴风</strong><br><code>editorial_balloon_collage</code><br><img src="assets/examples/19-editorial-balloon-collage.jpg" alt="气球拼贴风示例"></td>
+    <td width="50%"><strong>20｜透明字境风</strong><br><code>transparent_architectural_type</code><br><img src="assets/examples/20-transparent-architectural-type.jpg" alt="透明字境风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>21｜纸雕剪影风</strong><br><code>paper_cut_profile_silhouette</code><br><img src="assets/examples/21-paper-cut-profile-silhouette.jpg" alt="纸雕剪影风示例"></td>
+    <td width="50%"><strong>22｜撕纸便签风</strong><br><code>torn_paper_note_minimal</code><br><img src="assets/examples/22-torn-paper-note-minimal.jpg" alt="撕纸便签风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>23｜毛绒字体风</strong><br><code>fluffy_soft_typography</code><br><img src="assets/examples/23-fluffy-soft-typography.jpg" alt="毛绒字体风示例"></td>
+    <td width="50%"><strong>24｜云朵字体风</strong><br><code>cloud_typography_cover</code><br><img src="assets/examples/24-cloud-typography-cover.jpg" alt="云朵字体风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>25｜泡沫字体风</strong><br><code>foam_bubble_typography</code><br><img src="assets/examples/25-foam-bubble-typography.jpg" alt="泡沫字体风示例"></td>
+    <td width="50%"><strong>26｜刺绣徽章风</strong><br><code>embroidered_patch_brand</code><br><img src="assets/examples/26-embroidered-patch-brand.jpg" alt="刺绣徽章风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>27｜金属奢华风</strong><br><code>luxury_gold_typography</code><br><img src="assets/examples/27-luxury-gold-typography.jpg" alt="金属奢华风示例"></td>
+    <td width="50%"><strong>28｜微缩地图风</strong><br><code>miniature_map_life_scene</code><br><img src="assets/examples/28-miniature-map-life-scene.jpg" alt="微缩地图风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>29｜微缩清单风</strong><br><code>miniature_checklist_scene</code><br><img src="assets/examples/29-miniature-checklist-scene.jpg" alt="微缩清单风示例"></td>
+    <td width="50%"><strong>30｜布料微缩风</strong><br><code>fabric_micro_scene_ad</code><br><img src="assets/examples/30-fabric-micro-scene-ad.jpg" alt="布料微缩风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>31｜巨字生活风</strong><br><code>giant_letter_lifestyle_scene</code><br><img src="assets/examples/31-giant-letter-lifestyle-scene.jpg" alt="巨字生活风示例"></td>
+    <td width="50%"><strong>32｜花艺留白风</strong><br><code>oriental_floral_minimal_editorial</code><br><img src="assets/examples/32-oriental-floral-minimal-editorial.jpg" alt="花艺留白风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>33｜禅意水墨风</strong><br><code>zen_ink_philosophy_poster</code><br><img src="assets/examples/33-zen-ink-philosophy-poster.jpg" alt="禅意水墨风示例"></td>
+    <td width="50%"><strong>34｜编辑线稿风</strong><br><code>editorial_line_character</code><br><img src="assets/examples/34-editorial-line-character.jpg" alt="编辑线稿风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>35｜具象标注风</strong><br><code>editorial_object_annotation_card</code><br><img src="assets/examples/35-editorial-object-annotation-card.jpg" alt="具象标注风示例"></td>
+    <td width="50%"><strong>36｜人群造字风</strong><br><code>crowd_typography_scene</code><br><img src="assets/examples/36-crowd-typography-scene.jpg" alt="人群造字风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>37｜语义字体风</strong><br><code>semantic_material_typography</code><br><img src="assets/examples/37-semantic-material-typography.jpg" alt="语义字体风示例"></td>
+    <td width="50%"></td>
   </tr>
 </table>
 
