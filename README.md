@@ -15,54 +15,6 @@
 - 在可用 `image_gen` 的环境中隐藏提示词并直接批量生图
 - 适合小红书、公众号、知识博客、课程内容、品牌专栏和深度文章视觉资产
 
-## 风格预览
-
-下面这张图展示了前 24 套核心风格的整体效果，方便快速选择视觉方向。
-
-![zscc配图生成器风格预览](assets/examples/style-selection-preview-24.jpg)
-
-## 37 套风格
-
-| style_id | 风格名 | 适合场景 |
-| --- | --- | --- |
-| `handdrawn_knowledge_card` | 手绘知识风 | 默认；正文配图、知识图解、方法论、流程图、对比图 |
-| `oriental_editorial_illustration` | 典籍山水风 | 文化、历史、人文、哲学类高级封面 |
-| `study_note_card` | 学习笔记风 | 学习方法、笔记整理、步骤教程、知识清单 |
-| `pastel_learning_pyramid` | 粉彩金字塔风 | 分层模型、学习金字塔、能力进阶、成长路径 |
-| `childlike_cultural_infographic` | 童趣科普风 | 传统文化科普、儿童教育、器物拆解 |
-| `frosted_glass_editorial` | 磨砂情绪风 | 心理情绪、孤独感、音乐艺术主题 |
-| `translucent_object_editorial` | 透明物件风 | 设计主题、品牌设计、作品集封面、工具系统封面 |
-| `glassmorphism_gradient_blob` | 玻璃气泡风 | 品牌视觉、创意展览、趋势报告、AI 主题 |
-| `embossed_typography_poster` | 纸雕字体风 | 极简封面、品牌口号、深度思考、书封设计 |
-| `acrylic_dimensional_type` | 亚克力字风 | 品牌关键词、栏目标题、创意概念、年轻化封面 |
-| `dark_neon_search_ui` | 霓虹搜索风 | AI 搜索、知识探索、信息检索、灵感发现 |
-| `black_void_glowing_hands` | 黑场肢体风 | 心理主题、情绪主题、关系连接、孤独感 |
-| `soft_neumorphism_ui` | 柔光界面风 | 产品功能封面、AI 工具界面、智能家居、效率工具 |
-| `minimal_line_shadow_brand` | 线性品牌风 | 新品发布、品牌封面、科技产品、数字主题 |
-| `white_mono_texture_editorial` | 白色肌理风 | 深度文章封面、设计作品集、哲学主题、个人品牌 |
-| `minimal_architecture_portfolio` | 建筑线稿风 | 作品集封面、人生路径、职业路径、空间叙事 |
-| `minimal_healing_metaphor_comic` | 治愈漫画风 | 情绪疗愈、内耗、孤独、亲密关系、自我照顾 |
-| `retro_minimal_poster_illustration` | 复古海报风 | 极简主义、生活方式、个人手册、创作宣言、书封 |
-| `editorial_balloon_collage` | 气球拼贴风 | 团队协作、未来愿景、组织文化、品牌广告、社群主题 |
-| `transparent_architectural_type` | 透明字境风 | 宏大阶段、未来路径、系统升级、人生转折、空间隐喻 |
-| `paper_cut_profile_silhouette` | 纸雕剪影风 | 职业人物、行业精神、工程建筑、人物专访 |
-| `torn_paper_note_minimal` | 撕纸便签风 | 一句话封面、信念提醒、极简语录、每日提醒 |
-| `fluffy_soft_typography` | 毛绒字体风 | 好运、发财、治愈、可爱、祝福、轻松社媒图 |
-| `cloud_typography_cover` | 云朵字体风 | 希望、成长、新开始、复原力、上升、疗愈 |
-| `foam_bubble_typography` | 泡沫字体风 | 清洁、焕新、重启、梦想、生活方式海报 |
-| `embroidered_patch_brand` | 刺绣徽章风 | 品牌徽章、学院风、社群身份、工具包、服饰品牌 |
-| `luxury_gold_typography` | 金属奢华风 | 节日海报、高端品牌、仪式感、成就、庆典 |
-| `miniature_map_life_scene` | 微缩地图风 | 人生选择、职业路径、城市迁移、成长路线 |
-| `miniature_checklist_scene` | 微缩清单风 | 任务管理、行动清单、习惯养成、目标拆解 |
-| `fabric_micro_scene_ad` | 布料微缩风 | 劳动节、匠心、手工、服饰品牌、工艺精神 |
-| `giant_letter_lifestyle_scene` | 巨字生活风 | 品牌广告、教育、家庭、城市、组织价值 |
-| `oriental_floral_minimal_editorial` | 花艺留白风 | 女性主题、母亲节、思念、关系、疗愈、节气 |
-| `zen_ink_philosophy_poster` | 禅意水墨风 | 哲学、人生路径、自我修炼、觉察、东方智慧 |
-| `editorial_line_character` | 编辑线稿风 | 品牌视觉、杂志海报、网站首屏、包装、角色系统、城市生活场景 |
-| `editorial_object_annotation_card` | 具象标注风 | AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则 |
-| `crowd_typography_scene` | 人群造字风 | 社会议题、财经封面、就业问题、人口变化、城市议题、商业趋势、群体行为 |
-| `semantic_material_typography` | 语义字体风 | 关键词封面、品牌标题、栏目标题、概念海报、单词视觉化、强标题主视觉 |
-
 ## 风格效果示例
 
 下面展示 37 套风格的封面效果：前 10 张为原有核心示例，后 27 张基于文章《当老师不再教书：AI 时代的教育革命》批量生成。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
@@ -145,6 +97,50 @@
     <td width="50%"></td>
   </tr>
 </table>
+
+
+## 37 套风格
+
+| style_id | 风格名 | 适合场景 |
+| --- | --- | --- |
+| `handdrawn_knowledge_card` | 手绘知识风 | 默认；正文配图、知识图解、方法论、流程图、对比图 |
+| `oriental_editorial_illustration` | 典籍山水风 | 文化、历史、人文、哲学类高级封面 |
+| `study_note_card` | 学习笔记风 | 学习方法、笔记整理、步骤教程、知识清单 |
+| `pastel_learning_pyramid` | 粉彩金字塔风 | 分层模型、学习金字塔、能力进阶、成长路径 |
+| `childlike_cultural_infographic` | 童趣科普风 | 传统文化科普、儿童教育、器物拆解 |
+| `frosted_glass_editorial` | 磨砂情绪风 | 心理情绪、孤独感、音乐艺术主题 |
+| `translucent_object_editorial` | 透明物件风 | 设计主题、品牌设计、作品集封面、工具系统封面 |
+| `glassmorphism_gradient_blob` | 玻璃气泡风 | 品牌视觉、创意展览、趋势报告、AI 主题 |
+| `embossed_typography_poster` | 纸雕字体风 | 极简封面、品牌口号、深度思考、书封设计 |
+| `acrylic_dimensional_type` | 亚克力字风 | 品牌关键词、栏目标题、创意概念、年轻化封面 |
+| `dark_neon_search_ui` | 霓虹搜索风 | AI 搜索、知识探索、信息检索、灵感发现 |
+| `black_void_glowing_hands` | 黑场肢体风 | 心理主题、情绪主题、关系连接、孤独感 |
+| `soft_neumorphism_ui` | 柔光界面风 | 产品功能封面、AI 工具界面、智能家居、效率工具 |
+| `minimal_line_shadow_brand` | 线性品牌风 | 新品发布、品牌封面、科技产品、数字主题 |
+| `white_mono_texture_editorial` | 白色肌理风 | 深度文章封面、设计作品集、哲学主题、个人品牌 |
+| `minimal_architecture_portfolio` | 建筑线稿风 | 作品集封面、人生路径、职业路径、空间叙事 |
+| `minimal_healing_metaphor_comic` | 治愈漫画风 | 情绪疗愈、内耗、孤独、亲密关系、自我照顾 |
+| `retro_minimal_poster_illustration` | 复古海报风 | 极简主义、生活方式、个人手册、创作宣言、书封 |
+| `editorial_balloon_collage` | 气球拼贴风 | 团队协作、未来愿景、组织文化、品牌广告、社群主题 |
+| `transparent_architectural_type` | 透明字境风 | 宏大阶段、未来路径、系统升级、人生转折、空间隐喻 |
+| `paper_cut_profile_silhouette` | 纸雕剪影风 | 职业人物、行业精神、工程建筑、人物专访 |
+| `torn_paper_note_minimal` | 撕纸便签风 | 一句话封面、信念提醒、极简语录、每日提醒 |
+| `fluffy_soft_typography` | 毛绒字体风 | 好运、发财、治愈、可爱、祝福、轻松社媒图 |
+| `cloud_typography_cover` | 云朵字体风 | 希望、成长、新开始、复原力、上升、疗愈 |
+| `foam_bubble_typography` | 泡沫字体风 | 清洁、焕新、重启、梦想、生活方式海报 |
+| `embroidered_patch_brand` | 刺绣徽章风 | 品牌徽章、学院风、社群身份、工具包、服饰品牌 |
+| `luxury_gold_typography` | 金属奢华风 | 节日海报、高端品牌、仪式感、成就、庆典 |
+| `miniature_map_life_scene` | 微缩地图风 | 人生选择、职业路径、城市迁移、成长路线 |
+| `miniature_checklist_scene` | 微缩清单风 | 任务管理、行动清单、习惯养成、目标拆解 |
+| `fabric_micro_scene_ad` | 布料微缩风 | 劳动节、匠心、手工、服饰品牌、工艺精神 |
+| `giant_letter_lifestyle_scene` | 巨字生活风 | 品牌广告、教育、家庭、城市、组织价值 |
+| `oriental_floral_minimal_editorial` | 花艺留白风 | 女性主题、母亲节、思念、关系、疗愈、节气 |
+| `zen_ink_philosophy_poster` | 禅意水墨风 | 哲学、人生路径、自我修炼、觉察、东方智慧 |
+| `editorial_line_character` | 编辑线稿风 | 品牌视觉、杂志海报、网站首屏、包装、角色系统、城市生活场景 |
+| `editorial_object_annotation_card` | 具象标注风 | AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则 |
+| `crowd_typography_scene` | 人群造字风 | 社会议题、财经封面、就业问题、人口变化、城市议题、商业趋势、群体行为 |
+| `semantic_material_typography` | 语义字体风 | 关键词封面、品牌标题、栏目标题、概念海报、单词视觉化、强标题主视觉 |
+
 
 ## 默认匹配规则
 
