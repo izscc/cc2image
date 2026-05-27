@@ -187,6 +187,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "crowd_typography_scene": (
         '整体风格为人群造字风：白色或浅灰色巨大地面空间，高空俯视视角，大量真实微缩小人按照主题排列成一个有意义的巨大文字、数字、符号、图表或隐喻图形。小人有真实服装颜色和自然长阴影，部分人物成群，部分人物零散分布，形成社会观察感。文字排版像印在地面上，主标题使用粗黑中文字体，副标题较小，顶部可加入杂志栏目、目录、页码和灰色刊名，整体像财经杂志、深度报道或社会议题封面。不要做成卡通小人，不要普通信息图，不要拥挤杂乱，不要 3D 游戏场景，不要高饱和背景。\nCrowd typography editorial cover style, high-angle aerial view, vast white or light gray ground plane, hundreds of realistic tiny people arranged into a meaningful giant Chinese character, number, symbol, chart, path, arrow, question mark, or abstract diagram. Realistic clothing colors, long natural shadows, some scattered individuals around the main formation. Typography looks printed on the ground, bold black editorial headline, smaller subtitle, magazine cover layout with issue lines and page numbers, serious business and social issue magazine aesthetic, not cartoon, not infographic, not game scene, not crowded background.'
     ),
+    "semantic_material_typography": (
+        '整体风格为语义字体风：文字本身是画面主角，根据标题含义自动选择最贴合语义的真实材质、物体结构或自然纹理来构成字体。字体可以由木板、石头、苔藓、沙尘、蜂蜜、水果、金属机械、玻璃、纸张、布料、火焰、水、云朵、泥土、齿轮、线稿或混合材料构成。材质必须服务内容含义，而不是随机装饰。画面背景简洁，通常为白色、浅灰或干净摄影棚背景，保留大量留白。文字要醒目、可读、有强烈触感和真实光影。可以加入少量副标题、标签或编辑说明，但不要喧宾夺主。不要做成普通平面字，不要廉价 3D 字，不要杂乱拼贴，不要复杂信息图，不要高饱和背景。\nSemantic material typography style, the text itself is the main visual. Transform the title into a physical material or object structure that matches its meaning: wood planks, stone, moss, dust, sand, honey, fruit peel, golden paint, mechanical parts, glass, fabric, paper, metal, clouds, water, fire, soil, or mixed materials. The material must express the concept, not just decorate it. Clean white or light gray studio background, strong readability, realistic texture, tactile surface, natural shadows, premium editorial poster feel, minimal supporting text, not flat typography, not cheap 3D, not cluttered, not infographic.'
+    ),
 }
 
 STYLE_NAMES = {
@@ -226,6 +229,7 @@ STYLE_NAMES = {
     "editorial_line_character": "编辑线稿风",
     "editorial_object_annotation_card": "具象标注风",
     "crowd_typography_scene": "人群造字风",
+    "semantic_material_typography": "语义字体风",
 }
 
 BODY_STRUCTURES = {
@@ -270,6 +274,12 @@ class CoverSpec:
     scattered_elements: str = ""
     top_directory: str = ""
     bottom_info: str = ""
+    semantic_direction: str = ""
+    specified_material: str = ""
+    texture_keywords: str = ""
+    background: str = ""
+    randomness: str = ""
+    surprise_mode: bool = False
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -496,6 +506,61 @@ def render_crowd_typography_cover(spec: CoverSpec) -> str:
 {STYLE_ANCHORS['crowd_typography_scene']}"""
 
 
+def infer_semantic_material(title: str, semantic_direction: str = "", specified_material: str = "", randomness: str = "", surprise_mode: bool = False) -> tuple[str, str]:
+    text = f"{title} {semantic_direction}".lower()
+    if specified_material:
+        return specified_material, "使用用户指定材质，并确保材质与标题语义一致。"
+    groups = [
+        (("基础", "稳定", "框架", "结构", "长期", "根基", "搭建", "可靠"), "粗木板、木纹、钉子、石头、混凝土、年轮", "厚重、手工、稳定、粗粝"),
+        (("成长", "复利", "自然", "生长", "沉淀", "慢慢来", "生命力"), "石头、苔藓、种子、藤蔓、土壤、枝叶", "有机、缓慢、自然、时间感"),
+        (("混乱", "噪声", "消散", "遗忘", "不确定", "脆弱", "灰度"), "沙尘、灰尘、粉末、碎片、颗粒", "边缘散落、颗粒飞散、脆弱感"),
+        (("甜蜜", "快乐", "能量", "生活", "轻松", "欲望", "奖励"), "蜂蜜、糖浆、奶油、水果、香蕉、果冻", "黏稠、柔软、明亮、可口"),
+        (("ai", "系统", "自动化", "机器", "效率", "工程", "底层", "架构"), "机械零件、齿轮、金属、螺丝、弹簧、电路、轴承", "复杂精密、工业、结构清晰"),
+        (("创作", "表达", "签名", "品味", "价值", "个人品牌", "审美"), "金色油漆、厚涂笔触、墨迹、刷痕、颜料", "手写、艺术、动态、高级"),
+        (("prompt", "提示词", "生成", "草稿", "迭代", "原型", "设计过程"), "线稿描边、构造线、实心字、草图纸、半成品字形", "设计稿、生成过程、层次叠加"),
+        (("信任", "连接", "关系", "身份", "承诺", "手工", "温度"), "布料、刺绣、皮革、缝线、纸张、印章、绳结", "手工、可靠、温暖、可触摸"),
+    ]
+    material, hint = "混合材质块、纸张、金属、木头和细线结构", "语义清晰、材质与概念强相关"
+    for keywords, candidate, style_hint in groups:
+        if any(k.lower() in text for k in keywords):
+            material, hint = candidate, style_hint
+            break
+    if surprise_mode or randomness == "high":
+        hint += "；启用惊喜模式，可混合 2 种非直白但相关的材质隐喻，但文字可读性优先"
+    elif randomness == "medium":
+        hint += "；允许 1-2 种材质混合，增加创意但保持可读"
+    else:
+        hint += "；严格按语义选择最明显材质，画面稳定易懂"
+    return material, hint
+
+
+def render_semantic_material_typography_cover(spec: CoverSpec) -> str:
+    material, material_hint = infer_semantic_material(
+        spec.title,
+        semantic_direction=spec.semantic_direction,
+        specified_material=spec.specified_material,
+        randomness=spec.randomness,
+        surprise_mode=spec.surprise_mode,
+    )
+    background = spec.background or "纯白、浅灰或干净摄影棚背景"
+    texture_keywords = spec.texture_keywords or material_hint
+    semantic_direction = spec.semantic_direction or spec.metaphor or spec.bottom_sentence
+    return f"""请生成一张语义字体风的封面图。
+主题是「{spec.metaphor or spec.title}」。画面中最重要的主视觉是标题文字「{spec.title}」，文字本身必须成为画面主体。
+请先根据「{spec.title}」的语义，自动选择最合适的材质和结构来设计字体。材质必须服务内容含义，而不是随机装饰。
+语义方向是「{semantic_direction}」。推荐材质方向：「{material}」。质感关键词：「{texture_keywords}」。
+字体要有真实材质质感、自然光影、细节纹理和强烈触感。背景使用「{background}」，保留大量留白。标题必须清楚可读、醒目、有冲击力。
+如果主题偏「稳定、基础、长期主义」，优先使用木头、石头、混凝土等厚重材质。
+如果主题偏「成长、自然、生长」，优先使用苔藓、植物、种子、土壤、石头。
+如果主题偏「消散、混乱、脆弱」，优先使用沙尘、灰尘、碎片、颗粒。
+如果主题偏「甜蜜、能量、生活方式」，优先使用蜂蜜、水果、糖浆、奶油。
+如果主题偏「系统、AI、自动化、工程」，优先使用机械零件、金属、齿轮、电路。
+如果主题偏「创作、表达、品味」，优先使用金色笔触、油漆、手写刷痕。
+如果主题偏「Prompt、生成、设计过程」，优先使用线稿描边、草图层、构造线和实心字体组合。
+副标题「{spec.subtitle}」可以用小号现代字体放在标题下方或角落，不能抢主视觉。画面元素包括：「{spec.elements}」。底部短句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['semantic_material_typography']}"""
+
+
 EXTRA_COVER_GUIDES = {
     "retro_minimal_poster_illustration": "米白旧纸背景，复古印刷颗粒，大面积钴蓝和芥末黄色块，几何化人物或物件，像中世纪现代海报、复古书封或丝网印刷插画。",
     "editorial_balloon_collage": "白色纸张背景，大量留白，半透明彩色圆片像气球或光片，下方用细线素描人物或物件，并用细线连接到圆片，像品牌广告或编辑设计封面。",
@@ -507,6 +572,7 @@ EXTRA_COVER_GUIDES = {
     "editorial_line_character": "白色或奶油白背景，大量留白，黑白极简线稿人物作为主要叙事角色，搭配杂志式大标题、非对称网格和少量柔和色块；可做成品牌视觉板、海报、网站首屏、包装或多面板编辑插画。",
     "editorial_object_annotation_card": "纯白或暖白背景，大量留白，左侧大标题、副标题和三条编号原则，右侧一个高清真实具象物品作为核心隐喻，周围有虚线箭头、小圆点、手写短注释和极简手绘小人，像高级方法论知识卡片。",
     "crowd_typography_scene": "白色或浅灰色巨大地面，高空俯视，大量真实微缩小人排列成文字、数字、问号、箭头、天平、裂缝、阶梯、路径、趋势曲线或组织结构；文字像印在地面上，整体是财经杂志或深度社会议题封面。",
+    "semantic_material_typography": "简洁白色或浅灰摄影棚背景，标题文字本身是唯一主视觉；根据标题语义自动选择木头、石头、苔藓、沙尘、蜂蜜、机械、金属、线稿、布料等真实材质，让材质表达含义，保持文字醒目可读。",
 }
 
 
@@ -553,6 +619,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_object_annotation_cover(spec)
     if spec.style_id == "crowd_typography_scene":
         return render_crowd_typography_cover(spec)
+    if spec.style_id == "semantic_material_typography":
+        return render_semantic_material_typography_cover(spec)
     extra_prompt = render_extra_cover(spec)
     if extra_prompt:
         return extra_prompt
@@ -662,6 +730,12 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             scattered_elements=raw.get("scattered_elements", ""),
             top_directory=raw.get("top_directory", ""),
             bottom_info=raw.get("bottom_info", ""),
+            semantic_direction=raw.get("semantic_direction", ""),
+            specified_material=raw.get("specified_material", ""),
+            texture_keywords=raw.get("texture_keywords", ""),
+            background=raw.get("background", ""),
+            randomness=raw.get("randomness", ""),
+            surprise_mode=(raw.get("surprise_mode") is True or str(raw.get("surprise_mode", "")).lower() in {"1", "true", "yes", "y", "是", "启用", "开启"}),
             style_id=style_id,
         )
         return {
