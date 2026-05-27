@@ -193,6 +193,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "quirky_doodle_character_flow": (
         '整体风格为怪诞小人风：纯白或暖白背景，大量留白，黑色细线手绘，线条自然略带抖动。画面中有一个或多个怪诞小人角色，默认是黑色不规则小怪物，圆角身体，短手短脚，白色小眼睛，表情呆萌、困惑或努力。用小怪物参与流程：搬运文件、操作机器、判断、卡住、跑起来、举牌、掉进洞、从输出口出来。画面用极简图标、盒子、机器、漏斗、传送带、门、文件、工具箱、旗子、箭头、虚线来表达系统流程。配色以黑白为主，只用少量红色、蓝色和橙色做标注与箭头。整体像轻松怪诞的手绘工作流漫画、AI 系统草图、产品流程白板图。不要做成精致商业插画，不要复杂彩色卡通，不要 3D，不要拟真，不要高饱和颜色，不要密集文字。\nQuirky doodle character flow style, clean white background, lots of negative space, thin black hand-drawn lines, slightly wobbly sketch quality. Small strange black blob characters with rounded bodies, tiny arms and legs, white eyes, cute awkward expressions. Characters interact with the workflow: carrying files, operating machines, judging, getting stuck, running, holding signs, falling into holes, coming out of output doors. Use simple icons, boxes, machines, funnels, conveyor belts, doors, documents, toolboxes, flags, arrows and dotted feedback lines. Mostly black and white, with tiny red, blue and orange annotations. Looks like a playful AI workflow doodle, product system sketch, whiteboard process comic. Not polished commercial illustration, not colorful cartoon, not 3D, not realistic, not dense text.'
     ),
+    "minimal_line_art": (
+        '整体风格为线条艺术风：纯白或暖白背景，大量留白，用极简黑色线条表达主体。线条可以是连续一笔画，也可以是少量克制的轮廓线，线条自然流动、干净、轻盈。画面只保留最关键的人物姿态、关系动作、场景轮廓或概念符号，不画复杂细节。允许根据主题加入少量点缀色，例如浅粉爱心、黄色灯泡、浅蓝远方、红色重点或浅灰阴影。整体安静、优雅、克制、有情绪和概念感。不要复杂背景，不要厚重上色，不要写实人物，不要 3D，不要卡通夸张，不要高饱和颜色，不要密集文字。\nMinimal line art style, clean white background, lots of negative space, simple black continuous line drawing, elegant flowing outlines, minimal details, expressive posture and emotion, one-line illustration feel. Use only a tiny accent color when needed, such as pale pink heart, yellow light bulb, soft blue distance, red focus mark, or light gray shadow. Quiet, poetic, modern, minimal, conceptual. Not realistic, not 3D, not colorful cartoon, not complex background, not dense text.'
+    ),
 }
 
 STYLE_NAMES = {
@@ -234,6 +237,7 @@ STYLE_NAMES = {
     "crowd_typography_scene": "人群造字风",
     "semantic_material_typography": "语义字体风",
     "quirky_doodle_character_flow": "怪诞小人风",
+    "minimal_line_art": "线条艺术风",
 }
 
 BODY_STRUCTURES = {
@@ -292,6 +296,11 @@ class CoverSpec:
     node4: str = ""
     feedback_loop: str = ""
     risk_label: str = ""
+    core_subject: str = ""
+    relation_action: str = ""
+    accent_element: str = ""
+    line_type: str = ""
+    emotion: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -602,6 +611,30 @@ def render_quirky_doodle_body(spec: BodySpec) -> str:
 {STYLE_ANCHORS['quirky_doodle_character_flow']}"""
 
 
+def render_minimal_line_art_cover(spec: CoverSpec) -> str:
+    core_subject = spec.core_subject or spec.metaphor or "一个极简人物或关系场景"
+    action = spec.relation_action or spec.character_action or "安静地行走、靠近、思考或共同协作"
+    accent = spec.accent_element or "一个很小的黄色灯泡、粉色爱心、红色小点或浅蓝远方线"
+    line_type = spec.line_type or "连续一笔画或简洁轮廓线"
+    emotion = spec.emotion or spec.bottom_sentence or "安静、克制、有概念感"
+    return f"""请生成一张线条艺术风的中文封面图。
+主题是「{spec.title}」。画面白底留白，使用极简黑色线条作为主视觉，整体安静、现代、克制。
+画面主体是「{core_subject}」，用{line_type}表现。主体正在「{action}」，用来隐喻「{spec.metaphor}」。线条要干净、有流动感，不追求写实细节。
+标题「{spec.title}」放在留白区域，使用简洁黑色字体。副标题「{spec.subtitle}」字号较小。可以加入一个很小的点缀色元素：「{accent}」。
+画面情绪是「{emotion}」。画面元素包括：「{spec.elements}」。底部短句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['minimal_line_art']}"""
+
+
+def render_minimal_line_art_body(spec: BodySpec) -> str:
+    return f"""请生成一张线条艺术风的中文插画。
+主题是「{spec.title}」。画面使用纯白或暖白背景，大量留白，整体极简、安静、优雅。
+用黑色极简线条表现「{spec.modules}」。主体可以是人物、关系动作、城市轮廓、课堂场景、旅行场景、灵感灯泡、动物陪伴或抽象符号。线条要自然流动，像连续一笔画或少量克制轮廓线，只保留关键姿态和情绪，不画复杂细节。
+画面核心动作是：「{spec.character_action}」。通过线条表达「{spec.notes}」。
+可以根据主题加入少量点缀色，例如浅粉爱心、黄色灯泡、浅蓝远方、红色重点、小星星或浅灰阴影。点缀色必须很少，不能破坏黑白极简感。
+如果需要文字，加入短标题「{spec.title}」，使用极简中文字体或自然手写字，放在留白处。底部判断句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['minimal_line_art']}"""
+
+
 EXTRA_COVER_GUIDES = {
     "retro_minimal_poster_illustration": "米白旧纸背景，复古印刷颗粒，大面积钴蓝和芥末黄色块，几何化人物或物件，像中世纪现代海报、复古书封或丝网印刷插画。",
     "editorial_balloon_collage": "白色纸张背景，大量留白，半透明彩色圆片像气球或光片，下方用细线素描人物或物件，并用细线连接到圆片，像品牌广告或编辑设计封面。",
@@ -615,6 +648,7 @@ EXTRA_COVER_GUIDES = {
     "crowd_typography_scene": "白色或浅灰色巨大地面，高空俯视，大量真实微缩小人排列成文字、数字、问号、箭头、天平、裂缝、阶梯、路径、趋势曲线或组织结构；文字像印在地面上，整体是财经杂志或深度社会议题封面。",
     "semantic_material_typography": "简洁白色或浅灰摄影棚背景，标题文字本身是唯一主视觉；根据标题语义自动选择木头、石头、苔藓、沙尘、蜂蜜、机械、金属、线稿、布料等真实材质，让材质表达含义，保持文字醒目可读。",
     "quirky_doodle_character_flow": "白底大量留白，黑色细线手绘怪诞小黑角色参与工作流；用机器、盒子、漏斗、传送带、文件、门、工具箱、旗子、橙色箭头、蓝色虚线反馈和红色风险标注表达 AI 系统流程。",
+    "minimal_line_art": "纯白或暖白背景，大量留白，用极简黑色连续线条或少量克制轮廓线表现人物、关系、城市、旅行、课堂、灵感灯泡或抽象符号；只加入极少点缀色，整体优雅克制。",
 }
 
 
@@ -665,6 +699,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_semantic_material_typography_cover(spec)
     if spec.style_id == "quirky_doodle_character_flow":
         return render_quirky_doodle_cover(spec)
+    if spec.style_id == "minimal_line_art":
+        return render_minimal_line_art_cover(spec)
     extra_prompt = render_extra_cover(spec)
     if extra_prompt:
         return extra_prompt
@@ -738,6 +774,8 @@ def render_body(spec: BodySpec) -> str:
         return render_healing_metaphor_body(spec)
     if spec.style_id == "quirky_doodle_character_flow":
         return render_quirky_doodle_body(spec)
+    if spec.style_id == "minimal_line_art":
+        return render_minimal_line_art_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -790,6 +828,11 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             node4=raw.get("node4", ""),
             feedback_loop=raw.get("feedback_loop", ""),
             risk_label=raw.get("risk_label", ""),
+            core_subject=raw.get("core_subject", ""),
+            relation_action=raw.get("relation_action") or raw.get("action", ""),
+            accent_element=raw.get("accent_element", ""),
+            line_type=raw.get("line_type", ""),
+            emotion=raw.get("emotion", ""),
             style_id=style_id,
         )
         return {
