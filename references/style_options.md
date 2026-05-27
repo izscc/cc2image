@@ -40,7 +40,8 @@
     {"style_id": "giant_letter_lifestyle_scene", "style_name": "巨字生活风", "best_for": ["品牌广告、教育、家庭、城市、组织价值"]},
     {"style_id": "oriental_floral_minimal_editorial", "style_name": "花艺留白风", "best_for": ["女性主题、母亲节、思念、关系、疗愈、节气"]},
     {"style_id": "zen_ink_philosophy_poster", "style_name": "禅意水墨风", "best_for": ["哲学、人生路径、自我修炼、觉察、东方智慧"]},
-    {"style_id": "editorial_line_character", "style_name": "编辑线稿风", "best_for": ["品牌视觉、杂志海报、网站首屏、包装、角色系统、城市生活场景"]}
+    {"style_id": "editorial_line_character", "style_name": "编辑线稿风", "best_for": ["品牌视觉、杂志海报、网站首屏、包装、角色系统、城市生活场景"]},
+    {"style_id": "editorial_object_annotation_card", "style_name": "具象物品标注编辑风", "best_for": ["AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则"]}
   ]
 }
 ```
@@ -49,7 +50,7 @@
 
 A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`。
 B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`。
-C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`。
+C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`。
 D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`。
 E. 拼贴 / 纸张 / 手工材质类：`retro_minimal_poster_illustration`、`editorial_balloon_collage`、`paper_cut_profile_silhouette`、`torn_paper_note_minimal`、`embroidered_patch_brand`。
 F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_checklist_scene`、`fabric_micro_scene_ad`、`giant_letter_lifestyle_scene`。
@@ -92,8 +93,9 @@ F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_chec
 32. 女性、母亲节、思念、关系、疗愈、花、花瓣、节气、东方花艺、文学情绪：优先 `oriental_floral_minimal_editorial`。
 33. 哲学、人生道路、修行、自律、克己、觉察、禅意、东方智慧、格言：优先 `zen_ink_philosophy_poster`。
 34. 黑白线稿、编辑插画、品牌视觉系统、角色 set、城市生活、杂志版式、包装、网站首屏、App 概念：优先 `editorial_line_character`。
-35. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-36. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+35. AI 方法论、设计原则、信任、验证、判断力、工作流原则、创作者手册、playbook、三条原则、用一个物品隐喻一个观点：优先 `editorial_object_annotation_card`。
+36. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+37. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -235,3 +237,12 @@ F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_chec
 适合：品牌视觉、杂志海报、网站首屏、包装、角色系统、城市生活场景。
 
 核心：黑白极简线稿人物、几何扁平比例、城市日常行为、杂志式强排版、大留白、少量柔和色块，适合把品牌、产品、活动或抽象主题转成一套编辑插画视觉系统。
+
+
+## 35. editorial_object_annotation_card｜具象物品标注编辑风
+
+适合：AI方法论、设计思维、知识卡片、认知模型、信任验证、工作流原则。
+
+核心：真实具象物品 + 抽象观点映射 + 编辑排版 + 标注系统。用一个高清真实物品作为可被观察和标注的隐喻模型，左侧承载强观点标题与三条原则，右侧用虚线箭头、手写注释和极简小人讲清方法论。
+
+结构化字段建议：主题、标题、副标题、核心物品、隐喻含义、原则1、说明1、原则2、说明2、原则3、说明3、标注1、标注2、标注3、小人动作、系列名。
