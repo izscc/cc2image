@@ -190,6 +190,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "semantic_material_typography": (
         '整体风格为语义字体风：文字本身是画面主角，根据标题含义自动选择最贴合语义的真实材质、物体结构或自然纹理来构成字体。字体可以由木板、石头、苔藓、沙尘、蜂蜜、水果、金属机械、玻璃、纸张、布料、火焰、水、云朵、泥土、齿轮、线稿或混合材料构成。材质必须服务内容含义，而不是随机装饰。画面背景简洁，通常为白色、浅灰或干净摄影棚背景，保留大量留白。文字要醒目、可读、有强烈触感和真实光影。可以加入少量副标题、标签或编辑说明，但不要喧宾夺主。不要做成普通平面字，不要廉价 3D 字，不要杂乱拼贴，不要复杂信息图，不要高饱和背景。\nSemantic material typography style, the text itself is the main visual. Transform the title into a physical material or object structure that matches its meaning: wood planks, stone, moss, dust, sand, honey, fruit peel, golden paint, mechanical parts, glass, fabric, paper, metal, clouds, water, fire, soil, or mixed materials. The material must express the concept, not just decorate it. Clean white or light gray studio background, strong readability, realistic texture, tactile surface, natural shadows, premium editorial poster feel, minimal supporting text, not flat typography, not cheap 3D, not cluttered, not infographic.'
     ),
+    "quirky_doodle_character_flow": (
+        '整体风格为怪诞小人风：纯白或暖白背景，大量留白，黑色细线手绘，线条自然略带抖动。画面中有一个或多个怪诞小人角色，默认是黑色不规则小怪物，圆角身体，短手短脚，白色小眼睛，表情呆萌、困惑或努力。用小怪物参与流程：搬运文件、操作机器、判断、卡住、跑起来、举牌、掉进洞、从输出口出来。画面用极简图标、盒子、机器、漏斗、传送带、门、文件、工具箱、旗子、箭头、虚线来表达系统流程。配色以黑白为主，只用少量红色、蓝色和橙色做标注与箭头。整体像轻松怪诞的手绘工作流漫画、AI 系统草图、产品流程白板图。不要做成精致商业插画，不要复杂彩色卡通，不要 3D，不要拟真，不要高饱和颜色，不要密集文字。\nQuirky doodle character flow style, clean white background, lots of negative space, thin black hand-drawn lines, slightly wobbly sketch quality. Small strange black blob characters with rounded bodies, tiny arms and legs, white eyes, cute awkward expressions. Characters interact with the workflow: carrying files, operating machines, judging, getting stuck, running, holding signs, falling into holes, coming out of output doors. Use simple icons, boxes, machines, funnels, conveyor belts, doors, documents, toolboxes, flags, arrows and dotted feedback lines. Mostly black and white, with tiny red, blue and orange annotations. Looks like a playful AI workflow doodle, product system sketch, whiteboard process comic. Not polished commercial illustration, not colorful cartoon, not 3D, not realistic, not dense text.'
+    ),
 }
 
 STYLE_NAMES = {
@@ -230,6 +233,7 @@ STYLE_NAMES = {
     "editorial_object_annotation_card": "具象标注风",
     "crowd_typography_scene": "人群造字风",
     "semantic_material_typography": "语义字体风",
+    "quirky_doodle_character_flow": "怪诞小人风",
 }
 
 BODY_STRUCTURES = {
@@ -280,6 +284,14 @@ class CoverSpec:
     background: str = ""
     randomness: str = ""
     surprise_mode: bool = False
+    flow_action: str = ""
+    core_structure: str = ""
+    node1: str = ""
+    node2: str = ""
+    node3: str = ""
+    node4: str = ""
+    feedback_loop: str = ""
+    risk_label: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -561,6 +573,35 @@ def render_semantic_material_typography_cover(spec: CoverSpec) -> str:
 {STYLE_ANCHORS['semantic_material_typography']}"""
 
 
+def render_quirky_doodle_cover(spec: CoverSpec) -> str:
+    flow_action = spec.flow_action or spec.character_action or "小黑怪把素材送进机器，在机器里判断，然后推着输出卡片跑出来"
+    core_structure = spec.core_structure or spec.metaphor or "信息源 → 判断机器 → 内容卡片 → 承接口 → 反馈回收"
+    node1 = spec.node1 or "信息源"
+    node2 = spec.node2 or "判断"
+    node3 = spec.node3 or "内容生产"
+    node4 = spec.node4 or "承接"
+    feedback_loop = spec.feedback_loop or "用户反馈回到信息源"
+    risk_label = spec.risk_label or "别乱写"
+    return f"""请生成一张怪诞小人风的中文封面图。
+主题是「{spec.title}」。画面白底留白，使用黑色细线手绘和少量红蓝橙标注，整体像一张轻松怪诞的工作流封面。
+画面左侧放大标题「{spec.title}」，标题使用清晰黑色粗体或自然手写字。副标题写「{spec.subtitle}」，字号较小。
+画面右侧或中间画一个怪诞小黑角色，正在「{flow_action}」。它周围有简单的系统装置，例如机器、文件堆、漏斗、工具箱、传送带、门、输出卡片或旗子，用来隐喻「{spec.metaphor}」。
+请把内容组织成清晰结构：「{core_structure}」。节点包括：「{node1}」「{node2}」「{node3}」「{node4}」。每个节点只写 2-6 个字。
+用橙色箭头表示主流程，用蓝色虚线表示反馈回路：「{feedback_loop}」，用红色文字标注关键风险或核心判断：「{risk_label}」。底部可以写一句很短的判断句：「{spec.bottom_sentence}」。
+画面元素包括：「{spec.elements}」。画面要轻松、有趣、清楚，不要拥挤。
+{STYLE_ANCHORS['quirky_doodle_character_flow']}"""
+
+
+def render_quirky_doodle_body(spec: BodySpec) -> str:
+    return f"""请生成一张怪诞小人风的中文正文配图。
+主题是「{spec.title}」。画面使用纯白或暖白背景，大量留白，整体像轻松怪诞的手绘工作流漫画或 AI 系统草图。
+画面中有一个或多个怪诞小人角色，默认是黑色不规则小怪物，圆角身体，短手短脚，白色小眼睛，表情呆萌、困惑或努力。小怪物正在参与这个流程：「{spec.character_action}」。
+请把内容拆成一个清晰的流程或结构：「{spec.structure}」。可以使用机器、盒子、漏斗、传送带、门、文件、工具箱、旗子、输入口、输出口、路径线等极简手绘元素。
+使用橙色箭头表示主流程，蓝色虚线表示反馈回路或回收路径，红色文字标注关键风险或核心判断。黑色用于普通线条和节点说明。
+画面中的文字要少而清楚，核心节点包括：「{spec.modules}」。必要注释：「{spec.notes}」。每个节点只写 2-6 个字。底部判断句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['quirky_doodle_character_flow']}"""
+
+
 EXTRA_COVER_GUIDES = {
     "retro_minimal_poster_illustration": "米白旧纸背景，复古印刷颗粒，大面积钴蓝和芥末黄色块，几何化人物或物件，像中世纪现代海报、复古书封或丝网印刷插画。",
     "editorial_balloon_collage": "白色纸张背景，大量留白，半透明彩色圆片像气球或光片，下方用细线素描人物或物件，并用细线连接到圆片，像品牌广告或编辑设计封面。",
@@ -573,6 +614,7 @@ EXTRA_COVER_GUIDES = {
     "editorial_object_annotation_card": "纯白或暖白背景，大量留白，左侧大标题、副标题和三条编号原则，右侧一个高清真实具象物品作为核心隐喻，周围有虚线箭头、小圆点、手写短注释和极简手绘小人，像高级方法论知识卡片。",
     "crowd_typography_scene": "白色或浅灰色巨大地面，高空俯视，大量真实微缩小人排列成文字、数字、问号、箭头、天平、裂缝、阶梯、路径、趋势曲线或组织结构；文字像印在地面上，整体是财经杂志或深度社会议题封面。",
     "semantic_material_typography": "简洁白色或浅灰摄影棚背景，标题文字本身是唯一主视觉；根据标题语义自动选择木头、石头、苔藓、沙尘、蜂蜜、机械、金属、线稿、布料等真实材质，让材质表达含义，保持文字醒目可读。",
+    "quirky_doodle_character_flow": "白底大量留白，黑色细线手绘怪诞小黑角色参与工作流；用机器、盒子、漏斗、传送带、文件、门、工具箱、旗子、橙色箭头、蓝色虚线反馈和红色风险标注表达 AI 系统流程。",
 }
 
 
@@ -621,6 +663,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_crowd_typography_cover(spec)
     if spec.style_id == "semantic_material_typography":
         return render_semantic_material_typography_cover(spec)
+    if spec.style_id == "quirky_doodle_character_flow":
+        return render_quirky_doodle_cover(spec)
     extra_prompt = render_extra_cover(spec)
     if extra_prompt:
         return extra_prompt
@@ -692,6 +736,8 @@ def render_body(spec: BodySpec) -> str:
         return render_childlike(spec)
     if spec.style_id == "minimal_healing_metaphor_comic":
         return render_healing_metaphor_body(spec)
+    if spec.style_id == "quirky_doodle_character_flow":
+        return render_quirky_doodle_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -736,6 +782,14 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             background=raw.get("background", ""),
             randomness=raw.get("randomness", ""),
             surprise_mode=(raw.get("surprise_mode") is True or str(raw.get("surprise_mode", "")).lower() in {"1", "true", "yes", "y", "是", "启用", "开启"}),
+            flow_action=raw.get("flow_action", ""),
+            core_structure=raw.get("core_structure", ""),
+            node1=raw.get("node1", ""),
+            node2=raw.get("node2", ""),
+            node3=raw.get("node3", ""),
+            node4=raw.get("node4", ""),
+            feedback_loop=raw.get("feedback_loop", ""),
+            risk_label=raw.get("risk_label", ""),
             style_id=style_id,
         )
         return {
