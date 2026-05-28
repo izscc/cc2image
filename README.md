@@ -17,7 +17,7 @@
 
 ## 风格效果示例
 
-下面展示 38 套核心风格的封面效果；第 39 号线条艺术风可用于极简封面、情绪图和概念插画，第 40 号黑白系统风可用于 SOP、Skill、提示词库和方法论系统封面。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
+下面展示 40 套核心风格的封面效果。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
 
 <table>
   <tr>
@@ -95,6 +95,10 @@
   <tr>
     <td width="50%"><strong>37｜语义字体风</strong><br><code>semantic_material_typography</code><br><img src="assets/examples/37-semantic-material-typography.jpg" alt="语义字体风示例"></td>
     <td width="50%"><strong>38｜怪诞小人风</strong><br><code>quirky_doodle_character_flow</code><br><img src="assets/examples/38-quirky-doodle-character-flow.png" alt="怪诞小人风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>39｜线条艺术风</strong><br><code>minimal_line_art</code><br><img src="assets/examples/39-minimal-line-art.png" alt="线条艺术风示例"></td>
+    <td width="50%"><strong>40｜黑白系统风</strong><br><code>monochrome_system_editorial</code><br><img src="assets/examples/40-monochrome-system-editorial.png" alt="黑白系统风示例"></td>
   </tr>
 </table>
 
