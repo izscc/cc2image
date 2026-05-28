@@ -191,7 +191,7 @@ STYLE_ANCHORS: Dict[str, str] = {
         '整体风格为语义字体风：文字本身是画面主角，根据标题含义自动选择最贴合语义的真实材质、物体结构或自然纹理来构成字体。字体可以由木板、石头、苔藓、沙尘、蜂蜜、水果、金属机械、玻璃、纸张、布料、火焰、水、云朵、泥土、齿轮、线稿或混合材料构成。材质必须服务内容含义，而不是随机装饰。画面背景简洁，通常为白色、浅灰或干净摄影棚背景，保留大量留白。文字要醒目、可读、有强烈触感和真实光影。可以加入少量副标题、标签或编辑说明，但不要喧宾夺主。不要做成普通平面字，不要廉价 3D 字，不要杂乱拼贴，不要复杂信息图，不要高饱和背景。\nSemantic material typography style, the text itself is the main visual. Transform the title into a physical material or object structure that matches its meaning: wood planks, stone, moss, dust, sand, honey, fruit peel, golden paint, mechanical parts, glass, fabric, paper, metal, clouds, water, fire, soil, or mixed materials. The material must express the concept, not just decorate it. Clean white or light gray studio background, strong readability, realistic texture, tactile surface, natural shadows, premium editorial poster feel, minimal supporting text, not flat typography, not cheap 3D, not cluttered, not infographic.'
     ),
     "quirky_doodle_character_flow": (
-        '整体风格为怪诞小人风：纯白或暖白背景，大量留白，黑色细线手绘，线条自然略带抖动。画面中有一个或多个怪诞小人角色，默认是黑色不规则小怪物，圆角身体，短手短脚，白色小眼睛，表情呆萌、困惑或努力。用小怪物参与流程：搬运文件、操作机器、判断、卡住、跑起来、举牌、掉进洞、从输出口出来。画面用极简图标、盒子、机器、漏斗、传送带、门、文件、工具箱、旗子、箭头、虚线来表达系统流程。配色以黑白为主，只用少量红色、蓝色和橙色做标注与箭头。整体像轻松怪诞的手绘工作流漫画、AI 系统草图、产品流程白板图。不要做成精致商业插画，不要复杂彩色卡通，不要 3D，不要拟真，不要高饱和颜色，不要密集文字。\nQuirky doodle character flow style, clean white background, lots of negative space, thin black hand-drawn lines, slightly wobbly sketch quality. Small strange black blob characters with rounded bodies, tiny arms and legs, white eyes, cute awkward expressions. Characters interact with the workflow: carrying files, operating machines, judging, getting stuck, running, holding signs, falling into holes, coming out of output doors. Use simple icons, boxes, machines, funnels, conveyor belts, doors, documents, toolboxes, flags, arrows and dotted feedback lines. Mostly black and white, with tiny red, blue and orange annotations. Looks like a playful AI workflow doodle, product system sketch, whiteboard process comic. Not polished commercial illustration, not colorful cartoon, not 3D, not realistic, not dense text.'
+        '整体风格为怪诞小人风：16:9 横版，纯白背景，大量留白，黑色细线手绘，线条自然略带抖动。画面中有一个或多个怪诞小人角色，默认是黑色实心不规则小怪物，白色圆点眼睛，细胳膊细腿，空表情、认真、冷幽默。小黑必须承担核心概念动作，例如搬运、拉线、分拣、称重、守门、修补、卡在机器里、从输出口出来；不能只是站在旁边当装饰。每张图只讲一个认知锚点或核心结构，版式由内容动作决定，不固定左题右图。主体约占画面 40%-60%，至少保留 35% 空白。中文手写标注最多 5-8 处，每处 2-8 字。黑色用于主体线稿和小黑，橙色用于主流程，红色用于风险、问题或重点，蓝色用于反馈、系统状态或补充说明。不要写“流程图/系统架构/常见坑/路线图”等类型标题，不要 PPT、正式流程图、商业插画、儿童卡通、真实 UI、复杂架构、纸纹、渐变、阴影、密集文字。\nQuirky doodle character flow style, standalone 16:9 Chinese article illustration, pure white background, lots of negative space, thin black hand-drawn lines, slightly wobbly sketch quality. Small solid-black strange blob characters with white dot eyes, tiny thin arms and legs, blank serious deadpan expression. The character must perform the core conceptual action: carrying, pulling, sorting, weighing, guarding, repairing, getting stuck inside a machine, coming out of an output door; never decorative. One image explains one cognitive anchor. Content-driven layout, not a fixed template. Main subject around 40-60% of the canvas, at least 35% blank white space. Use at most 5-8 short handwritten Chinese labels. Orange for main flow, red for risk/problem/focus, blue for feedback/system state. Do not write structure type titles. Not PPT, not formal flowchart, not commercial illustration, not cute mascot poster, not children illustration, not realistic UI, not paper texture, not gradients, not dense text.'
     ),
     "minimal_line_art": (
         '整体风格为线条艺术风：纯白或暖白背景，大量留白，用极简黑色线条表达主体。线条可以是连续一笔画，也可以是少量克制的轮廓线，线条自然流动、干净、轻盈。画面只保留最关键的人物姿态、关系动作、场景轮廓或概念符号，不画复杂细节。允许根据主题加入少量点缀色，例如浅粉爱心、黄色灯泡、浅蓝远方、红色重点或浅灰阴影。整体安静、优雅、克制、有情绪和概念感。不要复杂背景，不要厚重上色，不要写实人物，不要 3D，不要卡通夸张，不要高饱和颜色，不要密集文字。\nMinimal line art style, clean white background, lots of negative space, simple black continuous line drawing, elegant flowing outlines, minimal details, expressive posture and emotion, one-line illustration feel. Use only a tiny accent color when needed, such as pale pink heart, yellow light bulb, soft blue distance, red focus mark, or light gray shadow. Quiet, poetic, modern, minimal, conceptual. Not realistic, not 3D, not colorful cartoon, not complex background, not dense text.'
@@ -300,6 +300,12 @@ class CoverSpec:
     node4: str = ""
     feedback_loop: str = ""
     risk_label: str = ""
+    placement: str = ""
+    core_idea: str = ""
+    visual_anchor: str = ""
+    shot_type: str = ""
+    suggested_elements: str = ""
+    short_labels: str = ""
     core_subject: str = ""
     relation_action: str = ""
     accent_element: str = ""
@@ -330,6 +336,14 @@ class BodySpec:
     speech_bubble: str
     bottom_sentence: str
     subtitle: str = ""
+    placement: str = ""
+    core_idea: str = ""
+    visual_anchor: str = ""
+    shot_type: str = ""
+    suggested_elements: str = ""
+    short_labels: str = ""
+    feedback_loop: str = ""
+    risk_label: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -599,31 +613,48 @@ def render_semantic_material_typography_cover(spec: CoverSpec) -> str:
 
 
 def render_quirky_doodle_cover(spec: CoverSpec) -> str:
-    flow_action = spec.flow_action or spec.character_action or "小黑怪把素材送进机器，在机器里判断，然后推着输出卡片跑出来"
-    core_structure = spec.core_structure or spec.metaphor or "信息源 → 判断机器 → 内容卡片 → 承接口 → 反馈回收"
-    node1 = spec.node1 or "信息源"
+    flow_action = spec.flow_action or spec.character_action or "小黑把素材塞进一台怪机器，拉动判断杆，再把结果推向输出口"
+    core_structure = spec.core_structure or spec.metaphor or "输入 → 判断 → 处理 → 输出 → 反馈"
+    node1 = spec.node1 or "输入"
     node2 = spec.node2 or "判断"
-    node3 = spec.node3 or "内容生产"
-    node4 = spec.node4 or "承接"
-    feedback_loop = spec.feedback_loop or "用户反馈回到信息源"
-    risk_label = spec.risk_label or "别乱写"
+    node3 = spec.node3 or "处理"
+    node4 = spec.node4 or "输出"
+    feedback_loop = spec.feedback_loop or "输出反馈回到输入"
+    risk_label = spec.risk_label or "别乱跑"
+    core_idea = spec.core_idea or spec.bottom_sentence or "把复杂流程变成一个可执行的动作"
+    visual_anchor = spec.visual_anchor or "输入输出闭环 / 分流判断 / 卡住到跑起来"
+    shot_type = spec.shot_type or "Workflow / 系统局部 / 概念隐喻"
+    suggested_elements = spec.suggested_elements or spec.elements or "旧机器、文件、门、输出卡片、虚线回路"
+    short_labels = spec.short_labels or f"{node1} / {node2} / {node3} / {node4} / {risk_label}"
     return f"""请生成一张怪诞小人风的中文封面图。
-主题是「{spec.title}」。画面白底留白，使用黑色细线手绘和少量红蓝橙标注，整体像一张轻松怪诞的工作流封面。
-画面左侧放大标题「{spec.title}」，标题使用清晰黑色粗体或自然手写字。副标题写「{spec.subtitle}」，字号较小。
-画面右侧或中间画一个怪诞小黑角色，正在「{flow_action}」。它周围有简单的系统装置，例如机器、文件堆、漏斗、工具箱、传送带、门、输出卡片或旗子，用来隐喻「{spec.metaphor}」。
-请把内容组织成清晰结构：「{core_structure}」。节点包括：「{node1}」「{node2}」「{node3}」「{node4}」。每个节点只写 2-6 个字。
-用橙色箭头表示主流程，用蓝色虚线表示反馈回路：「{feedback_loop}」，用红色文字标注关键风险或核心判断：「{risk_label}」。底部可以写一句很短的判断句：「{spec.bottom_sentence}」。
-画面元素包括：「{spec.elements}」。画面要轻松、有趣、清楚，不要拥挤。
+主题是「{spec.title}」。画面使用纯白背景、大量留白、黑色细线手绘和少量红蓝橙标注，整体像轻松怪诞的工作流封面或产品系统草图。
+这张图只表达一个认知锚点：「{visual_anchor}」。核心意思是：「{core_idea}」。不要平均铺开多个观点。
+版式不固定，不要固定左标题右图；根据核心动作选择合适构图：「{shot_type}」。可以是 Workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线或小漫画分镜。
+标题「{spec.title}」和副标题「{spec.subtitle}」只作为简短封面文字，放在留白区域，不要做成 PPT 标题栏。
+画面中必须有一个怪诞小黑角色：黑色实心不规则小怪物，白色圆点眼睛，细胳膊细腿，空表情、认真但有点荒诞。小黑正在执行核心动作：「{flow_action}」。如果去掉小黑后画面隐喻仍完整，就说明小黑太装饰，必须让它承担动作。
+请把内容组织成一个清晰但不正式的结构：「{core_structure}」。节点只保留：「{node1}」「{node2}」「{node3}」「{node4}」。建议元素：「{suggested_elements}」。短标注：「{short_labels}」。每个标注 2-8 个字，最多 5-8 处。
+用橙色表示主流程或移动路径；用蓝色虚线表示反馈回路：「{feedback_loop}」；用红色标注关键风险或判断：「{risk_label}」。底部可写很短的判断句：「{spec.bottom_sentence}」。
+不要写“流程图 / 系统架构 / 常见坑 / 路线图”等类型标题。不要画成正式流程图、课程页、复杂架构图或儿童卡通。
 {STYLE_ANCHORS['quirky_doodle_character_flow']}"""
 
 
 def render_quirky_doodle_body(spec: BodySpec) -> str:
+    core_idea = spec.core_idea or spec.bottom_sentence or "这张图要表达文章中的一个关键判断"
+    visual_anchor = spec.visual_anchor or spec.structure or "核心判断 / 断点 / 输入输出 / 分流 / 对比 / 承接 / 常见坑 / 状态变化"
+    shot_type = spec.shot_type or spec.structure or "Workflow / 系统局部 / 概念隐喻"
+    suggested_elements = spec.suggested_elements or spec.modules or "旧机器、纸箱、抽屉、漏斗、门、文件、路径线"
+    short_labels = spec.short_labels or spec.notes or spec.modules
+    feedback_loop = spec.feedback_loop or "反馈回流"
+    risk_label = spec.risk_label or "关键判断"
     return f"""请生成一张怪诞小人风的中文正文配图。
-主题是「{spec.title}」。画面使用纯白或暖白背景，大量留白，整体像轻松怪诞的手绘工作流漫画或 AI 系统草图。
-画面中有一个或多个怪诞小人角色，默认是黑色不规则小怪物，圆角身体，短手短脚，白色小眼睛，表情呆萌、困惑或努力。小怪物正在参与这个流程：「{spec.character_action}」。
-请把内容拆成一个清晰的流程或结构：「{spec.structure}」。可以使用机器、盒子、漏斗、传送带、门、文件、工具箱、旗子、输入口、输出口、路径线等极简手绘元素。
-使用橙色箭头表示主流程，蓝色虚线表示反馈回路或回收路径，红色文字标注关键风险或核心判断。黑色用于普通线条和节点说明。
-画面中的文字要少而清楚，核心节点包括：「{spec.modules}」。必要注释：「{spec.notes}」。每个节点只写 2-6 个字。底部判断句：「{spec.bottom_sentence}」。
+这是一张独立的 16:9 横版文章配图，主题是「{spec.title}」。画面必须是纯白背景、大量留白、黑色细线手绘，整体像轻松怪诞的产品工作流草图，而不是 PPT 或正式流程图。
+这张图只表达一个认知锚点：「{visual_anchor}」。核心意思是：「{core_idea}」。不要把多个段落或多个观点塞进同一张图。
+版式不固定，根据内容动作选择一种结构：「{shot_type}」。可用 Workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线或小漫画分镜；不要把结构类型写在画面上。
+画面中必须有小黑：一个黑色实心不规则小怪物，白色圆点眼睛，细胳膊细腿，空表情、认真、冷幽默。小黑正在「{spec.character_action}」。小黑必须承担核心动作，不是站在角落看图。
+把抽象概念转成一个物理动作或低科技物件：卡住、漏掉、变重、分拣、沉淀、发酵、开门、折叠、拆包、回流；可使用纸箱、抽屉、旧机器、漏斗、秤、邮筒、门、井、梯子、水管、线团、闸门、怪表盘等。建议元素：「{suggested_elements}」。
+画面只保留 3-5 个主要元素。中文手写短标注为：「{short_labels}」。每处 2-8 个字，最多 5-8 处。
+颜色规则：黑色用于主体线稿和小黑；橙色用于主流程、路径或箭头；蓝色虚线用于反馈或系统状态：「{feedback_loop}」；红色只用于问题、风险或关键判断：「{risk_label}」。底部判断句：「{spec.bottom_sentence}」。
+主体约占画面 40%-60%，至少 35% 空白。不要写左上角大标题，不要写“工作流/系统架构/常见坑/路线图”等类型标题，不要真实 UI 截图，不要纸纹、米色背景、渐变、复杂阴影或密集文字。
 {STYLE_ANCHORS['quirky_doodle_character_flow']}"""
 
 
@@ -663,7 +694,7 @@ EXTRA_COVER_GUIDES = {
     "editorial_object_annotation_card": "纯白或暖白背景，大量留白，左侧大标题、副标题和三条编号原则，右侧一个高清真实具象物品作为核心隐喻，周围有虚线箭头、小圆点、手写短注释和极简手绘小人，像高级方法论知识卡片。",
     "crowd_typography_scene": "白色或浅灰色巨大地面，高空俯视，大量真实微缩小人排列成文字、数字、问号、箭头、天平、裂缝、阶梯、路径、趋势曲线或组织结构；文字像印在地面上，整体是财经杂志或深度社会议题封面。",
     "semantic_material_typography": "简洁白色或浅灰摄影棚背景，标题文字本身是唯一主视觉；根据标题语义自动选择木头、石头、苔藓、沙尘、蜂蜜、机械、金属、线稿、布料等真实材质，让材质表达含义，保持文字醒目可读。",
-    "quirky_doodle_character_flow": "白底大量留白，黑色细线手绘怪诞小黑角色参与工作流；用机器、盒子、漏斗、传送带、文件、门、工具箱、旗子、橙色箭头、蓝色虚线反馈和红色风险标注表达 AI 系统流程。",
+    "quirky_doodle_character_flow": "纯白背景、大量留白，黑色细线手绘怪诞小黑角色承担核心动作；先抓文章认知锚点，再用旧机器、纸箱、抽屉、漏斗、门、路径线、橙色主流程、蓝色反馈和红色风险标注，讲清 AI 工作流或系统卡点。",
     "minimal_line_art": "纯白或暖白背景，大量留白，用极简黑色连续线条或少量克制轮廓线表现人物、关系、城市、旅行、课堂、灵感灯泡或抽象符号；只加入极少点缀色，整体优雅克制。",
     "monochrome_system_editorial": "黑白灰高对比，巨型粗体中文或英文字压场，配合档案盒、索引卡、锁、阶梯、门、路径线、路线图、货船、集装箱或微缩人物，并加入细线网格、编号、条形码和工业化信息排版。",
 }
@@ -821,9 +852,13 @@ def render_body(spec: BodySpec) -> str:
 
 
 def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
+    raw = dict(raw)
     image_type = raw.get("type")
     style_id = normalize_style(raw.get("style_id") or raw.get("style") or DEFAULT_STYLE_ID)
     if image_type == "cover":
+        raw.setdefault("metaphor", raw.get("visual_anchor") or raw.get("core_structure") or raw.get("core_idea", ""))
+        raw.setdefault("elements", raw.get("suggested_elements", ""))
+        raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action", ""))
         require_fields(raw, ["title", "subtitle", "metaphor", "elements", "character_action", "speech_bubble", "bottom_sentence"], "cover")
         spec = CoverSpec(
             title=raw["title"],
@@ -865,6 +900,12 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             node4=raw.get("node4", ""),
             feedback_loop=raw.get("feedback_loop", ""),
             risk_label=raw.get("risk_label", ""),
+            placement=raw.get("placement", ""),
+            core_idea=raw.get("core_idea", ""),
+            visual_anchor=raw.get("visual_anchor", ""),
+            shot_type=raw.get("shot_type") or raw.get("structure_type", ""),
+            suggested_elements=raw.get("suggested_elements", ""),
+            short_labels=raw.get("short_labels", ""),
             core_subject=raw.get("core_subject", ""),
             relation_action=raw.get("relation_action") or raw.get("action", ""),
             accent_element=raw.get("accent_element", ""),
@@ -895,6 +936,9 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             "prompt": render_cover(spec),
         }
     if image_type == "body":
+        raw.setdefault("modules", raw.get("suggested_elements", ""))
+        raw.setdefault("notes", raw.get("short_labels", ""))
+        raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action", ""))
         require_fields(raw, ["title", "structure", "modules", "notes", "character_action", "speech_bubble", "bottom_sentence"], "body")
         spec = BodySpec(
             title=raw["title"],
@@ -905,6 +949,14 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             speech_bubble=raw["speech_bubble"],
             bottom_sentence=raw["bottom_sentence"],
             subtitle=raw.get("subtitle", ""),
+            placement=raw.get("placement", ""),
+            core_idea=raw.get("core_idea", ""),
+            visual_anchor=raw.get("visual_anchor", ""),
+            shot_type=raw.get("shot_type") or raw.get("structure_type", ""),
+            suggested_elements=raw.get("suggested_elements", ""),
+            short_labels=raw.get("short_labels", ""),
+            feedback_loop=raw.get("feedback_loop", ""),
+            risk_label=raw.get("risk_label", ""),
             style_id=style_id,
         )
         return {
@@ -1000,6 +1052,22 @@ def self_test() -> None:
                 "speech_bubble": "要能产出",
                 "bottom_sentence": "不能输出的资料，只是库存。",
             },
+            {
+                "type": "body",
+                "style_id": "quirky_doodle_character_flow",
+                "title": "AI 内容工作流",
+                "structure": "Workflow",
+                "modules": "信息源、判断机器、内容卡片、承接口",
+                "notes": "信息源 / 判断 / 输出 / 回流",
+                "character_action": "把素材塞进旧机器，拉动判断杆，再推着输出卡片跑向门口",
+                "speech_bubble": "跑起来",
+                "bottom_sentence": "系统不是一次搭好，而是在回流里变稳。",
+                "core_idea": "从混乱素材到稳定输出，需要一个可回流的判断机器",
+                "visual_anchor": "输入输出闭环",
+                "shot_type": "Workflow",
+                "feedback_loop": "用户反馈回到信息源",
+                "risk_label": "别乱写",
+            },
         ],
     )
     assert batch["images"][0]["style_id"] == "oriental_editorial_illustration"
@@ -1012,6 +1080,9 @@ def self_test() -> None:
     assert "极简治愈隐喻漫画风" in batch["images"][3]["prompt"]
     assert batch["images"][4]["style_id"] == "study_note_card"
     assert "学习笔记风" in batch["images"][4]["prompt"]
+    assert batch["images"][5]["style_id"] == "quirky_doodle_character_flow"
+    assert "小黑必须承担核心动作" in batch["images"][5]["prompt"]
+    assert "认知锚点" in batch["images"][5]["prompt"]
     print("self-test passed")
 
 
