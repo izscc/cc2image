@@ -45,7 +45,8 @@
     {"style_id": "crowd_typography_scene", "style_name": "人群造字风", "best_for": ["社会议题、财经封面、就业问题、人口变化、城市议题、商业趋势、群体行为"]},
     {"style_id": "semantic_material_typography", "style_name": "语义字体风", "best_for": ["关键词封面、品牌标题、栏目标题、概念海报、单词视觉化、强标题主视觉"]},
     {"style_id": "quirky_doodle_character_flow", "style_name": "怪诞小人风", "best_for": ["AI工作流、系统流程、正文配图、方法论拆解、工具链说明、自动化流程"]},
-    {"style_id": "minimal_line_art", "style_name": "线条艺术风", "best_for": ["亲密关系、旅行、毕业、学习、课堂、会议、城市、灵感、个人成长、极简封面"]}
+    {"style_id": "minimal_line_art", "style_name": "线条艺术风", "best_for": ["亲密关系、旅行、毕业、学习、课堂、会议、城市、灵感、个人成长、极简封面"]},
+    {"style_id": "monochrome_system_editorial", "style_name": "黑白系统风", "best_for": ["Skill封面、SOP封面、提示词库、方法论手册、AI工作流、标准化流程"]}
   ]
 }
 ```
@@ -54,7 +55,7 @@
 
 A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`quirky_doodle_character_flow`。
 B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`、`minimal_line_art`。
-C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`。
+C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`、`monochrome_system_editorial`。
 D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`、`semantic_material_typography`。
 E. 拼贴 / 纸张 / 手工材质类：`retro_minimal_poster_illustration`、`editorial_balloon_collage`、`paper_cut_profile_silhouette`、`torn_paper_note_minimal`、`embroidered_patch_brand`。
 F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_checklist_scene`、`fabric_micro_scene_ad`、`giant_letter_lifestyle_scene`、`crowd_typography_scene`。
@@ -102,8 +103,9 @@ F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_chec
 37. 突出标题文字本身、关键词视觉化、品牌字、栏目名、短句封面、材质字体、醒目主视觉，或希望根据内容自动设计字体质感：优先 `semantic_material_typography`。
 38. AI 工作流、系统流程、工具链、Prompt 结构、自动化步骤、内容生产系统、从混乱到输出、卡住到跑起来，或希望用轻松怪诞的小人表现复杂流程：优先 `quirky_doodle_character_flow`。
 39. 极简表达人物、关系、旅行、毕业、学习、课堂、会议、城市、灵感、孤独、陪伴、个人成长，或希望用少量线条抽象表达一个概念：优先 `minimal_line_art`。
-40. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-41. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+40. Skill、SOP、提示词库、方法论、系统搭建、标准化、知识资产、流程封装、AI 工作流、路由判断、商业路径、出海增长，或需要黑白高对比、巨型文字、专业系统封面：优先 `monochrome_system_editorial`。
+41. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+42. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -290,3 +292,12 @@ F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_chec
 核心：用尽可能少的连续黑色线条表达人物、关系、场景、城市或抽象概念。背景纯白或暖白，大量留白，只使用极少点缀色，整体优雅、克制、安静、有情绪和概念感。
 
 结构化字段建议：任务、主题、标题、副标题、核心主体、动作或关系、核心隐喻、点缀色元素、线条类型、情绪。
+
+
+## 40. monochrome_system_editorial｜黑白系统风
+
+适合：Skill封面、SOP封面、提示词库、方法论手册、AI工作流、系统搭建、知识资产、标准化流程、企业内训、商业路线图、增长路径、出海策略。
+
+核心：黑白灰高对比，巨型粗体文字压场，结合透明档案盒、索引卡、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等系统隐喻物件，并使用细线网格、编号、条形码、REF 编号和工业化信息排版，形成专业系统手册和 SOP 封面感。
+
+结构化字段建议：任务、主题、主视觉文字、标题、副标题、核心物件、隐喻含义、标签1、标签2、标签3、标签4、阶段1、阶段2、阶段3、阶段4、编号、日期、英文小标题。

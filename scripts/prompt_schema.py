@@ -196,6 +196,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "minimal_line_art": (
         '整体风格为线条艺术风：纯白或暖白背景，大量留白，用极简黑色线条表达主体。线条可以是连续一笔画，也可以是少量克制的轮廓线，线条自然流动、干净、轻盈。画面只保留最关键的人物姿态、关系动作、场景轮廓或概念符号，不画复杂细节。允许根据主题加入少量点缀色，例如浅粉爱心、黄色灯泡、浅蓝远方、红色重点或浅灰阴影。整体安静、优雅、克制、有情绪和概念感。不要复杂背景，不要厚重上色，不要写实人物，不要 3D，不要卡通夸张，不要高饱和颜色，不要密集文字。\nMinimal line art style, clean white background, lots of negative space, simple black continuous line drawing, elegant flowing outlines, minimal details, expressive posture and emotion, one-line illustration feel. Use only a tiny accent color when needed, such as pale pink heart, yellow light bulb, soft blue distance, red focus mark, or light gray shadow. Quiet, poetic, modern, minimal, conceptual. Not realistic, not 3D, not colorful cartoon, not complex background, not dense text.'
     ),
+    "monochrome_system_editorial": (
+        '整体风格为黑白系统风：黑白灰单色，高对比，白色或浅灰背景，巨型黑色粗体中文或英文字作为主视觉，搭配细线网格、编号、条形码、页码、REF 编号、模块分隔线和工业化信息排版。画面中使用系统隐喻物件，例如透明档案盒、索引卡、文件柜、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等，表达知识封装、方法系统、SOP、路径判断、流程标准化或规模化分发。构图像高级方法论手册、SOP 封面、品牌 guideline、工业设计板或专业知识产品封面。整体冷静、专业、系统、权威、可执行。不要彩色插画，不要卡通，不要治愈风，不要复杂照片背景，不要高饱和颜色，不要杂乱排版。\nMonochrome system editorial style, black white and gray only, high contrast, clean white or light gray background, oversized bold black Chinese or English typography as the dominant visual, strict grid layout, thin technical lines, barcode, reference number, page index, module dividers, industrial information design. Use system metaphor objects such as transparent archive box, index cards, file cabinet, padlock, stairs, doorway, routing lines, path map, cargo ship, containers, bar chart, tiny human figures. Express knowledge encapsulation, SOP, prompt library, workflow standardization, decision routing, scalable distribution. Premium methodology manual cover, SOP playbook, industrial design board, professional knowledge product visual. Not colorful, not cartoon, not emotional illustration, not cluttered, not cyberpunk.'
+    ),
 }
 
 STYLE_NAMES = {
@@ -238,6 +241,7 @@ STYLE_NAMES = {
     "semantic_material_typography": "语义字体风",
     "quirky_doodle_character_flow": "怪诞小人风",
     "minimal_line_art": "线条艺术风",
+    "monochrome_system_editorial": "黑白系统风",
 }
 
 BODY_STRUCTURES = {
@@ -301,6 +305,18 @@ class CoverSpec:
     accent_element: str = ""
     line_type: str = ""
     emotion: str = ""
+    main_visual_text: str = ""
+    label1: str = ""
+    label2: str = ""
+    label3: str = ""
+    label4: str = ""
+    stage1: str = ""
+    stage2: str = ""
+    stage3: str = ""
+    stage4: str = ""
+    serial_number: str = ""
+    date_info: str = ""
+    english_title: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -649,6 +665,7 @@ EXTRA_COVER_GUIDES = {
     "semantic_material_typography": "简洁白色或浅灰摄影棚背景，标题文字本身是唯一主视觉；根据标题语义自动选择木头、石头、苔藓、沙尘、蜂蜜、机械、金属、线稿、布料等真实材质，让材质表达含义，保持文字醒目可读。",
     "quirky_doodle_character_flow": "白底大量留白，黑色细线手绘怪诞小黑角色参与工作流；用机器、盒子、漏斗、传送带、文件、门、工具箱、旗子、橙色箭头、蓝色虚线反馈和红色风险标注表达 AI 系统流程。",
     "minimal_line_art": "纯白或暖白背景，大量留白，用极简黑色连续线条或少量克制轮廓线表现人物、关系、城市、旅行、课堂、灵感灯泡或抽象符号；只加入极少点缀色，整体优雅克制。",
+    "monochrome_system_editorial": "黑白灰高对比，巨型粗体中文或英文字压场，配合档案盒、索引卡、锁、阶梯、门、路径线、路线图、货船、集装箱或微缩人物，并加入细线网格、编号、条形码和工业化信息排版。",
 }
 
 
@@ -662,6 +679,24 @@ def render_extra_cover(spec: CoverSpec) -> str | None:
 标题「{spec.title}」作为画面主视觉或重要文字，副标题「{spec.subtitle}」使用小号克制排版，底部短句为「{spec.bottom_sentence}」。
 整体构图要干净、克制、留白充足，符合高质量文章封面、书封或社交媒体主视觉。
 {STYLE_ANCHORS[spec.style_id]}"""
+
+def render_monochrome_system_editorial_cover(spec: CoverSpec) -> str:
+    main_text = spec.main_visual_text or spec.title or "SYSTEM"
+    core_object = spec.core_object or spec.metaphor or "透明档案盒、索引卡、锁、阶梯、门、路径线或路线图"
+    meaning = spec.metaphor_meaning or spec.metaphor or "把经验、流程和标准封装成可复用系统"
+    labels = [spec.label1 or "SYSTEM", spec.label2 or "METHOD", spec.label3 or "PROCESS", spec.label4 or "STANDARD"]
+    stages = [spec.stage1 or "输入", spec.stage2 or "标准化", spec.stage3 or "执行", spec.stage4 or "复用"]
+    serial = spec.serial_number or "REF W-001"
+    date_info = spec.date_info or "SYSTEM PLAYBOOK"
+    english = spec.english_title or "Monochrome System Editorial"
+    return f"""请生成一张黑白系统风的中文封面图。
+主题是「{spec.title}」。画面使用黑白灰单色，高对比，白色或浅灰背景，整体冷静、专业、系统、权威，像高级方法论手册、SOP 封面、工业设计板或专业知识产品封面。
+画面主视觉使用巨型黑色粗体文字：「{main_text}」。文字可以是中文、英文或中英混排，占据画面 40%-70%，字形厚重、方正、工业、极具压迫感。文字可以与物件发生遮挡或空间关系。
+画面中加入一个系统隐喻物件：「{core_object}」。这个物件用来表达「{meaning}」。物件要真实、克制、有工业设计感，不要花哨。补充元素包括：「{spec.elements}」。
+排版中加入细线网格、模块分隔线、编号、条形码、REF 编号、页码、日期和小号英文标签。可以出现如下小标签：「{labels[0]}」「{labels[1]}」「{labels[2]}」「{labels[3]}」。
+标题写「{spec.title}」，副标题写「{spec.subtitle}」。标题使用粗黑中文字体，副标题使用小号无衬线字体。底部加入流程导航：「01 {stages[0]} / 02 {stages[1]} / 03 {stages[2]} / 04 {stages[3]}」。角落加入「{serial}」和「{date_info}」，英文小标题为「{english}」。底部判断句：「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['monochrome_system_editorial']}"""
+
 
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
@@ -701,6 +736,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_quirky_doodle_cover(spec)
     if spec.style_id == "minimal_line_art":
         return render_minimal_line_art_cover(spec)
+    if spec.style_id == "monochrome_system_editorial":
+        return render_monochrome_system_editorial_cover(spec)
     extra_prompt = render_extra_cover(spec)
     if extra_prompt:
         return extra_prompt
@@ -833,6 +870,18 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             accent_element=raw.get("accent_element", ""),
             line_type=raw.get("line_type", ""),
             emotion=raw.get("emotion", ""),
+            main_visual_text=raw.get("main_visual_text") or raw.get("hero_text") or raw.get("primary_text", ""),
+            label1=raw.get("label1", ""),
+            label2=raw.get("label2", ""),
+            label3=raw.get("label3", ""),
+            label4=raw.get("label4", ""),
+            stage1=raw.get("stage1", ""),
+            stage2=raw.get("stage2", ""),
+            stage3=raw.get("stage3", ""),
+            stage4=raw.get("stage4", ""),
+            serial_number=raw.get("serial_number") or raw.get("number", ""),
+            date_info=raw.get("date_info") or raw.get("date", ""),
+            english_title=raw.get("english_title", ""),
             style_id=style_id,
         )
         return {
