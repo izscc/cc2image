@@ -118,7 +118,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 
 > 整体风格像高质量中文知识博主的手绘知识图解系统：暖白纸感背景，黑灰细线手绘，低饱和浅色块，中文手写字，自然成熟，克制精致，留白充足，轻商业内容资产感。不要做成 PPT，不要课程课件，不要科技海报，不要 3D，不要可爱儿童插画，不要复杂信息图，不要密集小字，不要高饱和颜色，不要英文乱码，不要水印。
 
-详细风格规范见 `references/visual_style.md`；风格库和非默认模板见 `references/style_options.md`；默认封面与正文模板见 `references/cover_prompt.md`、`references/body_prompt.md`。当使用 `quirky_doodle_character_flow` 时，额外参考 `references/quirky_doodle_method.md`，重点保证“小黑参与核心动作”，而不是固定套版式。
+详细风格规范见 `references/visual_style.md`；风格库和非默认模板见 `references/style_options.md`；默认封面与正文模板见 `references/cover_prompt.md`、`references/body_prompt.md`。当任务需要“更会讲故事、更像品牌资产、更适合长期运营”时，参考 `references/kashika_method.md` 的可视化研究所方法论：先语言整理，再控制信息密度，最后做角色化、图解化和系列化交付。当使用 `quirky_doodle_character_flow` 时，额外参考 `references/quirky_doodle_method.md`，重点保证“小黑参与核心动作”，而不是固定套版式。
 
 ## 输入类型与处理
 
@@ -133,7 +133,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 
 ### 明确要正文配图
 
-根据用户给出的题图、结构、核心模块、必要注释、小人动作、小人气泡、底部判断句直接生成正文 prompt；缺失字段自动补齐。
+根据用户给出的题图、结构、核心模块、必要注释、小人动作、小人气泡、底部判断句直接生成正文 prompt；缺失字段自动补齐。若主题复杂，先补齐 `关键词抽取 → 要约 → 目标读者 → 信息密度 → 视觉类型`，再写 prompt。
 
 ### 明确要封面图
 
@@ -179,7 +179,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 2. 先找“认知锚点”，不要平均按段落配图；优先画核心判断、认知断点、输入输出闭环、分流、前后对比、承接路径、常见坑和角色状态变化。
 3. 判断图片数量：默认 1 封面 + 3 到 6 正文；短文可 1 到 3 正文；长文通常不超过 9 张正文，用户指定优先。
 4. 将每个认知锚点映射成一种正文结构或视觉隐喻；一张图只表达一个核心结构。
-5. 为每张图补全字段，并写清 `core_idea`、`visual_anchor`、`main_action`、`short_labels` 等策略信息。
+5. 为每张图补全字段，并写清 `core_idea`、`target_reader`、`keyword_extract`、`compressed_sentence`、`visual_type`、`information_density`、`deformation_level`、`visual_anchor`、`main_action`、`short_labels` 等策略信息。
 6. 生成完整 prompt 或直接调用图片生成工具。
 
 ## 怪诞小人风多图规则
