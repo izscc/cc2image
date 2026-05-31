@@ -120,7 +120,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 
 > 整体风格像高质量中文知识博主的手绘知识图解系统：暖白纸感背景，黑灰细线手绘，低饱和浅色块，中文手写字，自然成熟，克制精致，留白充足，轻商业内容资产感。不要做成 PPT，不要课程课件，不要科技海报，不要 3D，不要可爱儿童插画，不要复杂信息图，不要密集小字，不要高饱和颜色，不要英文乱码，不要水印。
 
-详细风格规范见 `references/visual_style.md`；风格库和非默认模板见 `references/style_options.md`；默认封面与正文模板见 `references/cover_prompt.md`、`references/body_prompt.md`。当任务需要“更会讲故事、更像品牌资产、更适合长期运营”时，参考 `references/kashika_method.md` 的可视化研究所方法论：先语言整理，再控制信息密度，最后做角色化、图解化和系列化交付。若任务涉及系统、流程、空间、路径、模块关系或品牌插画组件库，参考 `references/kashika_isometric_method.md`，使用统一轴测网格、三面信息分工和模块化组件思路。当使用 `quirky_doodle_character_flow` 时，额外参考 `references/quirky_doodle_method.md`，重点保证“小黑参与核心动作”，而不是固定套版式。
+详细风格规范见 `references/visual_style.md`；风格库和非默认模板见 `references/style_options.md`；默认封面与正文模板见 `references/cover_prompt.md`、`references/body_prompt.md`。当任务需要“更会讲故事、更像品牌资产、更适合长期运营”时，参考 `references/kashika_method.md` 的可视化研究所方法论：先语言整理，再控制信息密度，最后做角色化、图解化和系列化交付。若任务涉及系统、流程、空间、路径、模块关系或品牌插画组件库，参考 `references/kashika_isometric_method.md`，使用统一轴测网格、三面信息分工和模块化组件思路。若任务涉及“解释度取舍、数据准确性、问卷故事化、角色连续性、品牌复用性或出图质量评估”，参考 `references/kashika_advanced_methods.md` 的解释度滑杆、7轴评估、数据动作映射和漫画共感型信息图。当使用 `quirky_doodle_character_flow` 时，额外参考 `references/quirky_doodle_method.md`，重点保证“小黑参与核心动作”，而不是固定套版式。
 
 ## 输入类型与处理
 
@@ -172,6 +172,17 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 - 风险路径图：错误路径、损耗、陷阱、失败原因。
 - 光谱选择图：从低到高、轻到重、手动到自动、简单到复杂。
 - 随附场景图：真实使用场景，人物、工具、输入、输出和轻流程。
+
+## 解释度与质量评估
+
+复杂配图在生成前先判断 `explanation_level`：
+
+- 5：图解型；最准确，适合手册、教程、教材、数据事实。
+- 4：夸张型；保留结构并放大重点，适合封面、广告、核心观点。
+- 3：场景型；补充前后情境，适合服务介绍、案例、故事板。
+- 1：世界观型；解释责任低，氛围和余韵高，适合品牌主视觉和书封。
+
+每张图生成前用 7 个轴快速自检：品牌调性、目标读者、复用性、记忆符号、独有信息、趣味钩子、可访问性/安全性。数据图额外检查来源、指标、比较维度、可表达结论和禁止推出的结论。
 
 ## 文章拆图流程
 
