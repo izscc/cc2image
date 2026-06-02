@@ -205,6 +205,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "real_object_doodle_composite": (
         '整体风格为实物涂鸦风：干净白色或暖白纸张背景，真实日常物品被物理放置在画面中，并与黑色手绘线稿角色无缝结合。真实物品必须成为角色或场景的关键部分，例如头、头发、大脑、身体、负担、心脏、武器、衣服、道具或爆炸效果。手绘部分使用简单黑色墨线，像快速漫画草图，表情夸张、动作明确、幽默而有情绪。画面通过真实物品和线稿之间的语义错位形成视觉双关，既聪明又易懂。背景极简，大量留白，真实物品有自然光影和摄影质感。可以加入一句短手写吐槽文字。不要复杂背景，不要完整彩色插画，不要 3D，不要普通拼贴，不要让物品只是装饰，不要密集文字。\nReal object doodle composite style: clean white paper background, one real everyday object physically placed in the scene and seamlessly integrated into a black ink hand-drawn cartoon illustration. The real object becomes a key part of the character or scene, such as the head, hair, brain, body, burden, heart, weapon, clothing, prop, or explosion. Simple expressive black line art, quick sketch feeling, exaggerated facial expression and clear action. The image creates a witty visual pun by turning the object into a meaningful part of the drawing. Photorealistic object, natural shadows, minimalist negative space, optional short handwritten caption. Not a full color illustration, not 3D, not cluttered, not ordinary collage, the object must not be decorative only.'
     ),
+    "expressive_3d_quirky_character": (
+        '整体风格为3D怪表情风：极简白色、浅灰或浅米色背景，大量留白，一个圆润夸张的 3D 小人角色作为主视觉。参考内置校准样图 assets/examples/3d_quirky/ 的角色质感、表情强度、动作夸张度和极简背景，但不要照抄样图人物、服装、构图或道具。角色头大身小，脸颊饱满，皮肤柔软，简单纯色服装，表情非常丰富，眼神、眉毛、嘴角和脸部肌肉都要夸张传达情绪。可表现不屑、无语、嫌弃、崩溃、焦虑、疲惫、得意、开心、怀疑、委屈、震惊、认真等表情，并配合抱臂、叉腰、摊手、抱头、OK 手势、指向、拖步、趴桌、举牌、推箱子等动作。整体像高质量 3D 表情包角色、轻量动画角色或 3D 版怪诞小人。可以搭配少量道具、流程元素或 8 字以内短句；不要真实儿童摄影，不要复杂背景，不要过度可爱玩具感，不要高饱和颜色，不要密集文字。\nExpressive quirky 3D character style: clean white, light gray or warm beige background with lots of negative space. Use bundled calibration examples in assets/examples/3d_quirky/ only to stabilize rounded 3D character quality, expressive facial intensity, exaggerated body language and sparse composition; do not copy any example identity, outfit, composition or prop. A rounded exaggerated 3D character as the main visual, big head, small body, chubby cheeks, soft skin, simple clothes, highly expressive face. Emotion is communicated through exaggerated eyes, eyebrows, mouth corners and facial muscles. The character can show skeptical, annoyed, unimpressed, exhausted, anxious, shocked, smug, happy, doubtful, embarrassed, confident or dramatic expressions, with matching body language such as crossed arms, hands on hips, shrugging, holding head, OK gesture, pointing, dragging feet, lying on a desk, holding a sign or pushing a box. High-quality 3D render, soft studio lighting, sticker-like or animated character feel. Not real child photography, not cluttered, not overly cute toy style, not dense text.'
+    ),
     "monochrome_system_editorial": (
         '整体风格为黑白系统风：黑白灰单色，高对比，白色或浅灰背景，巨型黑色粗体中文或英文字作为主视觉，搭配细线网格、编号、条形码、页码、REF 编号、模块分隔线和工业化信息排版。画面中使用系统隐喻物件，例如透明档案盒、索引卡、文件柜、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等，表达知识封装、方法系统、SOP、路径判断、流程标准化或规模化分发。构图像高级方法论手册、SOP 封面、品牌 guideline、工业设计板或专业知识产品封面。整体冷静、专业、系统、权威、可执行。不要彩色插画，不要卡通，不要治愈风，不要复杂照片背景，不要高饱和颜色，不要杂乱排版。\nMonochrome system editorial style, black white and gray only, high contrast, clean white or light gray background, oversized bold black Chinese or English typography as the dominant visual, strict grid layout, thin technical lines, barcode, reference number, page index, module dividers, industrial information design. Use system metaphor objects such as transparent archive box, index cards, file cabinet, padlock, stairs, doorway, routing lines, path map, cargo ship, containers, bar chart, tiny human figures. Express knowledge encapsulation, SOP, prompt library, workflow standardization, decision routing, scalable distribution. Premium methodology manual cover, SOP playbook, industrial design board, professional knowledge product visual. Not colorful, not cartoon, not emotional illustration, not cluttered, not cyberpunk.'
     ),
@@ -254,6 +257,7 @@ STYLE_NAMES = {
     "monochrome_system_editorial": "黑白系统风",
     "isometric_timeline_miniature": "时间微缩风",
     "real_object_doodle_composite": "实物涂鸦风",
+    "expressive_3d_quirky_character": "3D怪表情风",
 }
 
 BODY_STRUCTURES = {
@@ -336,6 +340,12 @@ class CoverSpec:
     serial_number: str = ""
     date_info: str = ""
     english_title: str = ""
+    character_profile: str = ""
+    outfit: str = ""
+    expression: str = ""
+    props: str = ""
+    short_phrase: str = ""
+    background_color: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -357,6 +367,12 @@ class BodySpec:
     short_labels: str = ""
     feedback_loop: str = ""
     risk_label: str = ""
+    character_profile: str = ""
+    outfit: str = ""
+    expression: str = ""
+    props: str = ""
+    short_phrase: str = ""
+    background_color: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -713,6 +729,7 @@ EXTRA_COVER_GUIDES = {
     "monochrome_system_editorial": "黑白灰高对比，巨型粗体中文或英文字压场，配合档案盒、索引卡、锁、阶梯、门、路径线、路线图、货船、集装箱或微缩人物，并加入细线网格、编号、条形码和工业化信息排版。",
     "isometric_timeline_miniature": "45° 等距俯视视角，横向展开的微型 3D 时间轴展台，底座分成 4-6 个时代区域；每段有代表物件、技术或环境，并加入少量微型人物互动；顶部标题、副标题和极简时间轴图标清晰呈现从过去到现代的演化。",
     "real_object_doodle_composite": "干净白色或暖白纸张背景，一个真实日常物品作为关键语义零件，与黑色手绘线稿角色无缝结合；物品变成头、头发、大脑、身体、负担、心脏、道具或爆炸，制造幽默易懂的视觉双关。",
+    "expressive_3d_quirky_character": "极简白色、浅灰或浅米色背景，一个圆润夸张的 3D 小人作为主视觉；用准确夸张的表情和肢体动作表达情绪、态度、吐槽、状态或轻剧情。",
 }
 
 
@@ -744,6 +761,46 @@ def render_monochrome_system_editorial_cover(spec: CoverSpec) -> str:
 标题写「{spec.title}」，副标题写「{spec.subtitle}」。标题使用粗黑中文字体，副标题使用小号无衬线字体。底部加入流程导航：「01 {stages[0]} / 02 {stages[1]} / 03 {stages[2]} / 04 {stages[3]}」。角落加入「{serial}」和「{date_info}」，英文小标题为「{english}」。底部判断句：「{spec.bottom_sentence}」。
 {STYLE_ANCHORS['monochrome_system_editorial']}"""
 
+
+
+def render_expressive_3d_quirky_cover(spec: CoverSpec) -> str:
+    background = spec.background_color or spec.background or "浅灰或暖白"
+    character = spec.character_profile or "一个圆润夸张的 3D 小人，头大身小，脸颊饱满，皮肤柔软"
+    outfit = spec.outfit or "简单纯色 T 恤或基础服装"
+    expression = spec.expression or spec.emotion or "无语、怀疑或认真吐槽"
+    action = spec.character_action or "双手摊开，身体微微后仰，像在表达一个明确态度"
+    props = spec.props or spec.elements or "提示词卡片、文件、按钮、放大镜、工具箱或小旗子"
+    phrase = spec.short_phrase or spec.speech_bubble or spec.bottom_sentence[:8] or "别乱来"
+    viewpoint = spec.metaphor_meaning or spec.metaphor or spec.bottom_sentence or "把抽象观点变成一个有传播感的角色反应"
+    return f"""请生成一张3D怪表情风的中文封面图。
+主题是「{spec.title}」。画面背景为{background}，大量留白，整体像高质量 3D 表情包角色或 3D 版怪诞小人风。
+标题「{spec.title}」使用清晰粗体中文字体，副标题「{spec.subtitle}」更小、更轻，放在留白区域，不要做成复杂信息页。
+画面主体是{character}，穿着「{outfit}」。角色表情是「{expression}」，要通过眼神、眉毛、嘴角、脸颊和头部姿态夸张表达。
+角色动作是：「{action}」。这个动作要表达「{viewpoint}」，肢体语言清楚、有戏剧性、有一点搞怪，但不要失控。
+可以加入少量道具或流程元素：「{props}」。道具只辅助表达，不要抢角色。
+如需文字，只加入一句很短的手写或粗体短句：「{phrase}」。文字不要超过 8 个字，像表情包吐槽或封面提示。
+参考 assets/examples/3d_quirky/ 的角色质感、表情强度、动作夸张度和极简背景；不要照抄样图人物、服装、构图或道具。
+{STYLE_ANCHORS['expressive_3d_quirky_character']}"""
+
+
+def render_expressive_3d_quirky_body(spec: BodySpec) -> str:
+    background = spec.background_color or "白色、浅灰或浅米色"
+    character = spec.character_profile or "一个圆润夸张的 3D 小人，头大身小，脸颊饱满，皮肤柔软"
+    outfit = spec.outfit or "简单纯色 T 恤或基础服装"
+    expression = spec.expression or spec.risk_label or spec.visual_anchor or "无语、焦虑、疲惫或震惊"
+    action = spec.character_action or "用夸张动作表达当前状态"
+    props = spec.props or spec.suggested_elements or spec.modules or "电脑、提示词卡片、文件、按钮、放大镜、工具箱、纸张或流程节点"
+    phrase = spec.short_phrase or spec.speech_bubble or spec.bottom_sentence[:8] or "又卡住了"
+    idea = spec.core_idea or spec.bottom_sentence or spec.notes or "把一个情绪、观点或流程节点变成角色反应"
+    return f"""请生成一张3D怪表情风的角色配图。
+主题是「{spec.title}」。画面使用极简 {background} 背景，大量留白，整体像高质量 3D 表情包角色或 3D 版怪诞小人风。
+画面中有{character}，穿着「{outfit}」。角色的表情是「{expression}」，要通过眼神、眉毛、嘴角、脸颊和头部姿态夸张表达。
+角色正在做动作：「{action}」。这个动作要表达「{idea}」。肢体语言要清楚、有戏剧性、有一点搞怪，但不要失控。
+可以加入少量道具：「{props}」。道具只辅助表达，不要抢角色。
+如果需要文字，在旁边加入一句很短的手写或粗体短句：「{phrase}」。文字不要超过 8 个字，像表情包吐槽或正文配图提示。
+画面只表达一个状态、态度、吐槽、反应或轻剧情节点；不要把复杂流程、长段文字或多层知识卡塞进一张图。
+参考 assets/examples/3d_quirky/ 的角色质感、表情强度、动作夸张度和极简背景；不要照抄样图人物、服装、构图或道具。
+{STYLE_ANCHORS['expressive_3d_quirky_character']}"""
 
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
@@ -783,6 +840,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_quirky_doodle_cover(spec)
     if spec.style_id == "minimal_line_art":
         return render_minimal_line_art_cover(spec)
+    if spec.style_id == "expressive_3d_quirky_character":
+        return render_expressive_3d_quirky_cover(spec)
     if spec.style_id == "isometric_modular_system":
         return render_extra_cover(spec) or render_handdrawn_cover(spec)
     if spec.style_id == "monochrome_system_editorial":
@@ -862,6 +921,8 @@ def render_body(spec: BodySpec) -> str:
         return render_quirky_doodle_body(spec)
     if spec.style_id == "minimal_line_art":
         return render_minimal_line_art_body(spec)
+    if spec.style_id == "expressive_3d_quirky_character":
+        return render_expressive_3d_quirky_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -941,6 +1002,12 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             serial_number=raw.get("serial_number") or raw.get("number", ""),
             date_info=raw.get("date_info") or raw.get("date", ""),
             english_title=raw.get("english_title", ""),
+            character_profile=raw.get("character_profile") or raw.get("character") or raw.get("role", ""),
+            outfit=raw.get("outfit") or raw.get("clothing", ""),
+            expression=raw.get("expression") or raw.get("emotion", ""),
+            props=raw.get("props") or raw.get("prop") or raw.get("elements", ""),
+            short_phrase=raw.get("short_phrase") or raw.get("caption") or raw.get("speech_bubble", ""),
+            background_color=raw.get("background_color") or raw.get("background", ""),
             style_id=style_id,
         )
         return {
@@ -975,6 +1042,12 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             short_labels=raw.get("short_labels", ""),
             feedback_loop=raw.get("feedback_loop", ""),
             risk_label=raw.get("risk_label", ""),
+            character_profile=raw.get("character_profile") or raw.get("character") or raw.get("role", ""),
+            outfit=raw.get("outfit") or raw.get("clothing", ""),
+            expression=raw.get("expression") or raw.get("emotion", ""),
+            props=raw.get("props") or raw.get("prop") or raw.get("modules", ""),
+            short_phrase=raw.get("short_phrase") or raw.get("caption") or raw.get("speech_bubble", ""),
+            background_color=raw.get("background_color") or raw.get("background", ""),
             style_id=style_id,
         )
         return {
@@ -1086,6 +1159,19 @@ def self_test() -> None:
                 "feedback_loop": "用户反馈回到信息源",
                 "risk_label": "别乱写",
             },
+            {
+                "type": "body",
+                "style_id": "expressive_3d_quirky_character",
+                "title": "提示词又写崩了",
+                "structure": "角色状态",
+                "modules": "提示词卡片、报错纸张、巨大按钮",
+                "notes": "别急着生成",
+                "character_action": "双手抱头，瞪大眼睛看着飞出来的报错纸张",
+                "speech_bubble": "又崩了",
+                "bottom_sentence": "先看清问题，再开始生成。",
+                "expression": "崩溃又无语",
+                "background_color": "浅灰",
+            },
         ],
     )
     assert batch["images"][0]["style_id"] == "oriental_editorial_illustration"
@@ -1102,6 +1188,9 @@ def self_test() -> None:
     assert "小黑必须承担核心动作" in batch["images"][5]["prompt"]
     assert "认知锚点" in batch["images"][5]["prompt"]
     assert "assets/examples/xiaohei/" in batch["images"][5]["prompt"]
+    assert batch["images"][6]["style_id"] == "expressive_3d_quirky_character"
+    assert "3D怪表情风" in batch["images"][6]["prompt"]
+    assert "assets/examples/3d_quirky/" in batch["images"][6]["prompt"]
     print("self-test passed")
 
 

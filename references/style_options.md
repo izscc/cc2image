@@ -49,7 +49,8 @@
     {"style_id": "isometric_modular_system", "style_name": "轴测模块系统风", "best_for": ["SaaS架构、服务流程、空间地图、系统关系、模块化品牌插画"]},
     {"style_id": "monochrome_system_editorial", "style_name": "黑白系统风", "best_for": ["Skill封面、SOP封面、提示词库、方法论手册、AI工作流、标准化流程"]},
     {"style_id": "isometric_timeline_miniature", "style_name": "时间微缩风", "best_for": ["技术演化", "行业发展史", "工具变迁", "产品迭代", "内容生产演化", "学习方式演化", "AI工作流演化", "知识管理演化", "品牌发展历程", "商业模式演化", "教育工具演化", "创作者工具链"], "not_best_for": ["单一情绪表达", "纯标题海报", "复杂数据图表", "严肃财经封面", "大量文字型知识卡片"], "core_features": ["45度等距俯视", "微型3D时间轴", "横向分段展台", "4到6个时代区域", "时代代表物", "微缩人物互动", "柔和材质", "均匀光照", "顶部标题和副标题", "教育博物馆感"]},
-    {"style_id": "real_object_doodle_composite", "style_name": "实物涂鸦风", "best_for": ["幽默封面", "创意配图", "社媒传播图", "情绪表达", "工作压力", "学习压力", "心理状态", "生活方式内容", "视觉双关", "轻量观点", "正文配图"], "not_best_for": ["严肃财经报告", "复杂系统流程", "数据图表", "高端方法论封面", "东方水墨", "正式企业封面"], "core_features": ["真实日常物品", "黑色手绘线稿", "白色纸张背景", "视觉双关", "物品成为角色关键部分", "漫画表情", "自然阴影", "大量留白", "短手写吐槽"]}
+    {"style_id": "real_object_doodle_composite", "style_name": "实物涂鸦风", "best_for": ["幽默封面", "创意配图", "社媒传播图", "情绪表达", "工作压力", "学习压力", "心理状态", "生活方式内容", "视觉双关", "轻量观点", "正文配图"], "not_best_for": ["严肃财经报告", "复杂系统流程", "数据图表", "高端方法论封面", "东方水墨", "正式企业封面"], "core_features": ["真实日常物品", "黑色手绘线稿", "白色纸张背景", "视觉双关", "物品成为角色关键部分", "漫画表情", "自然阴影", "大量留白", "短手写吐槽"]},
+    {"style_id": "expressive_3d_quirky_character", "style_name": "3D怪表情风", "best_for": ["情绪表达", "观点吐槽", "文章封面", "正文配图", "社媒表情图", "AI工作流节点", "创作者状态", "学习状态", "工作压力", "产品提示", "轻剧情配图"], "not_best_for": ["严肃财经封面", "东方水墨", "高端黑白系统封面", "复杂数据图表", "大量文字知识卡", "抽象材质字体", "真实产品摄影"], "core_features": ["圆润3D小人", "夸张表情", "态度动作", "极简背景", "低饱和色", "柔和灯光", "短句吐槽", "3D版怪诞小人"]}
   ]
 }
 ```
@@ -57,7 +58,7 @@
 ## 风格分组
 
 A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`quirky_doodle_character_flow`、`real_object_doodle_composite`。
-B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`、`minimal_line_art`。
+B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`、`minimal_line_art`、`expressive_3d_quirky_character`。
 C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`、`isometric_modular_system`、`monochrome_system_editorial`。
 D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`、`semantic_material_typography`。
 E. 拼贴 / 纸张 / 手工材质类：`retro_minimal_poster_illustration`、`editorial_balloon_collage`、`paper_cut_profile_silhouette`、`torn_paper_note_minimal`、`embroidered_patch_brand`。
@@ -111,8 +112,9 @@ G. 空间系统 / 轴测图解类：`isometric_modular_system`。
 41. Skill、SOP、提示词库、方法论、系统搭建、标准化、知识资产、流程封装、AI 工作流、路由判断、商业路径、出海增长，或需要黑白高对比、巨型文字、专业系统封面：优先 `monochrome_system_editorial`。
 42. 当用户主题涉及发展史、演化、变迁、从 A 到 B、过去到现在、技术迭代、行业阶段、工具演进、产品版本、时间线讲解时，优先 `isometric_timeline_miniature`（时间微缩风）。
 43. 当用户需要幽默创意配图、视觉双关、真实物品与手绘角色结合、表达压力 / 疲惫 / 焦虑 / 卡住 / 情绪隐喻，或希望“用一个日常物品变成画面关键部分”时，优先 `real_object_doodle_composite`（实物涂鸦风）。
-44. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-45. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+44. 当用户需要 3D 版怪诞小人、夸张表情、观点吐槽、情绪状态、工作/学习压力、AI 工作流节点、轻剧情或社媒表情图时，优先 `expressive_3d_quirky_character`（3D怪表情风）。
+45. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+46. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -415,4 +417,20 @@ Prompt 模板：
 ```
 
 示例：工作压力。真实物品是一块真实石头，把石头变成疲惫小男孩背上的巨大负担；小男孩弯腰往前走、满头大汗，视觉双关是“压力像一块真实的石头压在身上”，短句“我只是有点累”。
+
+## 44. expressive_3d_quirky_character｜3D怪表情风
+
+一句话描述：用一个圆润、夸张、表情丰富的 3D 小人角色，在极简背景中做出搞怪表情和肢体动作，把抽象情绪、观点、工作状态或流程节点表现成有传播感的角色画面。
+
+适合：情绪表达、观点吐槽、文章封面、正文配图、社媒表情图、AI 工作流节点、创作者状态、学习状态、工作压力、产品提示、轻松解释、流程中的角色替身、失败/卡住/完成/发布等状态图。
+
+不适合：严肃财经封面、东方水墨、高端黑白系统封面、复杂数据图表、大量文字知识卡、抽象材质字体、真实产品摄影。它适合“情绪和态度”，不适合“严肃系统权威”。
+
+核心：这是 38 号「怪诞小人风」的 3D 角色版。38 号用黑白线稿小黑解释流程；44 号用立体表情角色表达状态、态度、吐槽、反应和轻剧情。角色应头大身小、脸颊饱满、皮肤柔软、服装简单、表情夸张，眉毛、眼神、嘴角和脸部肌肉承担主要情绪。
+
+表情库：不屑、无语、嫌弃、崩溃、焦虑、疲惫、得意、开心、怀疑、委屈、自信、震惊、偷笑、认真。动作库：抱臂、叉腰、OK 手势、抱头、摊手、指向、后仰、拖步、趴桌、观察、举牌、推文件箱、被纸张淹没、站在流程节点上、坐在巨大按钮旁、从洞里探头。
+
+一致性规则：参考 `assets/examples/3d_quirky/` 的角色质感、表情强度、动作夸张度、极简背景和低饱和颜色；不要照抄样图人物、服装、构图或道具。背景使用纯白、浅灰、浅米或低饱和纯色；角色为高质量 3D 渲染、圆润柔软、柔和棚拍光；不要真实儿童摄影、复杂背景、过度可爱玩具感、高饱和颜色或密集文字。
+
+结构化字段建议：任务、主题、标题、副标题、角色设定、表情、动作、情绪或观点、道具、短句、背景颜色、服装、画幅。
 

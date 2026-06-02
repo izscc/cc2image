@@ -1,9 +1,9 @@
 interface:
   display_name: "zscc配图生成器"
-  short_description: "中文文章认知锚点拆图：43 风格封面、正文配图与批量生图方案。"
+  short_description: "中文文章认知锚点拆图：44 风格封面、正文配图与批量生图方案。"
   icon: "image"
   primary_color: "#E9DDC8"
   brand_color: "#E9DDC8"
-  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成 1 张封面和 5 张正文配图；默认手绘知识风，也可指定泡沫字体、人群造字、语义字体、怪诞小人、线条艺术、轴测模块、黑白系统、时间微缩、实物涂鸦等 43 种风格。"
+  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成 1 张封面和 5 张正文配图；默认手绘知识风，也可指定泡沫字体、人群造字、语义字体、怪诞小人、线条艺术、轴测模块、黑白系统、时间微缩、实物涂鸦、3D怪表情等 44 种风格。"
 policy:
   allow_implicit_invocation: true
