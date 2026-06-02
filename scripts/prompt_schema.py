@@ -199,6 +199,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "isometric_modular_system": (
         '整体风格为轴测模块系统风：统一等距/轴测视角，所有物体服从同一套斜向网格和轴线，远近不缩放，不使用戏剧化透视。画面像高端产品官网、SaaS 架构图、城市地图、服务流程图或品牌插画体系。主体由可组合模块构成：平台、方块、楼层、路径、台阶、管道、桥、门、窗口、浮动信息卡片、微型人物和图标。顶面承载路径、地图或平面关系；侧面承载层级、结构和状态；标签短而清楚。配色低饱和，常用米白、浅蓝、浅绿、浅黄、深蓝灰，线条统一，阴影轻微。重点对象通过尺寸、位置、颜色和描边控制优先级。适合解释系统、流程、空间、路线、组件关系和品牌系列。不要强透视，不要近大远小，不要电影景深，不要真实 3D 渲染，不要复杂装饰，不要密集文字，不要英文乱码。\nIsometric modular system illustration style, consistent isometric/axonometric grid, no perspective shrinkage, equal scale for near and far objects, modular blocks, platforms, paths, stairs, pipes, bridges, cards, tiny people and icons, clean SaaS architecture diagram or product website illustration, muted colors, clear hierarchy, reusable component system, no dramatic perspective, no depth of field, not realistic 3D, not cluttered.'
     ),
+    "isometric_timeline_miniature": (
+        '整体风格为时间微缩风：使用 45° 等距俯视视角，创建一个横向展开的微型 3D 时间轴展台。画面像微型博物馆、桌面沙盘或精致教育插画。底座被分成 4-6 个清晰时代区域，从左到右展示主题从早期到现代的演化。每个区域放置该时代最具代表性的物件、工具、设备、环境或技术，并加入少量微型人物与场景互动。顶部居中放大标题，下方放副标题和极简时间轴图标。整体材质柔和、干净、精致，光线均匀，背景为纯色或柔和渐变。不要复杂写实场景，不要拥挤，不要卡通夸张，不要高饱和杂乱，不要密集文字。\nClean isometric miniature 3D timeline diorama style, 45-degree top-down perspective, horizontal stepped base divided into clear time periods, each section shows era-specific objects, tools, environments, or technology. Add tiny stylized figures interacting with each stage, minimal facial detail. Soft refined materials, realistic PBR shading, neutral balanced lighting, clean solid background. Top center title, subtitle showing From [start era] to [modern era], small timeline icon underneath. Educational museum-like miniature evolution diagram, not cluttered, not cartoonish, not dense infographic.'
+    ),
     "monochrome_system_editorial": (
         '整体风格为黑白系统风：黑白灰单色，高对比，白色或浅灰背景，巨型黑色粗体中文或英文字作为主视觉，搭配细线网格、编号、条形码、页码、REF 编号、模块分隔线和工业化信息排版。画面中使用系统隐喻物件，例如透明档案盒、索引卡、文件柜、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等，表达知识封装、方法系统、SOP、路径判断、流程标准化或规模化分发。构图像高级方法论手册、SOP 封面、品牌 guideline、工业设计板或专业知识产品封面。整体冷静、专业、系统、权威、可执行。不要彩色插画，不要卡通，不要治愈风，不要复杂照片背景，不要高饱和颜色，不要杂乱排版。\nMonochrome system editorial style, black white and gray only, high contrast, clean white or light gray background, oversized bold black Chinese or English typography as the dominant visual, strict grid layout, thin technical lines, barcode, reference number, page index, module dividers, industrial information design. Use system metaphor objects such as transparent archive box, index cards, file cabinet, padlock, stairs, doorway, routing lines, path map, cargo ship, containers, bar chart, tiny human figures. Express knowledge encapsulation, SOP, prompt library, workflow standardization, decision routing, scalable distribution. Premium methodology manual cover, SOP playbook, industrial design board, professional knowledge product visual. Not colorful, not cartoon, not emotional illustration, not cluttered, not cyberpunk.'
     ),
@@ -246,6 +249,7 @@ STYLE_NAMES = {
     "minimal_line_art": "线条艺术风",
     "isometric_modular_system": "轴测模块系统风",
     "monochrome_system_editorial": "黑白系统风",
+    "isometric_timeline_miniature": "时间微缩风",
 }
 
 BODY_STRUCTURES = {
@@ -703,6 +707,7 @@ EXTRA_COVER_GUIDES = {
     "minimal_line_art": "纯白或暖白背景，大量留白，用极简黑色连续线条或少量克制轮廓线表现人物、关系、城市、旅行、课堂、灵感灯泡或抽象符号；只加入极少点缀色，整体优雅克制。",
     "isometric_modular_system": "统一等距/轴测视角，远近不缩放，模块化平台、路径、楼层、管道、信息卡片和微型人物共同构成系统、流程、地图或服务架构说明。",
     "monochrome_system_editorial": "黑白灰高对比，巨型粗体中文或英文字压场，配合档案盒、索引卡、锁、阶梯、门、路径线、路线图、货船、集装箱或微缩人物，并加入细线网格、编号、条形码和工业化信息排版。",
+    "isometric_timeline_miniature": "45° 等距俯视视角，横向展开的微型 3D 时间轴展台，底座分成 4-6 个时代区域；每段有代表物件、技术或环境，并加入少量微型人物互动；顶部标题、副标题和极简时间轴图标清晰呈现从过去到现代的演化。",
 }
 
 

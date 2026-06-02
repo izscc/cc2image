@@ -47,7 +47,8 @@
     {"style_id": "quirky_doodle_character_flow", "style_name": "怪诞小人风", "best_for": ["AI工作流、系统流程、正文配图、方法论拆解、工具链说明、长文认知锚点"]},
     {"style_id": "minimal_line_art", "style_name": "线条艺术风", "best_for": ["亲密关系、旅行、毕业、学习、课堂、会议、城市、灵感、个人成长、极简封面"]},
     {"style_id": "isometric_modular_system", "style_name": "轴测模块系统风", "best_for": ["SaaS架构、服务流程、空间地图、系统关系、模块化品牌插画"]},
-    {"style_id": "monochrome_system_editorial", "style_name": "黑白系统风", "best_for": ["Skill封面、SOP封面、提示词库、方法论手册、AI工作流、标准化流程"]}
+    {"style_id": "monochrome_system_editorial", "style_name": "黑白系统风", "best_for": ["Skill封面、SOP封面、提示词库、方法论手册、AI工作流、标准化流程"]},
+    {"style_id": "isometric_timeline_miniature", "style_name": "时间微缩风", "best_for": ["技术演化", "行业发展史", "工具变迁", "产品迭代", "内容生产演化", "学习方式演化", "AI工作流演化", "知识管理演化", "品牌发展历程", "商业模式演化", "教育工具演化", "创作者工具链"], "not_best_for": ["单一情绪表达", "纯标题海报", "复杂数据图表", "严肃财经封面", "大量文字型知识卡片"], "core_features": ["45度等距俯视", "微型3D时间轴", "横向分段展台", "4到6个时代区域", "时代代表物", "微缩人物互动", "柔和材质", "均匀光照", "顶部标题和副标题", "教育博物馆感"]}
   ]
 }
 ```
@@ -59,7 +60,7 @@ B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`mini
 C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`、`isometric_modular_system`、`monochrome_system_editorial`。
 D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`、`semantic_material_typography`。
 E. 拼贴 / 纸张 / 手工材质类：`retro_minimal_poster_illustration`、`editorial_balloon_collage`、`paper_cut_profile_silhouette`、`torn_paper_note_minimal`、`embroidered_patch_brand`。
-F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_checklist_scene`、`fabric_micro_scene_ad`、`giant_letter_lifestyle_scene`、`crowd_typography_scene`。
+F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_checklist_scene`、`isometric_timeline_miniature`、`fabric_micro_scene_ad`、`giant_letter_lifestyle_scene`、`crowd_typography_scene`。
 G. 空间系统 / 轴测图解类：`isometric_modular_system`。
 
 ## 默认匹配规则
@@ -107,8 +108,9 @@ G. 空间系统 / 轴测图解类：`isometric_modular_system`。
 39. 极简表达人物、关系、旅行、毕业、学习、课堂、会议、城市、灵感、孤独、陪伴、个人成长，或希望用少量线条抽象表达一个概念：优先 `minimal_line_art`。
 40. 系统架构、服务流程、产品功能总览、空间地图、园区/工厂/城市、AI Agent 节点关系、SaaS 模块关系，或需要统一等距视角、可组合组件和系列化品牌插画：优先 `isometric_modular_system`。
 41. Skill、SOP、提示词库、方法论、系统搭建、标准化、知识资产、流程封装、AI 工作流、路由判断、商业路径、出海增长，或需要黑白高对比、巨型文字、专业系统封面：优先 `monochrome_system_editorial`。
-42. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-43. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+42. 当用户主题涉及发展史、演化、变迁、从 A 到 B、过去到现在、技术迭代、行业阶段、工具演进、产品版本、时间线讲解时，优先 `isometric_timeline_miniature`（时间微缩风）。
+43. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+44. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -315,3 +317,58 @@ G. 空间系统 / 轴测图解类：`isometric_modular_system`。
 核心：统一等距/轴测视角，远近不缩放，所有对象服从同一斜向网格。把复杂系统拆成平台、方块、楼层、路径、台阶、管道、桥、门、窗口、浮动信息卡片、微型人物和图标。顶面承载路径/地图/平面关系，侧面承载结构/层级/状态，标题和关键说明保持正向可读。
 
 结构化字段建议：information_task、target_reader、isometric_angle、grid_rule、main_plane、modules、path_or_relation、priority_object、labels、component_reuse_notes。详细规则见 `kashika_isometric_method.md`。
+
+## 42. isometric_timeline_miniature｜时间微缩风
+
+一句话描述：用等距视角的微型 3D 场景，把一个主题从早期到现代的演化过程，拆成多个时代展台，像一座横向展开的微型历史博物馆。
+
+适合：技术演化、行业发展史、工具变迁、产品迭代、内容生产演化、学习方式演化、AI 工作流演化、知识管理演化、品牌发展历程、商业模式演化、教育工具演化、创作者工具链。尤其适合“从 A 到 B”“某某发展史”“某某演化过程”“某某的过去、现在和未来”“5 个阶段看懂某某”。
+
+不适合：单一情绪表达、纯标题海报、复杂数据图表、严肃财经封面、高端黑白系统封面、大量文字型知识卡片。它是叙事型时间演化图，不是强标题封面。
+
+风格锚点：整体风格为时间微缩风：使用 45° 等距俯视视角，创建一个横向展开的微型 3D 时间轴展台。画面像微型博物馆、桌面沙盘或精致教育插画。底座被分成 4-6 个清晰时代区域，从左到右展示主题从早期到现代的演化。每个区域放置该时代最具代表性的物件、工具、设备、环境或技术，并加入少量微型人物与场景互动。顶部居中放大标题，下方放副标题和极简时间轴图标。整体材质柔和、干净、精致，光线均匀，背景为纯色或柔和渐变。不要复杂写实场景，不要拥挤，不要卡通夸张，不要高饱和杂乱，不要密集文字。
+
+英文锚点：Clean isometric miniature 3D timeline diorama style, 45-degree top-down perspective, horizontal stepped base divided into clear time periods, each section shows era-specific objects, tools, environments, or technology. Add tiny stylized figures interacting with each stage, minimal facial detail. Soft refined materials, realistic PBR shading, neutral balanced lighting, clean solid background. Top center title, subtitle showing From [start era] to [modern era], small timeline icon underneath. Educational museum-like miniature evolution diagram, not cluttered, not cartoonish, not dense infographic.
+
+Prompt 模板：
+
+```text
+请生成一张时间微缩风的中文信息图封面。
+主题是「{主题}」。画面使用 45° 等距俯视视角，做成一个横向展开的微型 3D 时间轴展台，像精致的微型博物馆、桌面沙盘或教育展览模型。
+底座从左到右分成 {阶段数量} 个时代区域，每个区域代表一个阶段：
+1. {阶段1名称}：放置 {阶段1代表物}
+2. {阶段2名称}：放置 {阶段2代表物}
+3. {阶段3名称}：放置 {阶段3代表物}
+4. {阶段4名称}：放置 {阶段4代表物}
+5. {阶段5名称}：放置 {阶段5代表物}
+每个阶段加入 1-3 个微型人物，小人正在使用、观察、搬运或体验该阶段的工具和场景。人物要小巧、简化、有模型感，不要复杂表情。
+画面顶部居中写标题「{标题}」，使用清晰粗体字体。标题下方写副标题「从 {起点时代} 到 {现代阶段}」。副标题下面放一条极简时间轴图标，表示时间推进。
+底座下方为每个阶段加短标签，标签简洁清楚。阶段之间用细线、箭头、台阶或分隔线表示时间流动。
+整体风格为时间微缩风：45° 等距视角、微型 3D 时间轴、横向分段展台、时代代表物、微缩人物互动、柔和材质、均匀光照、干净背景、教育图解感。不要做成普通扁平信息图，不要复杂真实场景，不要卡通夸张，不要高饱和杂乱，不要密集文字。
+```
+
+结构化字段：
+
+```text
+风格：时间微缩风
+主题：
+标题：
+起点时代：
+现代阶段：
+阶段数量：
+阶段1名称：
+阶段1代表物：
+阶段2名称：
+阶段2代表物：
+阶段3名称：
+阶段3代表物：
+阶段4名称：
+阶段4代表物：
+阶段5名称：
+阶段5代表物：
+背景颜色：
+整体情绪：教育感 / 科技感 / 怀旧感 / 未来感 / 商业感
+```
+
+示例：AI 内容生产演化。标题“内容生产演化”，从手工写作时代到 AI Agent 时代；阶段可为手写时代、电脑写作、搜索时代、AI 辅助、Agent 时代；代表物依次使用纸张钢笔书桌手稿、台式电脑键盘文档软件、搜索框网页资料堆、聊天界面提示词卡片生成按钮、自动化工作台多模态屏幕流程节点小机器人。
+
