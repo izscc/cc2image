@@ -48,14 +48,15 @@
     {"style_id": "minimal_line_art", "style_name": "线条艺术风", "best_for": ["亲密关系、旅行、毕业、学习、课堂、会议、城市、灵感、个人成长、极简封面"]},
     {"style_id": "isometric_modular_system", "style_name": "轴测模块系统风", "best_for": ["SaaS架构、服务流程、空间地图、系统关系、模块化品牌插画"]},
     {"style_id": "monochrome_system_editorial", "style_name": "黑白系统风", "best_for": ["Skill封面、SOP封面、提示词库、方法论手册、AI工作流、标准化流程"]},
-    {"style_id": "isometric_timeline_miniature", "style_name": "时间微缩风", "best_for": ["技术演化", "行业发展史", "工具变迁", "产品迭代", "内容生产演化", "学习方式演化", "AI工作流演化", "知识管理演化", "品牌发展历程", "商业模式演化", "教育工具演化", "创作者工具链"], "not_best_for": ["单一情绪表达", "纯标题海报", "复杂数据图表", "严肃财经封面", "大量文字型知识卡片"], "core_features": ["45度等距俯视", "微型3D时间轴", "横向分段展台", "4到6个时代区域", "时代代表物", "微缩人物互动", "柔和材质", "均匀光照", "顶部标题和副标题", "教育博物馆感"]}
+    {"style_id": "isometric_timeline_miniature", "style_name": "时间微缩风", "best_for": ["技术演化", "行业发展史", "工具变迁", "产品迭代", "内容生产演化", "学习方式演化", "AI工作流演化", "知识管理演化", "品牌发展历程", "商业模式演化", "教育工具演化", "创作者工具链"], "not_best_for": ["单一情绪表达", "纯标题海报", "复杂数据图表", "严肃财经封面", "大量文字型知识卡片"], "core_features": ["45度等距俯视", "微型3D时间轴", "横向分段展台", "4到6个时代区域", "时代代表物", "微缩人物互动", "柔和材质", "均匀光照", "顶部标题和副标题", "教育博物馆感"]},
+    {"style_id": "real_object_doodle_composite", "style_name": "实物涂鸦风", "best_for": ["幽默封面", "创意配图", "社媒传播图", "情绪表达", "工作压力", "学习压力", "心理状态", "生活方式内容", "视觉双关", "轻量观点", "正文配图"], "not_best_for": ["严肃财经报告", "复杂系统流程", "数据图表", "高端方法论封面", "东方水墨", "正式企业封面"], "core_features": ["真实日常物品", "黑色手绘线稿", "白色纸张背景", "视觉双关", "物品成为角色关键部分", "漫画表情", "自然阴影", "大量留白", "短手写吐槽"]}
   ]
 }
 ```
 
 ## 风格分组
 
-A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`quirky_doodle_character_flow`。
+A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`quirky_doodle_character_flow`、`real_object_doodle_composite`。
 B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`、`minimal_line_art`。
 C. 极简设计 / 材质海报类：`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`、`isometric_modular_system`、`monochrome_system_editorial`。
 D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`、`semantic_material_typography`。
@@ -109,8 +110,9 @@ G. 空间系统 / 轴测图解类：`isometric_modular_system`。
 40. 系统架构、服务流程、产品功能总览、空间地图、园区/工厂/城市、AI Agent 节点关系、SaaS 模块关系，或需要统一等距视角、可组合组件和系列化品牌插画：优先 `isometric_modular_system`。
 41. Skill、SOP、提示词库、方法论、系统搭建、标准化、知识资产、流程封装、AI 工作流、路由判断、商业路径、出海增长，或需要黑白高对比、巨型文字、专业系统封面：优先 `monochrome_system_editorial`。
 42. 当用户主题涉及发展史、演化、变迁、从 A 到 B、过去到现在、技术迭代、行业阶段、工具演进、产品版本、时间线讲解时，优先 `isometric_timeline_miniature`（时间微缩风）。
-43. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-44. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+43. 当用户需要幽默创意配图、视觉双关、真实物品与手绘角色结合、表达压力 / 疲惫 / 焦虑 / 卡住 / 情绪隐喻，或希望“用一个日常物品变成画面关键部分”时，优先 `real_object_doodle_composite`（实物涂鸦风）。
+44. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+45. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -371,4 +373,46 @@ Prompt 模板：
 ```
 
 示例：AI 内容生产演化。标题“内容生产演化”，从手工写作时代到 AI Agent 时代；阶段可为手写时代、电脑写作、搜索时代、AI 辅助、Agent 时代；代表物依次使用纸张钢笔书桌手稿、台式电脑键盘文档软件、搜索框网页资料堆、聊天界面提示词卡片生成按钮、自动化工作台多模态屏幕流程节点小机器人。
+
+## 43. real_object_doodle_composite｜实物涂鸦风
+
+一句话描述：把真实生活物品嵌入黑色手绘线稿中，让物品变成角色身体、头发、负担、情绪、道具或场景的一部分，形成幽默、聪明、意外的视觉双关。
+
+适合：情绪表达、幽默海报、创意封面、社媒传播图、生活方式内容、心理状态、创作者状态、工作压力、学习压力、关系隐喻、轻量观点、正文配图、视觉双关。尤其适合“我被压垮了”“我已经焦了”“脑子炸了”“压力太大”“灵感卡住”“被工作掏空”“关系是一团线”等主题。
+
+不适合：严肃财经报告、复杂系统流程、高端品牌方法论、数据图表、东方水墨、正式企业封面、大段文字知识卡片。它的强项是一个画面讲一个隐喻，不是承载复杂信息。
+
+风格锚点：整体风格为实物涂鸦风：干净白色或暖白纸张背景，真实日常物品被物理放置在画面中，并与黑色手绘线稿角色无缝结合。真实物品必须成为角色或场景的关键部分，例如头、头发、大脑、身体、负担、心脏、武器、衣服、道具或爆炸效果。手绘部分使用简单黑色墨线，像快速漫画草图，表情夸张、动作明确、幽默而有情绪。画面通过真实物品和线稿之间的语义错位形成视觉双关，既聪明又易懂。背景极简，大量留白，真实物品有自然光影和摄影质感。可以加入一句短手写吐槽文字。不要复杂背景，不要完整彩色插画，不要 3D，不要普通拼贴，不要让物品只是装饰，不要密集文字。
+
+英文锚点：Real object doodle composite style: clean white paper background, one real everyday object physically placed in the scene and seamlessly integrated into a black ink hand-drawn cartoon illustration. The real object becomes a key part of the character or scene, such as the head, hair, brain, body, burden, heart, weapon, clothing, prop, or explosion. Simple expressive black line art, quick sketch feeling, exaggerated facial expression and clear action. The image creates a witty visual pun by turning the object into a meaningful part of the drawing. Photorealistic object, natural shadows, minimalist negative space, optional short handwritten caption. Not a full color illustration, not 3D, not cluttered, not ordinary collage, the object must not be decorative only.
+
+Prompt 模板：
+
+```text
+请生成一张实物涂鸦风的创意插画。
+主题是「{主题}」。画面使用干净白色或暖白纸张背景，大量留白，竖版 9:16，柔和摄影棚光线。
+画面中放置一个真实日常物品：「{真实物品}」。这个物品必须有真实摄影质感、自然阴影、清晰纹理和高细节。
+请把这个真实物品巧妙地变成手绘角色或场景的关键部分：「{物品变成什么}」。它可以变成角色的头、头发、大脑、身体、负担、心脏、武器、衣服、道具、爆炸或情绪本体。
+围绕真实物品画一个黑色手绘线稿角色。角色是「{角色设定}」，正在「{动作}」。手绘部分使用简单黑色墨线，像快速漫画草图，表情夸张、动作明确，和真实物品无缝衔接。
+这个画面要表达的视觉双关是：「{视觉双关}」。整体要幽默、聪明、有情绪，但画面极简。
+可以在下方加入一句短手写文字：「{短句}」。文字像随手写在纸上的吐槽，不要正式排版。
+整体风格为实物涂鸦风：真实日常物品 + 黑色手绘线稿 + 视觉双关 + 白色留白背景 + 摄影质感 + 幽默表达。不要复杂背景，不要完整彩色插画，不要 3D，不要普通拼贴，不要让物品只是装饰，不要密集文字。
+```
+
+结构化字段：
+
+```text
+风格：实物涂鸦风
+主题：
+真实物品：
+物品变成什么：
+角色设定：
+动作：
+视觉双关：
+短句：
+画幅：9:16 / 1:1 / 4:5
+情绪：幽默 / 疲惫 / 焦虑 / 崩溃 / 温柔 / 讽刺 / 惊喜
+```
+
+示例：工作压力。真实物品是一块真实石头，把石头变成疲惫小男孩背上的巨大负担；小男孩弯腰往前走、满头大汗，视觉双关是“压力像一块真实的石头压在身上”，短句“我只是有点累”。
 

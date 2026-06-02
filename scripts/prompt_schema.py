@@ -202,6 +202,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "isometric_timeline_miniature": (
         '整体风格为时间微缩风：使用 45° 等距俯视视角，创建一个横向展开的微型 3D 时间轴展台。画面像微型博物馆、桌面沙盘或精致教育插画。底座被分成 4-6 个清晰时代区域，从左到右展示主题从早期到现代的演化。每个区域放置该时代最具代表性的物件、工具、设备、环境或技术，并加入少量微型人物与场景互动。顶部居中放大标题，下方放副标题和极简时间轴图标。整体材质柔和、干净、精致，光线均匀，背景为纯色或柔和渐变。不要复杂写实场景，不要拥挤，不要卡通夸张，不要高饱和杂乱，不要密集文字。\nClean isometric miniature 3D timeline diorama style, 45-degree top-down perspective, horizontal stepped base divided into clear time periods, each section shows era-specific objects, tools, environments, or technology. Add tiny stylized figures interacting with each stage, minimal facial detail. Soft refined materials, realistic PBR shading, neutral balanced lighting, clean solid background. Top center title, subtitle showing From [start era] to [modern era], small timeline icon underneath. Educational museum-like miniature evolution diagram, not cluttered, not cartoonish, not dense infographic.'
     ),
+    "real_object_doodle_composite": (
+        '整体风格为实物涂鸦风：干净白色或暖白纸张背景，真实日常物品被物理放置在画面中，并与黑色手绘线稿角色无缝结合。真实物品必须成为角色或场景的关键部分，例如头、头发、大脑、身体、负担、心脏、武器、衣服、道具或爆炸效果。手绘部分使用简单黑色墨线，像快速漫画草图，表情夸张、动作明确、幽默而有情绪。画面通过真实物品和线稿之间的语义错位形成视觉双关，既聪明又易懂。背景极简，大量留白，真实物品有自然光影和摄影质感。可以加入一句短手写吐槽文字。不要复杂背景，不要完整彩色插画，不要 3D，不要普通拼贴，不要让物品只是装饰，不要密集文字。\nReal object doodle composite style: clean white paper background, one real everyday object physically placed in the scene and seamlessly integrated into a black ink hand-drawn cartoon illustration. The real object becomes a key part of the character or scene, such as the head, hair, brain, body, burden, heart, weapon, clothing, prop, or explosion. Simple expressive black line art, quick sketch feeling, exaggerated facial expression and clear action. The image creates a witty visual pun by turning the object into a meaningful part of the drawing. Photorealistic object, natural shadows, minimalist negative space, optional short handwritten caption. Not a full color illustration, not 3D, not cluttered, not ordinary collage, the object must not be decorative only.'
+    ),
     "monochrome_system_editorial": (
         '整体风格为黑白系统风：黑白灰单色，高对比，白色或浅灰背景，巨型黑色粗体中文或英文字作为主视觉，搭配细线网格、编号、条形码、页码、REF 编号、模块分隔线和工业化信息排版。画面中使用系统隐喻物件，例如透明档案盒、索引卡、文件柜、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等，表达知识封装、方法系统、SOP、路径判断、流程标准化或规模化分发。构图像高级方法论手册、SOP 封面、品牌 guideline、工业设计板或专业知识产品封面。整体冷静、专业、系统、权威、可执行。不要彩色插画，不要卡通，不要治愈风，不要复杂照片背景，不要高饱和颜色，不要杂乱排版。\nMonochrome system editorial style, black white and gray only, high contrast, clean white or light gray background, oversized bold black Chinese or English typography as the dominant visual, strict grid layout, thin technical lines, barcode, reference number, page index, module dividers, industrial information design. Use system metaphor objects such as transparent archive box, index cards, file cabinet, padlock, stairs, doorway, routing lines, path map, cargo ship, containers, bar chart, tiny human figures. Express knowledge encapsulation, SOP, prompt library, workflow standardization, decision routing, scalable distribution. Premium methodology manual cover, SOP playbook, industrial design board, professional knowledge product visual. Not colorful, not cartoon, not emotional illustration, not cluttered, not cyberpunk.'
     ),
@@ -250,6 +253,7 @@ STYLE_NAMES = {
     "isometric_modular_system": "轴测模块系统风",
     "monochrome_system_editorial": "黑白系统风",
     "isometric_timeline_miniature": "时间微缩风",
+    "real_object_doodle_composite": "实物涂鸦风",
 }
 
 BODY_STRUCTURES = {
@@ -708,6 +712,7 @@ EXTRA_COVER_GUIDES = {
     "isometric_modular_system": "统一等距/轴测视角，远近不缩放，模块化平台、路径、楼层、管道、信息卡片和微型人物共同构成系统、流程、地图或服务架构说明。",
     "monochrome_system_editorial": "黑白灰高对比，巨型粗体中文或英文字压场，配合档案盒、索引卡、锁、阶梯、门、路径线、路线图、货船、集装箱或微缩人物，并加入细线网格、编号、条形码和工业化信息排版。",
     "isometric_timeline_miniature": "45° 等距俯视视角，横向展开的微型 3D 时间轴展台，底座分成 4-6 个时代区域；每段有代表物件、技术或环境，并加入少量微型人物互动；顶部标题、副标题和极简时间轴图标清晰呈现从过去到现代的演化。",
+    "real_object_doodle_composite": "干净白色或暖白纸张背景，一个真实日常物品作为关键语义零件，与黑色手绘线稿角色无缝结合；物品变成头、头发、大脑、身体、负担、心脏、道具或爆炸，制造幽默易懂的视觉双关。",
 }
 
 
