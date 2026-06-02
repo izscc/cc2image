@@ -18,7 +18,7 @@
 
 ## 风格效果示例
 
-下面展示已配示例图的 40 套核心风格；第 41 套「轴测模块系统风」、第 42 套「时间微缩风」、第 43 套「实物涂鸦风」和第 44 套「3D怪表情风」为新增方法论/角色风格，可直接使用 `isometric_modular_system`、`isometric_timeline_miniature`、`real_object_doodle_composite` 与 `expressive_3d_quirky_character`。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
+下面展示已配示例图的核心风格；其中第 41 套「黑白系统风」、第 42 套「时间微缩风」、第 43 套「实物涂鸦风」和第 44 套「3D怪表情风」已补充封面示例图，可直接使用 `monochrome_system_editorial`、`isometric_timeline_miniature`、`real_object_doodle_composite` 与 `expressive_3d_quirky_character`。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
 
 <table>
   <tr>
@@ -100,6 +100,14 @@
   <tr>
     <td width="50%"><strong>39｜线条艺术风</strong><br><code>minimal_line_art</code><br><img src="assets/examples/39-minimal-line-art.png" alt="线条艺术风示例"></td>
     <td width="50%"><strong>40｜黑白系统风</strong><br><code>monochrome_system_editorial</code><br><img src="assets/examples/40-monochrome-system-editorial.png" alt="黑白系统风示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>41｜黑白系统风</strong><br><code>monochrome_system_editorial</code><br><img src="assets/examples/41-monochrome-system-editorial.png" alt="黑白系统风封面示例"></td>
+    <td width="50%"><strong>42｜时间微缩风</strong><br><code>isometric_timeline_miniature</code><br><img src="assets/examples/42-isometric-timeline-miniature.png" alt="时间微缩风封面示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>43｜实物涂鸦风</strong><br><code>real_object_doodle_composite</code><br><img src="assets/examples/43-real-object-doodle-composite.png" alt="实物涂鸦风封面示例"></td>
+    <td width="50%"><strong>44｜3D怪表情风</strong><br><code>expressive_3d_quirky_character</code><br><img src="assets/examples/44-expressive-3d-quirky-character.png" alt="3D怪表情风封面示例"></td>
   </tr>
 </table>
 
