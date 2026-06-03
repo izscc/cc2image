@@ -18,7 +18,7 @@
 
 ## 风格效果示例
 
-下面展示已配示例图的核心风格；其中第 41 套「黑白系统风」、第 42 套「时间微缩风」、第 43 套「实物涂鸦风」和第 44 套「3D怪表情风」已补充封面示例图，第 45 套「大字海报风」和第 46 套「产品海报风」已加入风格库，可直接使用 `monochrome_system_editorial`、`isometric_timeline_miniature`、`real_object_doodle_composite`、`expressive_3d_quirky_character`、`giant_chinese_concept_poster` 与 `premium_product_ad_poster`。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
+下面展示已配示例图的核心风格；其中第 41 套「黑白系统风」、第 42 套「时间微缩风」、第 43 套「实物涂鸦风」、第 44 套「3D怪表情风」、第 45 套「大字海报风」和第 46 套「产品海报风」已补充封面示例图，可直接使用 `monochrome_system_editorial`、`isometric_timeline_miniature`、`real_object_doodle_composite`、`expressive_3d_quirky_character`、`giant_chinese_concept_poster` 与 `premium_product_ad_poster`。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
 
 <table>
   <tr>
@@ -108,6 +108,10 @@
   <tr>
     <td width="50%"><strong>43｜实物涂鸦风</strong><br><code>real_object_doodle_composite</code><br><img src="assets/examples/43-real-object-doodle-composite.png" alt="实物涂鸦风封面示例"></td>
     <td width="50%"><strong>44｜3D怪表情风</strong><br><code>expressive_3d_quirky_character</code><br><img src="assets/examples/44-expressive-3d-quirky-character.png" alt="3D怪表情风封面示例"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>45｜大字海报风</strong><br><code>giant_chinese_concept_poster</code><br><img src="assets/examples/45-giant-chinese-concept-poster.png" alt="大字海报风封面示例"></td>
+    <td width="50%"><strong>46｜产品海报风</strong><br><code>premium_product_ad_poster</code><br><img src="assets/examples/46-premium-product-ad-poster.png" alt="产品海报风封面示例"></td>
   </tr>
 </table>
 
