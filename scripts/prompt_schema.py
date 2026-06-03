@@ -208,6 +208,12 @@ STYLE_ANCHORS: Dict[str, str] = {
     "expressive_3d_quirky_character": (
         '整体风格为3D怪表情风：极简白色、浅灰或浅米色背景，大量留白，一个圆润夸张的 3D 小人角色作为主视觉。参考内置校准样图 assets/examples/3d_quirky/ 的角色质感、表情强度、动作夸张度和极简背景，但不要照抄样图人物、服装、构图或道具。角色头大身小，脸颊饱满，皮肤柔软，简单纯色服装，表情非常丰富，眼神、眉毛、嘴角和脸部肌肉都要夸张传达情绪。可表现不屑、无语、嫌弃、崩溃、焦虑、疲惫、得意、开心、怀疑、委屈、震惊、认真等表情，并配合抱臂、叉腰、摊手、抱头、OK 手势、指向、拖步、趴桌、举牌、推箱子等动作。整体像高质量 3D 表情包角色、轻量动画角色或 3D 版怪诞小人。可以搭配少量道具、流程元素或 8 字以内短句；不要真实儿童摄影，不要复杂背景，不要过度可爱玩具感，不要高饱和颜色，不要密集文字。\nExpressive quirky 3D character style: clean white, light gray or warm beige background with lots of negative space. Use bundled calibration examples in assets/examples/3d_quirky/ only to stabilize rounded 3D character quality, expressive facial intensity, exaggerated body language and sparse composition; do not copy any example identity, outfit, composition or prop. A rounded exaggerated 3D character as the main visual, big head, small body, chubby cheeks, soft skin, simple clothes, highly expressive face. Emotion is communicated through exaggerated eyes, eyebrows, mouth corners and facial muscles. The character can show skeptical, annoyed, unimpressed, exhausted, anxious, shocked, smug, happy, doubtful, embarrassed, confident or dramatic expressions, with matching body language such as crossed arms, hands on hips, shrugging, holding head, OK gesture, pointing, dragging feet, lying on a desk, holding a sign or pushing a box. High-quality 3D render, soft studio lighting, sticker-like or animated character feel. Not real child photography, not cluttered, not overly cute toy style, not dense text.'
     ),
+    "giant_chinese_concept_poster": (
+        '整体风格为大字海报风：高级中文概念海报，竖版 3:4 或 4:5，巨大中文主标题是绝对主体，字形清晰完整、无错字、无缺笔，占据画面 45%-75%。画面必须先理解输入文字的表层含义、深层寓意、情绪气质、文化联想、人物命运感和隐含张力，再自动决定最适合的字体气质、构图、色彩和视觉隐喻。人物、物体、空间或象征元素必须与大字发生关系，例如字中开门、字里藏城市、字的缝隙透出风景、字像建筑、字像墙、字像路、字像牢笼、字像窗、字像裂缝、字被光穿透、人物站在字下或走入字中。大字是第一视觉，隐喻图像是第二视觉，小字是第三视觉。小字只保留三处：左上角 2-4 个关键词，右侧竖排一句命运感短句，左下角一句传播力总结句。整体高级、极简、克制、展览级，有强排版、强隐喻、强情绪、强记忆点。不要拥挤，不要廉价广告感，不要多余英文，不要解释性长文案，不要普通插画，不要让大字不可读。\nGiant Chinese concept poster style: premium vertical concept poster, 3:4 or 4:5 ratio, oversized Chinese title as the dominant visual, clear complete characters, no missing strokes, no wrong characters, occupying most of the composition. The visual language is generated from the meaning of the input word: emotional tone, cultural association, hidden tension, metaphor and fate-like atmosphere. The image metaphor must interact with the giant typography: a doorway inside the characters, city hidden in the strokes, landscape visible through gaps, characters as architecture, wall, road, monument or stage, a small human figure entering or standing beneath the word. Minimal, refined, cinematic, exhibition-level, strong typography, strong metaphor, strong emotion, memorable composition. Only three small text areas: top-left keywords, vertical poetic sentence on the right, short summary line at bottom-left. No clutter, no cheap advertising, no long explanatory copy, no ordinary illustration.'
+    ),
+    "premium_product_ad_poster": (
+        '整体风格为产品海报风：竖版高级商业广告海报，产品是绝对主角，使用高质量商业摄影或超真实 CGI 渲染，产品清晰锐利、材质真实、细节丰富、光影专业。产品占画面 35%-70%，边缘锐利、结构可信，不能被人物或文字抢走主体地位。根据产品属性自动选择最适合的广告创意方向：英雄近景、时尚巨物、极端场景、爆炸拆解、微缩人物互动或生活方式大片。画面需要具有强第一视觉、强产品质感、强卖点表达和高级品牌感。可使用巨大标题、功能卖点标注、细线说明、图标、数字信息、品牌式排版。背景干净、有设计感，色彩根据产品和品牌气质自动选择。整体像高端电商首图、科技新品发布海报、时尚杂志广告或产品工程解析图。不要廉价促销感，不要杂乱背景，不要低质 3D，不要错误产品结构，不要密集长文案，不要让人物抢走产品主体。\nPremium product advertising poster style: vertical high-impact commercial product poster, the product is the absolute hero. Hyper-realistic product photography or ultra-detailed CGI render, sharp product details, realistic materials, professional studio lighting, cinematic depth of field. Choose the most suitable creative direction based on the product: hero close-up, editorial fashion scale, extreme environment monument, exploded-view technical infographic, miniature figures interacting with oversized product, or clean lifestyle product campaign. Strong first visual, premium product texture, clear selling points, brand-level layout. Use oversized typography, feature callouts, thin annotation lines, icons, bold numbers and concise specs. Clean designed background, color palette driven by product and brand mood. High-end e-commerce hero image, tech launch poster, fashion magazine ad, or product engineering presentation. Not cheap promotion, not cluttered, not low-quality 3D, not incorrect product structure, not dense copy, product must remain dominant.'
+    ),
     "monochrome_system_editorial": (
         '整体风格为黑白系统风：黑白灰单色，高对比，白色或浅灰背景，巨型黑色粗体中文或英文字作为主视觉，搭配细线网格、编号、条形码、页码、REF 编号、模块分隔线和工业化信息排版。画面中使用系统隐喻物件，例如透明档案盒、索引卡、文件柜、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等，表达知识封装、方法系统、SOP、路径判断、流程标准化或规模化分发。构图像高级方法论手册、SOP 封面、品牌 guideline、工业设计板或专业知识产品封面。整体冷静、专业、系统、权威、可执行。不要彩色插画，不要卡通，不要治愈风，不要复杂照片背景，不要高饱和颜色，不要杂乱排版。\nMonochrome system editorial style, black white and gray only, high contrast, clean white or light gray background, oversized bold black Chinese or English typography as the dominant visual, strict grid layout, thin technical lines, barcode, reference number, page index, module dividers, industrial information design. Use system metaphor objects such as transparent archive box, index cards, file cabinet, padlock, stairs, doorway, routing lines, path map, cargo ship, containers, bar chart, tiny human figures. Express knowledge encapsulation, SOP, prompt library, workflow standardization, decision routing, scalable distribution. Premium methodology manual cover, SOP playbook, industrial design board, professional knowledge product visual. Not colorful, not cartoon, not emotional illustration, not cluttered, not cyberpunk.'
     ),
@@ -258,6 +264,8 @@ STYLE_NAMES = {
     "isometric_timeline_miniature": "时间微缩风",
     "real_object_doodle_composite": "实物涂鸦风",
     "expressive_3d_quirky_character": "3D怪表情风",
+    "giant_chinese_concept_poster": "大字海报风",
+    "premium_product_ad_poster": "产品海报风",
 }
 
 BODY_STRUCTURES = {
@@ -346,6 +354,17 @@ class CoverSpec:
     props: str = ""
     short_phrase: str = ""
     background_color: str = ""
+    product_name: str = ""
+    product_category: str = ""
+    product_texture: str = ""
+    creative_direction: str = ""
+    brand_mood: str = ""
+    color_palette: str = ""
+    selling_point1: str = ""
+    selling_point2: str = ""
+    selling_point3: str = ""
+    selling_point4: str = ""
+    selling_point5: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -373,6 +392,17 @@ class BodySpec:
     props: str = ""
     short_phrase: str = ""
     background_color: str = ""
+    product_name: str = ""
+    product_category: str = ""
+    product_texture: str = ""
+    creative_direction: str = ""
+    brand_mood: str = ""
+    color_palette: str = ""
+    selling_point1: str = ""
+    selling_point2: str = ""
+    selling_point3: str = ""
+    selling_point4: str = ""
+    selling_point5: str = ""
     style_id: str = DEFAULT_STYLE_ID
 
 
@@ -730,6 +760,8 @@ EXTRA_COVER_GUIDES = {
     "isometric_timeline_miniature": "45° 等距俯视视角，横向展开的微型 3D 时间轴展台，底座分成 4-6 个时代区域；每段有代表物件、技术或环境，并加入少量微型人物互动；顶部标题、副标题和极简时间轴图标清晰呈现从过去到现代的演化。",
     "real_object_doodle_composite": "干净白色或暖白纸张背景，一个真实日常物品作为关键语义零件，与黑色手绘线稿角色无缝结合；物品变成头、头发、大脑、身体、负担、心脏、道具或爆炸，制造幽默易懂的视觉双关。",
     "expressive_3d_quirky_character": "极简白色、浅灰或浅米色背景，一个圆润夸张的 3D 小人作为主视觉；用准确夸张的表情和肢体动作表达情绪、态度、吐槽、状态或轻剧情。",
+    "giant_chinese_concept_poster": "竖版 3:4 或 4:5，高级中文概念海报；巨型中文词作为绝对主体，词义驱动字体、隐喻场景、人物命运感和三处克制小字。",
+    "premium_product_ad_poster": "竖版高端商业广告海报，产品是绝对主角；用超清产品质感、巨大标题、功能卖点标注、创意场景或爆炸拆解制造品牌感和转化力。",
 }
 
 
@@ -802,6 +834,104 @@ def render_expressive_3d_quirky_body(spec: BodySpec) -> str:
 参考 assets/examples/3d_quirky/ 的角色质感、表情强度、动作夸张度和极简背景；不要照抄样图人物、服装、构图或道具。
 {STYLE_ANCHORS['expressive_3d_quirky_character']}"""
 
+
+def render_giant_chinese_concept_poster_cover(spec: CoverSpec) -> str:
+    input_text = spec.main_visual_text or spec.title
+    keywords = spec.short_labels or spec.label1 or spec.speech_bubble or "关键词 情绪 命运"
+    fate_sentence = spec.label2 or spec.subtitle or "让这个词像一道命运入口。"
+    summary = spec.label3 or spec.bottom_sentence or "一个词，打穿一种情绪。"
+    metaphor = spec.metaphor or spec.visual_anchor or "让巨大中文字成为空间本身，人物或光从字中穿过"
+    color_mood = spec.background or spec.texture_keywords or spec.emotion or "根据词义自动选择高级、节制的色彩气质"
+    font_mood = spec.specified_material or spec.core_structure or "根据词义自动选择厚重书法、碑刻、工业粗体、纸质肌理、石质墙体、光影字或极简几何字"
+    subject = spec.core_subject or spec.character_action or "一个极小的人物或象征物，与大字发生关系"
+    return f"""请生成一张大字海报风的高级中文概念海报。
+画幅：竖版 3:4。核心文字为「{input_text}」。
+请先深度理解「{input_text}」的表层含义、深层寓意、情绪气质、文化联想、人物命运感与隐含张力，再决定最适合它的画面风格、构图方式、色彩气质和视觉隐喻。
+画面中，巨大中文主标题「{input_text}」必须是绝对主体，字形清晰完整，无错字无缺笔，占据画面 45%-75%，形成最强第一视觉。字体气质：「{font_mood}」。字体必须高级、克制、有力量，不能变形到不可读。
+请提炼一个最准确、最有代表性的视觉隐喻：「{metaphor}」。让人物、物体、空间或象征元素与大字发生关系，例如字中开门、字里藏城市、字的缝隙透出风景、字像建筑、字像墙、字像路、字被光穿透、人物站在字下或走入字中。主体或人物：「{subject}」。隐喻图像是第二视觉，不要抢走大字主体。
+整体色彩：「{color_mood}」。色彩根据词义自动调整，但必须高级、节制，可以更冷峻、更诗意、更悲剧、更锋利、更温柔或更庄严。
+小字文案只保留三处：
+左上角：「{keywords}」
+右侧竖排：「{fate_sentence}」
+左下角：「{summary}」
+文字是第一视觉，隐喻图像是第二视觉，小字是第三视觉。元素少，概念准，留白克制。最终效果像展览级文学人物或概念主题海报，把「{input_text}」背后的精神状态和文化意味真正视觉化。
+不要拥挤，不要廉价广告感，不要多余英文，不要解释性长文案，不要普通插画，不要只画人物外貌，不要让大字不可读。
+{STYLE_ANCHORS['giant_chinese_concept_poster']}"""
+
+
+def render_giant_chinese_concept_poster_body(spec: BodySpec) -> str:
+    input_text = spec.title
+    keywords = spec.short_labels or spec.notes or "关键词 情绪 命运"
+    fate_sentence = spec.subtitle or spec.speech_bubble or "让这个词像一道命运入口。"
+    summary = spec.bottom_sentence or "一个词，打穿一种情绪。"
+    metaphor = spec.visual_anchor or spec.core_idea or spec.modules or "让巨大中文字成为空间本身，人物或光从字中穿过"
+    return f"""请生成一张大字海报风的高级中文概念海报。
+画幅：竖版 3:4。核心文字为「{input_text}」。
+这不是正文解释图，不要做流程图或知识卡片；只用一个中文词打穿一种情绪。
+巨大中文主标题「{input_text}」必须清晰完整、无错字、无缺笔，占据画面 45%-75%。
+视觉隐喻：「{metaphor}」。让人物、物体、空间或象征元素与大字发生关系，例如字中开门、字里藏城市、字的缝隙透出风景、字像建筑、字像墙、字像路、人物站在字下或走入字中。
+小字文案只保留三处：左上角「{keywords}」；右侧竖排「{fate_sentence}」；左下角「{summary}」。
+整体高级、极简、克制、展览级，有强排版、强隐喻、强情绪、强记忆点。不要拥挤，不要长文案，不要普通插画，不要让大字不可读。
+{STYLE_ANCHORS['giant_chinese_concept_poster']}"""
+
+
+def _product_selling_points(spec: CoverSpec | BodySpec) -> list[str]:
+    points = [spec.selling_point1, spec.selling_point2, spec.selling_point3, spec.selling_point4, spec.selling_point5]
+    fallback = []
+    if hasattr(spec, "short_labels") and getattr(spec, "short_labels"):
+        fallback = [p.strip() for p in str(getattr(spec, "short_labels")).replace("、", "/").split("/") if p.strip()]
+    if not any(points) and hasattr(spec, "label1"):
+        points = [getattr(spec, "label1", ""), getattr(spec, "label2", ""), getattr(spec, "label3", ""), getattr(spec, "label4", ""), ""]
+    merged = [p for p in points if p] or fallback or ["核心卖点", "高级质感", "清晰功能", "品牌体验"]
+    return merged[:5]
+
+
+def render_premium_product_ad_poster_cover(spec: CoverSpec) -> str:
+    product = spec.product_name or spec.title
+    category = spec.product_category or spec.core_object or "根据产品名称自动判断品类"
+    texture = spec.product_texture or spec.texture_keywords or "根据产品自动突出金属、玻璃、皮革、织物、水珠、屏幕、透明材质或柔软填充等关键质感"
+    direction = spec.creative_direction or spec.shot_type or "根据产品属性自动选择英雄近景 / 时尚巨物 / 极端场景 / 爆炸拆解 / 微缩互动 / 生活方式大片"
+    metaphor = spec.metaphor or spec.visual_anchor or "让产品卖点自然变成高级广告视觉创意"
+    headline = spec.main_visual_text or spec.title
+    subtitle = spec.subtitle or "Premium Product Campaign"
+    brand_mood = spec.brand_mood or spec.emotion or "根据产品自动选择科技、奢华、运动、年轻、极简、户外、未来或温柔气质"
+    color = spec.color_palette or spec.background or spec.texture_keywords or "产品颜色和品牌色优先，背景服务产品，强调色只用于引导视线"
+    points = _product_selling_points(spec)
+    point_lines = "\n".join(f"{i + 1}. {point}" for i, point in enumerate(points))
+    return f"""请生成一张产品海报风的竖版高级商业广告海报。
+产品是「{product}」。产品品类：「{category}」。如果提供了产品图片，请识别并保留产品主体的外观、颜色、结构、材质和关键特征，并基于它进行创意广告海报设计；不要随意改变产品品类或关键结构。
+画面中产品必须是绝对主角，清晰锐利，占据画面 35%-70% 的主要视觉位置。产品材质要真实、有高级感，突出「{texture}」。
+请根据产品属性自动选择最适合的广告创意方向：「{direction}」。可以是英雄近景、时尚巨物、极端场景、爆炸拆解、微缩人物互动或生活方式大片。不要机械套模板，要让产品卖点自然变成视觉创意。
+核心视觉隐喻是：「{metaphor}」。让产品与人物、空间、环境或功能卖点发生强关系，形成高级、记忆点强、有商业转化力的画面。
+画面标题为「{headline}」，使用巨大、干净、有冲击力的无衬线字体，可以放在背景层并被产品部分遮挡。副标题为「{subtitle}」。
+请加入 {len(points)} 个简短卖点信息：
+{point_lines}
+卖点用小图标、细线标注、数字模块或简洁信息块呈现，不要长篇解释。
+品牌气质：「{brand_mood}」。色彩倾向：「{color}」。专业棚拍光线，产品高光自然，背景干净，整体高级、清爽、有视觉冲击力。
+不要廉价促销感，不要杂乱背景，不要低质量 3D，不要错误产品结构，不要密集长文案，不要让人物抢走产品主体。
+{STYLE_ANCHORS['premium_product_ad_poster']}"""
+
+
+def render_premium_product_ad_poster_body(spec: BodySpec) -> str:
+    product = spec.product_name or spec.title
+    category = spec.product_category or spec.structure or "产品卖点图"
+    texture = spec.product_texture or spec.modules or "突出产品真实材质和关键细节"
+    direction = spec.creative_direction or spec.shot_type or "英雄近景 / 爆炸拆解 / 微缩互动 / 生活方式大片"
+    metaphor = spec.visual_anchor or spec.core_idea or "让产品卖点自然变成视觉创意"
+    points = _product_selling_points(spec)
+    point_lines = "\n".join(f"{i + 1}. {point}" for i, point in enumerate(points))
+    return f"""请生成一张产品海报风的竖版高级商业广告海报。
+产品是「{product}」。产品品类：「{category}」。这不是正文知识卡或流程图，产品必须是绝对主角。
+产品清晰锐利，占据画面 35%-70% 的主要视觉位置，材质真实可信，突出「{texture}」。
+广告创意方向：「{direction}」。核心视觉隐喻：「{metaphor}」。让产品与人物、空间、环境或功能卖点发生强关系。
+画面标题为「{product}」或一句短广告语，使用巨大、干净、有冲击力的字体；副标题或短句为「{spec.bottom_sentence}」。
+请加入简短卖点信息：
+{point_lines}
+卖点用小图标、细线标注、数字模块或简洁信息块呈现，不要长篇解释。
+背景干净、有设计感，色彩根据产品和品牌气质自动选择。整体像高端电商首图、科技新品发布海报、时尚杂志广告或产品工程解析图。
+不要廉价促销感，不要杂乱背景，不要低质量 3D，不要错误产品结构，不要密集长文案，不要让人物抢走产品主体。
+{STYLE_ANCHORS['premium_product_ad_poster']}"""
+
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     if spec.style_id == "oriental_editorial_illustration":
@@ -842,6 +972,10 @@ def render_cover(spec: CoverSpec) -> str:
         return render_minimal_line_art_cover(spec)
     if spec.style_id == "expressive_3d_quirky_character":
         return render_expressive_3d_quirky_cover(spec)
+    if spec.style_id == "giant_chinese_concept_poster":
+        return render_giant_chinese_concept_poster_cover(spec)
+    if spec.style_id == "premium_product_ad_poster":
+        return render_premium_product_ad_poster_cover(spec)
     if spec.style_id == "isometric_modular_system":
         return render_extra_cover(spec) or render_handdrawn_cover(spec)
     if spec.style_id == "monochrome_system_editorial":
@@ -923,6 +1057,10 @@ def render_body(spec: BodySpec) -> str:
         return render_minimal_line_art_body(spec)
     if spec.style_id == "expressive_3d_quirky_character":
         return render_expressive_3d_quirky_body(spec)
+    if spec.style_id == "giant_chinese_concept_poster":
+        return render_giant_chinese_concept_poster_body(spec)
+    if spec.style_id == "premium_product_ad_poster":
+        return render_premium_product_ad_poster_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -935,6 +1073,20 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
     image_type = raw.get("type")
     style_id = normalize_style(raw.get("style_id") or raw.get("style") or DEFAULT_STYLE_ID)
     if image_type == "cover":
+        if style_id == "giant_chinese_concept_poster":
+            raw.setdefault("subtitle", raw.get("fate_sentence") or raw.get("命运感短句") or "让一个词成为画面的命运入口")
+            raw.setdefault("metaphor", raw.get("visual_metaphor") or raw.get("视觉隐喻") or raw.get("visual_anchor") or "巨大中文字成为空间本身，人物或光从字中穿过")
+            raw.setdefault("elements", raw.get("subject") or raw.get("人物或主体") or raw.get("core_subject") or "极小人物、光、门、城市、风景或裂缝")
+            raw.setdefault("character_action", raw.get("subject") or raw.get("人物或主体") or "人物与巨型中文大字发生关系")
+            raw.setdefault("speech_bubble", raw.get("keywords") or raw.get("关键词") or raw.get("short_labels") or "关键词 情绪 命运")
+            raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("总结句") or "一个词，打穿一种情绪。")
+        if style_id == "premium_product_ad_poster":
+            raw.setdefault("subtitle", raw.get("subtitle") or raw.get("副标题") or "Premium Product Campaign")
+            raw.setdefault("metaphor", raw.get("visual_metaphor") or raw.get("视觉隐喻") or "让产品卖点自然变成高级广告视觉创意")
+            raw.setdefault("elements", raw.get("props") or raw.get("product_features") or raw.get("产品卖点") or "产品、功能标注、细线说明、品牌背景")
+            raw.setdefault("character_action", raw.get("creative_direction") or raw.get("创意方向") or "产品作为绝对主角")
+            raw.setdefault("speech_bubble", raw.get("selling_point1") or raw.get("卖点1") or "核心卖点")
+            raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("slogan") or raw.get("副标题") or "让产品一眼被记住。")
         raw.setdefault("metaphor", raw.get("visual_anchor") or raw.get("core_structure") or raw.get("core_idea", ""))
         raw.setdefault("elements", raw.get("suggested_elements", ""))
         raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action", ""))
@@ -966,9 +1118,9 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             top_directory=raw.get("top_directory", ""),
             bottom_info=raw.get("bottom_info", ""),
             semantic_direction=raw.get("semantic_direction", ""),
-            specified_material=raw.get("specified_material", ""),
-            texture_keywords=raw.get("texture_keywords", ""),
-            background=raw.get("background", ""),
+            specified_material=raw.get("specified_material") or raw.get("font_mood") or raw.get("字体气质", ""),
+            texture_keywords=raw.get("texture_keywords") or raw.get("color_mood") or raw.get("色彩气质", ""),
+            background=raw.get("background") or raw.get("color_mood") or raw.get("色彩气质", ""),
             randomness=raw.get("randomness", ""),
             surprise_mode=(raw.get("surprise_mode") is True or str(raw.get("surprise_mode", "")).lower() in {"1", "true", "yes", "y", "是", "启用", "开启"}),
             flow_action=raw.get("flow_action", ""),
@@ -985,15 +1137,15 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             shot_type=raw.get("shot_type") or raw.get("structure_type", ""),
             suggested_elements=raw.get("suggested_elements", ""),
             short_labels=raw.get("short_labels", ""),
-            core_subject=raw.get("core_subject", ""),
+            core_subject=raw.get("core_subject") or raw.get("subject") or raw.get("人物或主体", ""),
             relation_action=raw.get("relation_action") or raw.get("action", ""),
             accent_element=raw.get("accent_element", ""),
             line_type=raw.get("line_type", ""),
             emotion=raw.get("emotion", ""),
-            main_visual_text=raw.get("main_visual_text") or raw.get("hero_text") or raw.get("primary_text", ""),
-            label1=raw.get("label1", ""),
-            label2=raw.get("label2", ""),
-            label3=raw.get("label3", ""),
+            main_visual_text=raw.get("main_visual_text") or raw.get("hero_text") or raw.get("primary_text") or raw.get("input_text") or raw.get("输入文字", ""),
+            label1=raw.get("label1") or raw.get("keywords") or raw.get("关键词", ""),
+            label2=raw.get("label2") or raw.get("fate_sentence") or raw.get("命运感短句", ""),
+            label3=raw.get("label3") or raw.get("summary_sentence") or raw.get("总结句", ""),
             label4=raw.get("label4", ""),
             stage1=raw.get("stage1", ""),
             stage2=raw.get("stage2", ""),
@@ -1008,12 +1160,23 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             props=raw.get("props") or raw.get("prop") or raw.get("elements", ""),
             short_phrase=raw.get("short_phrase") or raw.get("caption") or raw.get("speech_bubble", ""),
             background_color=raw.get("background_color") or raw.get("background", ""),
+            product_name=raw.get("product_name") or raw.get("产品名称") or raw.get("title", ""),
+            product_category=raw.get("product_category") or raw.get("产品品类", ""),
+            product_texture=raw.get("product_texture") or raw.get("核心材质或质感") or raw.get("texture", ""),
+            creative_direction=raw.get("creative_direction") or raw.get("创意方向") or raw.get("shot_type", ""),
+            brand_mood=raw.get("brand_mood") or raw.get("品牌气质", ""),
+            color_palette=raw.get("color_palette") or raw.get("色彩倾向", ""),
+            selling_point1=raw.get("selling_point1") or raw.get("卖点1", ""),
+            selling_point2=raw.get("selling_point2") or raw.get("卖点2", ""),
+            selling_point3=raw.get("selling_point3") or raw.get("卖点3", ""),
+            selling_point4=raw.get("selling_point4") or raw.get("卖点4", ""),
+            selling_point5=raw.get("selling_point5") or raw.get("卖点5", ""),
             style_id=style_id,
         )
         return {
             "id": raw.get("id") or f"cover_{index:02d}",
             "type": "cover",
-            "aspect_ratio": raw.get("aspect_ratio") or "21:9",
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else "21:9")),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1048,12 +1211,23 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             props=raw.get("props") or raw.get("prop") or raw.get("modules", ""),
             short_phrase=raw.get("short_phrase") or raw.get("caption") or raw.get("speech_bubble", ""),
             background_color=raw.get("background_color") or raw.get("background", ""),
+            product_name=raw.get("product_name") or raw.get("产品名称") or raw.get("title", ""),
+            product_category=raw.get("product_category") or raw.get("产品品类", ""),
+            product_texture=raw.get("product_texture") or raw.get("核心材质或质感") or raw.get("texture", ""),
+            creative_direction=raw.get("creative_direction") or raw.get("创意方向") or raw.get("shot_type", ""),
+            brand_mood=raw.get("brand_mood") or raw.get("品牌气质", ""),
+            color_palette=raw.get("color_palette") or raw.get("色彩倾向", ""),
+            selling_point1=raw.get("selling_point1") or raw.get("卖点1", ""),
+            selling_point2=raw.get("selling_point2") or raw.get("卖点2", ""),
+            selling_point3=raw.get("selling_point3") or raw.get("卖点3", ""),
+            selling_point4=raw.get("selling_point4") or raw.get("卖点4", ""),
+            selling_point5=raw.get("selling_point5") or raw.get("卖点5", ""),
             style_id=style_id,
         )
         return {
             "id": raw.get("id") or f"body_{index:02d}",
             "type": "body",
-            "aspect_ratio": raw.get("aspect_ratio") or "16:9",
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else "16:9")),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1172,6 +1346,40 @@ def self_test() -> None:
                 "expression": "崩溃又无语",
                 "background_color": "浅灰",
             },
+            {
+                "type": "cover",
+                "style_id": "giant_chinese_concept_poster",
+                "title": "破局",
+                "subtitle": "困住你的不是墙，是你默认它没有门。",
+                "visual_metaphor": "巨大破局二字像黑色石墙，被一道白光从中间劈开",
+                "elements": "裂缝、白光、小人物、石墙",
+                "character_action": "一个很小的人正走向裂缝中的白光",
+                "speech_bubble": "裂缝 判断 出口",
+                "bottom_sentence": "真正的出口，常从裂缝开始。",
+                "keywords": "裂缝 判断 出口",
+                "fate_sentence": "困住你的不是墙，是你默认它没有门。",
+                "summary_sentence": "真正的出口，常从裂缝开始。",
+                "font_mood": "石质裂纹、硬边、锋利",
+                "color_mood": "黑白强对比、冷白光",
+            },
+            {
+                "type": "cover",
+                "style_id": "premium_product_ad_poster",
+                "title": "HEADPHONES",
+                "subtitle": "Over-Ear Wireless",
+                "product_name": "Apple Pods Pro 3",
+                "product_category": "无线头戴耳机",
+                "product_texture": "哑光白金属、柔软耳罩、黑色网孔、绿色 LED",
+                "creative_direction": "英雄近景",
+                "visual_metaphor": "用户把耳机递向镜头，像邀请观众进入沉浸式声音世界",
+                "selling_point1": "Premium Sound",
+                "selling_point2": "40 Hours Battery",
+                "selling_point3": "Fast Charge",
+                "selling_point4": "Spatial Audio",
+                "selling_point5": "Bluetooth 5.4",
+                "brand_mood": "科技、年轻、时尚",
+                "color_palette": "白色、银色、青柠绿、彩虹棱镜光",
+            },
         ],
     )
     assert batch["images"][0]["style_id"] == "oriental_editorial_illustration"
@@ -1191,6 +1399,14 @@ def self_test() -> None:
     assert batch["images"][6]["style_id"] == "expressive_3d_quirky_character"
     assert "3D怪表情风" in batch["images"][6]["prompt"]
     assert "assets/examples/3d_quirky/" in batch["images"][6]["prompt"]
+    assert batch["images"][7]["style_id"] == "giant_chinese_concept_poster"
+    assert batch["images"][7]["aspect_ratio"] == "3:4"
+    assert "大字海报风" in batch["images"][7]["prompt"]
+    assert "巨大中文主标题" in batch["images"][7]["prompt"]
+    assert batch["images"][8]["style_id"] == "premium_product_ad_poster"
+    assert batch["images"][8]["aspect_ratio"] == "4:5"
+    assert "产品海报风" in batch["images"][8]["prompt"]
+    assert "Apple Pods Pro 3" in batch["images"][8]["prompt"]
     print("self-test passed")
 
 
