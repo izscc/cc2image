@@ -67,58 +67,76 @@ E. 拼贴 / 纸张 / 手工材质类：`retro_minimal_poster_illustration`、`ed
 F. 微缩场景 / 品牌广告类：`miniature_map_life_scene`、`miniature_checklist_scene`、`isometric_timeline_miniature`、`fabric_micro_scene_ad`、`giant_letter_lifestyle_scene`、`crowd_typography_scene`。
 G. 空间系统 / 轴测图解类：`isometric_modular_system`。
 
+H. logo / 图标类：`cute_3d_plastic_icon`、`candy_glass_3d_icon`、`airbnb_soft_miniature_icon`、`circular_2_5d_vector_icon`、`soft_frosted_glass_icon`、`circular_3d_texture_icon`、`frosted_glass_ui_icon`、`pastel_reward_badge_icon`。
+
+## logo / 图标模式
+
+当用户说“生成一个 logo / 图标 / 小图标 / app icon / 功能图标”时，固定进入 1:1 方形图标模式，不再按文章封面或正文配图处理。可用图标风格：
+
+| style_id | 风格名 | 适合场景 |
+| --- | --- | --- |
+| `cute_3d_plastic_icon` | 3D 新拟物风小图标 | 默认图标风格；工具、功能、App 图标 |
+| `candy_glass_3d_icon` | 3D 糖果风格图标 | 低对比、清爽可爱、半透明糖果质感 |
+| `airbnb_soft_miniature_icon` | Airbnb 风软拟物图标 | 旅行、生活方式、露营、家居、厨房等温暖场景 |
+| `circular_2_5d_vector_icon` | 圆形轻拟物风格图标 | 金刚区、功能入口、中文移动 App 矢量图标 |
+| `soft_frosted_glass_icon` | 软糖风格图标 | 奶霜、毛玻璃、柔软透明质感的独立图标 |
+| `circular_3d_texture_icon` | 环形 3D 质感图标 | 圆形渐变底、系统级 3D App icon |
+| `frosted_glass_ui_icon` | 磨砂玻璃质感小图标 | 钱包、文件夹、卡片、面板等简洁 UI 图标 |
+| `pastel_reward_badge_icon` | 少女风奖牌图标 | 奖励徽章、等级奖牌、儿童或少女风粉彩图标 |
+
 ## 默认匹配规则
 
 自动匹配优先级：
 
 1. 用户明确指定风格时，优先服从。
-2. 用户说“合适的风格”“帮我选风格”“随机风格”时，按内容合理选择，不做纯随机。
-3. 正文配图、方法论解释、流程、对比、知识系统：优先 `handdrawn_knowledge_card`。
-4. 文化、历史、人文、哲学、东方智慧、古籍、文明：优先 `oriental_editorial_illustration`。
-5. 学习方法、笔记整理、复习、考试、效率技巧：优先 `study_note_card`。
-6. 学习金字塔、层级模型、能力进阶、成长路径、主动学习 / 被动学习：优先 `pastel_learning_pyramid`。
-7. 儿童教育、传统文化科普、器物拆解、博物馆内容：优先 `childlike_cultural_infographic`。
-8. 孤独、情绪、心理、音乐、艺术展、安静、疏离：优先 `frosted_glass_editorial` 或 `black_void_glowing_hands`。
-9. 设计、作品集、品牌、营销、工具、系统、工作室案例：优先 `translucent_object_editorial`。
-10. AI、未来感、趋势、创意展览、抽象概念、品牌视觉：优先 `glassmorphism_gradient_blob`。
-11. 深度思考、认知、策略、极简口号、书封、品牌宣言：优先 `embossed_typography_poster` 或 `white_mono_texture_editorial`。
-12. 单个关键词、栏目名、品牌词、年轻化视觉实验：优先 `acrylic_dimensional_type`。
-13. AI 搜索、探索、信息检索、发现、推荐、知识寻找：优先 `dark_neon_search_ui`。
-14. 产品界面、搜索框、控制器、智能家居、效率工具、轻科技：优先 `soft_neumorphism_ui`。
-15. 新品发布、数字主题、品牌发布会、极简科技主视觉：优先 `minimal_line_shadow_brand`。
-16. 作品集、建筑、路径规划、职业路线、人生路径、空间叙事：优先 `minimal_architecture_portfolio`。
-17. 情绪疗愈、内耗、孤独、亲密关系、自我照顾、被爱、好运、鼓励、生活感悟、内在小孩：优先 `minimal_healing_metaphor_comic`。
-18. 极简主义、生活方式、个人手册、创作宣言、书封：优先 `retro_minimal_poster_illustration`。
-19. 团队协作、共同成长、组织文化、未来愿景、品牌广告：优先 `editorial_balloon_collage`。
-20. 宏大阶段、未来路径、系统升级、人生转折、空间隐喻：优先 `transparent_architectural_type`。
-21. 职业人物、行业精神、工程建筑、创始人故事、人物专访：优先 `paper_cut_profile_silhouette`。
-22. 信念提醒、每日一句、极简语录、心理暗示、单个关键词：优先 `torn_paper_note_minimal`。
-23. 好运、发财、治愈、可爱、祝福、轻松社媒图：优先 `fluffy_soft_typography`。
-24. 希望、成长、新开始、复原力、上升、疗愈：优先 `cloud_typography_cover`。
-25. 清洁、焕新、重启、洗去旧状态、梦想变大、生活刷新：优先 `foam_bubble_typography`。
-26. 品牌徽章、社群身份、学院风、服饰、工具包、设计师身份：优先 `embroidered_patch_brand`。
-27. 高端、奢华、节日、仪式感、庆典、成就、财富：优先 `luxury_gold_typography`。
-28. 人生路径、职业选择、城市迁移、过去与现在、成长路线：优先 `miniature_map_life_scene`。
-29. 任务清单、执行力、打卡、习惯养成、目标拆解、项目计划：优先 `miniature_checklist_scene`。
-30. 匠心、劳动节、手工、服饰、工艺、细节、制造业：优先 `fabric_micro_scene_ad`。
-31. 品牌名、组织价值、教育场景、家庭场景、字母空间、系列广告：优先 `giant_letter_lifestyle_scene`。
-32. 女性、母亲节、思念、关系、疗愈、花、花瓣、节气、东方花艺、文学情绪：优先 `oriental_floral_minimal_editorial`。
-33. 哲学、人生道路、修行、自律、克己、觉察、禅意、东方智慧、格言：优先 `zen_ink_philosophy_poster`。
-34. 黑白线稿、编辑插画、品牌视觉系统、角色 set、城市生活、杂志版式、包装、网站首屏、App 概念：优先 `editorial_line_character`。
-35. AI 方法论、设计原则、信任、验证、判断力、工作流原则、创作者手册、playbook、三条原则、用一个物品隐喻一个观点：优先 `editorial_object_annotation_card`。
-36. 社会议题、就业、人口、城市、群体行为、商业趋势、用户规模、公共政策、平台经济、组织协作，或需要很多真实小人组成符号、文字、数字或图形：优先 `crowd_typography_scene`。
-37. 突出标题文字本身、关键词视觉化、品牌字、栏目名、短句封面、材质字体、醒目主视觉，或希望根据内容自动设计字体质感：优先 `semantic_material_typography`。
-38. AI 工作流、系统流程、工具链、Prompt 结构、自动化步骤、内容生产系统、从混乱到输出、卡住到跑起来，或希望用轻松怪诞的小人表现复杂流程：优先 `quirky_doodle_character_flow`。
-39. 极简表达人物、关系、旅行、毕业、学习、课堂、会议、城市、灵感、孤独、陪伴、个人成长，或希望用少量线条抽象表达一个概念：优先 `minimal_line_art`。
-40. 系统架构、服务流程、产品功能总览、空间地图、园区/工厂/城市、AI Agent 节点关系、SaaS 模块关系，或需要统一等距视角、可组合组件和系列化品牌插画：优先 `isometric_modular_system`。
-41. Skill、SOP、提示词库、方法论、系统搭建、标准化、知识资产、流程封装、AI 工作流、路由判断、商业路径、出海增长，或需要黑白高对比、巨型文字、专业系统封面：优先 `monochrome_system_editorial`。
-42. 当用户主题涉及发展史、演化、变迁、从 A 到 B、过去到现在、技术迭代、行业阶段、工具演进、产品版本、时间线讲解时，优先 `isometric_timeline_miniature`（时间微缩风）。
-43. 当用户需要幽默创意配图、视觉双关、真实物品与手绘角色结合、表达压力 / 疲惫 / 焦虑 / 卡住 / 情绪隐喻，或希望“用一个日常物品变成画面关键部分”时，优先 `real_object_doodle_composite`（实物涂鸦风）。
-44. 当用户需要 3D 版怪诞小人、夸张表情、观点吐槽、情绪状态、工作/学习压力、AI 工作流节点、轻剧情或社媒表情图时，优先 `expressive_3d_quirky_character`（3D怪表情风）。
-45. 当用户输入中文短词、成语、祝福语、情绪词、人物命运词、社会观察词，或要求高级概念海报、文学感封面、强中文大字视觉时，优先 `giant_chinese_concept_poster`（大字海报风）。
-46. 当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，优先 `premium_product_ad_poster`（产品海报风）。
-47. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-48. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+2. 用户说“生成一个 logo / 图标 / 小图标 / app icon / 功能图标”时，进入 logo/图标模式；奖牌/徽章/少女/儿童优先 `pastel_reward_badge_icon`，金刚区/矢量/2.5D 优先 `circular_2_5d_vector_icon`，旅行/露营/生活方式优先 `airbnb_soft_miniature_icon`，毛玻璃/半透明/软糖优先 `soft_frosted_glass_icon`，钱包/文件夹/卡片/UI 圆角层优先 `frosted_glass_ui_icon`，圆形底/系统级 App icon 优先 `circular_3d_texture_icon`，未命中明显风格时默认 `cute_3d_plastic_icon`。
+3. 用户说“合适的风格”“帮我选风格”“随机风格”时，按内容合理选择，不做纯随机。
+4. 正文配图、方法论解释、流程、对比、知识系统：优先 `handdrawn_knowledge_card`。
+5. 文化、历史、人文、哲学、东方智慧、古籍、文明：优先 `oriental_editorial_illustration`。
+6. 学习方法、笔记整理、复习、考试、效率技巧：优先 `study_note_card`。
+7. 学习金字塔、层级模型、能力进阶、成长路径、主动学习 / 被动学习：优先 `pastel_learning_pyramid`。
+8. 儿童教育、传统文化科普、器物拆解、博物馆内容：优先 `childlike_cultural_infographic`。
+9. 孤独、情绪、心理、音乐、艺术展、安静、疏离：优先 `frosted_glass_editorial` 或 `black_void_glowing_hands`。
+10. 设计、作品集、品牌、营销、工具、系统、工作室案例：优先 `translucent_object_editorial`。
+11. AI、未来感、趋势、创意展览、抽象概念、品牌视觉：优先 `glassmorphism_gradient_blob`。
+12. 深度思考、认知、策略、极简口号、书封、品牌宣言：优先 `embossed_typography_poster` 或 `white_mono_texture_editorial`。
+13. 单个关键词、栏目名、品牌词、年轻化视觉实验：优先 `acrylic_dimensional_type`。
+14. AI 搜索、探索、信息检索、发现、推荐、知识寻找：优先 `dark_neon_search_ui`。
+15. 产品界面、搜索框、控制器、智能家居、效率工具、轻科技：优先 `soft_neumorphism_ui`。
+16. 新品发布、数字主题、品牌发布会、极简科技主视觉：优先 `minimal_line_shadow_brand`。
+17. 作品集、建筑、路径规划、职业路线、人生路径、空间叙事：优先 `minimal_architecture_portfolio`。
+18. 情绪疗愈、内耗、孤独、亲密关系、自我照顾、被爱、好运、鼓励、生活感悟、内在小孩：优先 `minimal_healing_metaphor_comic`。
+19. 极简主义、生活方式、个人手册、创作宣言、书封：优先 `retro_minimal_poster_illustration`。
+20. 团队协作、共同成长、组织文化、未来愿景、品牌广告：优先 `editorial_balloon_collage`。
+21. 宏大阶段、未来路径、系统升级、人生转折、空间隐喻：优先 `transparent_architectural_type`。
+22. 职业人物、行业精神、工程建筑、创始人故事、人物专访：优先 `paper_cut_profile_silhouette`。
+23. 信念提醒、每日一句、极简语录、心理暗示、单个关键词：优先 `torn_paper_note_minimal`。
+24. 好运、发财、治愈、可爱、祝福、轻松社媒图：优先 `fluffy_soft_typography`。
+25. 希望、成长、新开始、复原力、上升、疗愈：优先 `cloud_typography_cover`。
+26. 清洁、焕新、重启、洗去旧状态、梦想变大、生活刷新：优先 `foam_bubble_typography`。
+27. 品牌徽章、社群身份、学院风、服饰、工具包、设计师身份：优先 `embroidered_patch_brand`。
+28. 高端、奢华、节日、仪式感、庆典、成就、财富：优先 `luxury_gold_typography`。
+29. 人生路径、职业选择、城市迁移、过去与现在、成长路线：优先 `miniature_map_life_scene`。
+30. 任务清单、执行力、打卡、习惯养成、目标拆解、项目计划：优先 `miniature_checklist_scene`。
+31. 匠心、劳动节、手工、服饰、工艺、细节、制造业：优先 `fabric_micro_scene_ad`。
+32. 品牌名、组织价值、教育场景、家庭场景、字母空间、系列广告：优先 `giant_letter_lifestyle_scene`。
+33. 女性、母亲节、思念、关系、疗愈、花、花瓣、节气、东方花艺、文学情绪：优先 `oriental_floral_minimal_editorial`。
+34. 哲学、人生道路、修行、自律、克己、觉察、禅意、东方智慧、格言：优先 `zen_ink_philosophy_poster`。
+35. 黑白线稿、编辑插画、品牌视觉系统、角色 set、城市生活、杂志版式、包装、网站首屏、App 概念：优先 `editorial_line_character`。
+36. AI 方法论、设计原则、信任、验证、判断力、工作流原则、创作者手册、playbook、三条原则、用一个物品隐喻一个观点：优先 `editorial_object_annotation_card`。
+37. 社会议题、就业、人口、城市、群体行为、商业趋势、用户规模、公共政策、平台经济、组织协作，或需要很多真实小人组成符号、文字、数字或图形：优先 `crowd_typography_scene`。
+38. 突出标题文字本身、关键词视觉化、品牌字、栏目名、短句封面、材质字体、醒目主视觉，或希望根据内容自动设计字体质感：优先 `semantic_material_typography`。
+39. AI 工作流、系统流程、工具链、Prompt 结构、自动化步骤、内容生产系统、从混乱到输出、卡住到跑起来，或希望用轻松怪诞的小人表现复杂流程：优先 `quirky_doodle_character_flow`。
+40. 极简表达人物、关系、旅行、毕业、学习、课堂、会议、城市、灵感、孤独、陪伴、个人成长，或希望用少量线条抽象表达一个概念：优先 `minimal_line_art`。
+41. 系统架构、服务流程、产品功能总览、空间地图、园区/工厂/城市、AI Agent 节点关系、SaaS 模块关系，或需要统一等距视角、可组合组件和系列化品牌插画：优先 `isometric_modular_system`。
+42. Skill、SOP、提示词库、方法论、系统搭建、标准化、知识资产、流程封装、AI 工作流、路由判断、商业路径、出海增长，或需要黑白高对比、巨型文字、专业系统封面：优先 `monochrome_system_editorial`。
+43. 当用户主题涉及发展史、演化、变迁、从 A 到 B、过去到现在、技术迭代、行业阶段、工具演进、产品版本、时间线讲解时，优先 `isometric_timeline_miniature`（时间微缩风）。
+44. 当用户需要幽默创意配图、视觉双关、真实物品与手绘角色结合、表达压力 / 疲惫 / 焦虑 / 卡住 / 情绪隐喻，或希望“用一个日常物品变成画面关键部分”时，优先 `real_object_doodle_composite`（实物涂鸦风）。
+45. 当用户需要 3D 版怪诞小人、夸张表情、观点吐槽、情绪状态、工作/学习压力、AI 工作流节点、轻剧情或社媒表情图时，优先 `expressive_3d_quirky_character`（3D怪表情风）。
+46. 当用户输入中文短词、成语、祝福语、情绪词、人物命运词、社会观察词，或要求高级概念海报、文学感封面、强中文大字视觉时，优先 `giant_chinese_concept_poster`（大字海报风）。
+47. 当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，优先 `premium_product_ad_poster`（产品海报风）。
+48. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+49. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -469,4 +487,3 @@ Prompt 模板：
 卖点规则：保留 3-6 个核心卖点，每个卖点配小图标、细线标注、数字模块或简洁信息块。信息必须短，不写长段说明。
 
 结构化字段建议：任务、产品名称、产品图片、产品品类、核心材质或质感、主标题、副标题、创意方向、视觉隐喻、卖点1、卖点2、卖点3、卖点4、卖点5、品牌气质、色彩倾向、画幅。
-

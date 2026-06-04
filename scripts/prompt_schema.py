@@ -214,6 +214,46 @@ STYLE_ANCHORS: Dict[str, str] = {
     "premium_product_ad_poster": (
         '整体风格为产品海报风：竖版高级商业广告海报，产品是绝对主角，使用高质量商业摄影或超真实 CGI 渲染，产品清晰锐利、材质真实、细节丰富、光影专业。产品占画面 35%-70%，边缘锐利、结构可信，不能被人物或文字抢走主体地位。根据产品属性自动选择最适合的广告创意方向：英雄近景、时尚巨物、极端场景、爆炸拆解、微缩人物互动或生活方式大片。画面需要具有强第一视觉、强产品质感、强卖点表达和高级品牌感。可使用巨大标题、功能卖点标注、细线说明、图标、数字信息、品牌式排版。背景干净、有设计感，色彩根据产品和品牌气质自动选择。整体像高端电商首图、科技新品发布海报、时尚杂志广告或产品工程解析图。不要廉价促销感，不要杂乱背景，不要低质 3D，不要错误产品结构，不要密集长文案，不要让人物抢走产品主体。\nPremium product advertising poster style: vertical high-impact commercial product poster, the product is the absolute hero. Hyper-realistic product photography or ultra-detailed CGI render, sharp product details, realistic materials, professional studio lighting, cinematic depth of field. Choose the most suitable creative direction based on the product: hero close-up, editorial fashion scale, extreme environment monument, exploded-view technical infographic, miniature figures interacting with oversized product, or clean lifestyle product campaign. Strong first visual, premium product texture, clear selling points, brand-level layout. Use oversized typography, feature callouts, thin annotation lines, icons, bold numbers and concise specs. Clean designed background, color palette driven by product and brand mood. High-end e-commerce hero image, tech launch poster, fashion magazine ad, or product engineering presentation. Not cheap promotion, not cluttered, not low-quality 3D, not incorrect product structure, not dense copy, product must remain dominant.'
     ),
+    "cute_3d_plastic_icon": (
+        "3D 新拟物风小图标：主体是圆润可爱的 3D app icon，半哑光塑料或精致树脂材质，饱满圆角、柔和轮廓、轻微倒角、干净结构。"
+        "使用主色、次色、点缀色形成清晰但柔和的多色分层；等距前视角居中，浅灰或白色棚拍背景，轻柔阴影。"
+        "避免软塌黏土、单色无对比、写实产品、金属、复杂细节、文字、水印和外部 logo。"
+    ),
+    "candy_glass_3d_icon": (
+        "3D 糖果风格图标：主体像光滑糖果或磨砂半透明玻璃，圆润极简几何，低对比、清爽可爱。"
+        "使用同色系粉彩主色和辅助色，带奶白细节、柔和内部模糊、边缘微光、丝滑亚克力质感；3/4 顶前视角，纯白背景，轻接触阴影。"
+        "避免强色相分离、饱和色、玉石/石头/陶瓷感、不透明塑料、复杂细节、文字和水印。"
+    ),
+    "airbnb_soft_miniature_icon": (
+        "Airbnb 风软拟物图标：主体是温暖生活方式 3D miniature，小玩具模型般的大块面、粗圆比例、柔和圆边和哑光 clay-like 表面。"
+        "可加入 1-2 个简单辅助物，形成 cozy 场景；使用低饱和暖色主色、辅助色、点缀色；暖白背景、柔和棚拍灯光、轻接触阴影。"
+        "避免真实产品摄影、皮革/织物/金属真实纹理、锐利反光、高细节渲染、忙乱构图、人物、文字和 logo。"
+    ),
+    "circular_2_5d_vector_icon": (
+        "圆形轻拟物风格图标：柔和 2.5D 轴测矢量插画，像中文移动 App 金刚区功能图标。"
+        "使用一个干净的圆形粉彩渐变背景作为裁切边界；主体占圆形约 72%-76%，略低于中心，使用分层矢量形状、柔和渐变、内阴影、边缘高光和清晰色块边界。"
+        "不要 3D 渲染、C4D、黏土、玩具模型、真实产品、平台地面、额外前景弧、文字、标签、边框和水印。"
+    ),
+    "soft_frosted_glass_icon": (
+        "软糖风格图标：单个独立主体置于纯白背景，整体为柔软奶霜式 glassmorphism。"
+        "使用奶白半透明磨砂玻璃、层叠半透明表面、圆润边缘、轻微景深和柔和折射；主体后方有主色/辅助色的柔雾光晕，颜色透过磨砂材质扩散。"
+        "避免清透硬塑料、玩具亮面、金属边、尖锐高光、真实摄影、外部容器、装饰背景、文字和多图标。"
+    ),
+    "circular_3d_texture_icon": (
+        "环形 3D 质感图标：系统级现代 3D app icon，1:1 方形画布，白色外背景，中心是大圆形低饱和马卡龙渐变底。"
+        "圆形只是平面渐变背景，不是 3D 圆盘；内部是柔软 3D 拟物主体，低饱和同色系、奶油质感、圆润厚边、必要结构简化。"
+        "主体略放大并被圆形底部裁切约 15%，3/4 等距视角，柔和左上光和轻微背后阴影。避免霓虹、高对比、外圈容器、浮雕进背景、金属、文字、水印和复杂场景。"
+    ),
+    "frosted_glass_ui_icon": (
+        "磨砂玻璃质感小图标：极简分层 UI 图标，纯白背景、居中构图、没有外框。"
+        "使用重叠圆角 UI 图层或简单几何来表达主体；超大 squircle 圆角、前层约 55% 半透明磨砂覆盖，后层同色系渐变并轻微上/左偏移，边缘柔和模糊，像 CSS backdrop-filter blur。"
+        "可加入一个小圆角强调色装饰点。避免黑色背景、App 外部容器、厚重 3D、亮面水晶玻璃、奶白不透明板、尖角、文字和复杂底纹。"
+    ),
+    "pastel_reward_badge_icon": (
+        "少女风奖牌图标：可爱柔软的移动 App reward badge，紧凑居中，半扁平 2.5D 卡通 UI 风格。"
+        "主体是小盾牌奖牌或圆润徽章，可有柔和翅膀丝带、底部小星星/小花章、中心大号数字或极短字；粉彩渐变从主色到辅助色，半透明珐琅质感、低对比内阴影、柔和边缘光。"
+        "浅色干净背景、柔和模糊投影、1:1 画幅。避免史诗幻想、奖杯奢华感、尖锐水晶、强闪光、霓虹、厚重 3D、真实金属、暗影和复杂细节。"
+    ),
     "monochrome_system_editorial": (
         '整体风格为黑白系统风：黑白灰单色，高对比，白色或浅灰背景，巨型黑色粗体中文或英文字作为主视觉，搭配细线网格、编号、条形码、页码、REF 编号、模块分隔线和工业化信息排版。画面中使用系统隐喻物件，例如透明档案盒、索引卡、文件柜、锁、阶梯、门、路径线、路线图、货船、集装箱、柱状图、微缩人物等，表达知识封装、方法系统、SOP、路径判断、流程标准化或规模化分发。构图像高级方法论手册、SOP 封面、品牌 guideline、工业设计板或专业知识产品封面。整体冷静、专业、系统、权威、可执行。不要彩色插画，不要卡通，不要治愈风，不要复杂照片背景，不要高饱和颜色，不要杂乱排版。\nMonochrome system editorial style, black white and gray only, high contrast, clean white or light gray background, oversized bold black Chinese or English typography as the dominant visual, strict grid layout, thin technical lines, barcode, reference number, page index, module dividers, industrial information design. Use system metaphor objects such as transparent archive box, index cards, file cabinet, padlock, stairs, doorway, routing lines, path map, cargo ship, containers, bar chart, tiny human figures. Express knowledge encapsulation, SOP, prompt library, workflow standardization, decision routing, scalable distribution. Premium methodology manual cover, SOP playbook, industrial design board, professional knowledge product visual. Not colorful, not cartoon, not emotional illustration, not cluttered, not cyberpunk.'
     ),
@@ -266,6 +306,14 @@ STYLE_NAMES = {
     "expressive_3d_quirky_character": "3D怪表情风",
     "giant_chinese_concept_poster": "大字海报风",
     "premium_product_ad_poster": "产品海报风",
+    "cute_3d_plastic_icon": "3D 新拟物风小图标",
+    "candy_glass_3d_icon": "3D 糖果风格图标",
+    "airbnb_soft_miniature_icon": "Airbnb 风软拟物图标",
+    "circular_2_5d_vector_icon": "圆形轻拟物风格图标",
+    "soft_frosted_glass_icon": "软糖风格图标",
+    "circular_3d_texture_icon": "环形 3D 质感图标",
+    "frosted_glass_ui_icon": "磨砂玻璃质感小图标",
+    "pastel_reward_badge_icon": "少女风奖牌图标",
 }
 
 BODY_STRUCTURES = {
@@ -282,7 +330,6 @@ BODY_STRUCTURES = {
     "分层金字塔",
     "儿童文化科普图",
 }
-
 
 @dataclass
 class CoverSpec:
@@ -369,6 +416,20 @@ class CoverSpec:
 
 
 @dataclass
+class IconSpec:
+    subject: str
+    title: str = ""
+    primary_color: str = "低饱和品牌主色"
+    secondary_color: str = "柔和辅助色"
+    accent_color: str = "少量点缀色"
+    auxiliary_objects: str = ""
+    scene_theme: str = ""
+    core_feature: str = ""
+    number: str = ""
+    style_id: str = "cute_3d_plastic_icon"
+
+
+@dataclass
 class BodySpec:
     title: str
     structure: str
@@ -411,6 +472,34 @@ def normalize_style(style_id: str | None) -> str:
     if style_id not in STYLE_ANCHORS:
         raise ValueError(f"未知 style_id: {style_id}. 可用值: {', '.join(STYLE_ANCHORS)}")
     return style_id
+
+
+def _contains_any(text: str, keywords: tuple[str, ...]) -> bool:
+    return any(keyword in text for keyword in keywords)
+
+
+def infer_logo_icon_style(raw: Dict[str, Any]) -> str:
+    text = " ".join(str(value) for value in raw.values() if isinstance(value, (str, int, float))).lower()
+    if _contains_any(text, ("少女", "女孩", "儿童", "奖牌", "徽章", "勋章", "badge", "reward", "medal", "number", "数字")):
+        return "pastel_reward_badge_icon"
+    if _contains_any(text, ("金刚区", "支付宝", "淘宝", "盒马", "2.5d", "2.5d", "矢量", "vector", "圆形轻拟物")):
+        return "circular_2_5d_vector_icon"
+    if _contains_any(text, ("环形", "圆形背景", "圆形遮罩", "圆形底", "圆盘", "system-level", "系统级")):
+        return "circular_3d_texture_icon"
+    if _contains_any(text, ("airbnb", "民宿", "露营", "旅行", "背包", "帐篷", "吐司", "厨房", "生活方式", "cozy")):
+        return "airbnb_soft_miniature_icon"
+    if _contains_any(text, ("ui", "圆角", "卡片", "文件夹", "钱包", "磨砂玻璃质感", "backdrop", "squircle")):
+        return "frosted_glass_ui_icon"
+    if _contains_any(text, ("软糖", "奶霜", "奶冻", "milky", "frosted glass", "glassmorphism", "毛玻璃", "半透明", "透明", "玻璃")):
+        return "soft_frosted_glass_icon"
+    if _contains_any(text, ("糖果", "candy", "低对比", "清爽", "果冻")):
+        return "candy_glass_3d_icon"
+    return "cute_3d_plastic_icon"
+
+
+def is_logo_icon_request(raw: Dict[str, Any]) -> bool:
+    text = " ".join(str(value) for value in raw.values() if isinstance(value, (str, int, float))).lower()
+    return _contains_any(text, ("logo", "图标", "小图标", "app icon", "icon", "功能入口", "功能图标"))
 
 
 def require_fields(data: Dict[str, Any], fields: List[str], label: str) -> None:
@@ -932,6 +1021,28 @@ def render_premium_product_ad_poster_body(spec: BodySpec) -> str:
 不要廉价促销感，不要杂乱背景，不要低质量 3D，不要错误产品结构，不要密集长文案，不要让人物抢走产品主体。
 {STYLE_ANCHORS['premium_product_ad_poster']}"""
 
+
+def render_icon(spec: IconSpec) -> str:
+    spec.style_id = normalize_style(spec.style_id)
+    auxiliary = spec.auxiliary_objects or "必要时加入 1-2 个简单辅助物，但不能抢主体"
+    scene_theme = spec.scene_theme or "干净、友好、可作为 App / 产品图标使用"
+    core_feature = spec.core_feature or "主体轮廓一眼可识别"
+    if spec.style_id == "pastel_reward_badge_icon":
+        number = spec.number or "1"
+        content_rule = f"中心允许出现一个大号数字「{number}」，除此之外不要出现文字。"
+    else:
+        content_rule = "不要出现文字、字母、品牌名、标签或水印；如果用户要 logo，也只生成图标化视觉符号。"
+    return f"""请生成一个 1:1 方形 logo / 图标模式图像。
+主体：{spec.subject}。
+使用场景：{scene_theme}。
+辅助元素：{auxiliary}。
+核心识别特征：{core_feature}。
+配色：主色为 {spec.primary_color}，辅助色为 {spec.secondary_color}，点缀色为 {spec.accent_color}。
+构图要求：单个主体，居中，留白干净，适合缩小到 App icon、功能图标或产品 logo 使用；主体边界清楚，不要复杂背景，不要多主体拼贴。
+文字规则：{content_rule}
+{STYLE_ANCHORS[spec.style_id]}"""
+
+
 def render_cover(spec: CoverSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     if spec.style_id == "oriental_editorial_illustration":
@@ -1071,7 +1182,36 @@ def render_body(spec: BodySpec) -> str:
 def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
     raw = dict(raw)
     image_type = raw.get("type")
-    style_id = normalize_style(raw.get("style_id") or raw.get("style") or DEFAULT_STYLE_ID)
+    if not image_type and is_logo_icon_request(raw):
+        image_type = "icon"
+    if image_type in {"icon", "logo"}:
+        style_id = normalize_style(raw.get("style_id") or raw.get("style") or infer_logo_icon_style(raw))
+    else:
+        style_id = normalize_style(raw.get("style_id") or raw.get("style") or DEFAULT_STYLE_ID)
+    if image_type in {"icon", "logo"}:
+        subject = raw.get("subject") or raw.get("主体") or raw.get("core_subject") or raw.get("product_name") or raw.get("title") or "抽象品牌符号"
+        spec = IconSpec(
+            subject=str(subject),
+            title=raw.get("title", ""),
+            primary_color=raw.get("primary_color") or raw.get("主色") or raw.get("color_palette") or "低饱和品牌主色",
+            secondary_color=raw.get("secondary_color") or raw.get("辅助色") or "柔和辅助色",
+            accent_color=raw.get("accent_color") or raw.get("点缀色") or "少量点缀色",
+            auxiliary_objects=raw.get("auxiliary_objects") or raw.get("辅助物") or raw.get("elements") or "",
+            scene_theme=raw.get("scene_theme") or raw.get("场景") or raw.get("brand_mood") or "",
+            core_feature=raw.get("core_feature") or raw.get("核心识别特征") or raw.get("visual_anchor") or "",
+            number=str(raw.get("number") or raw.get("数字") or ""),
+            style_id=style_id,
+        )
+        return {
+            "id": raw.get("id") or f"icon_{index:02d}",
+            "type": "icon",
+            "aspect_ratio": raw.get("aspect_ratio") or "1:1",
+            "style_id": style_id,
+            "style_name": STYLE_NAMES[style_id],
+            "title": raw.get("title") or spec.subject,
+            "subject": spec.subject,
+            "prompt": render_icon(spec),
+        }
     if image_type == "cover":
         if style_id == "giant_chinese_concept_poster":
             raw.setdefault("subtitle", raw.get("fate_sentence") or raw.get("命运感短句") or "让一个词成为画面的命运入口")
@@ -1259,6 +1399,8 @@ def build_batch(series_title: str, raw_images: List[Dict[str, Any]]) -> Dict[str
 
 
 def self_test() -> None:
+    assert is_logo_icon_request({"title": "生成一个 AI 笔记 App logo"})
+    assert not is_logo_icon_request({"title": "写一个品牌 slogan 海报"})
     batch = build_batch(
         "个人知识库真正的用法",
         [
@@ -1380,6 +1522,20 @@ def self_test() -> None:
                 "brand_mood": "科技、年轻、时尚",
                 "color_palette": "白色、银色、青柠绿、彩虹棱镜光",
             },
+            {
+                "type": "icon",
+                "title": "生成一个少女风奖牌图标",
+                "subject": "奖励徽章",
+                "number": "1",
+                "primary_color": "粉色",
+                "secondary_color": "奶油黄",
+                "accent_color": "浅橙",
+            },
+            {
+                "title": "生成一个 AI 笔记 App logo",
+                "subject": "圆润笔记本和小星星",
+                "primary_color": "蓝紫色",
+            },
         ],
     )
     assert batch["images"][0]["style_id"] == "oriental_editorial_illustration"
@@ -1407,6 +1563,15 @@ def self_test() -> None:
     assert batch["images"][8]["aspect_ratio"] == "4:5"
     assert "产品海报风" in batch["images"][8]["prompt"]
     assert "Apple Pods Pro 3" in batch["images"][8]["prompt"]
+    assert batch["images"][9]["type"] == "icon"
+    assert batch["images"][9]["style_id"] == "pastel_reward_badge_icon"
+    assert batch["images"][9]["aspect_ratio"] == "1:1"
+    assert "少女风奖牌图标" in batch["images"][9]["prompt"]
+    assert "奖励徽章" in batch["images"][9]["prompt"]
+    assert batch["images"][10]["type"] == "icon"
+    assert batch["images"][10]["style_id"] == "cute_3d_plastic_icon"
+    assert "1:1 方形 logo / 图标模式" in batch["images"][10]["prompt"]
+    assert "圆润笔记本和小星星" in batch["images"][10]["prompt"]
     print("self-test passed")
 
 
