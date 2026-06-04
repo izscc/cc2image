@@ -173,6 +173,25 @@
 
 当用户说“生成一个 logo”“生成一个图标”“做一个小图标”“做一个 app icon”“做一个功能图标”时，cc2image 会自动进入 **1:1 方形图标模式**，不再按文章封面或正文配图处理。logo 需求默认理解为“可作为 App / 产品 logo 的图标化视觉符号”；除非用户明确要求字标，否则避免品牌名、长文字、标签和水印。
 
+### logo风格效果示例
+
+下面用同一类“产品图标 / 功能入口”主体，展示 8 套 logo / 图标专用风格的视觉差异。实际生成时会根据用户给出的主体物、使用场景、主色、辅助色和识别特征自动调整。
+
+<table>
+  <tr>
+    <td width="25%"><strong>01｜3D 新拟物风小图标</strong><br><code>cute_3d_plastic_icon</code><br><img src="assets/examples/logo-styles/01-cute-3d-plastic-icon.png" alt="3D 新拟物风小图标示例"></td>
+    <td width="25%"><strong>02｜3D 糖果风格图标</strong><br><code>candy_glass_3d_icon</code><br><img src="assets/examples/logo-styles/02-candy-glass-3d-icon.png" alt="3D 糖果风格图标示例"></td>
+    <td width="25%"><strong>03｜Airbnb 风软拟物图标</strong><br><code>airbnb_soft_miniature_icon</code><br><img src="assets/examples/logo-styles/03-airbnb-soft-miniature-icon.png" alt="Airbnb 风软拟物图标示例"></td>
+    <td width="25%"><strong>04｜圆形轻拟物风格图标</strong><br><code>circular_2_5d_vector_icon</code><br><img src="assets/examples/logo-styles/04-circular-2-5d-vector-icon.png" alt="圆形轻拟物风格图标示例"></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>05｜软糖风格图标</strong><br><code>soft_frosted_glass_icon</code><br><img src="assets/examples/logo-styles/05-soft-frosted-glass-icon.png" alt="软糖风格图标示例"></td>
+    <td width="25%"><strong>06｜环形 3D 质感图标</strong><br><code>circular_3d_texture_icon</code><br><img src="assets/examples/logo-styles/06-circular-3d-texture-icon.png" alt="环形 3D 质感图标示例"></td>
+    <td width="25%"><strong>07｜磨砂玻璃质感小图标</strong><br><code>frosted_glass_ui_icon</code><br><img src="assets/examples/logo-styles/07-frosted-glass-ui-icon.png" alt="磨砂玻璃质感小图标示例"></td>
+    <td width="25%"><strong>08｜少女风奖牌图标</strong><br><code>pastel_reward_badge_icon</code><br><img src="assets/examples/logo-styles/08-pastel-reward-badge-icon.png" alt="少女风奖牌图标示例"></td>
+  </tr>
+</table>
+
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
 | `cute_3d_plastic_icon` | 3D 新拟物风小图标 | 默认图标风格；工具、功能、App 图标 |
