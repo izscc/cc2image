@@ -214,6 +214,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "premium_product_ad_poster": (
         '整体风格为产品海报风：竖版高级商业广告海报，产品是绝对主角，使用高质量商业摄影或超真实 CGI 渲染，产品清晰锐利、材质真实、细节丰富、光影专业。产品占画面 35%-70%，边缘锐利、结构可信，不能被人物或文字抢走主体地位。根据产品属性自动选择最适合的广告创意方向：英雄近景、时尚巨物、极端场景、爆炸拆解、微缩人物互动或生活方式大片。画面需要具有强第一视觉、强产品质感、强卖点表达和高级品牌感。可使用巨大标题、功能卖点标注、细线说明、图标、数字信息、品牌式排版。背景干净、有设计感，色彩根据产品和品牌气质自动选择。整体像高端电商首图、科技新品发布海报、时尚杂志广告或产品工程解析图。不要廉价促销感，不要杂乱背景，不要低质 3D，不要错误产品结构，不要密集长文案，不要让人物抢走产品主体。\nPremium product advertising poster style: vertical high-impact commercial product poster, the product is the absolute hero. Hyper-realistic product photography or ultra-detailed CGI render, sharp product details, realistic materials, professional studio lighting, cinematic depth of field. Choose the most suitable creative direction based on the product: hero close-up, editorial fashion scale, extreme environment monument, exploded-view technical infographic, miniature figures interacting with oversized product, or clean lifestyle product campaign. Strong first visual, premium product texture, clear selling points, brand-level layout. Use oversized typography, feature callouts, thin annotation lines, icons, bold numbers and concise specs. Clean designed background, color palette driven by product and brand mood. High-end e-commerce hero image, tech launch poster, fashion magazine ad, or product engineering presentation. Not cheap promotion, not cluttered, not low-quality 3D, not incorrect product structure, not dense copy, product must remain dominant.'
     ),
+    "glyph_object_imagery": (
+        '整体风格为字物意象风：以用户输入的文字、观点或金句为核心，先理解其表层含义、深层寓意、情绪、隐喻和传播点，再选择一个最贴切的具象物品、动作或场景作为视觉载体。让文字与物品形态高度融合：文字可以组成物体轮廓、填充物体内部、沿着边缘弯曲、成为动作轨迹、变成纹理、枝叶、蒸汽、水流、尾巴、影子或结构。画面以手写书法字、粗黑墨迹、干刷笔触、极简线稿、大量留白为主，辅以少量点睛色和小红色印章。整体要有东方手写感、幽默感、意境感和设计巧思。不要普通字体排版，不要写实插画堆砌，不要复杂背景，不要廉价卡通，不要把文字和图形割裂。核心文字必须准确、清晰、可读，图形必须服务文字寓意。\nGlyph-object imagery style: a creative typographic illustration where the user’s phrase, quote, idea or key message is transformed into a meaningful object, scene or symbolic visual metaphor. The text and object must be deeply integrated: Chinese brush lettering forms the object silhouette, fills the shape, follows the contour, becomes motion trails, texture, steam, leaves, waves or structural parts. Minimal hand-drawn black ink line art, bold expressive brush strokes, dry-brush texture, strong negative space, mostly white or light gray background, with one or two meaningful accent colors and a small red seal stamp. Poetic, witty, handmade, conceptual, memorable. The design should not be a normal illustration with text pasted on top; the words must become the visual form. Keep the main text accurate, readable and visually dominant.'
+    ),
     "cute_3d_plastic_icon": (
         "3D 新拟物风小图标：主体是圆润可爱的 3D app icon，半哑光塑料或精致树脂材质，饱满圆角、柔和轮廓、轻微倒角、干净结构。"
         "使用主色、次色、点缀色形成清晰但柔和的多色分层；等距前视角居中，浅灰或白色棚拍背景，轻柔阴影。"
@@ -306,6 +309,7 @@ STYLE_NAMES = {
     "expressive_3d_quirky_character": "3D怪表情风",
     "giant_chinese_concept_poster": "大字海报风",
     "premium_product_ad_poster": "产品海报风",
+    "glyph_object_imagery": "字物意象风",
     "cute_3d_plastic_icon": "3D 新拟物风小图标",
     "candy_glass_3d_icon": "3D 糖果风格图标",
     "airbnb_soft_miniature_icon": "Airbnb 风软拟物图标",
@@ -1022,6 +1026,39 @@ def render_premium_product_ad_poster_body(spec: BodySpec) -> str:
 {STYLE_ANCHORS['premium_product_ad_poster']}"""
 
 
+def render_glyph_object_imagery_cover(spec: CoverSpec) -> str:
+    input_text = spec.main_visual_text or spec.title
+    core_object = spec.core_object or spec.elements or "根据文字含义自动选择最贴切的具象物品、动作或场景"
+    metaphor = spec.metaphor or spec.visual_anchor or "让文字和物品互相生成，文字即图形，图形即寓意"
+    fusion = spec.core_structure or spec.shot_type or spec.character_action or "字成物 / 字填物 / 字沿线 / 字变景 / 字作符号"
+    emotion = spec.emotion or spec.subtitle or spec.bottom_sentence or "幽默、有意境、有记忆点"
+    accent = spec.accent_element or spec.color_palette or spec.background or "根据物品寓意加入 1-2 个点睛色，并可加入小红色印章"
+    return f"""请生成一张「字物意象风」创意字体图。
+画幅：1:1 方形。核心文字是：「{input_text}」。
+请先理解这句话的表层含义、深层寓意、情绪气质、关键词、隐喻关系和传播点，然后选择或使用最贴切的视觉载体：「{core_object}」。
+核心隐喻是：「{metaphor}」。
+不要只是把文字写在图上，而要让文字与物品形态真正融合。融合方式：「{fusion}」。文字可以组成物体轮廓、填充物体内部、沿着边缘或运动轨迹排列，或变成物品的纹理、枝叶、蒸汽、水流、尾巴、影子或结构。
+画面元素包括：「{spec.elements}」。主文字必须准确写作「{input_text}」，清晰可读、无错字、无缺笔；字形可以夸张、堆叠、弯曲、压缩或变形，但不能影响识别。
+画面风格：手写书法字、粗黑墨迹、干刷笔触、极简线稿、大量留白、东方手作感、幽默又有意境。背景为白色或浅灰色。点睛处理：「{accent}」。
+情绪气质：「{emotion}」。底部或角落可加入很小的辅助字：「{spec.bottom_sentence}」，但不要抢主视觉。
+不要普通排版，不要复杂背景，不要写实插画，不要廉价卡通，不要密集装饰，不要让图形和文字割裂。
+{STYLE_ANCHORS['glyph_object_imagery']}"""
+
+
+def render_glyph_object_imagery_body(spec: BodySpec) -> str:
+    input_text = spec.title
+    core_object = spec.modules or "根据文字含义自动选择最贴切的具象物品、动作或场景"
+    metaphor = spec.visual_anchor or spec.core_idea or spec.notes or "让文字和物品互相生成"
+    fusion = spec.shot_type or spec.structure or spec.character_action or "字成物 / 字填物 / 字沿线 / 字变景 / 字作符号"
+    return f"""请生成一张「字物意象风」创意字体图。
+画幅：1:1 方形。核心文字是：「{input_text}」。
+视觉载体：「{core_object}」。核心隐喻：「{metaphor}」。
+融合方式：「{fusion}」。让主文字参与造型：可以组成物体轮廓、填充物体内部、沿边缘弯曲、成为动作轨迹，或变成纹理、蒸汽、水流、枝叶、影子和结构。
+主文字必须准确、清晰、可读。画面使用粗黑手写书法字、极简线稿、白色或浅灰背景、大量留白、少量点睛色和可选小红印章。
+辅助说明只保留一句很短的小字：「{spec.bottom_sentence}」。不要做成正文知识卡、流程图或普通标题海报。
+{STYLE_ANCHORS['glyph_object_imagery']}"""
+
+
 def render_icon(spec: IconSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     auxiliary = spec.auxiliary_objects or "必要时加入 1-2 个简单辅助物，但不能抢主体"
@@ -1087,6 +1124,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_giant_chinese_concept_poster_cover(spec)
     if spec.style_id == "premium_product_ad_poster":
         return render_premium_product_ad_poster_cover(spec)
+    if spec.style_id == "glyph_object_imagery":
+        return render_glyph_object_imagery_cover(spec)
     if spec.style_id == "isometric_modular_system":
         return render_extra_cover(spec) or render_handdrawn_cover(spec)
     if spec.style_id == "monochrome_system_editorial":
@@ -1172,6 +1211,8 @@ def render_body(spec: BodySpec) -> str:
         return render_giant_chinese_concept_poster_body(spec)
     if spec.style_id == "premium_product_ad_poster":
         return render_premium_product_ad_poster_body(spec)
+    if spec.style_id == "glyph_object_imagery":
+        return render_glyph_object_imagery_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -1227,6 +1268,14 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             raw.setdefault("character_action", raw.get("creative_direction") or raw.get("创意方向") or "产品作为绝对主角")
             raw.setdefault("speech_bubble", raw.get("selling_point1") or raw.get("卖点1") or "核心卖点")
             raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("slogan") or raw.get("副标题") or "让产品一眼被记住。")
+        if style_id == "glyph_object_imagery":
+            raw.setdefault("subtitle", raw.get("subtitle") or raw.get("副标题") or "让文字和物品互相生成")
+            raw.setdefault("core_object", raw.get("recommended_object") or raw.get("推荐物品") or raw.get("core_object") or raw.get("subject") or raw.get("主体") or "")
+            raw.setdefault("metaphor", raw.get("visual_metaphor") or raw.get("视觉隐喻") or raw.get("visual_anchor") or "让主文字变成物品形态本身")
+            raw.setdefault("elements", raw.get("core_object") or raw.get("suggested_elements") or raw.get("物品") or "根据文字自动选择具象物品、动作或场景")
+            raw.setdefault("character_action", raw.get("fusion_method") or raw.get("融合方式") or raw.get("core_structure") or raw.get("shot_type") or "文字组成物品轮廓、填充内部或沿运动轨迹排列")
+            raw.setdefault("speech_bubble", raw.get("keywords") or raw.get("关键词") or raw.get("short_labels") or "文字即图形")
+            raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("总结句") or raw.get("slogan") or "文字即图形，图形即寓意。")
         raw.setdefault("metaphor", raw.get("visual_anchor") or raw.get("core_structure") or raw.get("core_idea", ""))
         raw.setdefault("elements", raw.get("suggested_elements", ""))
         raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action", ""))
@@ -1316,7 +1365,7 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
         return {
             "id": raw.get("id") or f"cover_{index:02d}",
             "type": "cover",
-            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else "21:9")),
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else "21:9"))),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1367,7 +1416,7 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
         return {
             "id": raw.get("id") or f"body_{index:02d}",
             "type": "body",
-            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else "16:9")),
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else "16:9"))),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1523,6 +1572,21 @@ def self_test() -> None:
                 "color_palette": "白色、银色、青柠绿、彩虹棱镜光",
             },
             {
+                "type": "cover",
+                "style_id": "glyph_object_imagery",
+                "title": "把话说开",
+                "subtitle": "沟通不是赢，而是把门打开。",
+                "input_text": "把话说开",
+                "core_object": "钥匙和门",
+                "core_structure": "字沿线",
+                "visual_metaphor": "主文字变成一把正在打开门锁的钥匙，笔画像钥匙齿和转动轨迹",
+                "elements": "钥匙、门缝、红色印章、浅灰门框",
+                "character_action": "文字沿钥匙轮廓与开门轨迹排列",
+                "speech_bubble": "说开",
+                "bottom_sentence": "把话说开，门就开了。",
+                "accent_element": "一点红色印章",
+            },
+            {
                 "type": "icon",
                 "title": "生成一个少女风奖牌图标",
                 "subject": "奖励徽章",
@@ -1563,15 +1627,20 @@ def self_test() -> None:
     assert batch["images"][8]["aspect_ratio"] == "4:5"
     assert "产品海报风" in batch["images"][8]["prompt"]
     assert "Apple Pods Pro 3" in batch["images"][8]["prompt"]
-    assert batch["images"][9]["type"] == "icon"
-    assert batch["images"][9]["style_id"] == "pastel_reward_badge_icon"
+    assert batch["images"][9]["style_id"] == "glyph_object_imagery"
     assert batch["images"][9]["aspect_ratio"] == "1:1"
-    assert "少女风奖牌图标" in batch["images"][9]["prompt"]
-    assert "奖励徽章" in batch["images"][9]["prompt"]
+    assert "字物意象风" in batch["images"][9]["prompt"]
+    assert "把话说开" in batch["images"][9]["prompt"]
+    assert "钥匙和门" in batch["images"][9]["prompt"]
     assert batch["images"][10]["type"] == "icon"
-    assert batch["images"][10]["style_id"] == "cute_3d_plastic_icon"
-    assert "1:1 方形 logo / 图标模式" in batch["images"][10]["prompt"]
-    assert "圆润笔记本和小星星" in batch["images"][10]["prompt"]
+    assert batch["images"][10]["style_id"] == "pastel_reward_badge_icon"
+    assert batch["images"][10]["aspect_ratio"] == "1:1"
+    assert "少女风奖牌图标" in batch["images"][10]["prompt"]
+    assert "奖励徽章" in batch["images"][10]["prompt"]
+    assert batch["images"][11]["type"] == "icon"
+    assert batch["images"][11]["style_id"] == "cute_3d_plastic_icon"
+    assert "1:1 方形 logo / 图标模式" in batch["images"][11]["prompt"]
+    assert "圆润笔记本和小星星" in batch["images"][11]["prompt"]
     print("self-test passed")
 
 
