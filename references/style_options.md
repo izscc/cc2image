@@ -53,14 +53,15 @@
     {"style_id": "expressive_3d_quirky_character", "style_name": "3D怪表情风", "best_for": ["情绪表达", "观点吐槽", "文章封面", "正文配图", "社媒表情图", "AI工作流节点", "创作者状态", "学习状态", "工作压力", "产品提示", "轻剧情配图"], "not_best_for": ["严肃财经封面", "东方水墨", "高端黑白系统封面", "复杂数据图表", "大量文字知识卡", "抽象材质字体", "真实产品摄影"], "core_features": ["圆润3D小人", "夸张表情", "态度动作", "极简背景", "低饱和色", "柔和灯光", "短句吐槽", "3D版怪诞小人"]},
     {"style_id": "giant_chinese_concept_poster", "style_name": "大字海报风", "best_for": ["中文概念海报", "文学感封面", "人物命运主题", "情绪关键词", "节日祝福海报", "城市观察", "社会情绪", "品牌态度海报", "短词强视觉", "朋友圈传播图", "公众号头图", "展览级主题海报"], "not_best_for": ["复杂流程图", "正文解释图", "多节点知识卡片", "数据图表", "工具教程", "大量文字海报", "儿童科普", "可爱表情包"], "core_features": ["竖版3:4或4:5", "巨大中文主标题", "文字绝对主体", "词义驱动画面", "强视觉隐喻", "人物与大字发生关系", "小字只保留三处", "高级克制", "强情绪", "展览级概念海报"]},
     {"style_id": "premium_product_ad_poster", "style_name": "产品海报风", "best_for": ["电商主图", "新品发布海报", "品牌广告", "产品卖点图", "详情页首屏", "小红书产品封面", "科技产品海报", "时尚产品广告", "运动装备海报", "功能拆解图", "产品概念视觉", "AI产品包装图"], "not_best_for": ["纯情绪短句", "文学概念海报", "复杂流程图", "时间演化图", "水墨禅意图", "手绘知识卡", "怪诞小人流程图"], "core_features": ["竖版商业海报", "产品绝对主角", "高质量产品摄影", "超真实CGI", "专业棚拍光线", "巨大标题", "卖点标注", "功能图标", "时尚人物", "夸张尺度", "极端场景", "爆炸拆解", "微缩人物互动", "高级品牌感"]},
-    {"style_id": "glyph_object_imagery", "style_name": "字物意象风", "best_for": ["中文金句", "观点短句", "品牌口号", "成语祝福", "情绪短句", "文字造物", "创意字体图", "社媒传播图", "东方趣味视觉符号"], "not_best_for": ["复杂流程图", "多节点知识卡片", "数据图表", "真实产品广告", "长篇正文海报", "纯写实插画"], "core_features": ["文字参与造型", "文字和物品融合", "具象隐喻物", "粗黑手写书法", "极简线稿", "少量点睛色", "红色印章", "大量留白", "幽默意境", "清晰可读"]}
+    {"style_id": "glyph_object_imagery", "style_name": "字物意象风", "best_for": ["中文金句", "观点短句", "品牌口号", "成语祝福", "情绪短句", "文字造物", "创意字体图", "社媒传播图", "东方趣味视觉符号"], "not_best_for": ["复杂流程图", "多节点知识卡片", "数据图表", "真实产品广告", "长篇正文海报", "纯写实插画"], "core_features": ["文字参与造型", "文字和物品融合", "具象隐喻物", "粗黑手写书法", "极简线稿", "少量点睛色", "红色印章", "大量留白", "幽默意境", "清晰可读"]},
+    {"style_id": "editorial_line_infographic_poster", "style_name": "竖版线稿长图风", "best_for": ["竖版教程长图", "SOP", "规则卡", "项目复盘", "AI工作流", "多步骤方法论", "知识海报", "手机端阅读长图"], "not_best_for": ["纯情绪海报", "真实产品广告", "单一大字概念海报", "复杂数据图表", "写实场景插画"], "core_features": ["竖版9:16", "黑白线稿人物", "粗黑中文标题", "2x2或纵向多面板", "圆角信息卡片", "编号黑点", "箭头连接", "少量浅黄淡紫强调块", "底部总结区", "手机端可读"]}
   ]
 }
 ```
 
 ## 风格分组
 
-A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`quirky_doodle_character_flow`、`real_object_doodle_composite`。
+A. 知识图解类：`handdrawn_knowledge_card`、`study_note_card`、`pastel_learning_pyramid`、`childlike_cultural_infographic`、`quirky_doodle_character_flow`、`real_object_doodle_composite`、`editorial_line_infographic_poster`。
 B. 东方 / 人文 / 情绪插画类：`oriental_editorial_illustration`、`minimal_healing_metaphor_comic`、`black_void_glowing_hands`、`oriental_floral_minimal_editorial`、`zen_ink_philosophy_poster`、`minimal_line_art`、`expressive_3d_quirky_character`、`giant_chinese_concept_poster`。
 C. 极简设计 / 材质海报类：`premium_product_ad_poster`、`frosted_glass_editorial`、`translucent_object_editorial`、`glassmorphism_gradient_blob`、`soft_neumorphism_ui`、`minimal_line_shadow_brand`、`white_mono_texture_editorial`、`minimal_architecture_portfolio`、`editorial_line_character`、`editorial_object_annotation_card`、`isometric_modular_system`、`monochrome_system_editorial`。
 D. 字体材质类：`acrylic_dimensional_type`、`embossed_typography_poster`、`transparent_architectural_type`、`fluffy_soft_typography`、`cloud_typography_cover`、`foam_bubble_typography`、`luxury_gold_typography`、`semantic_material_typography`、`glyph_object_imagery`。
@@ -136,9 +137,10 @@ H. logo / 图标类：`cute_3d_plastic_icon`、`candy_glass_3d_icon`、`airbnb_s
 45. 当用户需要 3D 版怪诞小人、夸张表情、观点吐槽、情绪状态、工作/学习压力、AI 工作流节点、轻剧情或社媒表情图时，优先 `expressive_3d_quirky_character`（3D怪表情风）。
 46. 当用户输入中文短词、成语、祝福语、情绪词、人物命运词、社会观察词，或要求高级概念海报、文学感封面、强中文大字视觉时，优先 `giant_chinese_concept_poster`（大字海报风）。
 47. 当用户输入中文金句、观点短句、品牌口号、成语祝福、情绪短句，或希望文字组成物品轮廓、填充物体、沿轨迹排列、变成纹理和隐喻物时，优先 `glyph_object_imagery`（字物意象风）。
-48. 当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，优先 `premium_product_ad_poster`（产品海报风）。
-49. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
-50. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
+48. 当用户需要竖版教程长图、手机端知识海报、SOP、规则卡、项目复盘、AI 工作流、多步骤方法论，或参考黑白线稿人物 + 多面板信息图时，优先 `editorial_line_infographic_poster`（竖版线稿长图风）。
+49. 当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，优先 `premium_product_ad_poster`（产品海报风）。
+50. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+51. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
@@ -505,3 +507,18 @@ Prompt 模板：
 视觉规则：白色或浅灰背景，粗黑手写书法字，干刷笔触，极简线稿，大量留白，少量点睛色和小红印章。颜色不是装饰，而是帮助物品成立。核心文字必须准确、清晰、可读，不要为了造型牺牲识别。
 
 结构化字段建议：核心文字、文字类型、核心情绪、推荐物品、融合方式、主色、点睛色、是否加红印章、画幅。
+
+
+## 48. editorial_line_infographic_poster｜竖版线稿长图风
+
+一句话描述：把流程、教程、规则、SOP、AI 工作流或项目复盘，组织成手机端可读的 9:16 竖版中文线稿长图。
+
+适合：竖版教程长图、SOP、规则卡、项目复盘、AI 工作流、多步骤方法论、知识海报、手机端阅读长图。尤其适合“犯错 → 修复 → 追因 → 写入规则”“输入 → 判断 → 输出 → 复用”等可拆成 4-6 个模块的内容。
+
+不适合：纯情绪海报、真实产品广告、单一大字概念海报、复杂数据图表、写实场景插画。它的强项是“多步骤讲清楚”，不是单一氛围图。
+
+核心：竖版 9:16，白色或暖白纸张背景，粗黑中文标题，黑白线稿人物，2x2 或纵向多面板，圆角信息卡片，编号黑点，箭头连接，底部总结区。浅黄色、淡紫色、浅橙或浅绿色只用于强调块、提示框和状态标记。
+
+视觉规则：人物是极简黑白线稿和几何扁平比例，表情简单但动作明确；常用道具包括代码窗口、文件夹、便签、规则卡、放大镜、清单、箭头、状态标记。文字允许比普通配图更多，但必须短句化、分区清楚、手机端可读，避免密集小字和 PPT 模板感。
+
+结构化字段建议：主题、主标题、副标题、核心流程、模块1、模块2、模块3、模块4、必要注释、人物动作、强调色、底部总结、画幅。

@@ -217,6 +217,9 @@ STYLE_ANCHORS: Dict[str, str] = {
     "glyph_object_imagery": (
         '整体风格为字物意象风：以用户输入的文字、观点或金句为核心，先理解其表层含义、深层寓意、情绪、隐喻和传播点，再选择一个最贴切的具象物品、动作或场景作为视觉载体。让文字与物品形态高度融合：文字可以组成物体轮廓、填充物体内部、沿着边缘弯曲、成为动作轨迹、变成纹理、枝叶、蒸汽、水流、尾巴、影子或结构。画面以手写书法字、粗黑墨迹、干刷笔触、极简线稿、大量留白为主，辅以少量点睛色和小红色印章。整体要有东方手写感、幽默感、意境感和设计巧思。不要普通字体排版，不要写实插画堆砌，不要复杂背景，不要廉价卡通，不要把文字和图形割裂。核心文字必须准确、清晰、可读，图形必须服务文字寓意。\nGlyph-object imagery style: a creative typographic illustration where the user’s phrase, quote, idea or key message is transformed into a meaningful object, scene or symbolic visual metaphor. The text and object must be deeply integrated: Chinese brush lettering forms the object silhouette, fills the shape, follows the contour, becomes motion trails, texture, steam, leaves, waves or structural parts. Minimal hand-drawn black ink line art, bold expressive brush strokes, dry-brush texture, strong negative space, mostly white or light gray background, with one or two meaningful accent colors and a small red seal stamp. Poetic, witty, handmade, conceptual, memorable. The design should not be a normal illustration with text pasted on top; the words must become the visual form. Keep the main text accurate, readable and visually dominant.'
     ),
+    "editorial_line_infographic_poster": (
+        '整体风格为竖版线稿长图风：适合把流程、教程、规则、方法论、SOP、AI 工作流和项目复盘做成竖版 9:16 中文知识长图。画面使用白色或暖白纸张背景，顶部是粗黑大标题和短副标题，中段用 2x2 或纵向多面板卡片组织信息，底部放总结区或行动清单。视觉语言参考 modern editorial line system：黑白线稿人物、几何扁平比例、简单表情、城市生活/办公场景、代码窗口、文件夹、便签、放大镜、箭头、图标和规则卡。排版像中文杂志信息图：粗细线对比、圆角边框、编号黑色圆点、强层级、大留白，少量低饱和浅黄色、淡紫色、浅橙或浅绿色只用于强调块、提示框和状态标记。文字可以比普通配图更多，但必须短句化、分区清楚、可读；优先 4-6 个模块，每个模块只讲一个动作或判断。不要 PPT 模板感，不要密集小字，不要彩色卡通，不要 3D，不要写实光影，不要复杂渐变，不要水印。\nVertical editorial line infographic poster style: a 9:16 Chinese long-form knowledge poster with minimalist black-and-white line art characters, flat geometric proportions, bold magazine-like typography, rounded panels, numbered black dots, arrows, code windows, notes, folders, magnifier, checklist cards and sparse pastel accent blocks. White paper background, strong hierarchy, clean grid, generous negative space. Use soft yellow, muted purple, warm orange or pale green only for highlights and status areas. Build 4-6 clear modules, each showing one action, step or rule. Text must be short, readable and organized. Not PPT, not dense tiny copy, not colorful cartoon, not 3D, not realistic rendering, not busy gradients.'
+    ),
     "cute_3d_plastic_icon": (
         "3D 新拟物风小图标：主体是圆润可爱的 3D app icon，半哑光塑料或精致树脂材质，饱满圆角、柔和轮廓、轻微倒角、干净结构。"
         "使用主色、次色、点缀色形成清晰但柔和的多色分层；等距前视角居中，浅灰或白色棚拍背景，轻柔阴影。"
@@ -310,6 +313,7 @@ STYLE_NAMES = {
     "giant_chinese_concept_poster": "大字海报风",
     "premium_product_ad_poster": "产品海报风",
     "glyph_object_imagery": "字物意象风",
+    "editorial_line_infographic_poster": "竖版线稿长图风",
     "cute_3d_plastic_icon": "3D 新拟物风小图标",
     "candy_glass_3d_icon": "3D 糖果风格图标",
     "airbnb_soft_miniature_icon": "Airbnb 风软拟物图标",
@@ -1059,6 +1063,28 @@ def render_glyph_object_imagery_body(spec: BodySpec) -> str:
 {STYLE_ANCHORS['glyph_object_imagery']}"""
 
 
+
+def render_editorial_line_infographic_poster_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张竖版线稿长图风的中文知识海报，比例 9:16。
+主题是「{spec.title}」。顶部使用粗黑中文大标题写「{spec.title}」，副标题写「{spec.subtitle}」。
+整体像一张可直接发布到公众号、小红书或手机端阅读的竖版教程长图：白色纸张背景，黑白线稿人物，杂志式信息层级，圆角卡片和清晰编号。
+中段设计 4 到 6 个信息模块或步骤卡片，围绕核心隐喻「{spec.metaphor}」展开。每个模块都要有一个明确动作、一个短标题和一处小图解。
+必须出现这些关键元素：「{spec.elements}」。人物动作是「{spec.character_action}」。可以使用代码窗口、文件夹、便签、规则卡、放大镜、清单、箭头、状态标记等办公/知识工作流道具。
+使用黑色圆点编号、粗细线边框、箭头连接、少量浅黄色/淡紫色/浅绿色强调块。底部放一块总结区，写「{spec.bottom_sentence}」。旁边可以有一个小提示气泡：「{spec.speech_bubble}」。
+文字必须短句化、分区清楚、可读，不要塞满小字；版式要有强层级、大留白和现代 editorial line system 气质。
+{STYLE_ANCHORS['editorial_line_infographic_poster']}"""
+
+
+def render_editorial_line_infographic_poster_body(spec: BodySpec) -> str:
+    return f"""请生成一张竖版线稿长图风的中文正文知识图，比例 9:16。
+题图是「{spec.title}」。顶部用粗黑中文标题，下面用短副标题或引导句「{spec.subtitle or spec.bottom_sentence}」。
+主体结构采用「{spec.structure}」，把内容拆成 4 到 6 个竖版模块、流程卡片或 2x2 面板。核心模块包括：「{spec.modules}」。
+每个模块用黑白线稿人物和办公/知识工作流道具表现一个动作或判断，人物动作是「{spec.character_action}」。
+必要注释为：「{spec.notes}」。注释要短句化，使用黑色圆点编号、圆角边框、箭头、代码窗口、便签、规则卡、文件夹、清单、状态标记来组织。
+少量浅黄色、淡紫色、浅橙或浅绿色只用于重点提示、错误/通过状态、总结框。底部写一句总结：「{spec.bottom_sentence}」。人物或提示气泡写：「{spec.speech_bubble}」。
+整体像手机端可读的中文教程长图，不要密集小字，不要 PPT 模板感，不要 3D，不要彩色卡通。
+{STYLE_ANCHORS['editorial_line_infographic_poster']}"""
+
 def render_icon(spec: IconSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     auxiliary = spec.auxiliary_objects or "必要时加入 1-2 个简单辅助物，但不能抢主体"
@@ -1126,6 +1152,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_premium_product_ad_poster_cover(spec)
     if spec.style_id == "glyph_object_imagery":
         return render_glyph_object_imagery_cover(spec)
+    if spec.style_id == "editorial_line_infographic_poster":
+        return render_editorial_line_infographic_poster_cover(spec)
     if spec.style_id == "isometric_modular_system":
         return render_extra_cover(spec) or render_handdrawn_cover(spec)
     if spec.style_id == "monochrome_system_editorial":
@@ -1213,6 +1241,8 @@ def render_body(spec: BodySpec) -> str:
         return render_premium_product_ad_poster_body(spec)
     if spec.style_id == "glyph_object_imagery":
         return render_glyph_object_imagery_body(spec)
+    if spec.style_id == "editorial_line_infographic_poster":
+        return render_editorial_line_infographic_poster_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -1276,6 +1306,13 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             raw.setdefault("character_action", raw.get("fusion_method") or raw.get("融合方式") or raw.get("core_structure") or raw.get("shot_type") or "文字组成物品轮廓、填充内部或沿运动轨迹排列")
             raw.setdefault("speech_bubble", raw.get("keywords") or raw.get("关键词") or raw.get("short_labels") or "文字即图形")
             raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("总结句") or raw.get("slogan") or "文字即图形，图形即寓意。")
+        if style_id == "editorial_line_infographic_poster":
+            raw.setdefault("subtitle", raw.get("subtitle") or raw.get("副标题") or "把复杂过程讲成一张可复用长图")
+            raw.setdefault("metaphor", raw.get("visual_metaphor") or raw.get("视觉隐喻") or raw.get("visual_anchor") or raw.get("core_idea") or "从问题到规则的竖版流程面板")
+            raw.setdefault("elements", raw.get("suggested_elements") or raw.get("modules") or raw.get("元素") or "线稿人物、代码窗口、便签、文件夹、箭头、规则卡、总结区")
+            raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action") or raw.get("动作") or "线稿人物在多个面板中排查、修复、复盘并写入规则")
+            raw.setdefault("speech_bubble", raw.get("short_labels") or raw.get("关键词") or "让错误变资产")
+            raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("总结句") or raw.get("slogan") or "把一次错误变成下一次的规则。")
         raw.setdefault("metaphor", raw.get("visual_anchor") or raw.get("core_structure") or raw.get("core_idea", ""))
         raw.setdefault("elements", raw.get("suggested_elements", ""))
         raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action", ""))
@@ -1365,7 +1402,7 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
         return {
             "id": raw.get("id") or f"cover_{index:02d}",
             "type": "cover",
-            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else "21:9"))),
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else ("9:16" if style_id == "editorial_line_infographic_poster" else "21:9")))),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1416,7 +1453,7 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
         return {
             "id": raw.get("id") or f"body_{index:02d}",
             "type": "body",
-            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else "16:9"))),
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else ("9:16" if style_id == "editorial_line_infographic_poster" else "16:9")))),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1587,6 +1624,17 @@ def self_test() -> None:
                 "accent_element": "一点红色印章",
             },
             {
+                "type": "cover",
+                "style_id": "editorial_line_infographic_poster",
+                "title": "别只修 Bug",
+                "subtitle": "错误也可以变成项目资产",
+                "visual_metaphor": "四格竖版流程面板，从犯错、修复、追因到写入规则",
+                "elements": "线稿人物、代码窗口、便签、文件夹、箭头、规则卡、总结区",
+                "character_action": "线稿人物先困惑、再修复、再追问原因、最后把规则卡放入 AGENTS.md 文件夹",
+                "speech_bubble": "让 AI 不再重复犯错",
+                "bottom_sentence": "错误不可怕，可怕的是重复犯错。",
+            },
+            {
                 "type": "icon",
                 "title": "生成一个少女风奖牌图标",
                 "subject": "奖励徽章",
@@ -1632,15 +1680,19 @@ def self_test() -> None:
     assert "字物意象风" in batch["images"][9]["prompt"]
     assert "把话说开" in batch["images"][9]["prompt"]
     assert "钥匙和门" in batch["images"][9]["prompt"]
-    assert batch["images"][10]["type"] == "icon"
-    assert batch["images"][10]["style_id"] == "pastel_reward_badge_icon"
-    assert batch["images"][10]["aspect_ratio"] == "1:1"
-    assert "少女风奖牌图标" in batch["images"][10]["prompt"]
-    assert "奖励徽章" in batch["images"][10]["prompt"]
+    assert batch["images"][10]["style_id"] == "editorial_line_infographic_poster"
+    assert batch["images"][10]["aspect_ratio"] == "9:16"
+    assert "竖版线稿长图风" in batch["images"][10]["prompt"]
+    assert "四格竖版流程面板" in batch["images"][10]["prompt"]
     assert batch["images"][11]["type"] == "icon"
-    assert batch["images"][11]["style_id"] == "cute_3d_plastic_icon"
-    assert "1:1 方形 logo / 图标模式" in batch["images"][11]["prompt"]
-    assert "圆润笔记本和小星星" in batch["images"][11]["prompt"]
+    assert batch["images"][11]["style_id"] == "pastel_reward_badge_icon"
+    assert batch["images"][11]["aspect_ratio"] == "1:1"
+    assert "少女风奖牌图标" in batch["images"][11]["prompt"]
+    assert "奖励徽章" in batch["images"][11]["prompt"]
+    assert batch["images"][12]["type"] == "icon"
+    assert batch["images"][12]["style_id"] == "cute_3d_plastic_icon"
+    assert "1:1 方形 logo / 图标模式" in batch["images"][12]["prompt"]
+    assert "圆润笔记本和小星星" in batch["images"][12]["prompt"]
     print("self-test passed")
 
 

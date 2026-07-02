@@ -4,7 +4,7 @@
 
 默认使用 `handdrawn_knowledge_card`（手绘知识风）。如果用户指定风格，优先服从。若用户说“合适的风格”“帮我选风格”“随机风格”，不要真正随机，要根据内容主题和任务类型选择最合适的 style_id。正文解释图默认仍用 `handdrawn_knowledge_card`；商业广告、材质字体、微缩场景、东方留白和禅意水墨类风格更适合封面、头图或主视觉。
 
-重点匹配：AI 工作流、系统流程、工具链、Prompt 结构、自动化步骤、内容生产系统、从混乱到输出、卡住到跑起来，或希望用轻松怪诞的小人表现复杂流程时，使用 `quirky_doodle_character_flow`；使用该风格时还要读取 `quirky_doodle_method.md`。当用户更强调情绪、态度、吐槽、工作/学习状态、轻剧情、社媒表情图或 3D 版怪诞小人时，使用 `expressive_3d_quirky_character`。当用户给出中文短词、成语、祝福语、情绪词、人物命运词、社会观察词，或要求高级概念海报、文学感封面、强中文大字视觉时，使用 `giant_chinese_concept_poster`。当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，使用 `premium_product_ad_poster`。
+重点匹配：AI 工作流、系统流程、工具链、Prompt 结构、自动化步骤、内容生产系统、从混乱到输出、卡住到跑起来，或希望用轻松怪诞的小人表现复杂流程时，使用 `quirky_doodle_character_flow`；使用该风格时还要读取 `quirky_doodle_method.md`。当用户更强调情绪、态度、吐槽、工作/学习状态、轻剧情、社媒表情图或 3D 版怪诞小人时，使用 `expressive_3d_quirky_character`。当用户给出中文短词、成语、祝福语、情绪词、人物命运词、社会观察词，或要求高级概念海报、文学感封面、强中文大字视觉时，使用 `giant_chinese_concept_poster`。当用户需要竖版教程长图、手机端知识海报、SOP、规则卡、项目复盘、AI 工作流或多步骤方法论时，使用 `editorial_line_infographic_poster`。当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，使用 `premium_product_ad_poster`。
 
 ## Step 1：理解文章
 
