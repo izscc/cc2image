@@ -4,7 +4,7 @@
 
 它不是单一“配图模板”，而是一个「文章理解 + 认知锚点拆图 + 风格库匹配 + 稳定生图提示词 + 批量生图」的视觉系统：可以把中文文章、选题、段落、知识点或产品概念，自动转成封面图、正文配图、系列主视觉、教程卡片、品牌海报、logo/图标和社媒内容资产。
 
-项目核心是 **cc2image 风格库**：默认使用「手绘知识风」，并内置 48 套内容视觉语言 + 8 套 logo/图标风格，覆盖知识图解、东方人文、极简编辑、字体材质、微缩场景、商业广告、社会议题、情绪疗愈和 App 图标等方向。用户不指定风格时，普通配图默认使用 `handdrawn_knowledge_card`；用户说“生成一个 logo / 图标 / app icon”时自动进入 1:1 图标模式；用户说“合适的风格”“帮我选风格”“随机风格”时，会根据内容合理选定风格，而不是纯随机。
+项目核心是 **cc2image 风格库**：默认使用「手绘知识风」，并内置 49 套内容视觉语言 + 8 套 logo/图标风格，覆盖知识图解、东方人文、极简编辑、字体材质、微缩场景、商业广告、社会议题、情绪疗愈和 App 图标等方向。用户不指定风格时，普通配图默认使用 `handdrawn_knowledge_card`；用户说“生成一个 logo / 图标 / app icon”时自动进入 1:1 图标模式；用户说“合适的风格”“帮我选风格”“随机风格”时，会根据内容合理选定风格，而不是纯随机。
 
 ## 生图工具硬性原则
 
@@ -15,7 +15,7 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 - 把文章拆成「1 张封面 + 多张正文配图」
 - 不平均按段落配图，而是优先抓核心判断、认知断点、输入输出、分流、对比、承接路径和常见坑
 - 自动判断封面、正文图、系列主视觉、教程页、知识卡片等任务类型
-- 根据主题自动匹配 48 套内容视觉风格 + 8 套 logo/图标风格
+- 根据主题自动匹配 49 套内容视觉风格 + 8 套 logo/图标风格
 - 当用户说“生成一个 logo / 图标 / 小图标 / app icon”时，自动生成 1:1 方形图标
 - 生成稳定、可复用的批量生图 JSON / Markdown 清单
 - 在可用 `image_gen` 的环境中隐藏提示词并直接批量生图；不可用时只输出 prompt / JSON，不用其他工具替代生图
@@ -23,7 +23,7 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 
 ## 风格效果示例
 
-下面展示已配示例图的核心风格；其中第 41 套「黑白系统风」、第 42 套「时间微缩风」、第 43 套「实物涂鸦风」、第 44 套「3D怪表情风」、第 45 套「大字海报风」、第 46 套「产品海报风」、第 47 套「字物意象风」和第 48 套「竖版线稿长图风」已补充封面示例图，可直接使用 `monochrome_system_editorial`、`isometric_timeline_miniature`、`real_object_doodle_composite`、`expressive_3d_quirky_character`、`giant_chinese_concept_poster`、`premium_product_ad_poster`、`glyph_object_imagery` 与 `editorial_line_infographic_poster`。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
+下面展示已配示例图的核心风格；其中第 41 套「黑白系统风」、第 42 套「时间微缩风」、第 43 套「实物涂鸦风」、第 44 套「3D怪表情风」、第 45 套「大字海报风」、第 46 套「产品海报风」、第 47 套「字物意象风」、第 48 套「竖版线稿长图风」和第 49 套「毛球角色家族风」已补充封面示例图，可直接使用 `monochrome_system_editorial`、`isometric_timeline_miniature`、`real_object_doodle_composite`、`expressive_3d_quirky_character`、`giant_chinese_concept_poster`、`premium_product_ad_poster`、`glyph_object_imagery`、`editorial_line_infographic_poster` 与 `scribble_furball_character_family`。实际生成时会根据用户文章主题、任务类型和指定 `style_id` 自动调整。
 
 <table>
   <tr>
@@ -122,10 +122,14 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
     <td width="50%"><strong>47｜字物意象风</strong><br><code>glyph_object_imagery</code><br><img src="assets/examples/47-glyph-object-imagery.png" alt="字物意象风封面示例"></td>
     <td width="50%"><strong>48｜竖版线稿长图风</strong><br><code>editorial_line_infographic_poster</code><br><img src="assets/examples/48-editorial-line-infographic-poster.png" alt="竖版线稿长图风封面示例"></td>
   </tr>
+  <tr>
+    <td width="50%"><strong>49｜毛球角色家族风</strong><br><code>scribble_furball_character_family</code><br><img src="assets/examples/49-scribble-furball-character-family.png" alt="毛球角色家族风封面示例"></td>
+    <td width="50%"></td>
+  </tr>
 </table>
 
 
-## 48 套风格
+## 49 套风格
 
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
@@ -177,6 +181,7 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 | `premium_product_ad_poster` | 产品海报风 | 电商主图、新品发布海报、品牌广告、产品卖点图、详情页首屏、小红书产品封面、科技产品海报、时尚产品广告、运动装备海报、功能拆解图 |
 | `glyph_object_imagery` | 字物意象风 | 中文金句、观点短句、品牌口号、成语祝福、情绪短句、文字造物、创意字体图 |
 | `editorial_line_infographic_poster` | 竖版线稿长图风 | 竖版教程长图、SOP、规则卡、项目复盘、AI工作流、多步骤方法论、手机端知识海报 |
+| `scribble_furball_character_family` | 毛球角色家族风 | 情绪表达、知识卡片、办公状态、教育内容、品牌 IP、角色设定、社媒传播图 |
 
 
 ## logo / 图标模式（8 套）
@@ -365,6 +370,16 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 - 视觉参考 editorial line system：黑白线稿人物、几何扁平比例、粗黑中文标题、多面板圆角卡片、编号黑点和少量浅黄/淡紫强调块。
 - 适合把“犯错 → 修复 → 追因 → 写入规则”等过程做成手机端可读长图。
 - 默认示例图：`assets/examples/48-editorial-line-infographic-poster.png`。
+
+## 毛球角色家族风增强
+
+本仓库新增第 49 套风格 `scribble_furball_character_family`（毛球角色家族风）：
+
+- 以黑色手绘乱线团、大眼睛、简洁四肢和强情绪动作构成统一角色家族。
+- 可通过体形、表情、围巾、眼镜、灯泡、书本、便签和办公用品扩展性格、职业与关系。
+- 黑白为骨架，只使用 1 种明亮点缀色，背景干净留白，保持呆萌、治愈和高识别 IP 感。
+- 适合情绪状态、教育知识卡、办公表达、品牌吉祥物、角色设定板和社媒传播图。
+- 默认示例图：`assets/examples/49-scribble-furball-character-family.png`。
 
 ## 可视化研究所进阶方法增强
 

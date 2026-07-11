@@ -220,6 +220,12 @@ STYLE_ANCHORS: Dict[str, str] = {
     "editorial_line_infographic_poster": (
         '整体风格为竖版线稿长图风：适合把流程、教程、规则、方法论、SOP、AI 工作流和项目复盘做成竖版 9:16 中文知识长图。画面使用白色或暖白纸张背景，顶部是粗黑大标题和短副标题，中段用 2x2 或纵向多面板卡片组织信息，底部放总结区或行动清单。视觉语言参考 modern editorial line system：黑白线稿人物、几何扁平比例、简单表情、城市生活/办公场景、代码窗口、文件夹、便签、放大镜、箭头、图标和规则卡。排版像中文杂志信息图：粗细线对比、圆角边框、编号黑色圆点、强层级、大留白，少量低饱和浅黄色、淡紫色、浅橙或浅绿色只用于强调块、提示框和状态标记。文字可以比普通配图更多，但必须短句化、分区清楚、可读；优先 4-6 个模块，每个模块只讲一个动作或判断。不要 PPT 模板感，不要密集小字，不要彩色卡通，不要 3D，不要写实光影，不要复杂渐变，不要水印。\nVertical editorial line infographic poster style: a 9:16 Chinese long-form knowledge poster with minimalist black-and-white line art characters, flat geometric proportions, bold magazine-like typography, rounded panels, numbered black dots, arrows, code windows, notes, folders, magnifier, checklist cards and sparse pastel accent blocks. White paper background, strong hierarchy, clean grid, generous negative space. Use soft yellow, muted purple, warm orange or pale green only for highlights and status areas. Build 4-6 clear modules, each showing one action, step or rule. Text must be short, readable and organized. Not PPT, not dense tiny copy, not colorful cartoon, not 3D, not realistic rendering, not busy gradients.'
     ),
+    "scribble_furball_character_family": (
+        "整体风格为毛球角色家族风：暖白或浅色干净背景，大量留白，以黑色手绘乱线团作为统一角色原型。"
+        "角色拥有超大黑白圆眼、极简四肢和一眼可读的情绪动作；家族成员可通过体形、表情、职业配件和道具区分，但都保留乱线团生命体的共同基因。"
+        "画面以黑白为骨架，只使用一种明亮点缀色，颜色集中在围巾、灯泡、便签、书本或小图标。整体呆萌、灵动、治愈、略带笨拙，具有可持续扩展的手绘 IP 感。"
+        "不要 3D，不要写实人物，不要复杂背景，不要厚重阴影，不要多色杂乱，不要普通 emoji 或贴纸风，不要让线团脏乱到影响识别。"
+    ),
     "cute_3d_plastic_icon": (
         "3D 新拟物风小图标：主体是圆润可爱的 3D app icon，半哑光塑料或精致树脂材质，饱满圆角、柔和轮廓、轻微倒角、干净结构。"
         "使用主色、次色、点缀色形成清晰但柔和的多色分层；等距前视角居中，浅灰或白色棚拍背景，轻柔阴影。"
@@ -314,6 +320,7 @@ STYLE_NAMES = {
     "premium_product_ad_poster": "产品海报风",
     "glyph_object_imagery": "字物意象风",
     "editorial_line_infographic_poster": "竖版线稿长图风",
+    "scribble_furball_character_family": "毛球角色家族风",
     "cute_3d_plastic_icon": "3D 新拟物风小图标",
     "candy_glass_3d_icon": "3D 糖果风格图标",
     "airbnb_soft_miniature_icon": "Airbnb 风软拟物图标",
@@ -1085,6 +1092,23 @@ def render_editorial_line_infographic_poster_body(spec: BodySpec) -> str:
 整体像手机端可读的中文教程长图，不要密集小字，不要 PPT 模板感，不要 3D，不要彩色卡通。
 {STYLE_ANCHORS['editorial_line_infographic_poster']}"""
 
+
+def render_scribble_furball_cover(spec: CoverSpec) -> str:
+    return f"""请生成一张毛球角色家族风中文插画海报。
+主题是「{spec.title}」，标题准确写作「{spec.title}」，副标题是「{spec.subtitle}」。
+用一只黑色手绘乱线毛球作为主角，以「{spec.metaphor}」转译主题；搭配「{spec.elements}」。
+角色拥有超大黑白圆眼、简洁四肢和强烈但讨喜的表情，动作是「{spec.character_action}」。可加入 2 到 5 个形体或配件不同的家族成员参与互动，所有成员保持统一乱线团生命体基因。
+黑白为骨架，只选一种明亮点缀色用于围巾、道具、便签和小图标；暖白背景，大量留白。提示气泡只写「{spec.speech_bubble}」，底部短句写「{spec.bottom_sentence}」。
+{STYLE_ANCHORS['scribble_furball_character_family']}"""
+
+
+def render_scribble_furball_body(spec: BodySpec) -> str:
+    return f"""请生成一张毛球角色家族风中文内容插画。
+主题是「{spec.title}」，采用「{spec.structure}」构图，用乱线毛球角色的表情、动作和互动解释「{spec.modules}」。
+主角动作是「{spec.character_action}」，必要注释是「{spec.notes}」，气泡短句是「{spec.speech_bubble}」，底部结论是「{spec.bottom_sentence}」。
+角色必须拥有黑色手绘乱线团身体、超大黑白圆眼和极简四肢；可用不同体形、表情、围巾、眼镜、书本、灯泡、便签或办公用品扩展家族成员。黑白为骨架，只使用一种明亮点缀色，背景干净留白，情绪一眼可读。
+{STYLE_ANCHORS['scribble_furball_character_family']}"""
+
 def render_icon(spec: IconSpec) -> str:
     spec.style_id = normalize_style(spec.style_id)
     auxiliary = spec.auxiliary_objects or "必要时加入 1-2 个简单辅助物，但不能抢主体"
@@ -1154,6 +1178,8 @@ def render_cover(spec: CoverSpec) -> str:
         return render_glyph_object_imagery_cover(spec)
     if spec.style_id == "editorial_line_infographic_poster":
         return render_editorial_line_infographic_poster_cover(spec)
+    if spec.style_id == "scribble_furball_character_family":
+        return render_scribble_furball_cover(spec)
     if spec.style_id == "isometric_modular_system":
         return render_extra_cover(spec) or render_handdrawn_cover(spec)
     if spec.style_id == "monochrome_system_editorial":
@@ -1243,6 +1269,8 @@ def render_body(spec: BodySpec) -> str:
         return render_glyph_object_imagery_body(spec)
     if spec.style_id == "editorial_line_infographic_poster":
         return render_editorial_line_infographic_poster_body(spec)
+    if spec.style_id == "scribble_furball_character_family":
+        return render_scribble_furball_body(spec)
     # Cover/editorial styles are not ideal for body diagrams; still render a sparse editorial visual if explicitly requested.
     return f"""请生成一张中文知识视觉图，主题是「{spec.title}」。
 画面不要做成密集正文解释图，只保留少量核心概念。核心模块包括：「{spec.modules}」。必要注释：「{spec.notes}」。
@@ -1313,6 +1341,13 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
             raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action") or raw.get("动作") or "线稿人物在多个面板中排查、修复、复盘并写入规则")
             raw.setdefault("speech_bubble", raw.get("short_labels") or raw.get("关键词") or "让错误变资产")
             raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("总结句") or raw.get("slogan") or "把一次错误变成下一次的规则。")
+        if style_id == "scribble_furball_character_family":
+            raw.setdefault("subtitle", raw.get("subtitle") or raw.get("副标题") or "让乱糟糟的思绪变成有生命的表达")
+            raw.setdefault("metaphor", raw.get("visual_metaphor") or raw.get("视觉隐喻") or raw.get("visual_anchor") or "让抽象概念变成乱线毛球角色的情绪与动作")
+            raw.setdefault("elements", raw.get("suggested_elements") or raw.get("props") or raw.get("元素") or "围巾、灯泡、便签、书本、清单和少量点睛图标")
+            raw.setdefault("character_action", raw.get("main_action") or raw.get("动作") or "毛球主角用夸张而清晰的动作表达主题")
+            raw.setdefault("speech_bubble", raw.get("short_labels") or raw.get("关键词") or "有点乱，也在变清楚")
+            raw.setdefault("bottom_sentence", raw.get("summary_sentence") or raw.get("总结句") or raw.get("slogan") or "把情绪和知识，变成一眼能懂的角色。")
         raw.setdefault("metaphor", raw.get("visual_anchor") or raw.get("core_structure") or raw.get("core_idea", ""))
         raw.setdefault("elements", raw.get("suggested_elements", ""))
         raw.setdefault("character_action", raw.get("main_action") or raw.get("flow_action", ""))
@@ -1402,7 +1437,7 @@ def build_image_item(raw: Dict[str, Any], index: int) -> Dict[str, Any]:
         return {
             "id": raw.get("id") or f"cover_{index:02d}",
             "type": "cover",
-            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id == "glyph_object_imagery" else ("9:16" if style_id == "editorial_line_infographic_poster" else "21:9")))),
+            "aspect_ratio": raw.get("aspect_ratio") or ("3:4" if style_id == "giant_chinese_concept_poster" else ("4:5" if style_id == "premium_product_ad_poster" else ("1:1" if style_id in {"glyph_object_imagery", "scribble_furball_character_family"} else ("9:16" if style_id == "editorial_line_infographic_poster" else "21:9")))),
             "style_id": style_id,
             "style_name": STYLE_NAMES[style_id],
             "title": spec.title,
@@ -1693,6 +1728,17 @@ def self_test() -> None:
     assert batch["images"][12]["style_id"] == "cute_3d_plastic_icon"
     assert "1:1 方形 logo / 图标模式" in batch["images"][12]["prompt"]
     assert "圆润笔记本和小星星" in batch["images"][12]["prompt"]
+    furball = build_image_item(
+        {
+            "type": "cover",
+            "style_id": "scribble_furball_character_family",
+            "title": "有点乱，也在变清楚",
+        },
+        13,
+    )
+    assert furball["style_name"] == "毛球角色家族风"
+    assert furball["aspect_ratio"] == "1:1"
+    assert "黑色手绘乱线团" in furball["prompt"]
     print("self-test passed")
 
 
