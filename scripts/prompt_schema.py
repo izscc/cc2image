@@ -221,10 +221,10 @@ STYLE_ANCHORS: Dict[str, str] = {
         '整体风格为竖版线稿长图风：适合把流程、教程、规则、方法论、SOP、AI 工作流和项目复盘做成竖版 9:16 中文知识长图。画面使用白色或暖白纸张背景，顶部是粗黑大标题和短副标题，中段用 2x2 或纵向多面板卡片组织信息，底部放总结区或行动清单。视觉语言参考 modern editorial line system：黑白线稿人物、几何扁平比例、简单表情、城市生活/办公场景、代码窗口、文件夹、便签、放大镜、箭头、图标和规则卡。排版像中文杂志信息图：粗细线对比、圆角边框、编号黑色圆点、强层级、大留白，少量低饱和浅黄色、淡紫色、浅橙或浅绿色只用于强调块、提示框和状态标记。文字可以比普通配图更多，但必须短句化、分区清楚、可读；优先 4-6 个模块，每个模块只讲一个动作或判断。不要 PPT 模板感，不要密集小字，不要彩色卡通，不要 3D，不要写实光影，不要复杂渐变，不要水印。\nVertical editorial line infographic poster style: a 9:16 Chinese long-form knowledge poster with minimalist black-and-white line art characters, flat geometric proportions, bold magazine-like typography, rounded panels, numbered black dots, arrows, code windows, notes, folders, magnifier, checklist cards and sparse pastel accent blocks. White paper background, strong hierarchy, clean grid, generous negative space. Use soft yellow, muted purple, warm orange or pale green only for highlights and status areas. Build 4-6 clear modules, each showing one action, step or rule. Text must be short, readable and organized. Not PPT, not dense tiny copy, not colorful cartoon, not 3D, not realistic rendering, not busy gradients.'
     ),
     "scribble_furball_character_family": (
-        "整体风格为毛球角色家族风：暖白或浅色干净背景，大量留白，以黑色手绘乱线团作为统一角色原型。"
+        "整体风格为毛球角色家族风：暖白或浅色干净背景，大量留白，以稀松、透气的黑色手绘乱线团作为统一角色原型，线圈之间必须保留大量白色空隙。"
         "角色拥有超大黑白圆眼、极简四肢和一眼可读的情绪动作；家族成员可通过体形、表情、职业配件和道具区分，但都保留乱线团生命体的共同基因。"
-        "画面以黑白为骨架，只使用一种明亮点缀色，颜色集中在围巾、灯泡、便签、书本或小图标。整体呆萌、灵动、治愈、略带笨拙，具有可持续扩展的手绘 IP 感。"
-        "不要 3D，不要写实人物，不要复杂背景，不要厚重阴影，不要多色杂乱，不要普通 emoji 或贴纸风，不要让线团脏乱到影响识别。"
+        "毛球不能被反复描黑或填成实心黑块，内部约 55%-70% 保持白亮可见；画面以黑白为骨架，只使用一种明亮点缀色，颜色集中在围巾、灯泡、便签、书本或小图标。整体呆萌、灵动、治愈、略带笨拙，具有可持续扩展的手绘 IP 感。"
+        "不要 3D，不要写实人物，不要复杂背景，不要厚重阴影，不要多色杂乱，不要普通 emoji 或贴纸风，不要高密度短碎线、煤球感、厚重黑块或暗黑压抑气质，不要让线团脏乱到影响识别。"
     ),
     "cute_3d_plastic_icon": (
         "3D 新拟物风小图标：主体是圆润可爱的 3D app icon，半哑光塑料或精致树脂材质，饱满圆角、柔和轮廓、轻微倒角、干净结构。"
@@ -1096,7 +1096,7 @@ def render_editorial_line_infographic_poster_body(spec: BodySpec) -> str:
 def render_scribble_furball_cover(spec: CoverSpec) -> str:
     return f"""请生成一张毛球角色家族风中文插画海报。
 主题是「{spec.title}」，标题准确写作「{spec.title}」，副标题是「{spec.subtitle}」。
-用一只黑色手绘乱线毛球作为主角，以「{spec.metaphor}」转译主题；搭配「{spec.elements}」。
+用一只稀松透气的黑色手绘乱线毛球作为主角，使用较少的长弧线和大环线松散交叠，内部保留大量白色空隙，以「{spec.metaphor}」转译主题；搭配「{spec.elements}」。
 角色拥有超大黑白圆眼、简洁四肢和强烈但讨喜的表情，动作是「{spec.character_action}」。可加入 2 到 5 个形体或配件不同的家族成员参与互动，所有成员保持统一乱线团生命体基因。
 黑白为骨架，只选一种明亮点缀色用于围巾、道具、便签和小图标；暖白背景，大量留白。提示气泡只写「{spec.speech_bubble}」，底部短句写「{spec.bottom_sentence}」。
 {STYLE_ANCHORS['scribble_furball_character_family']}"""
@@ -1106,7 +1106,7 @@ def render_scribble_furball_body(spec: BodySpec) -> str:
     return f"""请生成一张毛球角色家族风中文内容插画。
 主题是「{spec.title}」，采用「{spec.structure}」构图，用乱线毛球角色的表情、动作和互动解释「{spec.modules}」。
 主角动作是「{spec.character_action}」，必要注释是「{spec.notes}」，气泡短句是「{spec.speech_bubble}」，底部结论是「{spec.bottom_sentence}」。
-角色必须拥有黑色手绘乱线团身体、超大黑白圆眼和极简四肢；可用不同体形、表情、围巾、眼镜、书本、灯泡、便签或办公用品扩展家族成员。黑白为骨架，只使用一种明亮点缀色，背景干净留白，情绪一眼可读。
+角色必须拥有稀松透气的黑色手绘乱线团身体、超大黑白圆眼和极简四肢；线圈之间保留大量白色空隙，内部约 55%-70% 保持白亮可见，禁止涂成实心黑块；可用不同体形、表情、围巾、眼镜、书本、灯泡、便签或办公用品扩展家族成员。黑白为骨架，只使用一种明亮点缀色，背景干净留白，情绪一眼可读。
 {STYLE_ANCHORS['scribble_furball_character_family']}"""
 
 def render_icon(spec: IconSpec) -> str:
@@ -1739,6 +1739,7 @@ def self_test() -> None:
     assert furball["style_name"] == "毛球角色家族风"
     assert furball["aspect_ratio"] == "1:1"
     assert "黑色手绘乱线团" in furball["prompt"]
+    assert "55%-70% 保持白亮可见" in furball["prompt"]
     print("self-test passed")
 
 

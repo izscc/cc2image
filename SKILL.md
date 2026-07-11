@@ -84,7 +84,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 - `premium_product_ad_poster`：产品海报风；适合电商主图、新品发布海报、品牌广告、产品卖点图、功能拆解图。
 - `glyph_object_imagery`：字物意象风；适合中文金句、观点短句、品牌口号、成语祝福、情绪短句、文字造物、创意字体图。
 - `editorial_line_infographic_poster`：竖版线稿长图风；适合竖版教程长图、SOP、规则卡、项目复盘、AI工作流、多步骤方法论、手机端知识海报。
-- `scribble_furball_character_family`：毛球角色家族风；适合情绪表达、知识卡片、办公状态、教育内容、品牌 IP、角色设定和社媒传播图。
+- `scribble_furball_character_family`：毛球角色家族风；以稀松透气、保留大量白色空隙的乱线团为角色原型；适合情绪表达、知识卡片、办公状态、教育内容、品牌 IP、角色设定和社媒传播图。
 
 logo/图标模式专用 style_id：
 
