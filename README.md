@@ -8,15 +8,9 @@
 
 ## 高级交互演示
 
-点击下方预览图，观看从文章分析、推荐风格示例、封面参数和正文配图数量调整，到提交配置继续生成的完整交互流程。
+从文章分析、推荐风格示例、封面参数和正文配图数量调整，到提交配置继续生成的完整交互流程。点击下方播放器即可直接观看。
 
-<p align="center">
-  <a href="assets/demo/cc2image-interactive-demo.mp4">
-    <img src="assets/demo/cc2image-interactive-demo.png" alt="cc2image 高级交互式操作演示视频" width="100%">
-  </a>
-</p>
-
-<p align="center"><a href="assets/demo/cc2image-interactive-demo.mp4">▶ 点击观看 67 秒完整演示视频</a></p>
+https://github.com/user-attachments/assets/3f885c38-8370-49fd-b514-9aeaf439bf80
 
 ## 可视化交互选型
 
