@@ -4,11 +4,11 @@
 
 它不是单一“配图模板”，而是一个「文章理解 + 认知锚点拆图 + 可视化交互选型 + 稳定生图提示词 + 批量生图」的视觉系统：可以把中文文章、选题、段落、知识点或产品概念，自动转成封面图、正文配图、系列主视觉、教程卡片、品牌海报、logo/图标和社媒内容资产。
 
-项目核心是 **cc2image 风格库**：默认使用「手绘知识风」，并内置 49 套内容视觉语言 + 8 套 logo/图标风格，覆盖知识图解、东方人文、极简编辑、字体材质、微缩场景、商业广告、社会议题、情绪疗愈和 App 图标等方向。用户不指定风格时，普通配图默认使用 `handdrawn_knowledge_card`；用户说“生成一个 logo / 图标 / app icon”时自动进入 1:1 图标模式；用户说“合适的风格”“帮我选风格”“随机风格”时，会根据内容合理选定风格，而不是纯随机。
+项目核心是 **cc2image 风格库**：内置 49 套内容视觉语言 + 8 套 logo/图标风格，覆盖知识图解、东方人文、极简编辑、字体材质、微缩场景、商业广告、社会议题、情绪疗愈和 App 图标等方向。用户未明确指定有效风格时，必须先通过 `Visualize:visualize` 打开交互选择器，由用户确认风格和出图参数；不会再自动采用手绘知识风直接生成。
 
 ## 可视化交互选型
 
-当环境提供 `visualize` 且用户没有明确完整配置时，cc2image 会先分析内容，再打开一次紧凑的交互选择器：
+只要用户没有明确指定风格，cc2image 就会先分析内容，再通过 `Visualize:visualize` 打开一次交互选择器：
 
 - 最匹配的 3 个风格优先展示，第一推荐默认选中；全部 49 套内容风格仍可按类别选择。
 - 推荐项优先使用仓库现有示例图，不为选择器伪造新示例。
@@ -19,7 +19,7 @@
 - 正文配图默认数量按文章长度推荐为 3、5 或 7 张，用户可以直接修改；只给主题时默认 0 张正文图。
 - 点击“使用此配置继续”后回到当前任务继续生成，不会重复打开选择器。
 
-如果 `visualize` 不可用，或用户说“直接生成 / 用默认值 / 不用选择”，则自动采用第一推荐风格和推荐数量继续。详细协议见 [`references/interactive_selection.md`](references/interactive_selection.md)。
+“直接生成 / 用默认值 / 不用选择 / 用合适的风格”都不能跳过选择器。选择器展示后，该轮不会调用 `image_gen`；只有用户提交选择、返回 `CC2IMAGE_SELECTION_V1` 后才会继续生成。如果 `Visualize:visualize` 不可用，则停止并说明原因，不回退直出。详细协议见 [`references/interactive_selection.md`](references/interactive_selection.md)。
 
 ## 生图工具硬性原则
 
@@ -148,7 +148,7 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
-| `handdrawn_knowledge_card` | 手绘知识风 | 默认；正文配图、知识图解、方法论、流程图、对比图 |
+| `handdrawn_knowledge_card` | 手绘知识风 | 常见首选推荐；正文配图、知识图解、方法论、流程图、对比图 |
 | `oriental_editorial_illustration` | 典籍山水风 | 文化、历史、人文、哲学类高级封面 |
 | `study_note_card` | 学习笔记风 | 学习方法、笔记整理、步骤教程、知识清单 |
 | `pastel_learning_pyramid` | 粉彩金字塔风 | 分层模型、学习金字塔、能力进阶、成长路径 |
@@ -224,7 +224,7 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
-| `cute_3d_plastic_icon` | 3D 新拟物风小图标 | 默认图标风格；工具、功能、App 图标 |
+| `cute_3d_plastic_icon` | 3D 新拟物风小图标 | 常见首选推荐；工具、功能、App 图标 |
 | `candy_glass_3d_icon` | 3D 糖果风格图标 | 低对比、清爽可爱、半透明糖果质感 |
 | `airbnb_soft_miniature_icon` | Airbnb 风软拟物图标 | 旅行、生活方式、露营、家居、厨房等温暖场景 |
 | `circular_2_5d_vector_icon` | 圆形轻拟物风格图标 | 金刚区、功能入口、中文移动 App 矢量图标 |
@@ -233,15 +233,15 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
 | `frosted_glass_ui_icon` | 磨砂玻璃质感小图标 | 钱包、文件夹、卡片、面板等简洁 UI 图标 |
 | `pastel_reward_badge_icon` | 少女风奖牌图标 | 奖励徽章、等级奖牌、儿童或少女风粉彩图标 |
 
-自动选择规则：奖牌/徽章/少女/儿童优先 `pastel_reward_badge_icon`；金刚区/矢量/2.5D 优先 `circular_2_5d_vector_icon`；旅行/露营/生活方式优先 `airbnb_soft_miniature_icon`；毛玻璃/半透明/软糖优先 `soft_frosted_glass_icon`；钱包/文件夹/卡片/UI 圆角层优先 `frosted_glass_ui_icon`；圆形底/系统级 App icon 优先 `circular_3d_texture_icon`；未命中明显风格时默认 `cute_3d_plastic_icon`。
+推荐排序规则：奖牌/徽章/少女/儿童优先 `pastel_reward_badge_icon`；金刚区/矢量/2.5D 优先 `circular_2_5d_vector_icon`；旅行/露营/生活方式优先 `airbnb_soft_miniature_icon`；毛玻璃/半透明/软糖优先 `soft_frosted_glass_icon`；钱包/文件夹/卡片/UI 圆角层优先 `frosted_glass_ui_icon`；圆形底/系统级 App icon 优先 `circular_3d_texture_icon`；未命中明显风格时优先推荐 `cute_3d_plastic_icon`，最终由用户在选择器中确认。
 
-## 默认匹配规则
+## 推荐匹配规则
 
 如果用户没有指定风格：
 
-1. logo / 图标 / app icon / 功能小图标：进入 1:1 图标模式，并在 8 套图标风格中自动选择。
-2. 普通知识/正文配图：默认 `handdrawn_knowledge_card`。
-3. 用户说“合适的风格”“帮我选风格”“随机风格”：根据内容合理选择。
+1. logo / 图标 / app icon / 功能小图标：进入 1:1 图标模式；未指定图标风格时展示 8 套图标风格选择器，由用户确认。
+2. 普通知识/正文配图：可优先推荐 `handdrawn_knowledge_card`，由用户在选择器中确认。
+3. 用户说“合适的风格”“帮我选风格”“随机风格”：根据内容生成推荐排序并展示选择器，不自动确认。
 4. 文化、历史、人文、哲学、东方智慧：优先 `oriental_editorial_illustration`。
 5. 学习方法、笔记、复习、考试：优先 `study_note_card`。
 6. 学习金字塔、层级模型、能力进阶：优先 `pastel_learning_pyramid`。

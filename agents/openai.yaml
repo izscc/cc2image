@@ -1,9 +1,9 @@
 interface:
   display_name: "zscc配图生成器"
-  short_description: "可视化选择 49 套内容风格，生成中文文章封面与正文配图。"
+  short_description: "未指定风格时强制可视化选择，再生成中文封面与正文配图。"
   icon: "image"
   primary_color: "#E9DDC8"
   brand_color: "#E9DDC8"
-  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成封面和正文配图。先通过 visualize 交互选择推荐风格、封面比例尺寸和正文配图数量；用户说直接生成时跳过选择。生成 logo 或图标时自动进入 1:1 图标模式。"
+  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成封面和正文配图。若我没有明确指定有效风格，必须先调用 Visualize:visualize 展示交互选择器并结束当前轮，等我提交风格、封面比例尺寸和正文配图数量后再生成；不得自动采用默认风格直出。"
 policy:
   allow_implicit_invocation: true

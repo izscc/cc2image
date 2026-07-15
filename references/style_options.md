@@ -2,14 +2,14 @@
 
 本文件是风格选择、自动推荐和 `visualize` 交互选型的单一风格来源。交互控件不得发明本文件之外的 style_id；推荐排序、封面比例和正文图数量的交互规则见 `interactive_selection.md`。
 
-默认风格是 `handdrawn_knowledge_card`（手绘知识风）。只有用户明确指定其他风格，或用户说“合适的风格 / 帮我选风格 / 随机风格”时，才按主题自动匹配；“随机风格”也不做纯随机。正文解释图仍优先使用手绘知识风；多数非知识卡片风更适合封面图、头图、海报或系列主视觉。
+`handdrawn_knowledge_card`（手绘知识风）是普通知识内容的常见首选推荐，不是自动直出的默认值。用户未明确指定有效风格时，必须先进入 `Visualize:visualize` 选择器；“合适的风格 / 帮我选风格 / 随机风格”只影响推荐排序，不允许自动确认。正文解释图可优先推荐手绘知识风；多数非知识卡片风更适合封面图、头图、海报或系列主视觉。
 
 ## 风格选择表
 
 ```json
 {
   "styles": [
-    {"style_id": "handdrawn_knowledge_card", "style_name": "手绘知识风", "best_for": ["默认；正文配图、知识图解、方法论、流程图、对比图"]},
+    {"style_id": "handdrawn_knowledge_card", "style_name": "手绘知识风", "best_for": ["常见首选推荐；正文配图、知识图解、方法论、流程图、对比图"]},
     {"style_id": "oriental_editorial_illustration", "style_name": "典籍山水风", "best_for": ["文化、历史、人文、哲学类高级封面"]},
     {"style_id": "study_note_card", "style_name": "学习笔记风", "best_for": ["学习方法、笔记整理、步骤教程、知识清单"]},
     {"style_id": "pastel_learning_pyramid", "style_name": "粉彩金字塔风", "best_for": ["分层模型、学习金字塔、能力进阶、成长路径"]},
@@ -80,7 +80,7 @@ H. logo / 图标类：`cute_3d_plastic_icon`、`candy_glass_3d_icon`、`airbnb_s
 
 | style_id | 风格名 | 适合场景 |
 | --- | --- | --- |
-| `cute_3d_plastic_icon` | 3D 新拟物风小图标 | 默认图标风格；工具、功能、App 图标 |
+| `cute_3d_plastic_icon` | 3D 新拟物风小图标 | 常见首选推荐；工具、功能、App 图标 |
 | `candy_glass_3d_icon` | 3D 糖果风格图标 | 低对比、清爽可爱、半透明糖果质感 |
 | `airbnb_soft_miniature_icon` | Airbnb 风软拟物图标 | 旅行、生活方式、露营、家居、厨房等温暖场景 |
 | `circular_2_5d_vector_icon` | 圆形轻拟物风格图标 | 金刚区、功能入口、中文移动 App 矢量图标 |
@@ -89,13 +89,13 @@ H. logo / 图标类：`cute_3d_plastic_icon`、`candy_glass_3d_icon`、`airbnb_s
 | `frosted_glass_ui_icon` | 磨砂玻璃质感小图标 | 钱包、文件夹、卡片、面板等简洁 UI 图标 |
 | `pastel_reward_badge_icon` | 少女风奖牌图标 | 奖励徽章、等级奖牌、儿童或少女风粉彩图标 |
 
-## 默认匹配规则
+## 推荐匹配规则
 
 自动匹配优先级：
 
 1. 用户明确指定风格时，优先服从。
-2. 用户说“生成一个 logo / 图标 / 小图标 / app icon / 功能图标”时，进入 logo/图标模式；奖牌/徽章/少女/儿童优先 `pastel_reward_badge_icon`，金刚区/矢量/2.5D 优先 `circular_2_5d_vector_icon`，旅行/露营/生活方式优先 `airbnb_soft_miniature_icon`，毛玻璃/半透明/软糖优先 `soft_frosted_glass_icon`，钱包/文件夹/卡片/UI 圆角层优先 `frosted_glass_ui_icon`，圆形底/系统级 App icon 优先 `circular_3d_texture_icon`，未命中明显风格时默认 `cute_3d_plastic_icon`。
-3. 用户说“合适的风格”“帮我选风格”“随机风格”时，按内容合理选择，不做纯随机。
+2. 用户说“生成一个 logo / 图标 / 小图标 / app icon / 功能图标”时，进入 logo/图标模式；未指定图标风格时仍先展示选择器。奖牌/徽章/少女/儿童优先推荐 `pastel_reward_badge_icon`，金刚区/矢量/2.5D 优先推荐 `circular_2_5d_vector_icon`，旅行/露营/生活方式优先推荐 `airbnb_soft_miniature_icon`，毛玻璃/半透明/软糖优先推荐 `soft_frosted_glass_icon`，钱包/文件夹/卡片/UI 圆角层优先推荐 `frosted_glass_ui_icon`，圆形底/系统级 App icon 优先推荐 `circular_3d_texture_icon`，未命中明显风格时优先推荐 `cute_3d_plastic_icon`。
+3. 用户说“合适的风格”“帮我选风格”“随机风格”时，按内容生成推荐排序并展示选择器，不做纯随机，也不自动确认。
 4. 正文配图、方法论解释、流程、对比、知识系统：优先 `handdrawn_knowledge_card`。
 5. 文化、历史、人文、哲学、东方智慧、古籍、文明：优先 `oriental_editorial_illustration`。
 6. 学习方法、笔记整理、复习、考试、效率技巧：优先 `study_note_card`。
@@ -143,14 +143,14 @@ H. logo / 图标类：`cute_3d_plastic_icon`、`candy_glass_3d_icon`、`airbnb_s
 48. 当用户需要竖版教程长图、手机端知识海报、SOP、规则卡、项目复盘、AI 工作流、多步骤方法论，或参考黑白线稿人物 + 多面板信息图时，优先 `editorial_line_infographic_poster`（竖版线稿长图风）。
 49. 当用户需要用乱线毛球萌物表达情绪、知识、办公状态、教育内容、品牌吉祥物或角色家族，或希望用大眼睛、单色点缀和强情绪动作转译抽象概念时，优先 `scribble_furball_character_family`（毛球角色家族风）。
 50. 当用户提供产品名称、产品图片、商品卖点，或要求电商海报、新品发布图、品牌广告、产品卖点图、功能拆解图、产品概念视觉时，优先 `premium_product_ad_poster`（产品海报风）。
-51. 用户未指定时，普通文章封面默认 `handdrawn_knowledge_card`。
+51. 用户未指定风格时必须展示选择器；普通文章封面可把 `handdrawn_knowledge_card` 作为首选推荐，但不得自动确认或直接生成。
 52. 若用户说“封面用 A，正文用 B”，封面和正文分别套用对应 style_id。
 
 ## 风格详情
 
 ## 1. handdrawn_knowledge_card｜手绘知识风
 
-适合：默认；正文配图、知识图解、方法论、流程图、对比图。
+适合：常见首选推荐；正文配图、知识图解、方法论、流程图、对比图。
 
 ## 2. oriental_editorial_illustration｜典籍山水风
 
