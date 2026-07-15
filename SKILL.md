@@ -52,7 +52,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 2. 使用 `Visualize:visualize` 创建一张精炼的磨砂编辑感交互界面。推荐区的 3 张卡片必须从 `references/style_example_assets.json` 解析对应缩略图并以 `<img>` 显示，同时显示中文风格名和一句推荐理由；禁止用 Lucide、emoji、SVG、色块或其他抽象 icon 代替示例图。style_id 只保存在控件数据与提交协议中，禁止出现在任何用户可见位置。
 3. 普通文章任务在同一界面选择：风格、是否生成封面、封面比例尺寸、正文配图数量。图标模式只显示图标风格和固定 1:1，不显示正文数量。
 4. 封面默认比例为 21:9（2560×1080）；若推荐风格有强制竖版规则，则使用该风格默认比例：`giant_chinese_concept_poster` 和 `premium_product_ad_poster` 默认 4:5（1440×1800），`editorial_line_infographic_poster` 默认 9:16（1080×1920），`glyph_object_imagery` 默认 1:1（1536×1536）。用户仍可修改。
-5. 文章正文图推荐数量按正文长度计算：短文（少于 1200 个中文字符）3 张，中等文章（1200-3000）5 张，长文（超过 3000）7 张；单一主题默认 0 张。界面把推荐值直接预填，允许在 0-10 张内修改。
+5. 文章正文图推荐数量按正文长度计算：短文（少于 1200 个中文字符）3 张，中等文章（1200-3000）5 张，长文（超过 3000）7 张；单一主题默认 0 张。界面把推荐值直接预填，允许在 0-10 张内修改；数量滑杆的圆形 thumb 必须使用 `references/interactive_selection.md` 规定的主题自适应深蓝色，不能保留默认白色圆点。
 6. 主操作按钮使用 `window.openai.sendFollowUpMessage` 提交结构化 `CC2IMAGE_SELECTION_V1` 配置，按钮文案为“使用此配置继续”。提交内容必须带 `skip_selector=true`，避免循环打开选择器。
 7. 选择器只负责收集配置，不生成任何图片，不得把 HTML、SVG、Canvas 或截图当作 cc2image 图片结果。最终封面和正文配图仍只能由 `image_gen` 生成。
 8. 创建 fragment 前必须逐项检查 3 个推荐 style_id 在 `references/style_example_assets.json` 中的映射和文件存在性；把对应 `assets/style-thumbnails/*.jpg` 编码为 `data:image/jpeg;base64,...`，不得直接引用仓库绝对路径。若任一推荐缩略图缺失，停止创建选择器并修复资产映射，不得静默回退到 icon。

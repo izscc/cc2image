@@ -83,6 +83,27 @@
 - 短文少于 1200 个中文字符默认 3 张；中等文章 1200-3000 默认 5 张；长文超过 3000 默认 7 张；只有主题而没有正文默认 0 张。
 - 不增加第二套加减按钮或预设按钮，避免一个状态由多种控件重复控制。
 - 数量标签、推荐值、当前值与滑杆放在同一逻辑区域：标题在左，当前张数在右，滑杆独占下一行；不要把“当前”与数字拆到不同列或让数字漂到界面边缘。
+- 给正文数量 range 同时添加 `.form-range` 和 `.body-count-range`。滑轨继续使用 Visualize 默认中性色，只覆盖圆形 thumb 的填充与边框：亮色主题呈深蓝色，暗色主题使用 `--primary` 保持对比；禁止继续显示白色或透明圆点。
+- 使用下面的最小样式，不改变 thumb 尺寸、滑轨几何、焦点环或交互状态：
+
+```css
+.body-count-range {
+  --body-count-thumb: light-dark(
+    color-mix(in oklab, var(--primary) 76%, var(--foreground) 24%),
+    var(--primary)
+  );
+}
+
+.body-count-range::-webkit-slider-thumb {
+  border-color: var(--body-count-thumb);
+  background: var(--body-count-thumb);
+}
+
+.body-count-range::-moz-range-thumb {
+  border-color: var(--body-count-thumb);
+  background: var(--body-count-thumb);
+}
+```
 
 ### 5. 当前配置与提交
 
@@ -121,7 +142,7 @@ END_CC2IMAGE_SELECTION
 
 ## 可访问性与视觉约束
 
-- 使用 `visualize` 提供的 `.viz-grid`、`.viz-controls`、`.card`、`.btn`、`.form-select`、`.form-range` 和主题变量，不重造控件样式。
+- 使用 `visualize` 提供的 `.viz-grid`、`.viz-controls`、`.card`、`.btn`、`.form-select`、`.form-range` 和主题变量，不重造控件样式；唯一允许的 range 外观覆盖是上文 `.body-count-range` 的深蓝色 thumb。
 - 所有交互使用原生 button、checkbox、select、range；标签与控件正确关联；保留键盘焦点样式。
 - 不写死亮色或暗色主题，不使用固定外宽、内部滚动、横向滚动或 viewport 高度。
 - 第一屏即显示已选推荐方案和可直接提交的默认值；用户零修改也能完成选择。
