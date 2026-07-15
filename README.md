@@ -6,6 +6,18 @@
 
 项目核心是 **cc2image 风格库**：内置 49 套内容视觉语言 + 8 套 logo/图标风格，覆盖知识图解、东方人文、极简编辑、字体材质、微缩场景、商业广告、社会议题、情绪疗愈和 App 图标等方向。用户未明确指定有效风格时，必须先通过 `Visualize:visualize` 打开交互选择器，由用户确认风格和出图参数；不会再自动采用手绘知识风直接生成。
 
+## 高级交互演示
+
+点击下方预览图，观看从文章分析、推荐风格示例、封面参数和正文配图数量调整，到提交配置继续生成的完整交互流程。
+
+<p align="center">
+  <a href="assets/demo/cc2image-interactive-demo.mp4">
+    <img src="assets/demo/cc2image-interactive-demo.png" alt="cc2image 高级交互式操作演示视频" width="100%">
+  </a>
+</p>
+
+<p align="center"><a href="assets/demo/cc2image-interactive-demo.mp4">▶ 点击观看 67 秒完整演示视频</a></p>
+
 ## 可视化交互选型
 
 只要用户没有明确指定风格，cc2image 就会先分析内容，再通过 `Visualize:visualize` 打开一次交互选择器：
