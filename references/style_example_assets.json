@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "styles": {
+    "handdrawn_knowledge_card": {
+      "source": "assets/examples/01-handdrawn-knowledge-card.jpg",
+      "thumbnail": "assets/style-thumbnails/handdrawn_knowledge_card.jpg"
+    },
+    "oriental_editorial_illustration": {
+      "source": "assets/examples/02-oriental-editorial-illustration.jpg",
+      "thumbnail": "assets/style-thumbnails/oriental_editorial_illustration.jpg"
+    },
+    "study_note_card": {
+      "source": "assets/examples/03-study-note-card.jpg",
+      "thumbnail": "assets/style-thumbnails/study_note_card.jpg"
+    },
+    "pastel_learning_pyramid": {
+      "source": "assets/examples/04-pastel-learning-pyramid.jpg",
+      "thumbnail": "assets/style-thumbnails/pastel_learning_pyramid.jpg"
+    },
+    "childlike_cultural_infographic": {
+      "source": "assets/examples/05-childlike-cultural-infographic.jpg",
+      "thumbnail": "assets/style-thumbnails/childlike_cultural_infographic.jpg"
+    },
+    "frosted_glass_editorial": {
+      "source": "assets/examples/06-frosted-glass-editorial.jpg",
+      "thumbnail": "assets/style-thumbnails/frosted_glass_editorial.jpg"
+    },
+    "translucent_object_editorial": {
+      "source": "assets/examples/07-translucent-object-editorial.jpg",
+      "thumbnail": "assets/style-thumbnails/translucent_object_editorial.jpg"
+    },
+    "glassmorphism_gradient_blob": {
+      "source": "assets/examples/08-glassmorphism-gradient-blob.jpg",
+      "thumbnail": "assets/style-thumbnails/glassmorphism_gradient_blob.jpg"
+    },
+    "embossed_typography_poster": {
+      "source": "assets/examples/09-embossed-typography-poster.jpg",
+      "thumbnail": "assets/style-thumbnails/embossed_typography_poster.jpg"
+    },
+    "acrylic_dimensional_type": {
+      "source": "assets/examples/10-acrylic-dimensional-type.jpg",
+      "thumbnail": "assets/style-thumbnails/acrylic_dimensional_type.jpg"
+    },
+    "dark_neon_search_ui": {
+      "source": "assets/examples/11-dark-neon-search-ui.jpg",
+      "thumbnail": "assets/style-thumbnails/dark_neon_search_ui.jpg"
+    },
+    "black_void_glowing_hands": {
+      "source": "assets/examples/12-black-void-glowing-hands.jpg",
+      "thumbnail": "assets/style-thumbnails/black_void_glowing_hands.jpg"
+    },
+    "soft_neumorphism_ui": {
+      "source": "assets/examples/13-soft-neumorphism-ui.jpg",
+      "thumbnail": "assets/style-thumbnails/soft_neumorphism_ui.jpg"
+    },
+    "minimal_line_shadow_brand": {
+      "source": "assets/examples/14-minimal-line-shadow-brand.jpg",
+      "thumbnail": "assets/style-thumbnails/minimal_line_shadow_brand.jpg"
+    },
+    "white_mono_texture_editorial": {
+      "source": "assets/examples/15-white-mono-texture-editorial.jpg",
+      "thumbnail": "assets/style-thumbnails/white_mono_texture_editorial.jpg"
+    },
+    "minimal_architecture_portfolio": {
+      "source": "assets/examples/16-minimal-architecture-portfolio.jpg",
+      "thumbnail": "assets/style-thumbnails/minimal_architecture_portfolio.jpg"
+    },
+    "minimal_healing_metaphor_comic": {
+      "source": "assets/examples/17-minimal-healing-metaphor-comic.jpg",
+      "thumbnail": "assets/style-thumbnails/minimal_healing_metaphor_comic.jpg"
+    },
+    "retro_minimal_poster_illustration": {
+      "source": "assets/examples/18-retro-minimal-poster-illustration.jpg",
+      "thumbnail": "assets/style-thumbnails/retro_minimal_poster_illustration.jpg"
+    },
+    "editorial_balloon_collage": {
+      "source": "assets/examples/19-editorial-balloon-collage.jpg",
+      "thumbnail": "assets/style-thumbnails/editorial_balloon_collage.jpg"
+    },
+    "transparent_architectural_type": {
+      "source": "assets/examples/20-transparent-architectural-type.jpg",
+      "thumbnail": "assets/style-thumbnails/transparent_architectural_type.jpg"
+    },
+    "paper_cut_profile_silhouette": {
+      "source": "assets/examples/21-paper-cut-profile-silhouette.jpg",
+      "thumbnail": "assets/style-thumbnails/paper_cut_profile_silhouette.jpg"
+    },
+    "torn_paper_note_minimal": {
+      "source": "assets/examples/22-torn-paper-note-minimal.jpg",
+      "thumbnail": "assets/style-thumbnails/torn_paper_note_minimal.jpg"
+    },
+    "fluffy_soft_typography": {
+      "source": "assets/examples/23-fluffy-soft-typography.jpg",
+      "thumbnail": "assets/style-thumbnails/fluffy_soft_typography.jpg"
+    },
+    "cloud_typography_cover": {
+      "source": "assets/examples/24-cloud-typography-cover.jpg",
+      "thumbnail": "assets/style-thumbnails/cloud_typography_cover.jpg"
+    },
+    "foam_bubble_typography": {
+      "source": "assets/examples/25-foam-bubble-typography.jpg",
+      "thumbnail": "assets/style-thumbnails/foam_bubble_typography.jpg"
+    },
+    "embroidered_patch_brand": {
+      "source": "assets/examples/26-embroidered-patch-brand.jpg",
+      "thumbnail": "assets/style-thumbnails/embroidered_patch_brand.jpg"
+    },
+    "luxury_gold_typography": {
+      "source": "assets/examples/27-luxury-gold-typography.jpg",
+      "thumbnail": "assets/style-thumbnails/luxury_gold_typography.jpg"
+    },
+    "miniature_map_life_scene": {
+      "source": "assets/examples/28-miniature-map-life-scene.jpg",
+      "thumbnail": "assets/style-thumbnails/miniature_map_life_scene.jpg"
+    },
+    "miniature_checklist_scene": {
+      "source": "assets/examples/29-miniature-checklist-scene.jpg",
+      "thumbnail": "assets/style-thumbnails/miniature_checklist_scene.jpg"
+    },
+    "fabric_micro_scene_ad": {
+      "source": "assets/examples/30-fabric-micro-scene-ad.jpg",
+      "thumbnail": "assets/style-thumbnails/fabric_micro_scene_ad.jpg"
+    },
+    "giant_letter_lifestyle_scene": {
+      "source": "assets/examples/31-giant-letter-lifestyle-scene.jpg",
+      "thumbnail": "assets/style-thumbnails/giant_letter_lifestyle_scene.jpg"
+    },
+    "oriental_floral_minimal_editorial": {
+      "source": "assets/examples/32-oriental-floral-minimal-editorial.jpg",
+      "thumbnail": "assets/style-thumbnails/oriental_floral_minimal_editorial.jpg"
+    },
+    "zen_ink_philosophy_poster": {
+      "source": "assets/examples/33-zen-ink-philosophy-poster.jpg",
+      "thumbnail": "assets/style-thumbnails/zen_ink_philosophy_poster.jpg"
+    },
+    "editorial_line_character": {
+      "source": "assets/examples/34-editorial-line-character.jpg",
+      "thumbnail": "assets/style-thumbnails/editorial_line_character.jpg"
+    },
+    "editorial_object_annotation_card": {
+      "source": "assets/examples/35-editorial-object-annotation-card.jpg",
+      "thumbnail": "assets/style-thumbnails/editorial_object_annotation_card.jpg"
+    },
+    "crowd_typography_scene": {
+      "source": "assets/examples/36-crowd-typography-scene.jpg",
+      "thumbnail": "assets/style-thumbnails/crowd_typography_scene.jpg"
+    },
+    "semantic_material_typography": {
+      "source": "assets/examples/37-semantic-material-typography.jpg",
+      "thumbnail": "assets/style-thumbnails/semantic_material_typography.jpg"
+    },
+    "quirky_doodle_character_flow": {
+      "source": "assets/examples/38-quirky-doodle-character-flow.png",
+      "thumbnail": "assets/style-thumbnails/quirky_doodle_character_flow.jpg"
+    },
+    "minimal_line_art": {
+      "source": "assets/examples/39-minimal-line-art.png",
+      "thumbnail": "assets/style-thumbnails/minimal_line_art.jpg"
+    },
+    "isometric_modular_system": {
+      "source": "assets/examples/40-isometric-modular-system.png",
+      "thumbnail": "assets/style-thumbnails/isometric_modular_system.jpg"
+    },
+    "monochrome_system_editorial": {
+      "source": "assets/examples/41-monochrome-system-editorial.png",
+      "thumbnail": "assets/style-thumbnails/monochrome_system_editorial.jpg"
+    },
+    "isometric_timeline_miniature": {
+      "source": "assets/examples/42-isometric-timeline-miniature.png",
+      "thumbnail": "assets/style-thumbnails/isometric_timeline_miniature.jpg"
+    },
+    "real_object_doodle_composite": {
+      "source": "assets/examples/43-real-object-doodle-composite.png",
+      "thumbnail": "assets/style-thumbnails/real_object_doodle_composite.jpg"
+    },
+    "expressive_3d_quirky_character": {
+      "source": "assets/examples/44-expressive-3d-quirky-character.png",
+      "thumbnail": "assets/style-thumbnails/expressive_3d_quirky_character.jpg"
+    },
+    "giant_chinese_concept_poster": {
+      "source": "assets/examples/45-giant-chinese-concept-poster.png",
+      "thumbnail": "assets/style-thumbnails/giant_chinese_concept_poster.jpg"
+    },
+    "premium_product_ad_poster": {
+      "source": "assets/examples/46-premium-product-ad-poster.png",
+      "thumbnail": "assets/style-thumbnails/premium_product_ad_poster.jpg"
+    },
+    "glyph_object_imagery": {
+      "source": "assets/examples/47-glyph-object-imagery.png",
+      "thumbnail": "assets/style-thumbnails/glyph_object_imagery.jpg"
+    },
+    "editorial_line_infographic_poster": {
+      "source": "assets/examples/48-editorial-line-infographic-poster.png",
+      "thumbnail": "assets/style-thumbnails/editorial_line_infographic_poster.jpg"
+    },
+    "scribble_furball_character_family": {
+      "source": "assets/examples/49-scribble-furball-character-family.png",
+      "thumbnail": "assets/style-thumbnails/scribble_furball_character_family.jpg"
+    },
+    "cute_3d_plastic_icon": {
+      "source": "assets/examples/logo-styles/01-cute-3d-plastic-icon.png",
+      "thumbnail": "assets/style-thumbnails/cute_3d_plastic_icon.jpg"
+    },
+    "candy_glass_3d_icon": {
+      "source": "assets/examples/logo-styles/02-candy-glass-3d-icon.png",
+      "thumbnail": "assets/style-thumbnails/candy_glass_3d_icon.jpg"
+    },
+    "airbnb_soft_miniature_icon": {
+      "source": "assets/examples/logo-styles/03-airbnb-soft-miniature-icon.png",
+      "thumbnail": "assets/style-thumbnails/airbnb_soft_miniature_icon.jpg"
+    },
+    "circular_2_5d_vector_icon": {
+      "source": "assets/examples/logo-styles/04-circular-2-5d-vector-icon.png",
+      "thumbnail": "assets/style-thumbnails/circular_2_5d_vector_icon.jpg"
+    },
+    "soft_frosted_glass_icon": {
+      "source": "assets/examples/logo-styles/05-soft-frosted-glass-icon.png",
+      "thumbnail": "assets/style-thumbnails/soft_frosted_glass_icon.jpg"
+    },
+    "circular_3d_texture_icon": {
+      "source": "assets/examples/logo-styles/06-circular-3d-texture-icon.png",
+      "thumbnail": "assets/style-thumbnails/circular_3d_texture_icon.jpg"
+    },
+    "frosted_glass_ui_icon": {
+      "source": "assets/examples/logo-styles/07-frosted-glass-ui-icon.png",
+      "thumbnail": "assets/style-thumbnails/frosted_glass_ui_icon.jpg"
+    },
+    "pastel_reward_badge_icon": {
+      "source": "assets/examples/logo-styles/08-pastel-reward-badge-icon.png",
+      "thumbnail": "assets/style-thumbnails/pastel_reward_badge_icon.jpg"
+    }
+  }
+}

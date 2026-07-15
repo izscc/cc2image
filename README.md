@@ -119,7 +119,7 @@ cc2image 直接生成图片时只能调用 `image_gen`。如果当前环境没�
   </tr>
   <tr>
     <td width="50%"><strong>39｜线条艺术风</strong><br><code>minimal_line_art</code><br><img src="assets/examples/39-minimal-line-art.png" alt="线条艺术风示例"></td>
-    <td width="50%"><strong>40｜黑白系统风</strong><br><code>monochrome_system_editorial</code><br><img src="assets/examples/40-monochrome-system-editorial.png" alt="黑白系统风示例"></td>
+    <td width="50%"><strong>40｜轴测模块系统风</strong><br><code>isometric_modular_system</code><br><img src="assets/examples/40-isometric-modular-system.png" alt="轴测模块系统风示例"></td>
   </tr>
   <tr>
     <td width="50%"><strong>41｜黑白系统风</strong><br><code>monochrome_system_editorial</code><br><img src="assets/examples/41-monochrome-system-editorial.png" alt="黑白系统风封面示例"></td>
@@ -534,10 +534,13 @@ git clone https://github.com/izscc/cc2image.git ~/.agents/skills/zscc配图生�
 
 `scripts/prompt_schema.py` 可用于把结构化字段渲染成批量生图 JSON。
 
+`references/style_example_assets.json` 为 49 套内容风格和 8 套图标风格提供选择器缩略图映射，低分辨率预览位于 `assets/style-thumbnails/`。推荐卡必须使用这些示例图，不以抽象 icon 代替。
+
 自测：
 
 ```bash
 python3 scripts/prompt_schema.py --self-test
+python3 scripts/validate_style_assets.py
 ```
 
 ## 许可证

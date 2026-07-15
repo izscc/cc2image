@@ -48,11 +48,14 @@
 ### 1. 推荐风格
 
 - 最上方展示 3 个推荐项，推荐第一项优先。
-- 优先从 `assets/examples/` 读取与推荐 style_id 对应的已有示例图并嵌入。为遵守 fragment 2 MB 上限，只嵌入推荐项，必要时减少图片数量；不得为选择器重新生成、重绘或伪造风格示例。
+- **3 个推荐项必须全部展示对应风格示例图，不能降级成 icon。** 先从 `references/style_example_assets.json` 取得精确映射，再读取 `assets/style-thumbnails/` 中的低分辨率缩略图，以 `data:image/jpeg;base64,...` 嵌入 fragment。禁止使用 Lucide、emoji、SVG、单色块、渐变块或其他抽象图标替代示例图。
+- 缩略图均由仓库中现有的 `image_gen` 风格示例图派生，只用于选择器预览，不是新的出图结果。不得凭风格名临时绘制预览，不得把其他风格图片错配给当前 style_id。
+- 创建 HTML 前逐项验证 3 个推荐 style_id 都有映射、源图和缩略图文件；缺任一项时先修复资产，不输出残缺选择器。3 张缩略图与 fragment 总计必须低于 2 MB。
+- 创建 HTML 前运行 `python3 scripts/validate_style_assets.py <推荐1> <推荐2> <推荐3>`。输出 `OK` 后，分别对 manifest 给出的缩略图执行 `base64 <缩略图路径>`，把结果放进对应 `<img src="data:image/jpeg;base64,...">`；生成后再检查 `<img` 恰好为 3、`data:image/jpeg;base64,` 恰好为 3、`data-lucide` 为 0。
 - 每项只显示中文风格名、推荐理由和必要的中文排序标签；不得显示 style_id。style_id 放入 button 的 `data-style-id`。选择状态使用原生 button 的 `aria-pressed`，不要增加第二套选择状态。
 - 卡片内容采用上下结构：上方是 16:9 示例图或稳定的视觉预览区，下方是完整中文风格名和两行以内理由。禁止把风格名、style_id、理由塞进同一横行。
 - 736px 下使用 3 列等宽推荐卡；320px 下改为单列，图片、风格名和理由都不得裁切或横向溢出。
-- 若没有可靠示例映射或图片会超限，显示风格名、核心特征和适合场景，不阻塞选择器。
+- 不允许以“没有可靠映射”或“图片可能超限”为由改用图标；本仓库已经为全部内容风格和图标风格提供轻量缩略图映射。
 
 ### 2. 更多风格
 

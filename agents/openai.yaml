@@ -4,6 +4,6 @@ interface:
   icon: "image"
   primary_color: "#E9DDC8"
   brand_color: "#E9DDC8"
-  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成封面和正文配图。若我没有明确指定有效风格，必须先调用 Visualize:visualize 展示交互选择器并结束当前轮，等我提交风格、封面比例尺寸和正文配图数量后再生成；不得自动采用默认风格直出。"
+  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成封面和正文配图。若我没有明确指定有效风格，必须先调用 Visualize:visualize 展示交互选择器并结束当前轮；推荐风格卡必须展示对应示例图，禁止以抽象 icon 代替。等我提交风格、封面比例尺寸和正文配图数量后再生成；不得自动采用默认风格直出。"
 policy:
   allow_implicit_invocation: true
