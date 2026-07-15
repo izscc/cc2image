@@ -1,9 +1,9 @@
 interface:
   display_name: "zscc配图生成器"
-  short_description: "中文文章认知锚点拆图：46 套内容风格 + 8 套 logo/图标模式。"
+  short_description: "可视化选择 49 套内容风格，生成中文文章封面与正文配图。"
   icon: "image"
   primary_color: "#E9DDC8"
   brand_color: "#E9DDC8"
-  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成 1 张封面和 5 张正文配图；默认手绘知识风，也可指定泡沫字体、人群造字、语义字体、怪诞小人、线条艺术、轴测模块、黑白系统、时间微缩、实物涂鸦、3D怪表情、大字海报、产品海报等 46 种内容风格。用户说生成 logo 或图标时，自动进入 1:1 图标模式。"
+  default_prompt: "使用 $zscc配图生成器，把这篇中文文章按认知锚点拆成封面和正文配图。先通过 visualize 交互选择推荐风格、封面比例尺寸和正文配图数量；用户说直接生成时跳过选择。生成 logo 或图标时自动进入 1:1 图标模式。"
 policy:
   allow_implicit_invocation: true
