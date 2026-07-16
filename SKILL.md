@@ -17,6 +17,30 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 6. 只有两种情况可跳过选择器：用户已明确指定有效风格；或消息中已有有效的 `CC2IMAGE_SELECTION_V1`。仅仅指定图片数量、封面比例或说“直接生成”不能跳过。
 7. 如果 `Visualize:visualize` 确实不可用，停止生图并明确告知无法打开风格选择器；不得回退到手绘知识风或其他自动风格继续生成。
 
+## 选择器首显快速路径（强制）
+
+未指定风格的首轮目标只有一个：**尽快显示选择器**。必须使用已经预校验的确定性生成器，禁止每次临时编写和调试 HTML。
+
+1. 读取用户内容后，直接在当前 Skill 的匹配规则中确定 3 个推荐 style_id 和正文推荐张数。不要为了生成选择器再次完整读取 `style_options.md`、`interactive_selection.md` 或 `style_example_assets.json`；生成器会统一解析并校验这些文件，并按风格分组补齐短中文理由。
+2. 调用 `Visualize:visualize` 后，将当前线程的 visualization 目录设为命令工作目录，关闭 login shell，并以 PTY 启动下面这个固定命令；命令行不得拼接用户文本或模型选择的 style_id：
+
+```bash
+python3 <SKILL_ROOT>/scripts/build_selector.py --stdin-config --output-dir .
+```
+
+进程等待输入后，通过工具的 stdin 通道发送一行 JSON，动态内容不得经过 shell：
+
+```json
+{"recommend":["<STYLE_ID_1>","<STYLE_ID_2>","<STYLE_ID_3>"],"body_count":5,"cover_enabled":true,"icon_mode":false}
+```
+
+图标任务使用 `"icon_mode":true`；明确只要正文图时使用 `"cover_enabled":false`。
+
+3. 命令成功后读取 JSON 输出中的唯一文件名，立即输出对应的 `::codex-inline-vis{file="<实际文件名>"}` 并结束当前轮。不得复用旧 selector 文件名。
+4. **选择器首显前禁止执行**：手写或 `apply_patch` 生成 HTML、`render.py`、Playwright/浏览器 QA、截图、`view_image`、加载浏览器依赖、再次读取完整风格库、全量素材验证、启动子代理、生成 prompt 或调用 `image_gen`。
+5. `scripts/build_selector.py` 已负责 style_id、缩略图、数量边界、3 张示例图、2 MB 上限和交互协议拼装。浏览器与双尺寸视觉 QA 只在修改生成器或交互规范时执行一次，不得在每次用户调用 Skill 时重复执行。
+6. 选择器首显阶段不使用子代理：这里只有“读内容 → 推荐 → 生成 fragment → 展示”的短串行关键路径，子代理启动与回收会增加等待。用户提交配置后，后续多图提示词规划可并行，但不得延迟选择器首显。
+
 ## 核心目标
 
 把中文文章、选题、段落或知识点转成一套可批量生成的视觉资产：封面图、正文配图、内容拆图、logo/图标和批量生图清单。内置 49 套内容视觉风格和 8 套 logo/图标风格；未指定风格时先通过可视化选择器让用户确认，不自动采用手绘知识风直接生成。
@@ -55,7 +79,7 @@ description: zscc配图生成器；当用户提到封面、正文配图、配图
 5. 文章正文图推荐数量按正文长度计算：短文（少于 1200 个中文字符）3 张，中等文章（1200-3000）5 张，长文（超过 3000）7 张；单一主题默认 0 张。界面把推荐值直接预填，允许在 0-10 张内修改；数量滑杆的圆形 thumb 必须使用 `references/interactive_selection.md` 规定的主题自适应深蓝色，不能保留默认白色圆点。
 6. 主操作按钮使用 `window.openai.sendFollowUpMessage` 提交结构化 `CC2IMAGE_SELECTION_V1` 配置，按钮文案为“使用此配置继续”。提交内容必须带 `skip_selector=true`，避免循环打开选择器。
 7. 选择器只负责收集配置，不生成任何图片，不得把 HTML、SVG、Canvas 或截图当作 cc2image 图片结果。最终封面和正文配图仍只能由 `image_gen` 生成。
-8. 创建 fragment 前必须逐项检查 3 个推荐 style_id 在 `references/style_example_assets.json` 中的映射和文件存在性；把对应 `assets/style-thumbnails/*.jpg` 编码为 `data:image/jpeg;base64,...`，不得直接引用仓库绝对路径。若任一推荐缩略图缺失，停止创建选择器并修复资产映射，不得静默回退到 icon。
+8. fragment 的映射检查、缩略图读取、base64 嵌入和体积校验全部由 `scripts/build_selector.py` 一次完成；运行时不得手工重复这些步骤。若生成器报告任一推荐缩略图缺失，停止创建选择器并修复资产映射，不得静默回退到 icon。
 9. 若 `Visualize:visualize` 不可用、界面提交失败，或当前客户端不支持交互，停止当前出图任务并说明原因；禁止使用第一推荐风格回退直出。
 10. 视觉层级、磨砂质感、中文文案、卡片排版与响应式细节必须遵守 `references/interactive_selection.md`；不要把风格名、英文 ID 和理由压进同一行，也不要让控件标签与数值错位。
 

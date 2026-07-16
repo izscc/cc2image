@@ -17,11 +17,19 @@
 3. 用户点击“使用此配置继续”后，`window.openai.sendFollowUpMessage` 发回 `CC2IMAGE_SELECTION_V1`；下一轮校验配置后才能进入 prompt 构建和 `image_gen`。
 4. 任何“为了省一步而自动采用首选推荐”的行为都属于门禁失败。
 
+## 首显性能预算
+
+- 每次选择器调用必须复用 `scripts/build_selector.py`，不得让模型重新创作整份 HTML。
+- 运行时通过生成器的 stdin JSON 通道传入 3 个推荐 style_id、正文推荐张数和必要开关，不把动态内容拼进 shell 命令；中文风格名、分组短理由、完整下拉分组、缩略图映射、比例选项与提交脚本由生成器补齐。
+- 首显前不运行 `render.py`、Playwright、浏览器截图、`view_image` 或双尺寸 QA。这些验证属于生成器本身的开发检查，不属于每次出图任务。
+- 首显前不启动子代理。文章读取和推荐判断是短关键路径，子代理编排开销通常大于收益；并行能力留给用户完成选择后的多图规划或其他独立工作。
+- 生成命令成功后立即输出 inline visualization directive，不再追加解释、审计或预览步骤。
+
 ## 推荐计算
 
 1. 从 `references/style_options.md` 的现有风格和默认匹配规则中选择，不能发明 style_id。
 2. 选出 3 个互有差异、都能解释内容的候选：第一项是最匹配的稳妥方案，第二项强调另一种表达方式，第三项提供合理的视觉张力。
-3. 推荐顺序即匹配度顺序。首项默认选中，并显示“推荐”标记和不超过 24 个中文字的理由。
+3. 推荐顺序即匹配度顺序。首项默认选中，并显示“推荐”标记和生成器提供的 8-15 字视觉侧重点理由。
 4. 用户明确说“随机风格”时仍按内容推荐，不做随机抽样。
 
 ## 交互布局
@@ -42,16 +50,15 @@
 - 推荐卡、更多风格下拉框、当前配置摘要、按钮、状态提示和错误信息全部使用简体中文。
 - **禁止在任何用户可见位置显示 style_id**，包括 `<code>`、卡片副标题、tooltip、下拉选项、摘要、加载状态和错误信息。
 - style_id 只允许存在于 DOM 的 `data-style-id`、JavaScript 状态和 `CC2IMAGE_SELECTION_V1` 提交内容中。
-- 推荐理由控制在 12-24 个中文字，直接解释“为什么适合这篇内容”，不要重复风格名。
+- 推荐理由由生成器按风格分组提供 8-15 字的视觉侧重点，不重复风格名；短文案应在 736px 三列卡片中保持自然换行。
 - 推荐顺序用“首选 / 备选 / 探索”或等价的简短中文标签表达；只给第一项使用高强调标记。
 
 ### 1. 推荐风格
 
 - 最上方展示 3 个推荐项，推荐第一项优先。
-- **3 个推荐项必须全部展示对应风格示例图，不能降级成 icon。** 先从 `references/style_example_assets.json` 取得精确映射，再读取 `assets/style-thumbnails/` 中的低分辨率缩略图，以 `data:image/jpeg;base64,...` 嵌入 fragment。禁止使用 Lucide、emoji、SVG、单色块、渐变块或其他抽象图标替代示例图。
+- **3 个推荐项必须全部展示对应风格示例图，不能降级成 icon。** `scripts/build_selector.py` 会从 `references/style_example_assets.json` 取得精确映射，读取 `assets/style-thumbnails/` 中的低分辨率缩略图，并以 `data:image/jpeg;base64,...` 嵌入 fragment。禁止使用 Lucide、emoji、SVG、单色块、渐变块或其他抽象图标替代示例图。
 - 缩略图均由仓库中现有的 `image_gen` 风格示例图派生，只用于选择器预览，不是新的出图结果。不得凭风格名临时绘制预览，不得把其他风格图片错配给当前 style_id。
-- 创建 HTML 前逐项验证 3 个推荐 style_id 都有映射、源图和缩略图文件；缺任一项时先修复资产，不输出残缺选择器。3 张缩略图与 fragment 总计必须低于 2 MB。
-- 创建 HTML 前运行 `python3 scripts/validate_style_assets.py <推荐1> <推荐2> <推荐3>`。输出 `OK` 后，分别对 manifest 给出的缩略图执行 `base64 <缩略图路径>`，把结果放进对应 `<img src="data:image/jpeg;base64,...">`；生成后再检查 `<img` 恰好为 3、`data:image/jpeg;base64,` 恰好为 3、`data-lucide` 为 0。
+- 运行时只调用一次 `scripts/build_selector.py`。生成器会逐项验证 3 个推荐 style_id 的映射和缩略图文件，完成 base64 嵌入，并检查 `<img` 恰好为 3、`data:image/jpeg;base64,` 恰好为 3、`data-lucide` 为 0、fragment 小于 2 MB；任一条件失败时不输出残缺选择器。
 - 每项只显示中文风格名、推荐理由和必要的中文排序标签；不得显示 style_id。style_id 放入 button 的 `data-style-id`。选择状态使用原生 button 的 `aria-pressed`，不要增加第二套选择状态。
 - 卡片内容采用上下结构：上方是 16:9 示例图或稳定的视觉预览区，下方是完整中文风格名和两行以内理由。禁止把风格名、style_id、理由塞进同一横行。
 - 736px 下使用 3 列等宽推荐卡；320px 下改为单列，图片、风格名和理由都不得裁切或横向溢出。

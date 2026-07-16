@@ -25,6 +25,8 @@ https://github.com/user-attachments/assets/3f885c38-8370-49fd-b514-9aeaf439bf80
 - 正文配图默认数量按文章长度推荐为 3、5 或 7 张，用户可以通过深蓝色圆点滑杆直接修改；只给主题时默认 0 张正文图。
 - 点击“使用此配置继续”后回到当前任务继续生成，不会重复打开选择器。
 
+选择器使用预校验的确定性生成器构建。每次调用只传入推荐风格与出图参数，不再临时编写 HTML、启动浏览器或重复执行视觉 QA；子代理并发留给选择完成后的独立任务，不进入首显关键路径。
+
 “直接生成 / 用默认值 / 不用选择 / 用合适的风格”都不能跳过选择器。选择器展示后，该轮不会调用 `image_gen`；只有用户提交选择、返回 `CC2IMAGE_SELECTION_V1` 后才会继续生成。如果 `Visualize:visualize` 不可用，则停止并说明原因，不回退直出。详细协议见 [`references/interactive_selection.md`](references/interactive_selection.md)。
 
 ## 生图工具硬性原则
@@ -533,12 +535,14 @@ git clone https://github.com/izscc/cc2image.git ~/.agents/skills/zscc配图生�
 │   ├── style_options.md
 │   └── visual_style.md
 └── scripts/
-    └── prompt_schema.py
+    ├── build_selector.py
+    ├── prompt_schema.py
+    └── validate_style_assets.py
 ```
 
 ## 辅助脚本
 
-`scripts/prompt_schema.py` 可用于把结构化字段渲染成批量生图 JSON。
+`scripts/build_selector.py` 通过不经过 shell 解释的 stdin JSON 接收 3 个推荐风格和出图参数，在几十毫秒内生成带唯一文件名、可直接展示的 Visualize 交互面板；`scripts/prompt_schema.py` 可用于把结构化字段渲染成批量生图 JSON。
 
 `references/style_example_assets.json` 为 49 套内容风格和 8 套图标风格提供选择器缩略图映射，低分辨率预览位于 `assets/style-thumbnails/`。推荐卡必须使用这些示例图，不以抽象 icon 代替。
 
@@ -546,6 +550,7 @@ git clone https://github.com/izscc/cc2image.git ~/.agents/skills/zscc配图生�
 
 ```bash
 python3 scripts/prompt_schema.py --self-test
+python3 scripts/build_selector.py --self-test
 python3 scripts/validate_style_assets.py
 ```
 
