@@ -425,7 +425,19 @@ cc2image 在做文章配图时会先出一份 shot list：每张图对应一个�
 
 ## 安装
 
-推荐安装到本地 Skills 目录：
+推荐通过 [Skills CLI](https://www.skills.sh/docs/cli) 安装：
+
+```bash
+npx skills add izscc/cc2image
+```
+
+全局安装并显式指定 Codex：
+
+```bash
+npx skills add izscc/cc2image --agent codex --global --yes
+```
+
+也可以手动克隆到本地 Skills 目录：
 
 ```bash
 git clone https://github.com/izscc/cc2image.git ~/.agents/skills/zscc配图生成器
